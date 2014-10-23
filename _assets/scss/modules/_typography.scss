@@ -130,12 +130,15 @@ h6 {
 }
 
 h1 {
+	font-size: #{$base-font-size * map-get($typo_scale, ms9)}; // Pixel :/
+	font-size: #{map-get($typo_scale, ms9)}rem; // Rem
+	line-height: map-get($typo_scale, ms8);
 	&.welcome-quote {
 		$typo_value: map-get($typo_scale, ms7) + map-get($typo_scale, ms3);
 		@include toRem(map-get($typo_scale, large));
 		text-align: center; 
 		line-height: $typo_value;
-		//line-height: 2;
+
 		margin: #{round($typo_value * $base-font-size)}px auto;
 		margin: #{$typo_value}rem auto;
 		@include mq($bp-large-screen){
@@ -185,8 +188,9 @@ em, strong, code {
 	line-height: 1;
 }
 
-// Blog
-
-.blog {
-	
+blockquote {
+	font-style: italic;
+	border-left :  1px solid #ff0000;
+	max-width: 85%;
+	margin: auto;
 }

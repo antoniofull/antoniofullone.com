@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<section class="journal">
+	<article class="">
+		<header>
+			<h1 class="about__title"> My Personal Journal </h1>
+		</header>
+		<ul class="journal__posts">
+			{% for post in site.posts %}
+		    <li>
+		      <a href="{{ post.url }}">{{ post.title }}</a>
+		    </li>
+		  {% endfor %}
+		</ul>
+	</article>
+</section>
