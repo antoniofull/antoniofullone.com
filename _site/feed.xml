@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Antonio Fullone</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <link>http://antoniofullone.com/</link>
+    <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 23 Oct 2014 06:33:21 +0200</pubDate>
+    <lastBuildDate>Thu, 23 Oct 2014 06:33:21 +0200</lastBuildDate>
+    <generator>Jekyll v2.1.1</generator>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
+        <link>http://antoniofullone.com/jekyll/update/2014/07/25/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://antoniofullone.com/jekyll/update/2014/07/25/welcome-to-jekyll/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Style Guides</title>
+        <description>&lt;div class=&quot;page__wrapper&quot;&gt;
+        &lt;section class=&quot;blog&quot;&gt;
+
+    &lt;article class=&quot;post group&quot;&gt;
+        &lt;header&gt;
+            &lt;h1 class=&quot;post-title&quot;&gt;The purporse of this page is to show the style-guide for my website.&lt;/h1&gt;
+        &lt;/header&gt;
+        &lt;aside class=&quot;post-meta&quot;&gt;
+            &lt;time class=&quot;post-date&quot; datetime=&quot;2014-05-29&quot; pubdate=&quot;&quot;&gt;May 29, 2014&lt;/time&gt;
+            &lt;span class=&quot;post-category&quot;&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/category/personal-2/&quot; title=&quot;View all posts in Personal&quot; rel=&quot;category tag&quot;&gt;Personal&lt;/a&gt;&lt;/span&gt;
+        &lt;/aside&gt;
+        &lt;div class=&quot;post-content&quot;&gt;
+	        &lt;p&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot;&gt;&lt;img class=&quot; wp-image-466 alignnone rwd-img&quot; alt=&quot;I should learn dutch&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Era ancora buio. Lontano, nell’ampia distesa nera dell’Alìa, ammiccava soltanto un lume di carbonai, e più a sinistra la stella del mattino, sopra un nuvolone basso che tagliava l’alba nel lungo altipiano del Paradiso. Per tutta la campagna diffondevasi un uggiolare lugubre di cani. E subito, dal quartiere basso, giunse il suono grave del campanone di San Giovanni che dava l’allarme anch’esso; poi la campana fessa di San Vito; l’altra della chiesa madre, più lontano; quella di Sant’Agata che parve addirittura cascar sul capo agli abitanti della piazzetta.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot;&gt;&lt;img class=&quot; wp-image-474 rwd-img alignnone&quot; alt=&quot;best&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;“Quando uno non ha niente, il meglio è di andarsene.”&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2&gt;This is a header h2&lt;/h2&gt;
+&lt;h3&gt;This is a header h2&lt;/h3&gt;
+&lt;h4&gt;This is a header h2&lt;/h4&gt;
+&lt;h5&gt;This is a header h2&lt;/h5&gt;
+&lt;h3&gt;This is a List.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;ul&gt;
+&lt;li&gt;this is a list&lt;/li&gt;
+&lt;li&gt;item&lt;/li&gt;
+&lt;li&gt;item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;item
+&lt;ul&gt;
+&lt;li&gt;Sub list&lt;/li&gt;
+&lt;li&gt;Sub item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;nbsp;Ordered list&lt;/li&gt;
+&lt;li&gt;Item&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;nbsp;Sub Ordered list&lt;/li&gt;
+&lt;li&gt;Sub Item&lt;/li&gt;
+&lt;li&gt;Sub Item&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!--	--&gt;    &lt;/div&gt;&lt;/article&gt;
+    &lt;div class=&quot;separator bottom&quot;&gt;
+        &lt;span class=&quot;separator--dec&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+	
+&lt;!--	&lt;footer&gt;--&gt;
+&lt;!--		&amp;copy; --&gt;&lt;!-- --&gt;&lt;!--. All rights reserved.--&gt;
+&lt;!--	&lt;/footer&gt;--&gt;
+        &lt;/section&gt;&lt;/div&gt;
+</description>
+        <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
+        <link>http://antoniofullone.com/coding/2014/07/25/style-guides/</link>
+        <guid isPermaLink="true">http://antoniofullone.com/coding/2014/07/25/style-guides/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+  </channel>
+</rss>

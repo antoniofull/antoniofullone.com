@@ -1,0 +1,203 @@
+//   Clearfix. : @extend %group
+
+%group {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+//   Convert Pixel to Rem : pixel for older browsers. @include convertFontSize(16px);
+
+@function convertRem($size) {
+	$remSize: $size / $base-font-size;
+	@return #{$remSize}rem;
+}
+
+@mixin pxToRem($size) {
+	font-size: $size;
+	font-size: convertRem($size);
+}
+
+//   Triangle : @include(up,#dedede,1px,1/2);
+
+@mixin create-triangle($direction, $color, $width, $type:1) {
+
+	width: 0;
+	height: 0;
+	position: absolute;
+	z-index: 100;
+
+	// Up 
+	@if ($direction == 'up') {
+		border-left: $type*$width solid transparent;
+		border-right: $type*$width solid transparent;
+		border-bottom: $width solid $color;
+		content: " ";
+		// Down
+	} @else if ($direction == 'down') {
+		border-left: $type*$width solid transparent;
+		border-right: $type*$width solid transparent;
+		border-top: $width solid $color;
+		content: " ";
+		// Left
+	} @else if ($direction == 'left') {
+		border-top: $type*$width solid transparent;
+		border-bottom: $type*$width solid transparent;
+		border-right: $width solid $color;
+		content: " ";
+		// Right
+	} @else if ($direction == 'right') {
+		border-top: $type*$width solid transparent;
+		border-bottom: $type*$width solid transparent;
+		border-left: $width solid $color;
+		content: " ";
+	}
+
+}
+
+//   Circles : @include cirle(100px,50%);
+
+@mixin create-circle($size, $radius) {
+	display: block;
+	border-radius: $radius;
+	width: $size;
+	height: $size;
+}
+
+//   Animations. Create an animation then @include call-animation(fadeIn)
+
+@mixin call-animation($name, $duration, $iterations, $timing-function, $delay) {
+	-webkit-animation: $name $duration $iterations $timing-function $delay;
+	-moz-animation: $name $duration $iterations $timing-function $delay;
+	-o-animation: $name $duration $iterations $timing-function $delay;
+	animation: $name $duration $iterations $timing-function $delay;
+}
+
+//   Simple tooltip
+
+@mixin tooltip {
+	display: inline;
+	position: relative;
+	z-index: 2;
+	&:before {
+		@include create-triangle(up, #333, 10px, 1/2);
+		transition: opacity 0.1s ease;
+		display: block;
+		content: "";
+		position: absolute;
+		z-index: 400;
+		left: 40%;
+		bottom: -10px;
+		opacity: 0;
+	}
+	&:after {
+		@include pxToRem(10px);
+		@include round-it(5px);
+		display: block;
+		line-height: 30px;
+		transition: all 0.4s ease-in;
+		position: absolute;
+		z-index: 150;
+		content: attr(title);
+		opacity: 0;
+		min-width: 180px;
+		min-height: 30px;
+		background: #333;
+		color: #f5f5f5;
+		padding: 5px;
+		top: calc(100% + 10px);
+		pointer-events: none;
+	}
+	&:hover:after {
+		opacity: 1;
+	}
+	&:hover:before {
+		opacity: 1;
+
+	}
+}
+
+//   I used to use my simple rating system, but this one from Lea Verou is awesome, so I put this
+// http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+
+@mixin star-rating {
+
+	float: left;
+
+	&:not(:checked) > input {
+		position: absolute;
+		top: -9999px;
+		clip: rect(0, 0, 0, 0);
+	}
+
+	&:not(:checked) > label {
+		float: right;
+		width: 1em;
+		padding: 0 .1em;
+		overflow: hidden;
+		white-space: nowrap;
+		cursor: pointer;
+		font-size: 200%;
+		line-height: 1.2;
+		color: #ddd;
+		text-shadow: 1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0, 0, 0, .5);
+	}
+
+	&:not(:checked) > label:before {
+		content: '★ ';
+	}
+
+	> input:checked ~ label {
+		color: #f70;
+		text-shadow: 1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0, 0, 0, .5);
+	}
+
+	&:not(:checked) > label:hover,
+	&:not(:checked) > label:hover ~ label {
+		color: gold;
+		text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0, 0, 0, .5);
+	}
+
+	> input:checked + label:hover,
+	> input:checked + label:hover ~ label,
+	> input:checked ~ label:hover,
+	> input:checked ~ label:hover ~ label,
+	> label:hover ~ input:checked ~ label {
+		color: #ea0;
+		text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0, 0, 0, .5);
+	}
+
+	> label:active {
+		position: relative;
+		top: 2px;
+		left: 2px;
+	}
+}
+
+//	Simple sliders with css
+
+@mixin sliders {
+	border-radius: 10px;
+	width: 100px;
+	height: 30px;
+	background: white;
+	position: relative;
+	z-index: 10;
+	&:after {
+		border-radius: 10px;
+		display: block;
+		content: " ";
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		background: green;
+		position: absolute;
+		z-index: 20;
+	}
+}
+

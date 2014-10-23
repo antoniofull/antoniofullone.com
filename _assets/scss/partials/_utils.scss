@@ -1,0 +1,47 @@
+%group {
+	&:before,
+	&:after {
+		content : " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	@if($is-IE7 == true or $is-IE8 == true){
+	*zoom :1;
+	}
+}
+
+// General utils classes
+
+.hide {
+	position: absolute;
+	left: -9999999em;
+}
+
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+.settings {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	background:url('images/settings.png') no-repeat;
+	display: block;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+// Responsive
+
+.rwd-img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	display: block;
+}

@@ -1,0 +1,364 @@
+/*
+Theme Name: 	Antonio
+Theme URI: 		http://antoniofullone.com
+Description: 	My Personal theme
+Version: 		2.0
+Author: 		Antonio Fullone
+Author URI: 	http://antoniofullone.com
+Tags: 			//
+*/
+/*
+===========================
+CONTENTS:
+===========================
+*/
+.page__wrapper:before, .header:before, .page__wrapper:after, .header:after {
+  content: " ";
+  display: table;
+}
+.page__wrapper:after, .header:after {
+  clear: both;
+}
+
+.hide {
+  position: absolute;
+  left: -9999999em;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+
+.settings {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: url("images/settings.png") no-repeat;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.rwd-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html.baseline {
+  background-image: linear-gradient(#cccccc 1px, transparent 1px);
+  background-size: 100% 1.5em;
+}
+@media only screen and (min-width: 61.25em) {
+  html.baseline {
+    background-size: 100% 1.875em;
+  }
+}
+
+body {
+  background-image: linear-gradient(#cccccc 1px, transparent 1px);
+  background-size: 100% 1.5em;
+  font-family: "skolar", "skolar-1", serif;
+  font-style: normal;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #444444;
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  -webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -moz-font-feature-settings: 'kern=1, onum=1, liga=1';
+  -ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  -o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+}
+
+a {
+  color: #444444;
+}
+a:visited {
+  color: #444444;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
+  -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+}
+
+h1.welcome-quote {
+  font-size: 32px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.132;
+  margin: 18px auto;
+  margin: 1.132rem auto;
+}
+@media only screen and (min-width: 61.25em) {
+  h1.welcome-quote {
+    font-size: 54px;
+    font-size: 3.375rem;
+    line-height: 1;
+  }
+}
+
+.blink {
+  text-decoration: line-through;
+}
+
+em, strong, code {
+  line-height: 1;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
+}
+
+body {
+  max-width: 2000px;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+}
+
+.rwd-img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+@media only screen and (min-width: 61.25em) {
+  .rwd-img {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 61.25em) {
+  #page {
+    max-width: 960px;
+    margin: auto;
+  }
+}
+
+.page__wrapper {
+  max-width: 95%;
+  margin: auto;
+}
+
+/* ==========================================================================
+   Home Page
+   ========================================================================== */
+.home {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+@media only screen and (min-width: 61.25em) {
+  .home__introduction {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 61.25em) {
+  .home__info {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+.home__info .img--me {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.header--top {
+  display: none;
+  background: url("images/bg_nav_top.png") repeat-x;
+  width: 100%;
+  height: 24px;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+
+.header {
+  border-bottom: 1px dotted #cccccc;
+  height: 88px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin: 0.6667em 0;
+  border: 1px solid #F6F4F4;
+  border-radius: 100%;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.logo .logo__circle {
+  display: block;
+  background: #392F2F;
+  border-radius: 50%;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  font-family: "cosmopolitan-1", "cosmopolitan-2", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.logo .logo--text {
+  display: block;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: "cosmopolitan-1", "cosmopolitan-2", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  position: relative;
+  top: 50%;
+  left: -2px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.logo:hover .logo__circle {
+  background-color: #444444;
+}
+
+#logo {
+  float: left;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
+
+/* Nav */
+.nav {
+  font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  float: left;
+  text-transform: uppercase;
+  margin: 1.5em 0 1.5em 1.5em;
+}
+.nav a {
+  display: inline-block;
+  margin-right: 0.889em;
+  text-decoration: none;
+  color: #999999;
+}
+.nav a:last-child {
+  margin-right: 0;
+}
+
+footer {
+  clear: right;
+  height: 120px;
+  width: 100%;
+  max-width: 960px;
+  border-top: 1px dotted #cccccc;
+  margin: 0 auto;
+  position: relative;
+  top: calc(100%-120px);
+  text-align: center;
+}
+footer p {
+  margin-top: 1.5em;
+}
+
+/* ==========================================================================
+   Blog
+   ========================================================================== */
+.blog .post-content img.rwd-img {
+  display: block;
+}
+
+.post {
+  position: relative;
+  top: 0;
+}
+.post .post-meta {
+  position: absolute;
+  z-index: 10;
+  left: -10em;
+  top: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+.post .post-meta .post-date,
+.post .post-meta post-category {
+  display: block;
+}

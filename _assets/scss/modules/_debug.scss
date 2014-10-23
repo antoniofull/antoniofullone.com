@@ -1,0 +1,43 @@
+@if $debug == true {
+
+// Main debug class, migh be needed to together with Javascript
+
+	.debug {
+		background: #ff0000;
+		border: 3px inset yellow;
+
+	}
+
+// Check if there are any empty element in the page ()
+	:empty {
+		padding: 10px;
+		background: #ff0000;
+	}
+
+// If image has both alt and title
+
+	img {
+		outline: 3px solid $red;
+		&[alt][title] {
+			outline: none;
+		}
+		&[alt][title=""] {
+			outline: 3px solid $red;
+		}
+	}
+// links have title ?
+	a {
+		outline: 3px solid $red;
+	}
+
+	a[title] {
+		outline: none;
+	}
+
+// Ensure list has always
+
+}
+
+.warning {
+	outline: 1px solid #ff0000;
+}

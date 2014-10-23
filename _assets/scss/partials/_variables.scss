@@ -1,0 +1,69 @@
+// Debug
+
+$debug: false;
+$red: #ff0000;
+$yellow: #ff0000;
+
+// Legacy Browsers
+$is-IE7 : false;
+$is-IE8 : false;
+$is-IE9 : true;
+
+$cp-grey: #cccccc;
+
+// Typography Base Config
+
+$base-line-height: 24;
+$base-font-size: 16;
+$rhythm-unit: $base-line-height;
+$guide-color: $cp-grey; 
+
+// modular scale values
+// Pixel TODO maybe remove
+// http://modularscale.com/scale/?px1=16&px2=48&ra1=1.5&ra2=0
+
+$typo_scale : (
+	
+	ms1: 0.088,
+	ms2: 0.132,
+	ms3: 0.198,
+	ms4: 0.296,
+	ms5: 0.444,
+	ms6: 0.667,
+	ms7: 1,
+	ms8: 1.5,
+	ms9: 2.25,
+	ms10: 3.375,
+	ms11: 5.063,
+	ms12: 7.594,
+	ms13: 11.391,
+	ms14: 17.086,
+	ms15: 25.629,
+	ms16: 38.443,
+	ms17: 57.665,
+	// Pixel values
+	
+	xx-small : 9,
+	x-small  : 10,
+	small    : 14,
+	base     : 16,
+	medium   : 21,
+	x-medium : 24,
+	large    : 32,
+	x-large  : 36,
+	bigger   : 48,
+	extra    : 54			
+);
+
+// Color Palette
+$cp-white       : #ffffff;
+$cp-black       : #000000;
+$cp-light-black : #444444;
+$cp-grey        : #cccccc;
+$cp-orange      : #F8AC48;
+
+// Breakpoints bp / 16
+
+$bp-large-screen  : 61.25em; // 1024px
+$bp-medium-screen : 40em; // 640px
+
