@@ -131,17 +131,18 @@ h6 {
 
 h1 {
 	&.welcome-quote {
-		$typo_value: map-get($typo_scale, ms7) + map-get($typo_scale, ms2);
+		$typo_value: map-get($typo_scale, ms7) + map-get($typo_scale, ms3);
 		@include toRem(map-get($typo_scale, large));
 		text-align: center; 
 		line-height: $typo_value;
+		//line-height: 2;
 		margin: #{round($typo_value * $base-font-size)}px auto;
 		margin: #{$typo_value}rem auto;
 		@include mq($bp-large-screen){
 			@include toRem(map-get($typo_scale, extra));
 			line-height: map-get($typo_scale, ms7);
 		}
-		 
+ 
 	}
 }
 

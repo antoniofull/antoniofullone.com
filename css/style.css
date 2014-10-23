@@ -114,9 +114,9 @@ h1.welcome-quote {
   font-size: 32px;
   font-size: 2rem;
   text-align: center;
-  line-height: 1.132;
-  margin: 18px auto;
-  margin: 1.132rem auto;
+  line-height: 1.198;
+  margin: 19px auto;
+  margin: 1.198rem auto;
 }
 @media only screen and (min-width: 61.25em) {
   h1.welcome-quote {
@@ -202,7 +202,22 @@ body {
 }
 
 /* ==========================================================================
-   Home Page
+   Elements : Images
+   ========================================================================== */
+.img--me {
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.img--about {
+  display: block;
+  height: 192px;
+  overflow: hidden;
+  margin-bottom: 0.132;
+}
+
+/* ==========================================================================
+   Page : Home
    ========================================================================== */
 .home {
   max-width: 100%;
@@ -230,11 +245,10 @@ body {
     margin-right: 1.69492%;
   }
 }
-.home__info .img--me {
-  display: block;
-  margin: 1.5rem auto;
-}
 
+/* ==========================================================================
+   Page : About
+   ========================================================================== */
 .header--top {
   display: none;
   background: url("images/bg_nav_top.png") repeat-x;
@@ -249,6 +263,7 @@ body {
 .header {
   border-bottom: 1px dotted #cccccc;
   height: 88px;
+  margin-bottom: 1em;
 }
 
 .logo {
@@ -362,3 +377,5 @@ footer p {
 .post .post-meta post-category {
   display: block;
 }
+
+/*# sourceMappingURL=style.css.map */

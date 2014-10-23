@@ -3,11 +3,11 @@
   <channel>
     <title>Antonio Fullone</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
-    <link>http://antoniofullone.com//</link>
-    <atom:link href="http://antoniofullone.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Oct 2014 07:27:49 +0200</pubDate>
-    <lastBuildDate>Thu, 23 Oct 2014 07:27:49 +0200</lastBuildDate>
-    <generator>Jekyll v2.1.1</generator>
+    <link>http://antoniofullone.com/</link>
+    <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 23 Oct 2014 10:18:55 +0200</pubDate>
+    <lastBuildDate>Thu, 23 Oct 2014 10:18:55 +0200</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Welcome to Jekyll!</title>
@@ -26,8 +26,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 </description>
         <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
-        <link>http://antoniofullone.com//jekyll/update/2014/07/25/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://antoniofullone.com//jekyll/update/2014/07/25/welcome-to-jekyll/</guid>
+        <link>http://antoniofullone.com/jekyll/update/2014/07/25/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://antoniofullone.com/jekyll/update/2014/07/25/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>
@@ -96,8 +96,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
         &lt;/section&gt;&lt;/div&gt;
 </description>
         <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
-        <link>http://antoniofullone.com//coding/2014/07/25/style-guides/</link>
-        <guid isPermaLink="true">http://antoniofullone.com//coding/2014/07/25/style-guides/</guid>
+        <link>http://antoniofullone.com/coding/2014/07/25/style-guides/</link>
+        <guid isPermaLink="true">http://antoniofullone.com/coding/2014/07/25/style-guides/</guid>
         
         
         <category>coding</category>
