@@ -30,10 +30,10 @@
 	position: fixed;
 	top: 20px;
 	right: 20px;
-	background:url('images/settings.png') no-repeat;
+	background: url('#{$img-path}/settings.png') no-repeat;
 	display: block;
-	width: 50px;
-	height: 50px;
+	width: 36px;
+	height: 36px;
 	cursor: pointer;
 }
 

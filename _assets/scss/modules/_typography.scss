@@ -78,10 +78,9 @@ html {
 			background-size: 100% 1.875em;
 		}
 	}
-}
+} 
 
 body {
-	@include baseline-guide;
 	@include skolar;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;

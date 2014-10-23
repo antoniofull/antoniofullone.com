@@ -5,6 +5,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-browserify');
+	grunt.loadNpmTasks('grunt-watchify');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	
 	
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
@@ -35,6 +39,26 @@ module.exports = function(grunt) {
 			}			
 		},
 		
+		watchify: {
+			options: {
+				watch: true,
+				keepAlive: true
+			},
+			script: {
+				src: './script.js',
+				dest: './scripts.js'
+			}
+
+		},
+
+		jshint: {
+			options : {
+
+			},
+
+			all: ['./_assets/js/**/*.js']
+		},
+		
 		watch : {
 			css : {
 				files: ['_assets/scss/**/*.scss'],
@@ -42,7 +66,7 @@ module.exports = function(grunt) {
 			},
 
 			js: {
-				files: ['js/modules/**/*.js'],
+				files: ['_assets/js/**/*.js'],
 				tasks: ['watchify', 'jshint']
 			},
 
@@ -56,5 +80,7 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.registerTask('css', ['sass']);
-	grunt.registerTask('css-dev',['watch']);
+	grunt.registerTask('dev',['watch']);
+	grunt.registerTask('default',['watch']);
+	
 }
