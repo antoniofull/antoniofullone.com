@@ -78,9 +78,9 @@ body {
 
 .img--about {
 	display: block;
-	height: 192px;
+	max-height: 192px;
 	overflow: hidden;
-	margin-bottom: map-get($typo_scale, ms2);
+	margin-bottom: 1.6667em;  
 }
 
 /* ==========================================================================
@@ -89,8 +89,7 @@ body {
 
 .home {
 	@include container(100%);
-	@include mq($bp-large-screen) {	
-
+	@include mq($bp-large-screen) {
 	}
 }
 
