@@ -5,8 +5,8 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Oct 2014 21:37:31 +0200</pubDate>
-    <lastBuildDate>Thu, 23 Oct 2014 21:37:31 +0200</lastBuildDate>
+    <pubDate>Thu, 23 Oct 2014 22:57:17 +0200</pubDate>
+    <lastBuildDate>Thu, 23 Oct 2014 22:57:17 +0200</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
@@ -38,19 +38,7 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
     
       <item>
         <title>Style Guides</title>
-        <description>&lt;div class=&quot;page__wrapper&quot;&gt;
-        &lt;section class=&quot;blog&quot;&gt;
-
-    &lt;article class=&quot;post group&quot;&gt;
-        &lt;header&gt;
-            &lt;h1 class=&quot;post-title&quot;&gt;The purporse of this page is to show the style-guide for my website.&lt;/h1&gt;
-        &lt;/header&gt;
-        &lt;aside class=&quot;post-meta&quot;&gt;
-            &lt;time class=&quot;post-date&quot; datetime=&quot;2014-05-29&quot; pubdate=&quot;&quot;&gt;May 29, 2014&lt;/time&gt;
-            &lt;span class=&quot;post-category&quot;&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/category/personal-2/&quot; title=&quot;View all posts in Personal&quot; rel=&quot;category tag&quot;&gt;Personal&lt;/a&gt;&lt;/span&gt;
-        &lt;/aside&gt;
-        &lt;div class=&quot;post-content&quot;&gt;
-	        &lt;p&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot;&gt;&lt;img class=&quot; wp-image-466 alignnone rwd-img&quot; alt=&quot;I should learn dutch&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot;&gt;&lt;img class=&quot; wp-image-466 alignnone rwd-img&quot; alt=&quot;I should learn dutch&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Era ancora buio. Lontano, nell’ampia distesa nera dell’Alìa, ammiccava soltanto un lume di carbonai, e più a sinistra la stella del mattino, sopra un nuvolone basso che tagliava l’alba nel lungo altipiano del Paradiso. Per tutta la campagna diffondevasi un uggiolare lugubre di cani. E subito, dal quartiere basso, giunse il suono grave del campanone di San Giovanni che dava l’allarme anch’esso; poi la campana fessa di San Vito; l’altra della chiesa madre, più lontano; quella di Sant’Agata che parve addirittura cascar sul capo agli abitanti della piazzetta.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot;&gt;&lt;img class=&quot; wp-image-474 rwd-img alignnone&quot; alt=&quot;best&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;“Quando uno non ha niente, il meglio è di andarsene.”&lt;/p&gt;&lt;/blockquote&gt;
@@ -85,15 +73,20 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;!--	--&gt;    &lt;/div&gt;&lt;/article&gt;
-    &lt;div class=&quot;separator bottom&quot;&gt;
-        &lt;span class=&quot;separator--dec&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-	
+&lt;!--	--&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/div&amp;gt;&amp;lt;/article&amp;gt;
+&amp;lt;div class=&quot;separator bottom&quot;&amp;gt;
+    &amp;lt;span class=&quot;separator--dec&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;!--	&lt;footer&gt;--&gt;
-&lt;!--		&amp;copy; --&gt;&lt;!-- --&gt;&lt;!--. All rights reserved.--&gt;
+&lt;!--		&amp;copy; --&gt;
+&lt;!-- --&gt;
+&lt;!--. All rights reserved.--&gt;
 &lt;!--	&lt;/footer&gt;--&gt;
-        &lt;/section&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;/section&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
         <link>http://antoniofullone.com/coding/2014/07/25/style-guides/</link>

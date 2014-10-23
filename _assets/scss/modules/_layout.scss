@@ -78,8 +78,11 @@ body {
 
 .img--about {
 	display: block;
-	max-height: 192px;
-	margin-bottom: 1.6667em;  
+	opacity: 0.9;
+	transition: all 0.3s ease-out;
+	& > img:hover {
+		border: 1px solid $cp-orange;  
+	}
 }
 
 /* ==========================================================================
@@ -110,10 +113,18 @@ body {
 .about__title {
 	
 }
-
 /* ==========================================================================
-   Page : Post Template
+   Page : Journal
    ========================================================================== */
 
-.post {
+.title--journal {
+
+}
+
+
+.journal__posts {
+	list-style-type: hiragana-iroha;
+	li a { 
+		text-decoration: none;
+	}
 }

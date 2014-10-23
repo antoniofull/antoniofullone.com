@@ -190,6 +190,13 @@ em, strong, code {
 blockquote {
 	font-style: italic;
 	border-left :  1px solid #ff0000;
+	padding-left:10px;
 	max-width: 85%;
 	margin: auto;
 }
+.meta {
+	font-style: italic;
+	display:block;
+	text-align: center;
+}
+

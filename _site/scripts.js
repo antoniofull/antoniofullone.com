@@ -9,7 +9,6 @@
 			this.body = document.body;
 
 			var self = this;
-			console.log(settings); 
 			if(settings) {
 				settings.addEventListener('click', function(e){
 					self.showGrid(e);
@@ -27,4 +26,14 @@
 	
 })();
 
-},{}]
+},{}],2:[function(require,module,exports){
+
+var utils = require('./_assets/js/utils');
+
+document.addEventListener('DOMContentLoaded', function() {
+	if(document.querySelector('.settings')) {
+		utils.initialize();
+  	}
+});
+
+},{"./_assets/js/utils":1}]},{},[2])

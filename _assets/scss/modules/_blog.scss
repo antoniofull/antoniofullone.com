@@ -1,33 +1,14 @@
 /* ==========================================================================
    Blog
    ========================================================================== */
-.blog {
-	// fix for separator in single.php margin-bottom
-	.post-content {
-		img.rwd-img {
-			display: block;
-
-		}
-	}
-}
-
 .post {
 	position: relative;
-	top: 0;
-	.post-meta {
-//		float: left;
-//		margin-left: -10em;
-//		max-width: 120px;
-//		width: auto;
-		position: absolute;
-		z-index: 10;
-		left: -10em;
-		top: 0;
-		font-size: 14px;
-		font-style: italic;
-		.post-date,
-		post-category {
-			display: block;
+	top: -1em;
+	.post-header {
+		h1 {
+			margin: 0;
+			margin-top: #{map-get($typo_scale, ms2)}em; 
+			text-align: center;
 		}
 	}
 }

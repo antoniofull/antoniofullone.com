@@ -5,7 +5,7 @@ Description: 	My Personal theme
 Version: 		2.0
 Author: 		Antonio Fullone
 Author URI: 	http://antoniofullone.com
-Tags: 			//
+Tags: 			#lazy 
 */
 /*
 ===========================
@@ -156,8 +156,15 @@ em, strong, code {
 blockquote {
   font-style: italic;
   border-left: 1px solid #ff0000;
+  padding-left: 10px;
   max-width: 85%;
   margin: auto;
+}
+
+.meta {
+  font-style: italic;
+  display: block;
+  text-align: center;
 }
 
 /* ==========================================================================
@@ -237,8 +244,11 @@ body {
 
 .img--about {
   display: block;
-  max-height: 192px;
-  margin-bottom: 1.6667em;
+  opacity: 0.9;
+  transition: all 0.3s ease-out;
+}
+.img--about > img:hover {
+  border: 1px solid #f8ac48;
 }
 
 /* ==========================================================================
@@ -275,8 +285,15 @@ body {
    Page : About
    ========================================================================== */
 /* ==========================================================================
-   Page : Post Template
+   Page : Journal
    ========================================================================== */
+.journal__posts {
+  list-style-type: hiragana-iroha;
+}
+.journal__posts li a {
+  text-decoration: none;
+}
+
 .header--top {
   display: none;
   background: url("images/bg_nav_top.png") repeat-x;
@@ -385,23 +402,12 @@ footer p {
 /* ==========================================================================
    Blog
    ========================================================================== */
-.blog .post-content img.rwd-img {
-  display: block;
-}
-
 .post {
   position: relative;
-  top: 0;
+  top: -1em;
 }
-.post .post-meta {
-  position: absolute;
-  z-index: 10;
-  left: -10em;
-  top: 0;
-  font-size: 14px;
-  font-style: italic;
-}
-.post .post-meta .post-date,
-.post .post-meta post-category {
-  display: block;
+.post .post-header h1 {
+  margin: 0;
+  margin-top: 0.132em;
+  text-align: center;
 }
