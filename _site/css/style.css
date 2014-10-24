@@ -84,9 +84,9 @@ html.baseline {
 }
 
 body {
-  font-family: "skolar", "skolar-1", serif;
+  font-family: "freight-text-pro-1", "freight-text-pro-2", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -117,6 +117,9 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
+  font-style: normal;
+  font-weight: 700;
   -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   -moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
   -ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -125,11 +128,14 @@ h6 {
 }
 
 h1 {
-  font-size: 36;
+  font-size: 36px;
   font-size: 2.25rem;
-  line-height: 1.5;
+  line-height: 1.667;
 }
 h1.welcome-quote {
+  font-family: "skolar", "skolar-1", serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 32px;
   font-size: 2rem;
   text-align: center;
@@ -149,7 +155,9 @@ h1.welcome-quote {
   text-decoration: line-through;
 }
 
-em, strong, code {
+em,
+strong,
+code {
   line-height: 1;
 }
 
@@ -165,6 +173,7 @@ blockquote {
   font-style: italic;
   display: block;
   text-align: center;
+  line-height: 2.25;
 }
 
 /* ==========================================================================
@@ -248,7 +257,7 @@ body {
   transition: all 0.3s ease-out;
 }
 .img--about > img:hover {
-  border: 1px solid #f8ac48;
+  border: 1px solid #F8AC48;
 }
 
 /* ==========================================================================
@@ -292,6 +301,10 @@ body {
 }
 .journal__posts li a {
   text-decoration: none;
+}
+
+.post-content img {
+  max-height: 192px;
 }
 
 .header--top {
@@ -411,3 +424,5 @@ footer p {
   margin-top: 0.132em;
   text-align: center;
 }
+
+/*# sourceMappingURL=style.css.map */

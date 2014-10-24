@@ -81,7 +81,9 @@ html {
 } 
 
 body {
-	@include skolar;
+	//@include skolar;
+	
+	@include freight-text-pro;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -121,6 +123,7 @@ h3,
 h4,
 h5,
 h6 {
+	@include freightBold;
 	-webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
 	-moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
 	-ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
@@ -129,10 +132,11 @@ h6 {
 }
 
 h1 {
-	font-size: #{$base-font-size * map-get($typo_scale, ms9)}; // Pixel :/
+	font-size: #{$base-font-size * map-get($typo_scale, ms9)}px; // Pixel :/
 	font-size: #{map-get($typo_scale, ms9)}rem; // Rem
-	line-height: map-get($typo_scale, ms8);
+	line-height: 1.667;
 	&.welcome-quote {
+		@include skolar;  
 		$typo_value: map-get($typo_scale, ms7) + map-get($typo_scale, ms3);
 		@include toRem(map-get($typo_scale, large));
 		text-align: center; 
@@ -140,7 +144,7 @@ h1 {
 
 		margin: #{round($typo_value * $base-font-size)}px auto;
 		margin: #{$typo_value}rem auto;
-		@include mq($bp-large-screen){
+		@include mq($bp-large-screen) {
 			@include toRem(map-get($typo_scale, extra));
 			line-height: map-get($typo_scale, ms7);
 		}
@@ -183,7 +187,9 @@ ol {
 	}
 }
 
-em, strong, code {
+em, 
+strong, 
+code {
 	line-height: 1;
 }
 
@@ -198,5 +204,6 @@ blockquote {
 	font-style: italic;
 	display:block;
 	text-align: center;
+	line-height: map-get($typo_scale, ms9);
 }
 
