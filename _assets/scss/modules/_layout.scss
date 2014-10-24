@@ -45,7 +45,7 @@ body {
 }
 
 .rwd-img {
-	@include mq($bp-large-screen){
+	@include mq($bp-large-screen) {
 		width: auto;
 		max-width: 100%;
 	}
@@ -97,8 +97,21 @@ body {
 
 .home__introduction {
 	@include mq($bp-large-screen) {
-		@include span(9 of 12 last);
+		@include span(12 of 12 last);
 	}
+	.home__social {
+		display: none;
+		@include mq($bp-large-screen) {
+			@include span(2 of 12);
+			display: block;
+		}
+	}
+//	.home__entry {
+//		@include span(3 of 12);
+//	}
+//	.home__info {
+//		@include span(7 of 12);
+//	}
 }
 .home__info {
 	@include mq($bp-large-screen) {
@@ -110,9 +123,14 @@ body {
    Page : About
    ========================================================================== */
 
-.about__title {
-	
+.title--about {
+	margin-top:0;
 }
+.about__me {
+	@extend .home__introduction;
+}
+
+
 /* ==========================================================================
    Page : Journal
    ========================================================================== */
@@ -120,7 +138,11 @@ body {
 .title--journal {
 
 }
-
+.home__introduction {
+	max-width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .journal__posts {
 	list-style-type: hiragana-iroha;

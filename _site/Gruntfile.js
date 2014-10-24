@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 	});
 	
 	grunt.registerTask('css', ['sass']);
-	grunt.registerTask('dev',['watch']);
-	grunt.registerTask('default',['watch']);
+	grunt.registerTask('dev',['watch', 'watchify']);
+	grunt.registerTask('default',['watch', 'watchify']);
 	
 }

@@ -62,7 +62,7 @@
 // Generate a baseline guide equal to the rhythm unit
 @mixin baseline-guide {
 	background-image: linear-gradient($guide-color 1px, transparent 1px);
-	background-size: 100% em($rhythm-unit);
+	background-size: 100% px($rhythm-unit);
 }
 
 .typogrid {}
@@ -82,13 +82,13 @@ html {
 
 body {
 	//@include skolar;
-	
 	@include freight-text-pro;
+	font-size: #{$base-font-size}px;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	color: $cp-light-black;
-	line-height: 1.5;
+	line-height: $base-line-height;
 }
 
 p {
@@ -213,7 +213,7 @@ blockquote {
 pre {
 	font-size: #{$base-font-size}px;
 	line-height: 1.5;
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 	font-weight: normal;
 	font-style: italic;
 	padding: 10px;
@@ -224,4 +224,12 @@ pre {
 	max-width: 90%;
 	background: #fcf8e3;
 	overflow-x: auto;	
+}
+
+
+
+.nav {
+	@include toRem(18);
+	@include freight;
+	
 }

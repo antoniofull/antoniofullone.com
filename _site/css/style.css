@@ -75,7 +75,7 @@ html {
 }
 html.baseline {
   background-image: linear-gradient(#cccccc 1px, transparent 1px);
-  background-size: 100% 1.5em;
+  background-size: 100% px(27);
 }
 @media only screen and (min-width: 61.25em) {
   html.baseline {
@@ -87,11 +87,12 @@ body {
   font-family: "freight-text-pro-1", "freight-text-pro-2", sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 19px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   color: #444444;
-  line-height: 1.5;
+  line-height: 1.875;
 }
 
 p {
@@ -128,7 +129,7 @@ h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 42.75px;
   font-size: 2.25rem;
   line-height: 1.667;
 }
@@ -137,16 +138,16 @@ h1.welcome-quote {
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
-  font-size: 2rem;
+  font-size: 1.68421rem;
   text-align: center;
   line-height: 1.198;
-  margin: 19px auto;
+  margin: 23px auto;
   margin: 1.198rem auto;
 }
 @media only screen and (min-width: 61.25em) {
   h1.welcome-quote {
     font-size: 54px;
-    font-size: 3.375rem;
+    font-size: 2.84211rem;
     line-height: 1;
   }
 }
@@ -180,7 +181,7 @@ blockquote {
 }
 
 pre {
-  font-size: 16px;
+  font-size: 19px;
   line-height: 1.5;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-weight: normal;
@@ -193,6 +194,14 @@ pre {
   max-width: 90%;
   background: #fcf8e3;
   overflow-x: auto;
+}
+
+.nav {
+  font-size: 18px;
+  font-size: 0.94737rem;
+  font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* ==========================================================================
@@ -294,10 +303,21 @@ body {
 }
 
 @media only screen and (min-width: 61.25em) {
-  .home__introduction {
-    width: 74.57627%;
+  .home__introduction, .about__me {
+    width: 100%;
     float: right;
     margin-right: 0;
+  }
+}
+.home__introduction .home__social, .about__me .home__social {
+  display: none;
+}
+@media only screen and (min-width: 61.25em) {
+  .home__introduction .home__social, .about__me .home__social {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+    display: block;
   }
 }
 
@@ -312,9 +332,19 @@ body {
 /* ==========================================================================
    Page : About
    ========================================================================== */
+.title--about {
+  margin-top: 0;
+}
+
 /* ==========================================================================
    Page : Journal
    ========================================================================== */
+.home__introduction, .about__me {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .journal__posts {
   list-style-type: hiragana-iroha;
 }
@@ -399,9 +429,6 @@ body {
 
 /* Nav */
 .nav {
-  font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   float: left;
   text-transform: uppercase;
   margin: 1.5em 0 1.5em 1.5em;

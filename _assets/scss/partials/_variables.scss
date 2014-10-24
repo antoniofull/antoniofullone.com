@@ -16,9 +16,9 @@ $cp-grey: #cccccc;
 $img-path: '/images/css';
 // Typography Base Config
 
-$base-line-height: 24;
-$base-font-size: 16;
-$rhythm-unit: $base-line-height;
+$base-line-height: 1.875;
+$base-font-size: 19; // 1.5 / 16 = x / 20
+$rhythm-unit: 27;
 $guide-color: $cp-grey; 
 
 // modular scale values

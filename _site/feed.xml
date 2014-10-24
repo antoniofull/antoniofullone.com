@@ -29,7 +29,7 @@
         ga('send', 'pageview');
     </script>
 </head>
-	<body class="home">
+	<body class="home baseline">
 
     <body>
 		<!--[if lt IE 8]>
@@ -46,7 +46,6 @@
 					<span class="logo--text">A</span>
 				</span>
 			</div>
-			<!--<img id="logo" src="images/logo.png" alt="Antonio Fullone" class="" title="test"/>-->
 		</a>
 		<nav class="nav" role="navigation">
 			<a href="/antonio/" title="About me">About</a>
@@ -54,7 +53,7 @@
 			<a href="/lab/" title="Contact me">My Lab</a>
 		</nav>
 	</header>
-    <div class="page__wrapper">
+	<div class="page__wrapper">
 
       <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -63,8 +62,8 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Oct 2014 15:41:26 +0200</pubDate>
-    <lastBuildDate>Fri, 24 Oct 2014 15:41:26 +0200</lastBuildDate>
+    <pubDate>Fri, 24 Oct 2014 21:56:18 +0200</pubDate>
+    <lastBuildDate>Fri, 24 Oct 2014 21:56:18 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>

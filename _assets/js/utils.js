@@ -5,10 +5,9 @@
 
 		initialize: function() {
 			var settings = document.querySelector('.settings'); 
+			var self = this;
 			this.body = document.body;
 
-			var self = this;
-			console.log(settings); 
 			if(settings) {
 				settings.addEventListener('click', function(e){
 					self.showGrid(e);
@@ -23,5 +22,6 @@
 	};
 
 	module.exports = Utils;
-	
+		
 })();
+
