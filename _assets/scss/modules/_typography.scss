@@ -148,6 +148,9 @@ h1 {
 			@include toRem(map-get($typo_scale, extra));
 			line-height: map-get($typo_scale, ms7);
 		}
+		&.title--about {
+			margin: 0.667em 0;
+		}
  
 	}
 }
@@ -210,6 +213,7 @@ blockquote {
 pre {
 	font-size: #{$base-font-size}px;
 	line-height: 1.5;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 	font-weight: normal;
 	font-style: italic;
 	padding: 10px;
@@ -219,6 +223,5 @@ pre {
 	border-radius: 4px;
 	max-width: 90%;
 	background: #fcf8e3;
-	margin: 0 auto 1.5em auto;
 	overflow-x: auto;	
 }
