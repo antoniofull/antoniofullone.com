@@ -135,7 +135,7 @@ body {
 }
 .home__entry {
 	@include mq($bp-large-screen) {
-		@include span(6 of 12 last);
+		@include span(7 of 12 last);
 	}
 	
 }
@@ -144,7 +144,6 @@ body {
 		@include span(12 of 12);
 	}
 	.home__social {
-		display: none;
 		@include mq($bp-large-screen) {
 			@include span(2 of 12);
 			display: block;
@@ -153,15 +152,34 @@ body {
 
 }
 .home__info {
-	@include mq($bp-large-screen) {
-		@include span(3 of 12); 
+	figure { 
+		img {
+			@include mq($bp-medium-screen) {
+				@include rwd-img;
+			}			
+		}
 	}
-	@include custom-mq($bp-medium-screen, $bp-large-screen) {
-		@include span(3 of 12); 
+	@include mq($bp-medium-screen) {
+		@include span(2 of 12); 
 	}
-
 }
-
+.home__social {
+	ul {
+		@include toRem(map-get($typo_scale, base));
+		font-style: italic;
+		margin-top: #{map-get($typo_scale, ms8)}em;
+		li {
+			border-bottom:1px dotted $cp-grey;
+			transition: all 0.3s ease-out;
+			&:hover {
+				border-bottom:1px dotted $cp-orange;
+			}
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
 /* ==========================================================================
    Page : About
    ========================================================================== */

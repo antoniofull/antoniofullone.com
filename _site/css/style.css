@@ -357,7 +357,7 @@ body {
 
 @media only screen and (min-width: 61.25em) {
   .home__entry {
-    width: 49.15254%;
+    width: 57.62712%;
     float: right;
     margin-right: 0;
   }
@@ -371,9 +371,6 @@ body {
     margin-right: 0;
   }
 }
-.home__introduction .home__social, .about__me .home__social {
-  display: none;
-}
 @media only screen and (min-width: 61.25em) {
   .home__introduction .home__social, .about__me .home__social {
     width: 15.25424%;
@@ -383,19 +380,37 @@ body {
   }
 }
 
-@media only screen and (min-width: 61.25em) {
+@media only screen and (min-width: 40em) {
+  .home__info figure img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+@media only screen and (min-width: 40em) {
   .home__info {
-    width: 23.72881%;
+    width: 15.25424%;
     float: left;
     margin-right: 1.69492%;
   }
 }
-@media only screen and (min-width: 40em) and (max-width: 61.25em) {
-  .home__info {
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-  }
+
+.home__social ul {
+  font-size: 16px;
+  font-size: 0.88889rem;
+  font-style: italic;
+  margin-top: 1.5em;
+}
+.home__social ul li {
+  border-bottom: 1px dotted #cccccc;
+  transition: all 0.3s ease-out;
+}
+.home__social ul li:hover {
+  border-bottom: 1px dotted #F8AC48;
+}
+.home__social ul a {
+  text-decoration: none;
 }
 
 /* ==========================================================================
