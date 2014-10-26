@@ -1,9 +1,4 @@
 // Typography Mixins
-@mixin minion-pro {
-	font-family: "minion-pro-1", "minion-pro-2", sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
 
 @mixin freight {
 	font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
@@ -24,18 +19,12 @@
 }
 
 @mixin scala {
-	font-family: "ff-scala-web-sc-1", "ff-scala-web-sc-2", sans-serif;
+	font-family: "ff-scala-web-1","ff-scala-web-2",sans-serif;
 	font-style: normal;
 	font-weight: 400;
 
 }
 
-@mixin tisa {
-	font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", serif;
-	font-style: normal;
-	font-weight: 400;
-
-}
 
 @mixin freight-text-pro {
 	font-family: "freight-text-pro-1", "freight-text-pro-2", sans-serif;
@@ -43,11 +32,6 @@
 	font-weight: 300;
 }
 
-@mixin garamond {
-	font-family: "adobe-garamond-pro-1", "adobe-garamond-pro-2", sans-serif;
-	font-style: normal;
-	font-weight: 400;
-}
 
 
 
@@ -75,13 +59,13 @@ html {
 	&.baseline {
 		@include baseline-guide;
 		@include mq($bp-large-screen) {
-			background-size: 100% 1.875em;
+			background-size: 100% 1.875em; 
 		}
 	}
 } 
 
 body {
-	//@include skolar;
+	//@include scala;
 	@include freight-text-pro;
 	font-size: #{$base-font-size}px;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
@@ -138,13 +122,13 @@ h1 {
 	&.welcome-quote {
 		@include skolar;  
 		$typo_value: map-get($typo_scale, ms7) + map-get($typo_scale, ms3);
-		@include toRem(map-get($typo_scale, large));
+		@include toRem(map-get($typo_scale, x-large));
 		text-align: center; 
 		line-height: $typo_value;
-
+		transition: all 0.3s ease-in;
 		margin: #{round($typo_value * $base-font-size)}px auto;
 		margin: #{$typo_value}rem auto;
-		@include mq($bp-large-screen) {
+		@include mq($bp-medium-screen) {
 			@include toRem(map-get($typo_scale, extra));
 			line-height: map-get($typo_scale, ms7);
 		}
@@ -173,7 +157,11 @@ h6 {
 }
 
 blockquote {
-	
+	font-style: italic;
+	border-left : 1px solid $cp-grey;
+	padding-left:10px;
+	max-width: 85%;
+	margin: auto;
 }
 
 ul,
@@ -196,13 +184,7 @@ code {
 	line-height: 1;
 }
 
-blockquote {
-	font-style: italic;
-	border-left :  1px solid #ff0000;
-	padding-left:10px;
-	max-width: 85%;
-	margin: auto;
-}
+
 .meta {
 	font-style: italic;
 	display:block;
@@ -211,9 +193,9 @@ blockquote {
 }
 
 pre {
-	font-size: #{$base-font-size}px;
+	font-size: #{$base-font-size - 3}px;
 	line-height: 1.5;
-	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 	font-weight: normal;
 	font-style: italic;
 	padding: 10px;
@@ -225,7 +207,17 @@ pre {
 	background: #fcf8e3;
 	overflow-x: auto;	
 }
-
+figure {
+	position: relative;
+	figcaption {
+		@include toRem(map-get($typo_scale, small));
+		font-style: italic;
+		margin-top: 0.6667em;
+		border-bottom: 1px dotted $cp-grey;
+		width: auto;
+		display: inline-block;
+	}
+}
 
 
 .nav {

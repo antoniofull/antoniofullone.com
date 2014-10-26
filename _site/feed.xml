@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" href="/img/favicon.ico"/>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/css/style.css">
-	<script src="/js/modernizr.custom.js"></script>
+<!--	<script src="/js/modernizr.custom.js"></script> -->
 	<script type="text/javascript" src="//use.typekit.net/otj2fxp.js"></script>
 	<script type="text/javascript" src="//use.typekit.net/szm0avi.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -62,8 +62,8 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Oct 2014 21:56:18 +0200</pubDate>
-    <lastBuildDate>Fri, 24 Oct 2014 21:56:18 +0200</lastBuildDate>
+    <pubDate>Sun, 26 Oct 2014 21:25:07 +0100</pubDate>
+    <lastBuildDate>Sun, 26 Oct 2014 21:25:07 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -95,9 +95,19 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
     
       <item>
         <title>Style Guides</title>
-        <description>&lt;p&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot;&gt;&lt;img class=&quot; wp-image-466 alignnone rwd-img&quot; alt=&quot;I should learn dutch&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;
+	&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot;&gt;
+		&lt;figure class=&quot;img--post-default&quot;&gt;
+			&lt;img class=&quot;&quot; alt=&quot;&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot; /&gt;
+			&lt;figcaption&gt;Where I would like to be now.&lt;/figcaption&gt;
+		&lt;/figure&gt;
+	&lt;/a&gt;
+&lt;/p&gt;
 &lt;p&gt;Era ancora buio. Lontano, nell’ampia distesa nera dell’Alìa, ammiccava soltanto un lume di carbonai, e più a sinistra la stella del mattino, sopra un nuvolone basso che tagliava l’alba nel lungo altipiano del Paradiso. Per tutta la campagna diffondevasi un uggiolare lugubre di cani. E subito, dal quartiere basso, giunse il suono grave del campanone di San Giovanni che dava l’allarme anch’esso; poi la campana fessa di San Vito; l’altra della chiesa madre, più lontano; quella di Sant’Agata che parve addirittura cascar sul capo agli abitanti della piazzetta.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot;&gt;&lt;img class=&quot; wp-image-474 rwd-img alignnone&quot; alt=&quot;best&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+	&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot;&gt;
+		&lt;figure class=&quot;img--post-large&quot;&gt;&lt;img class=&quot;&quot; alt=&quot;best&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot; /&gt;&lt;figcaption&gt;Where I will go one day&lt;/figcaption&gt;&lt;/figure&gt;
+		&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;“Quando uno non ha niente, il meglio è di andarsene.”&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2&gt;This is a header h2&lt;/h2&gt;
 &lt;h3&gt;This is a header h2&lt;/h3&gt;
@@ -123,27 +133,13 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 &lt;li&gt;&amp;nbsp;Ordered list&lt;/li&gt;
 &lt;li&gt;Item&lt;/li&gt;
 &lt;li&gt;
-&lt;ol&gt;
+	&lt;ol&gt;
 &lt;li&gt;&amp;nbsp;Sub Ordered list&lt;/li&gt;
 &lt;li&gt;Sub Item&lt;/li&gt;
 &lt;li&gt;Sub Item&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;!--	--&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;/div&amp;gt;&amp;lt;/article&amp;gt;
-&amp;lt;div class=&quot;separator bottom&quot;&amp;gt;
-    &amp;lt;span class=&quot;separator--dec&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;!--	&lt;footer&gt;--&gt;
-&lt;!--		&amp;copy; --&gt;
-&lt;!-- --&gt;
-&lt;!--. All rights reserved.--&gt;
-&lt;!--	&lt;/footer&gt;--&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;/section&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
         <link>http://antoniofullone.com/coding/2014/07/25/style-guides/</link>
@@ -167,7 +163,7 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 	</p>
 	<p class="footer_copyright">Antonio Fullone - &copy;2009 - 2013</p>
 </footer>
-<script src="/scripts.js"></script> 
+<script src="/main.js"></script> 
 
     </body>
 </html>

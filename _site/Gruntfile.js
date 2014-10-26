@@ -45,8 +45,8 @@ module.exports = function(grunt) {
 				keepAlive: true
 			},
 			script: {
-				src: './script.js',
-				dest: './scripts.js'
+				src: './_assets/js/script.js',
+				dest: './main.js'
 			}
 
 		},
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 			options : {
 
 			},
-
+ 		   
 			all: ['./_assets/js/**/*.js']
 		},
 		
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 			},
 
 			js: {
-				files: ['_assets/js/**/*.js'],
+				files: ['./_assets/js/**/*.js'],
 				tasks: ['watchify', 'jshint']
 			},
 

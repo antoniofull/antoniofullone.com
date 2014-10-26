@@ -80,8 +80,47 @@ body {
 	display: block;
 	opacity: 0.9;
 	transition: all 0.3s ease-out;
+	border: 1px solid inherit;  
+	@include mq($bp-large-screen) {
+		width: calc(1000% + 200px);
+		max-width: 700px;
+		margin-left: -200px;
+	}
+	figcaption {
+		max-width: 180px;
+	}
 	& > img:hover {
 		border: 1px solid $cp-orange;  
+	}
+}
+.img--post-default {
+	position: relative;
+	max-width: 100%;
+	img {
+		@extend .rwd-img;
+	}
+	figcaption {
+		@include mq($bp-large-screen) {
+			position: absolute;
+			z-index: 1;
+			left: -90px;
+			top: 0;
+			max-width: 70px;		
+		}
+		max-width: 180px;
+	}
+}
+.img--post-large {
+	@include mq($bp-large-screen) {
+		width: calc(100% + 200px);
+		max-width: calc(100% + 200px);
+		margin-left: -200px;
+	}
+	img {
+		@extend .rwd-img;
+		figcaption {
+			max-width: 180px;
+		}
 	}
 }
 
@@ -94,10 +133,15 @@ body {
 	@include mq($bp-large-screen) {
 	}
 }
-
+.home__entry {
+	@include mq($bp-large-screen) {
+		@include span(6 of 12 last);
+	}
+	
+}
 .home__introduction {
 	@include mq($bp-large-screen) {
-		@include span(12 of 12 last);
+		@include span(12 of 12);
 	}
 	.home__social {
 		display: none;
@@ -106,17 +150,16 @@ body {
 			display: block;
 		}
 	}
-//	.home__entry {
-//		@include span(3 of 12);
-//	}
-//	.home__info {
-//		@include span(7 of 12);
-//	}
+
 }
 .home__info {
 	@include mq($bp-large-screen) {
 		@include span(3 of 12); 
 	}
+	@include custom-mq($bp-medium-screen, $bp-large-screen) {
+		@include span(3 of 12); 
+	}
+
 }
 
 /* ==========================================================================
@@ -124,13 +167,27 @@ body {
    ========================================================================== */
 
 .title--about {
-	margin-top:0;
+	margin-top:0;	
 }
 .about__me {
 	@extend .home__introduction;
 }
-
-
+.about {
+	@include mq($bp-large-screen) {
+		@include container(100%); 
+	}
+}
+.about__info {
+	@include mq($bp-large-screen) {
+		@include span(4 of 12); 
+		margin-top: #{map-get($typo_scale, ms12)}em;
+	}
+}
+.about__me {
+	@include mq($bp-large-screen) {
+		@include span(7 of 12 last); 
+	}
+}
 /* ==========================================================================
    Page : Journal
    ========================================================================== */
@@ -150,9 +207,18 @@ body {
 		text-decoration: none;
 	}
 }
-
+.post {
+	@include mq($bp-large-screen) {
+		max-width: 34.172em;
+		margin: auto;
+	}
+}
 .post-content {
 	img {
-		max-height:192px;
+		height: auto;
+		@include mq($bp-large-screen) {
+			height: auto;
+			max-height: 100%;
+		}
 	}
 }

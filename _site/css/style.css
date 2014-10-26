@@ -44,7 +44,7 @@ CONTENTS:
   cursor: pointer;
 }
 
-.rwd-img {
+.rwd-img, .img--post-default img, .img--post-large img {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -87,7 +87,7 @@ body {
   font-family: "freight-text-pro-1", "freight-text-pro-2", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 19px;
+  font-size: 18px;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -129,7 +129,7 @@ h6 {
 }
 
 h1 {
-  font-size: 42.75px;
+  font-size: 40.5px;
   font-size: 2.25rem;
   line-height: 1.667;
 }
@@ -137,17 +137,18 @@ h1.welcome-quote {
   font-family: "skolar", "skolar-1", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
-  font-size: 1.68421rem;
+  font-size: 36px;
+  font-size: 2rem;
   text-align: center;
   line-height: 1.198;
-  margin: 23px auto;
+  transition: all 0.3s ease-in;
+  margin: 22px auto;
   margin: 1.198rem auto;
 }
-@media only screen and (min-width: 61.25em) {
+@media only screen and (min-width: 40em) {
   h1.welcome-quote {
     font-size: 54px;
-    font-size: 2.84211rem;
+    font-size: 3rem;
     line-height: 1;
   }
 }
@@ -159,18 +160,18 @@ h1.welcome-quote.title--about {
   text-decoration: line-through;
 }
 
+blockquote {
+  font-style: italic;
+  border-left: 1px solid #cccccc;
+  padding-left: 10px;
+  max-width: 85%;
+  margin: auto;
+}
+
 em,
 strong,
 code {
   line-height: 1;
-}
-
-blockquote {
-  font-style: italic;
-  border-left: 1px solid #ff0000;
-  padding-left: 10px;
-  max-width: 85%;
-  margin: auto;
 }
 
 .meta {
@@ -181,9 +182,9 @@ blockquote {
 }
 
 pre {
-  font-size: 19px;
+  font-size: 15px;
   line-height: 1.5;
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   font-weight: normal;
   font-style: italic;
   padding: 10px;
@@ -196,9 +197,22 @@ pre {
   overflow-x: auto;
 }
 
+figure {
+  position: relative;
+}
+figure figcaption {
+  font-size: 14px;
+  font-size: 0.77778rem;
+  font-style: italic;
+  margin-top: 0.6667em;
+  border-bottom: 1px dotted #cccccc;
+  width: auto;
+  display: inline-block;
+}
+
 .nav {
   font-size: 18px;
-  font-size: 0.94737rem;
+  font-size: 1rem;
   font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -247,13 +261,13 @@ body {
   top: 0;
 }
 
-.rwd-img {
+.rwd-img, .img--post-default img, .img--post-large img {
   max-width: 100%;
   height: auto;
   width: 100%;
 }
 @media only screen and (min-width: 61.25em) {
-  .rwd-img {
+  .rwd-img, .img--post-default img, .img--post-large img {
     width: auto;
     max-width: 100%;
   }
@@ -283,9 +297,48 @@ body {
   display: block;
   opacity: 0.9;
   transition: all 0.3s ease-out;
+  border: 1px solid inherit;
+}
+@media only screen and (min-width: 61.25em) {
+  .img--about {
+    width: calc(1000% + 200px);
+    max-width: 700px;
+    margin-left: -200px;
+  }
+}
+.img--about figcaption {
+  max-width: 180px;
 }
 .img--about > img:hover {
   border: 1px solid #F8AC48;
+}
+
+.img--post-default {
+  position: relative;
+  max-width: 100%;
+}
+.img--post-default figcaption {
+  max-width: 180px;
+}
+@media only screen and (min-width: 61.25em) {
+  .img--post-default figcaption {
+    position: absolute;
+    z-index: 1;
+    left: -90px;
+    top: 0;
+    max-width: 70px;
+  }
+}
+
+@media only screen and (min-width: 61.25em) {
+  .img--post-large {
+    width: calc(100% + 200px);
+    max-width: calc(100% + 200px);
+    margin-left: -200px;
+  }
+}
+.img--post-large img figcaption {
+  max-width: 180px;
 }
 
 /* ==========================================================================
@@ -303,9 +356,18 @@ body {
 }
 
 @media only screen and (min-width: 61.25em) {
+  .home__entry {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 61.25em) {
   .home__introduction, .about__me {
     width: 100%;
-    float: right;
+    float: left;
+    margin-left: 0;
     margin-right: 0;
   }
 }
@@ -328,12 +390,49 @@ body {
     margin-right: 1.69492%;
   }
 }
+@media only screen and (min-width: 40em) and (max-width: 61.25em) {
+  .home__info {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
 
 /* ==========================================================================
    Page : About
    ========================================================================== */
 .title--about {
   margin-top: 0;
+}
+
+@media only screen and (min-width: 61.25em) {
+  .about {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 61.25em) {
+  .about__info {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-top: 7.594em;
+  }
+}
+
+@media only screen and (min-width: 61.25em) {
+  .about__me {
+    width: 57.62712%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 /* ==========================================================================
@@ -352,8 +451,21 @@ body {
   text-decoration: none;
 }
 
+@media only screen and (min-width: 61.25em) {
+  .post {
+    max-width: 34.172em;
+    margin: auto;
+  }
+}
+
 .post-content img {
-  max-height: 192px;
+  height: auto;
+}
+@media only screen and (min-width: 61.25em) {
+  .post-content img {
+    height: auto;
+    max-height: 100%;
+  }
 }
 
 .header--top {

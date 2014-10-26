@@ -17,7 +17,7 @@ $img-path: '/images/css';
 // Typography Base Config
 
 $base-line-height: 1.875;
-$base-font-size: 19; // 1.5 / 16 = x / 20
+$base-font-size: 18; // 1.5 / 16 = x / 20
 $rhythm-unit: 27;
 $guide-color: $cp-grey; 
 
@@ -42,10 +42,11 @@ $typo_scale : (
 	ms13: 11.391,
 	ms14: 17.086,
 	ms15: 25.629,
-	ms16: 38.443,
-	ms17: 57.665,
-	// Pixel values
+	ms16: 34.172,
+	ms17: 38.443,
+	ms18: 57.665,
 	
+	// Pixel values
 	xx-small : 9,
 	x-small  : 10,
 	small    : 14,

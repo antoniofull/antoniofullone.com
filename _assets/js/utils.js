@@ -1,6 +1,6 @@
 (function(){
 	"use strict";
-
+ 
 	var Utils = {
 
 		initialize: function() {
