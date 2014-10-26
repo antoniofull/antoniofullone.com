@@ -173,9 +173,14 @@ body {
 	@extend .home__introduction;
 }
 .about {
+	@include custom-mq(640px, 1024px) {
+		max-width: 34.172em;
+		margin: auto;
+	}
 	@include mq($bp-large-screen) {
 		@include container(100%); 
 	}
+	
 }
 .about__info {
 	@include mq($bp-large-screen) {
@@ -183,7 +188,7 @@ body {
 		margin-top: #{map-get($typo_scale, ms12)}em;
 	}
 }
-.about__me {
+.about__me { 
 	@include mq($bp-large-screen) {
 		@include span(7 of 12 last); 
 	}
@@ -207,8 +212,14 @@ body {
 		text-decoration: none;
 	}
 }
+.journal {
+	@extend .post;
+	h1 {
+		text-align: center;
+	}
+}
 .post {
-	@include mq($bp-large-screen) {
+	@include mq($bp-medium-screen) {
 		max-width: 34.172em;
 		margin: auto;
 	}
@@ -221,4 +232,25 @@ body {
 			max-height: 100%;
 		}
 	}
+}
+/* ==========================================================================
+   Global.
+   ========================================================================== */
+
+.nav {
+	float: left;
+	text-transform: uppercase;
+	margin: 1.5em 0 1.5em 1.5em;
+	a {
+		display: inline-block;
+		margin-right:0.889em;
+		text-decoration: none;
+		color: #999999;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	@include mq($bp-large-screen) {
+		float: right;
+	} 
 }

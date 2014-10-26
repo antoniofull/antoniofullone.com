@@ -405,6 +405,12 @@ body {
   margin-top: 0;
 }
 
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  .about {
+    max-width: 34.172em;
+    margin: auto;
+  }
+}
 @media only screen and (min-width: 61.25em) {
   .about {
     max-width: 100%;
@@ -451,8 +457,12 @@ body {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 61.25em) {
-  .post {
+.journal h1 {
+  text-align: center;
+}
+
+@media only screen and (min-width: 40em) {
+  .post, .journal {
     max-width: 34.172em;
     margin: auto;
   }
@@ -465,6 +475,29 @@ body {
   .post-content img {
     height: auto;
     max-height: 100%;
+  }
+}
+
+/* ==========================================================================
+   Global.
+   ========================================================================== */
+.nav {
+  float: left;
+  text-transform: uppercase;
+  margin: 1.5em 0 1.5em 1.5em;
+}
+.nav a {
+  display: inline-block;
+  margin-right: 0.889em;
+  text-decoration: none;
+  color: #999999;
+}
+.nav a:last-child {
+  margin-right: 0;
+}
+@media only screen and (min-width: 61.25em) {
+  .nav {
+    float: right;
   }
 }
 
@@ -540,21 +573,6 @@ body {
 }
 
 /* Nav */
-.nav {
-  float: left;
-  text-transform: uppercase;
-  margin: 1.5em 0 1.5em 1.5em;
-}
-.nav a {
-  display: inline-block;
-  margin-right: 0.889em;
-  text-decoration: none;
-  color: #999999;
-}
-.nav a:last-child {
-  margin-right: 0;
-}
-
 footer {
   clear: right;
   height: 120px;
@@ -573,11 +591,11 @@ footer p {
 /* ==========================================================================
    Blog
    ========================================================================== */
-.post {
+.post, .journal {
   position: relative;
   top: -1em;
 }
-.post .post-header h1 {
+.post .post-header h1, .journal .post-header h1 {
   margin: 0;
   margin-top: 0.132em;
   text-align: center;
