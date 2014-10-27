@@ -281,7 +281,7 @@ body {
 			margin-right: 0;
 		}
 	}
-	@include mq($bp-medium-screen) {
-		float: right;
-	} 
+	//@include mq($bp-medium-screen) {
+//		float: right;
+//	}
 }
