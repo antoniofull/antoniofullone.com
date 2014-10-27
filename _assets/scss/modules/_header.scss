@@ -1,6 +1,6 @@
 .header--top {
 	display: none;
- 	background: url('images/bg_nav_top.png') repeat-x;
+ 	background: url('/images/bg_nav_top.png') repeat-x;
 	width: 100%;
 	height: 24px;
 	position: fixed;
@@ -71,9 +71,4 @@
 			
 		}
 	}
-}
-
-/* Nav */
-.nav {
-	
 }

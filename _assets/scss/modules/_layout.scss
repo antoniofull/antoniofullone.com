@@ -131,13 +131,17 @@ body {
 .home {
 	@include container(100%);
 	@include mq($bp-large-screen) {
+		
 	}
 }
 .home__entry {
-	@include mq($bp-large-screen) {
-		@include span(7 of 12 last);
+	@include mq($bp-medium-screen) {
+		@include span(8 of 12 last);
 	}
 	
+	@include mq($bp-large-screen) {
+		@include span(8 of 12 last);
+	}
 }
 .home__introduction {
 	@include mq($bp-large-screen) {
@@ -149,9 +153,14 @@ body {
 			display: block;
 		}
 	}
-
 }
 .home__info {
+	@include mq($bp-medium-screen) {
+		@include span(3 of 12); 
+	}
+	@include mq($bp-large-screen) {
+		@include span(2 of 12); 
+	}
 	figure { 
 		img {
 			@include mq($bp-medium-screen) {
@@ -159,16 +168,18 @@ body {
 			}			
 		}
 	}
-	@include mq($bp-medium-screen) {
-		@include span(2 of 12); 
-	}
+	
 }
 .home__social {
+	display: none;
+	@include mq($bp-large-screen) {
+		display: block;
+	}	
 	ul {
 		@include toRem(map-get($typo_scale, base));
 		font-style: italic;
 		margin-top: #{map-get($typo_scale, ms8)}em;
-		li {
+		li { 
 			border-bottom:1px dotted $cp-grey;
 			transition: all 0.3s ease-out;
 			&:hover {
@@ -226,6 +237,8 @@ body {
 
 .journal__posts {
 	list-style-type: hiragana-iroha;
+	max-width: 70%;
+	margin: auto;
 	li a { 
 		text-decoration: none;
 	}
@@ -256,7 +269,7 @@ body {
    ========================================================================== */
 
 .nav {
-	float: left;
+	float: right;
 	text-transform: uppercase;
 	margin: 1.5em 0 1.5em 1.5em;
 	a {
@@ -268,7 +281,7 @@ body {
 			margin-right: 0;
 		}
 	}
-	@include mq($bp-large-screen) {
+	@include mq($bp-medium-screen) {
 		float: right;
 	} 
 }

@@ -28,13 +28,16 @@
 }
 .settings {
 	position: fixed;
+	display: none;
 	top: 20px;
 	right: 20px;
 	background: url('#{$img-path}/settings.png') no-repeat;
-	display: block;
 	width: 36px;
 	height: 36px;
 	cursor: pointer;
+	&.show {
+		display: block;
+	}
 }
 
 // Responsive

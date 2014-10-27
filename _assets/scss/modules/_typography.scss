@@ -129,6 +129,10 @@ h1 {
 		margin: #{round($typo_value * $base-font-size)}px auto;
 		margin: #{$typo_value}rem auto;
 		@include mq($bp-medium-screen) {
+			@include toRem(map-get($typo_scale, x-large) + 2);
+			line-height: map-get($typo_scale, ms7);
+		}
+		@include mq($bp-large-screen) {
 			@include toRem(map-get($typo_scale, extra));
 			line-height: map-get($typo_scale, ms7);
 		}
@@ -158,7 +162,7 @@ h6 {
 
 blockquote {
 	font-style: italic;
-	border-left : 1px solid $cp-grey;
+	border-left : 4px solid $cp-grey;
 	padding-left:10px;
 	max-width: 85%;
 	margin: auto;
