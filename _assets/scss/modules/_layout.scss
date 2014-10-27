@@ -79,7 +79,7 @@ body {
 .img--about {
 	display: block;
 	opacity: 0.9;
-	transition: all 0.3s ease-out;
+	transition: border 0.3s ease-out;
 	border: 1px solid inherit;  
 	@include mq($bp-large-screen) {
 		width: calc(1000% + 200px);

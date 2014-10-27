@@ -40,12 +40,10 @@
 	<div class="header--top"></div>
 	<div class="settings"></div>
 	<header class="header" role="banner">
-		<a href="/" class="" id="logo">
-			<div class="logo">
-				<span class="logo__circle">
-					<span class="logo--text">A</span>
-				</span>
-			</div>
+		<a href="/" class="logo" id="logo">
+			<span class="logo__circle">
+				<span class="logo--text">A</span>
+			</span>
 		</a>
 		<nav class="nav" role="navigation">
 			<a href="/antonio/" title="About me">About</a>
@@ -62,8 +60,8 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 26 Oct 2014 22:42:23 +0100</pubDate>
-    <lastBuildDate>Sun, 26 Oct 2014 22:42:23 +0100</lastBuildDate>
+    <pubDate>Mon, 27 Oct 2014 07:31:44 +0100</pubDate>
+    <lastBuildDate>Mon, 27 Oct 2014 07:31:44 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>

@@ -22,6 +22,10 @@
 	margin: 0.6667em 0;
 	border: 1px solid #F6F4F4;
 	border-radius: 100%;
+	display: block;
+	float: left;
+	position: relative;
+	text-decoration: none;
 	-webkit-transition: all 0.5s ease-out;
 	   -moz-transition: all 0.5s ease-out;
 			transition: all 0.5s ease-out;
@@ -64,15 +68,9 @@
 			background-color: $cp-light-black;
 		}
 		.logo--text {
-
+			
 		}
 	}
-}
-#logo {
-	float: left;
-	margin: 0 auto;
-	position: relative;
-	display: block;
 }
 
 /* Nav */
