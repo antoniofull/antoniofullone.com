@@ -229,3 +229,19 @@ figure {
 	@include freight;
 	
 }
+
+.post-content {
+	p:first-of-type:first-letter {
+		@include skolar;
+		color: #444444;
+		font-size: 72px;
+		font-size: 4.5rem;
+		float: left;
+		line-height: .7;
+		margin: 0.117em .1em 0 0;
+		-webkit-transition: color 0.5s ease;
+		-moz-transition: color 0.5s ease;
+		-o-transition: color 0.5s ease;
+		transition: color 0.5s ease;
+	}
+}

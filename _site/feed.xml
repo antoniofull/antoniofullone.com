@@ -29,13 +29,13 @@
         ga('send', 'pageview');
     </script>
 </head>
-	<body class="home baseline">
+	<body class="">
 
     <body>
 		<!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div id="page" class="wrapper page home">
+    <div id="page" class="page">
 	<!--</header>-->
 	<div class="header--top"></div>
 	<div class="page__wrapper">
@@ -48,7 +48,7 @@
 			<nav class="nav" role="navigation">
 				<a href="/antonio/" title="About me">About</a>
 				<a href="/journal" title="Journal">Journal</a>
-				<a href="/lab/" title="Contact me">My Lab</a>
+				<a href="https://bitbucket.org/afullone" title="">Lab</a>
 			</nav>
 		</header>
 
@@ -59,9 +59,49 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 27 Oct 2014 14:21:55 +0100</pubDate>
-    <lastBuildDate>Mon, 27 Oct 2014 14:21:55 +0100</lastBuildDate>
+    <pubDate>Mon, 27 Oct 2014 22:38:26 +0100</pubDate>
+    <lastBuildDate>Mon, 27 Oct 2014 22:38:26 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Bye Bye Wordpress, welcome Jekyll!</title>
+        <description>&lt;figure class=&quot;img--post-large&quot;&gt;
+		&lt;img src=&quot;/images/posts/jekyll.png&quot; alt=&quot;Jekyll home page&quot; /&gt;
+		&lt;figcaption&gt;Jekyll is easy to install&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.&lt;/p&gt;
+
+&lt;p&gt;Also the template system in Wordpress is complex while I,as you can see, I like to keep this site much simple as possible.&lt;/p&gt;
+
+&lt;p&gt;The answer to all my questions is Jekyll. I was intrigued to use it, but a little bit “scared”,  I found out instead that is really easy to set up and use. I installed the Mac version, opened my Textmate and started moving the code from Wordpress to static pages in less than a weekend. &lt;/p&gt;
+
+&lt;p&gt;Jekyll has his own template system, and once you do the build, the only thing is to use the same name pattern for the posts.&lt;/p&gt;
+
+&lt;p&gt;Another reason why I moved to Jekyll is the fact that I love writing with IAWriter, which has a very good support for Markdown, and Jekyll uses Markdown for its posts, so it’s a perfect combination.&lt;/p&gt;
+
+&lt;p&gt;The last thing to do was to find a good way to avoid to deploy manually every time, so I found &lt;a href=&quot;https://github.com/dmathieu/glynn&quot;&gt;Glynn&lt;/a&gt; which does the job for you, deploying also on the FTP.&lt;/p&gt;
+
+&lt;p&gt;Next step is to move also my italian blog (which basically will just be a copy of this one, but probably different contents) where I use to blog more often, like 6/7 times a year.&lt;/p&gt;
+
+&lt;p&gt;I am very happy now with the results, here some simple advantages I found on Jekyll: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Template : as I said above, easy, simple faster.&lt;/li&gt;
+  &lt;li&gt;Static pages mean also speed, the page now load much faster.&lt;/li&gt;
+  &lt;li&gt;Easy writing with Markdown.&lt;/li&gt;
+  &lt;li&gt;Ridiculously easy to update and maintain. You just need a grunt file.&lt;/li&gt;
+  &lt;li&gt;More freedom on styling and editing the posts, I can get rid of the rigid template system and build custom post each time I want.&lt;/li&gt;
+  &lt;li&gt;Easy to update. It’s just html right? :D&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 27 Oct 2014 22:48:02 +0100</pubDate>
+        <link>http://antoniofullone.com/dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/</link>
+        <guid isPermaLink="true">http://antoniofullone.com/dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/</guid>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>

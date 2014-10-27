@@ -47,7 +47,7 @@ CONTENTS:
   display: block;
 }
 
-.rwd-img, .img--post-default img, .img--post-large img {
+.rwd-img, .img--post-default img, .img--post-large img, .home__info figure img {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -228,6 +228,22 @@ figure figcaption {
   font-weight: 400;
 }
 
+.post-content p:first-of-type:first-letter {
+  font-family: "skolar", "skolar-1", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #444444;
+  font-size: 72px;
+  font-size: 4.5rem;
+  float: left;
+  line-height: .7;
+  margin: 0.117em .1em 0 0;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
 /* ==========================================================================
    Reset
    ========================================================================== */
@@ -271,13 +287,13 @@ body {
   top: 0;
 }
 
-.rwd-img, .img--post-default img, .img--post-large img {
+.rwd-img, .img--post-default img, .img--post-large img, .home__info figure img {
   max-width: 100%;
   height: auto;
   width: 100%;
 }
 @media only screen and (min-width: 56.88888em) {
-  .rwd-img, .img--post-default img, .img--post-large img {
+  .rwd-img, .img--post-default img, .img--post-large img, .home__info figure img {
     width: auto;
     max-width: 100%;
   }
@@ -342,11 +358,19 @@ body {
 
 @media only screen and (min-width: 56.88888em) {
   .img--post-large {
+    width: calc(100% + 140px);
+    max-width: calc(100% + 140px);
+    margin-left: -140px;
+  }
+}
+@media only screen and (min-width: 1280px) and (min-width: 56.88888em) {
+  .img--post-large {
     width: calc(100% + 200px);
     max-width: calc(100% + 200px);
     margin-left: -200px;
   }
 }
+
 .img--post-large img figcaption {
   max-width: 180px;
 }
@@ -354,8 +378,21 @@ body {
 /* ==========================================================================
    Page : Home
    ========================================================================== */
+.separator {
+  background: url(/images/separator.png) no-repeat center center;
+  width: 100%;
+  height: 27px;
+  display: block;
+  margin: auto;
+}
+@media only screen and (min-width: 56.88888em) {
+  .separator {
+    max-width: 68%;
+  }
+}
+
 .home {
-  max-width: 100%;
+  max-width: 430px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -364,45 +401,44 @@ body {
   display: block;
   clear: both;
 }
-
-@media only screen and (min-width: 35.5em) {
-  .home__entry {
-    width: 66.10169%;
-    float: right;
-    margin-right: 0;
-  }
-}
 @media only screen and (min-width: 56.88888em) {
-  .home__entry {
-    width: 66.10169%;
-    float: right;
-    margin-right: 0;
+  .home {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home:after {
+    content: " ";
+    display: block;
+    clear: both;
   }
 }
 
+.home__introduction, .about__me {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media only screen and (min-width: 56.88888em) {
   .home__introduction, .about__me {
-    width: 100%;
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media only screen and (min-width: 56.88888em) {
-  .home__introduction .home__social, .about__me .home__social {
-    width: 15.25424%;
+    width: 83.05085%;
     float: left;
     margin-right: 1.69492%;
-    display: block;
   }
 }
 
-@media only screen and (min-width: 35.5em) {
-  .home__info {
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
+@media only screen and (min-width: 56.88888em) {
+  .home__entry {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0;
   }
+}
+
+.home__info figure {
+  max-width: 130px;
+  margin: auto;
+  display: block;
 }
 @media only screen and (min-width: 56.88888em) {
   .home__info {
@@ -426,6 +462,9 @@ body {
 @media only screen and (min-width: 56.88888em) {
   .home__social {
     display: block;
+    width: 15.25424%;
+    float: right;
+    margin-right: 0;
   }
 }
 .home__social ul {
@@ -491,12 +530,6 @@ body {
 /* ==========================================================================
    Page : Journal
    ========================================================================== */
-.home__introduction, .about__me {
-  max-width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .journal__posts {
   list-style-type: hiragana-iroha;
   max-width: 70%;
@@ -519,6 +552,7 @@ body {
 
 .post-content img {
   height: auto;
+  max-width: 100%;
 }
 @media only screen and (min-width: 56.88888em) {
   .post-content img {
