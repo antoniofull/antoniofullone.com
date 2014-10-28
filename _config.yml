@@ -6,6 +6,10 @@ baseurl: ""
 url: "http://antoniofullone.com"
 twitter_username: lastwebdesigner
 github_username:  lastwebdesigner
+ftp_host: 'antoniofullone.com'
+ftp_dir: '/web/site/root'
+ftp_passive: false
+
 
 # Build settings
 markdown: kramdown

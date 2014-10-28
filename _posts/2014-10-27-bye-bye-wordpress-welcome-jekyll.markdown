@@ -10,7 +10,7 @@ categories: dev
 </figure>	
 I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.
 
-Also the template system in Wordpress is complex while I,as you can see, I like to keep this site much simple as possible.
+Also the template system in Wordpress is complex while I, as you can see, I like to keep this site much simple as possible.
 
 The answer to all my questions is Jekyll. I was intrigued to use it, but a little bit “scared”,  I found out instead that is really easy to set up and use. I installed the Mac version, opened my Textmate and started moving the code from Wordpress to static pages in less than a weekend. 
 

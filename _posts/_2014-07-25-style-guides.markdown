@@ -13,7 +13,9 @@ categories: [coding]
 		</figure>
 	</a>
 </p>
-<p>Era ancora buio. Lontano, nell’ampia distesa nera dell’Alìa, ammiccava soltanto un lume di carbonai, e più a sinistra la stella del mattino, sopra un nuvolone basso che tagliava l’alba nel lungo altipiano del Paradiso. Per tutta la campagna diffondevasi un uggiolare lugubre di cani. E subito, dal quartiere basso, giunse il suono grave del campanone di San Giovanni che dava l’allarme anch’esso; poi la campana fessa di San Vito; l’altra della chiesa madre, più lontano; quella di Sant’Agata che parve addirittura cascar sul capo agli abitanti della piazzetta.</p>
+
+Era ancora buio. Lontano, nell’ampia distesa nera dell’Alìa, ammiccava soltanto un lume di carbonai, e più a sinistra la stella del mattino, sopra un nuvolone basso che tagliava l’alba nel lungo altipiano del Paradiso. Per tutta la campagna diffondevasi un uggiolare lugubre di cani. E subito, dal quartiere basso, giunse il suono grave del campanone di San Giovanni che dava l’allarme anch’esso; poi la campana fessa di San Vito; l’altra della chiesa madre, più lontano; quella di Sant’Agata che parve addirittura cascar sul capo agli abitanti della piazzetta.
+
 <p>
 	<a href="http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg">
 		<figure class="img--post-large"><img class="" alt="best" src="http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg"><figcaption>Where I will go one day</figcaption></figure>

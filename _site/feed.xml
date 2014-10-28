@@ -59,8 +59,8 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 27 Oct 2014 22:38:26 +0100</pubDate>
-    <lastBuildDate>Mon, 27 Oct 2014 22:38:26 +0100</lastBuildDate>
+    <pubDate>Tue, 28 Oct 2014 06:36:41 +0100</pubDate>
+    <lastBuildDate>Tue, 28 Oct 2014 06:36:41 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -71,7 +71,7 @@
 &lt;/figure&gt;
 &lt;p&gt;I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.&lt;/p&gt;
 
-&lt;p&gt;Also the template system in Wordpress is complex while I,as you can see, I like to keep this site much simple as possible.&lt;/p&gt;
+&lt;p&gt;Also the template system in Wordpress is complex while I, as you can see, I like to keep this site much simple as possible.&lt;/p&gt;
 
 &lt;p&gt;The answer to all my questions is Jekyll. I was intrigued to use it, but a little bit “scared”,  I found out instead that is really easy to set up and use. I installed the Mac version, opened my Textmate and started moving the code from Wordpress to static pages in less than a weekend. &lt;/p&gt;
 
@@ -100,90 +100,6 @@
         
         
         <category>dev</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
-To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
-        <link>http://antoniofullone.com/jekyll/update/2014/07/25/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://antoniofullone.com/jekyll/update/2014/07/25/welcome-to-jekyll/</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Style Guides</title>
-        <description>&lt;p&gt;
-	&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot;&gt;
-		&lt;figure class=&quot;img--post-default&quot;&gt;
-			&lt;img class=&quot;&quot; alt=&quot;&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2014/01/dutch.jpg&quot; /&gt;
-			&lt;figcaption&gt;Where I would like to be now.&lt;/figcaption&gt;
-		&lt;/figure&gt;
-	&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;Era ancora buio. Lontano, nell’ampia distesa nera dell’Alìa, ammiccava soltanto un lume di carbonai, e più a sinistra la stella del mattino, sopra un nuvolone basso che tagliava l’alba nel lungo altipiano del Paradiso. Per tutta la campagna diffondevasi un uggiolare lugubre di cani. E subito, dal quartiere basso, giunse il suono grave del campanone di San Giovanni che dava l’allarme anch’esso; poi la campana fessa di San Vito; l’altra della chiesa madre, più lontano; quella di Sant’Agata che parve addirittura cascar sul capo agli abitanti della piazzetta.&lt;/p&gt;
-&lt;p&gt;
-	&lt;a href=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot;&gt;
-		&lt;figure class=&quot;img--post-large&quot;&gt;&lt;img class=&quot;&quot; alt=&quot;best&quot; src=&quot;http://localhost/blog.antoniofullone.com/wp-content/uploads/2013/11/best.jpg&quot; /&gt;&lt;figcaption&gt;Where I will go one day&lt;/figcaption&gt;&lt;/figure&gt;
-		&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;“Quando uno non ha niente, il meglio è di andarsene.”&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2&gt;This is a header h2&lt;/h2&gt;
-&lt;h3&gt;This is a header h2&lt;/h3&gt;
-&lt;h4&gt;This is a header h2&lt;/h4&gt;
-&lt;h5&gt;This is a header h2&lt;/h5&gt;
-&lt;h3&gt;This is a List.&lt;/h3&gt;
-&lt;ul&gt;
-&lt;ul&gt;
-&lt;li&gt;this is a list&lt;/li&gt;
-&lt;li&gt;item&lt;/li&gt;
-&lt;li&gt;item&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;item
-&lt;ul&gt;
-&lt;li&gt;Sub list&lt;/li&gt;
-&lt;li&gt;Sub item&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&amp;nbsp;Ordered list&lt;/li&gt;
-&lt;li&gt;Item&lt;/li&gt;
-&lt;li&gt;
-	&lt;ol&gt;
-&lt;li&gt;&amp;nbsp;Sub Ordered list&lt;/li&gt;
-&lt;li&gt;Sub Item&lt;/li&gt;
-&lt;li&gt;Sub Item&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Fri, 25 Jul 2014 19:48:02 +0200</pubDate>
-        <link>http://antoniofullone.com/coding/2014/07/25/style-guides/</link>
-        <guid isPermaLink="true">http://antoniofullone.com/coding/2014/07/25/style-guides/</guid>
-        
-        
-        <category>coding</category>
         
       </item>
     
