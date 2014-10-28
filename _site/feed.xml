@@ -44,7 +44,9 @@
 		<!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div id="page" class="page">
+    <div class="loader"></div>
+<div class="spiral"></div>
+<div id="page" class="page">
 	<!--</header>-->
 	<div class="header--top"></div>
 	<div class="page__wrapper">
@@ -68,8 +70,8 @@
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 28 Oct 2014 18:39:51 +0100</pubDate>
-    <lastBuildDate>Tue, 28 Oct 2014 18:39:51 +0100</lastBuildDate>
+    <pubDate>Tue, 28 Oct 2014 22:34:59 +0100</pubDate>
+    <lastBuildDate>Tue, 28 Oct 2014 22:34:59 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>

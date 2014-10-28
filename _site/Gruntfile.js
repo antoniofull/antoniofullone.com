@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 
 			js: {
 				files: ['./_assets/js/**/*.js'],
-				tasks: ['watchify', 'jshint']
+				tasks: ['watchify']
 			},
 
 			auto: {

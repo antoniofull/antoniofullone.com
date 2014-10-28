@@ -1,4 +1,3 @@
-;(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function(root, definition) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
@@ -678,62 +677,3 @@
 	return FontLoader;
 	
 }));
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-var utils = require('./utils');
-var FontLoader = require('./FontLoader');
-
-document.addEventListener('DOMContentLoaded', function() {
-	if(document.querySelector('.settings')) {
-		utils.initialize();
-  	}
-	var fontLoader = new FontLoader(['skolar', 'freight-text-pro-1'], {
-	            "fontsLoaded": function(error) {
-	                if (error !== null) {
-	                    // Reached the timeout but not all fonts were loaded
-	                    console.log(error.message);
-	                    console.log(error.notLoadedFontFamilies); 
-	                } else {
-	                    // All fonts were loaded
-	                    console.log("all fonts were loaded");
-	                }
-	            },   
-	            "fontLoaded": function(fontFamily) {
-	                // One of the fonts was loaded
-	                console.log("font loaded: " + fontFamily);
-	            }
-	        }, 3000);
-	        fontLoader.loadFonts();
-});
-},{"./FontLoader":1,"./utils":3}],3:[function(require,module,exports){
-(function(){
-	"use strict";
- 
-	var Utils = {
-
-		initialize: function() {
-			var settings = document.querySelector('.settings'); 
-			var self = this;
-			this.body = document.body;
-
-			if(settings) {
-				settings.addEventListener('click', function(e){
-					self.showGrid(e);
-				});
-			}
-		},
-
-		showGrid: function(e) {
-			e.preventDefault();
-			document.querySelector('html').classList.toggle('baseline');
-		}
-	};
-
-	module.exports = Utils;
-		
-})();
-
-
-},{}]},{},[2])
