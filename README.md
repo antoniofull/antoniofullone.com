@@ -3,32 +3,39 @@
 
 ## CSS 
 
-I use sass for everything. The css is organized in modules which are build using sass and a grunt plugin inside the _assets_ folder.
+I use _Sass_ for everything. The css is organized in modules which are build using sass and a grunt plugin inside the _assets_ folder.
 The partials folder contains the variables and functions file. Also the utils file, which contains many common utilities I use on that site.
 The Modules folder contains all the modules needed for the site, layout typography etc.
 Finally the Lib just contains the external libraries that I use. For the moment just mine plus Susy ( I wonder how I did to live before met this awesome library).
 
 ## Javascript 
 
-I used browserify and vanilla JS. As you can see basically in this website Javascript is useless, but it's a good practice to keep you code modular.
-I also learnt how to properly user Browserify with Grunt.
+I used _Browserify_ and _Vanilla JS_. As you can see basically in this website Javascript is useless, but it's a good practice to keep your code modular.
+
+I also learnt how to properly user Browserify with _Grunt_.
 
 ## HTML 
 
-HTML 5 of course. I usually use Emmet, but since the update to Yosemite the plugin crashes everytime, so this time I wrote "by hands".
+HTML 5 of course. I usually use _Emmet_ with _Textmate_, but since the update to Yosemite the plugin crashes everytime, so this time I wrote everything basically "by hands".
 
 ## Typography
 
-Fonts used : Skolar for the introduction text in the home page and for styling the first letter of each post.
-Freight text pro : for Headings
-Freight sans pro : for Text
-Cosmopolitan : for the "A" in the logo.
-Typekit for serving the fonts.
+Fonts used : 
+
+- Skolar for the introduction text in the home page and for styling the first letter of each post.
+
+- Freight text pro : for Headings
+
+- Freight sans pro : for Text
+
+- Cosmopolitan : for the "A" in the logo.
+
+- Typekit is serving the fonts.
 
 ## Build 
 
-Grunt for everything. I would prefer Gulp since it's faster, but the support and the ecosystem around Grunt is bigger and more reliable.
-Especially because I used Sass Maps, which are not widely supported yet from all the "building tools".
+Grunt, a very simple file. I would prefer to Gulp since it's faster, but the support and the ecosystem around Grunt is bigger and much more reliable, for the moment.
+Especially because I used Sass Maps, which are not widely supported yet from all this "building tools".
 
 ## Design, blog, everything else
 
