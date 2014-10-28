@@ -33,8 +33,12 @@ Especially because I used Sass Maps, which are not widely supported yet from all
 ## Design, blog, everything else
 
 The first design happened during one of my insomniac night. Now it was time for a small refresh, I like keeping it simple so it reflects more myself :D
+
 There are no comments, I have very few visits a day and I have no time to deal with comments, if I had time I would probably write more often (justifying the use of comments).
+
 Share buttons are also not present, I guess everyone now knows how to share a post (thanks to Upworthy!!)
+
 I am happy with feedbacks, so if you feel like to give me yours, I am happy to receive it. 
-TYpos, errors : I write really bad, I do the same in Italian which is my mother language, so please be kind when reminding me of errors on his site, I am aware of my writing style :D
+
+Typos, errors : I write really bad, I do the same in Italian which is my mother language, so please be kind when reminding me of errors on his site, I am aware of my writing style :D
 
