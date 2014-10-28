@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" href="/img/favicon.ico"/>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/css/style.css">
-<!--	<script src="/js/modernizr.custom.js"></script> -->
+	<!--	<script src="/js/modernizr.custom.js"></script> -->
 	<script>
 	  (function(d) {
 	    var config = {
@@ -68,8 +68,8 @@
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 28 Oct 2014 10:09:20 +0100</pubDate>
-    <lastBuildDate>Tue, 28 Oct 2014 10:09:20 +0100</lastBuildDate>
+    <pubDate>Tue, 28 Oct 2014 18:39:51 +0100</pubDate>
+    <lastBuildDate>Tue, 28 Oct 2014 18:39:51 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
