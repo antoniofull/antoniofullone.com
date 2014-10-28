@@ -541,6 +541,7 @@ body {
 
 .journal h1 {
   text-align: center;
+  line-height: 1;
 }
 
 @media only screen and (min-width: 35.5em) {
@@ -673,6 +674,7 @@ footer p {
   margin: 0;
   margin-top: 0.132em;
   text-align: center;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

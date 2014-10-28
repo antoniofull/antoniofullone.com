@@ -271,6 +271,7 @@ body {
 	@extend .post;
 	h1 {
 		text-align: center;
+		line-height: 1;
 	}
 }
 .post {
@@ -306,7 +307,4 @@ body {
 			margin-right: 0;
 		}
 	}
-	//@include mq($bp-medium-screen) {
-//		float: right;
-//	}
 }
