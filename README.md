@@ -1,11 +1,14 @@
-# Welcome to my site's source code.
+# Welcome to my site.
 
 
 ## CSS 
 
 I use _Sass_ for everything. The css is organized in modules which are build using sass and a grunt plugin inside the _assets_ folder.
+
 The partials folder contains the variables and functions file. Also the utils file, which contains many common utilities I use on that site.
+
 The Modules folder contains all the modules needed for the site, layout typography etc.
+
 Finally the Lib just contains the external libraries that I use. For the moment just mine plus Susy ( I wonder how I did to live before met this awesome library).
 
 ## Javascript 
@@ -35,6 +38,7 @@ Fonts used :
 ## Build 
 
 Grunt, a very simple file. I would prefer to Gulp since it's faster, but the support and the ecosystem around Grunt is bigger and much more reliable, for the moment.
+
 Especially because I used Sass Maps, which are not widely supported yet from all this "building tools".
 
 ## Design, blog, everything else
