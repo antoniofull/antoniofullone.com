@@ -231,7 +231,7 @@ figure {
 }
 
 .post-content {
-	p:first-of-type:first-letter {
+	& > p:first-of-type:first-letter {
 		@include skolar;
 		color: #444444;
 		font-size: 72px;
