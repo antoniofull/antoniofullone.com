@@ -70,8 +70,8 @@
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 19 Nov 2014 14:00:54 +0100</pubDate>
-    <lastBuildDate>Wed, 19 Nov 2014 14:00:54 +0100</lastBuildDate>
+    <pubDate>Wed, 19 Nov 2014 14:55:01 +0100</pubDate>
+    <lastBuildDate>Wed, 19 Nov 2014 14:55:01 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -132,7 +132,7 @@ I have some simple rules that I apply every time I am writing code with &lt;stro
 
 &lt;p&gt;Like @&lt;em&gt;extend&lt;/em&gt;, this is also a super abused feature of Sass. Nesting can be very bad for our code, can screw up specificity and make your code unmaintainable.&lt;/p&gt;
 
-&lt;p&gt;I try to extend as &lt;em&gt;less as I can&lt;/em&gt;, if possible I prefer to add another class. On the other side, nesting is not bad if used carefully. One of the good use I found for it is when I am writing code for a module.&lt;/p&gt;
+&lt;p&gt;I try to nest as &lt;em&gt;less as I can&lt;/em&gt;, if possible I prefer to add another class. On the other side, nesting is not bad if used carefully. One of the good use I found for it is when I am writing code for a module.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;.landing {   // every thing goes nested here at one level
   	.landing__element {
@@ -191,7 +191,7 @@ also important, the problem of naming variables.&lt;/p&gt;
   &lt;li&gt;Typography Scale&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The advantage is not only the better organization of the variables, take a look at this article to better understand how Maps can be very powerful.&lt;/p&gt;
+&lt;p&gt;The advantage is not only the better organization of the variables, take a look at this &lt;a href=&quot;http://viget.com/extend/sass-maps-are-awesome&quot;&gt;article&lt;/a&gt; to better understand how Maps can be very powerful.&lt;/p&gt;
 
 &lt;h2 id=&quot;use-nested-media-queries-with-content&quot;&gt;Use nested Media Queries with @content&lt;/h2&gt;
 

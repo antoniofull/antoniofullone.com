@@ -57,7 +57,7 @@ In this case, might be simpler just to use a mixin
 
 Like @*extend*, this is also a super abused feature of Sass. Nesting can be very bad for our code, can screw up specificity and make your code unmaintainable.
 
-I try to extend as *less as I can*, if possible I prefer to add another class. On the other side, nesting is not bad if used carefully. One of the good use I found for it is when I am writing code for a module.
+I try to nest as *less as I can*, if possible I prefer to add another class. On the other side, nesting is not bad if used carefully. One of the good use I found for it is when I am writing code for a module.
 
 	.landing {
   // every thing goes nested here at one level
@@ -112,7 +112,7 @@ also important, the problem of naming variables.
 - Responsive Break Points
 - Typography Scale
 
-The advantage is not only the better organization of the variables, take a look at this article to better understand how Maps can be very powerful.
+The advantage is not only the better organization of the variables, take a look at this [article](http://viget.com/extend/sass-maps-are-awesome) to better understand how Maps can be very powerful.
 
 ## Use nested Media Queries with @content
 
