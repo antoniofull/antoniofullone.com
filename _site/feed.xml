@@ -70,9 +70,47 @@
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 31 Oct 2014 18:58:50 +0100</pubDate>
-    <lastBuildDate>Fri, 31 Oct 2014 18:58:50 +0100</lastBuildDate>
+    <pubDate>Wed, 05 Nov 2014 21:40:39 +0100</pubDate>
+    <lastBuildDate>Wed, 05 Nov 2014 21:40:39 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Not just about work.</title>
+        <description>&lt;figure class=&quot;img--post&quot;&gt;
+		&lt;img src=&quot;/images/posts/team.png&quot; alt=&quot;2011 - in Mare Magnum, after Barcelona won the Champions league against Manchester&quot; /&gt; 
+		&lt;figcaption&gt;2011 - in Mare Magnum, after Barcelona won the Champions League against Manchester&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2010 /2011 and we had a very nice time. I was &lt;em&gt;leading&lt;/em&gt; that team, so I am proud we built this &lt;em&gt;lovely friendship&lt;/em&gt; which is lasting for years.&lt;/p&gt;
+
+&lt;p&gt;This is the list of the countries represented in this meeting : &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Italy&lt;/li&gt;
+  &lt;li&gt;Netherlands&lt;/li&gt;
+  &lt;li&gt;Belgium&lt;/li&gt;
+  &lt;li&gt;Sweden&lt;/li&gt;
+  &lt;li&gt;Peru&lt;/li&gt;
+  &lt;li&gt;Finland&lt;/li&gt;
+  &lt;li&gt;Spain&lt;/li&gt;
+  &lt;li&gt;Argentina (probably)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I met these amazing people because I went to live and work abroad, and this is the best part of being an &lt;strong&gt;expat&lt;/strong&gt;, something I never regret I did. &lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The ideal place for me is the one in which it is most natural to live as a foreigner. - Italo Calvino.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Wed, 05 Nov 2014 22:30:00 +0100</pubDate>
+        <link>http://antoniofullone.com/expat-life/2014/11/05/not-just-about-work/</link>
+        <guid isPermaLink="true">http://antoniofullone.com/expat-life/2014/11/05/not-just-about-work/</guid>
+        
+        
+        <category>expat-life</category>
+        
+      </item>
     
       <item>
         <title>Bye Bye Wordpress, welcome Jekyll!</title>
