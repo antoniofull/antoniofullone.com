@@ -121,6 +121,14 @@ CONTENTS:
   -webkit-transform-origin: center center;
 }
 
+@keyframes bounce {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
@@ -725,6 +733,50 @@ footer p {
   margin-top: 2.25em;
   text-align: center;
   line-height: 1;
+}
+
+/* ==========================================================================
+   Lab
+   ========================================================================== */
+.lab {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.lab__code {
+  margin-right: 1%;
+  flex-grow: 1;
+  flex-basis: auto;
+  text-align: center;
+}
+.lab__code:last-child {
+  margin-right: 0;
+}
+.lab__code figure {
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.lab__code figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.lab__code figure figcaption {
+  display: block;
+  padding: 5px;
+  background: #f1f1f1;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.lab__code figure:hover figcaption {
+  height: 50px;
+  opacity: 1;
+  animation: bounce 0.2s;
 }
 
 /*# sourceMappingURL=style.css.map */

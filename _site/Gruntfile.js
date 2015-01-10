@@ -8,6 +8,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-watchify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	
 	
 	grunt.initConfig({
@@ -76,6 +78,25 @@ module.exports = function(grunt) {
 			}
 
 		},
+
+		uglify: {
+ 			 options: {},
+  		dist: {
+    		files: {
+      			'./main_minified.js': ['./main.js']
+    			}
+  			}
+		},
+		cssmin: {
+  			add_banner: {
+    			options: {
+      				banner: ''
+    			},
+    			files: {
+      			'css/style.min.css': ['css/style.css']
+    		}
+  		}
+	}
 		
 	});
 	

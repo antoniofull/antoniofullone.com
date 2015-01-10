@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Lab
+   ========================================================================== */
+
+.lab {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.lab__code {
+  margin-right: 1%;
+  flex-grow: 1;
+  flex-basis: auto;
+  text-align: center;
+  &:last-child {
+    margin-right: 0;
+  }
+  figure {
+    display: block;
+    text-align: center;
+    position: relative;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    figcaption {
+      display: block;
+      padding: 5px;
+      background: #f1f1f1;
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      opacity: 0;
+      transition: all 0.2s ease-out;
+    }
+    &:hover {
+      figcaption {
+        height: 50px;
+        opacity: 1;
+        animation: bounce 0.2s;
+      }
+    }
+  }
+}

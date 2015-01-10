@@ -58,7 +58,7 @@
 			</a>
 			<nav class="nav" role="navigation">
 				<a href="/antonio/" title="About me">About</a>
-				<a href="/journal" title="Journal">Journal</a>
+				<a href="/journal/" title="Journal">Journal</a>
 				<a href="https://bitbucket.org/afullone" title="">Lab</a>
 			</nav>
 		</header>
@@ -70,18 +70,18 @@
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 05 Nov 2014 21:40:39 +0100</pubDate>
-    <lastBuildDate>Wed, 05 Nov 2014 21:40:39 +0100</lastBuildDate>
+    <pubDate>Sat, 10 Jan 2015 11:54:49 +0100</pubDate>
+    <lastBuildDate>Sat, 10 Jan 2015 11:54:49 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Not just about work.</title>
         <description>&lt;figure class=&quot;img--post&quot;&gt;
-		&lt;img src=&quot;/images/posts/team.png&quot; alt=&quot;2011 - in Mare Magnum, after Barcelona won the Champions league against Manchester&quot; /&gt; 
-		&lt;figcaption&gt;2011 - in Mare Magnum, after Barcelona won the Champions League against Manchester&lt;/figcaption&gt;
+		&lt;img src=&quot;/images/posts/team.png&quot; alt=&quot;2009 - in Mare Magnum, after Barcelona won the Champions league against Manchester&quot; /&gt;
+		&lt;figcaption&gt;2009 - in Mare Magnum, after Barcelona won the Champions League against Manchester&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2010 /2011 and we had a very nice time. I was &lt;em&gt;leading&lt;/em&gt; that team, so I am proud we built this &lt;em&gt;lovely friendship&lt;/em&gt; which is lasting for years.&lt;/p&gt;
+&lt;p&gt;Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2009/2010 and we had a very nice time. I was &lt;em&gt;leading&lt;/em&gt; that team, so I am proud we built this &lt;em&gt;lovely friendship&lt;/em&gt; which is lasting for years.&lt;/p&gt;
 
 &lt;p&gt;This is the list of the countries represented in this meeting : &lt;/p&gt;
 
@@ -165,7 +165,7 @@
 	</p>
 	<p class="footer_copyright">Antonio Fullone - &copy;2009 - 2014</p>
 </footer>
-<script src="/main.js"></script> 
+<script src="/main.js" async="true"></script> 
 
     </body>
 </html>
