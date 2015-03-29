@@ -1,39 +1,43 @@
 ---
-layout: default
+layout: lab
 ---
-
+<section class="presentation">
+    <article >
+        <h1>Welcome to my Lab!</h1>
+        <p>
+            This is my playground, my projects and everything I do as experiment. Most of my public code is on <a href="http://bitbucket.org/afullone/"> BitBucket </a>. 
+            If you find some of this code useful for you and want to use it, go ahead and do it!
+        </p>
+    </article>
+</section>
 <section class="lab">
-    <article class="lab__code">
+    <div class="flexy-container">
+        <article class="lab__code flexy-item">
+            <header>
+                <h1>My Blog</h1>
+            </header>
+            <a href="https://bitbucket.org/afullone/blog">
+                <figure>
+                    <img src="/images/posts/jekyll.png" alt="Icons" />
+                    <figcaption>
+                       The source code of my blog, powered locally by Jekyll.
+                    </figcaption>
+                </figure>                
+            </a>
+        </article>
+    <article class="lab__code flexy-item">
         <header>
-            <h1>Icons</h1>
+            <h1>Switch Mixin</h1>
         </header>
+        <a href="/switch/">
             <figure>
-                <img src="/images/posts/jekyll.png" alt="Icons" />
+                <img src="/images/lab/switch.png" alt="Switch Buttons Sass Mixin" />
                 <figcaption>
-                    I am trying to learn icon design. Here some experiments I did.
+                    A complete mixin for create IOS and Material stylish switch buttons.
                 </figcaption>
             </figure>
+        </a>
     </article>
-    <article class="lab__code">
-        <header>
-            <h1>My Blog</h1>
-        </header>
-        <figure>
-            <img src="/images/posts/jekyll.png" alt="Icons" />
-            <figcaption>
-               I open sourced my blog. The source code is hosted on BitBucket.
-            </figcaption>
-        </figure>
-    </article>
-    <article class="lab__code">
-        <header>
-            <h1>My Blog</h1>
-        </header>
-        <figure>
-            <img src="/images/posts/jekyll.png" alt="Icons" />
-            <figcaption>
-                I open sourced my blog. The source code is hosted on BitBucket.
-            </figcaption>
-        </figure>
-    </article>
+    </div>
+     
 </section>

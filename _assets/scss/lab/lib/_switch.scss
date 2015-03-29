@@ -1,0 +1,184 @@
+
+// =================
+//  Configuration
+// =================
+
+// ============================
+// @param {$width} {@required} {Number} {Default: 50}
+// @param {$type} {@required} {String} {'ios' || 'material'}
+// @param {$subtype} {String} {'rounded' || 'square'} {@dep: $type == 'ios'}
+// @param {$materialBackground} {HEX} {@dep: $type == 'material'}
+// @param {$toggleBackground} {HEX} {@default == '#ffffff'}
+
+$config: (
+	width: 50,
+	materialBackground: '',
+	subtype: 'rounded',
+	toggleBackground: #ffffff
+);	
+
+%animated {
+-webkit-transition: all 0.2s ease-in-out, background-color 0.5s ease-in-out, box-shadow 0.2s ease-in-out;
+		transition:  all 0.2s ease-in-out, background-color 0.5s ease-in-out, box-shadow 0.2s ease-in-out;
+		transition-delay: 0.1s;
+}
+
+@mixin switch( 
+	$width: map-get($config, width),
+	$type: 'ios', 
+	$subtype: null,
+	$materialBackground: null,
+	$toggleBackground: null
+	
+	) {
+
+	$toggleWidth: #{round($width / 2)}px;
+
+	display: inline-block;
+	width: #{$width}px;
+	max-width: #{$width}px;
+	position: relative;
+
+	@if $type == 'ios' {
+		height: #{round($width / 2)}px;
+		%iosOn {
+			background-color: rgba(#64BD63, 1);
+			border: 1px solid rgba(#bdc3c7, 1);
+			box-shadow: rgba(#64BD63, 1) 0px 0px 0px 16px inset;
+		}
+			
+		%iosOff {
+			background-color: rgba(#95a5a6, 1);
+			border: 1px solid rgba(#DFDFDF, 1);
+			box-shadow:rgba(#DFDFDF, 1) 0px 0px 0px 0px inset;	
+		}
+	
+		$borderRadius: null;
+
+		@if $subtype == 'rounded' {
+			$borderRadius: 15px;
+		} @else if $subtype == 'square' {
+			$borderRadius: 5px;
+		} @else  {
+			$borderRadius: 15px;
+		}
+
+		& > label {
+				@extend %iosOff;
+				border-radius: $borderRadius;
+				&:after {	
+					height: 95%;
+					border-radius: $borderRadius;
+				}
+				 
+			}
+		input[data-type=switch]:checked ~ label {
+			@extend %iosOn;
+			@extend %animated;
+		}
+
+	} @else if $type == 'material' {
+		@if $materialBackground == null {
+			$materialBackground: #8BC34A;
+		} 
+		$background: rgba($materialBackground, 1);
+		height: #{round($width / 3)}px;
+			%materialOn {
+				background-color: rgba($materialBackground, 1);
+				border: 1px solid rgba($materialBackground, 1);
+				box-shadow: rgba($materialBackground, 0.3) 0px 0px 0px 16px inset;
+			}
+			
+			%materialOff {
+				background-color: rgba(#B6B6B6, 1);
+				border: 1px solid rgba(#b6b6b6, 1);
+				box-shadow:rgba(#ccc, 1) 0px 0px 0px 0px inset;	
+			}
+
+		& > label {
+			@extend %animated;
+			@extend %materialOff;
+			border-radius: 15px;
+			&:after {
+				border-radius: 100%;
+				height: $toggleWidth;
+				box-shadow: 1px 1px 10px darken($materialBackground, 30%);
+				top: 50%;
+				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+
+			}
+		}
+
+		input[data-type=switch]:checked ~ label {
+			@extend %materialOn;
+			@extend %animated;
+			background: rgba($materialBackground, 0.5);
+			&:after {
+				background: #{$materialBackground};
+				box-shadow: 1px 1px 10px #{$materialBackground};
+			}
+		}
+
+	} @else {
+		@warn "Error, you need to specify a type. It can be 'ios' or 'material' ";
+	}
+	
+	input[data-type=switch] {
+		position: absolute;
+		z-index: 10;
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		cursor: pointer;
+	}
+
+	input[data-type=switch]:checked ~ label {
+		&:after {
+			left: calc(100% - #{$toggleWidth});
+		}
+		&:before {
+			position: absolute;
+			left: 10%;
+		}
+
+	}
+
+	label {
+		@extend %animated;
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: relative;
+		z-index: 1;
+		&:after {
+			@extend %animated;
+			width: $toggleWidth;
+			position: absolute;
+			left: 0;	
+			content: "";
+			@if $toggleBackground == null {
+				background: #fff;
+				border: 1px solid darken(#fff, 20%);
+			}@else {
+				background: $toggleBackground;
+				border: 1px solid darken($toggleBackground, 20%);
+			}
+			
+		}
+		&:before {
+			position: absolute;
+			right: 10%;
+			top: 50%;
+			transform: translateY(-50%);
+			font-weight: bolder;
+			color: white;
+
+		}
+
+	}
+
+}
+
+

@@ -9,14 +9,17 @@
 @mixin gutters(
   $span: $susy
 ) {
-  $span: parse-gutters($span);
-  $_gutters: get-gutters($span);
+  $inspect  : $span;
+  $span     : parse-gutters($span);
+  $_gutters : get-gutters($span);
 
   $_output: (
     before: map-get($_gutters, before),
     after: map-get($_gutters, after),
     flow: susy-get(flow, $span),
   );
+
+  @include susy-inspect(gutters, $inspect);
 
   @if is-inside($span) {
     @include padding-output($_output...);
@@ -66,7 +69,7 @@
   $_gutters : susy-get(gutters, $context);
   $_gutter  : susy-get(gutter-override, $context);
 
-  @if $_gutters and ($_gutters > 0) and not $_gutter {
+  @if $_gutters and ($_gutters > 0) and not($_gutter) {
     $_column-width: susy-get(column-width, $context);
     $_math: gutter-math($context);
     @if $_math == static {

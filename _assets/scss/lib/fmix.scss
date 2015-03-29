@@ -200,4 +200,23 @@
 		z-index: 20;
 	}
 }
-
+// @params {@required} {$direction} {'both', 'vertical', 'horizontal'} 
+// {@required} Parent elements must be in position: relative;
+@mixin centering($direction: 'both') {
+	position: absolute;
+	@if ($direction == 'both') {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);		
+	} @else if ($direction == 'vertical') {
+		top: 50%;
+		transform: translateY(-50%);				
+	} @else if ($direction == 'horizontal') {
+		left: 50%;
+		transform: translateX(-50%);				
+	} @else {
+		// Eventual Debug
+ 		@warn "Error, parameter is not passed correctly.";
+		@debug "The parameter passed is : #{$direction}"; 
+	}
+}
