@@ -27,7 +27,7 @@
 
 // Media Queries
 @mixin mq($bp) {
-	@media only screen and (min-width:$bp){  
+	@media only screen and (max-width:$bp){  
 		@content;
 	}
 }
@@ -35,24 +35,4 @@
 	@media only screen and (min-width:$min-bp) and (max-width: $max-bp) {  
 		@content;
 	}
-}
-
-
-// Transitions
-
-@mixin transition($transition-property, $transition-time, $method) {
-	-webkit-transition: $transition-property $transition-time $method;
-	-moz-transition: $transition-property $transition-time $method;
-	-ms-transition: $transition-property $transition-time $method;
-	-o-transition: $transition-property $transition-time $method;
-	transition: $transition-property $transition-time $method;
-}
-
-@mixin media_transition($transition-time) {
-	-webkit-transition: $transition-time;
-	-moz-transition: $transition-time;
-	-ms-transition: $transition-time;
-	-o-transition: $transition-time;
-	transition: $transition-time;
-
 }

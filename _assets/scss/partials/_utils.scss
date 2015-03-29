@@ -12,8 +12,6 @@
 	}
 }
 
-// General utils classes
-
 .hide {
 	position: absolute;
 	left: -9999999em;
@@ -26,27 +24,7 @@
 .align-right {
 	float: right;
 }
-.settings {
-	position: fixed;
-	display: none;
-	top: 20px;
-	right: 20px;
-	background: url('#{$img-path}/settings.png') no-repeat;
-	width: 36px;
-	height: 36px;
-	cursor: pointer;
-	&.show {
-		display: block;
-	}
-}
 
-// Responsive
-@mixin rwd-img {
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
 .rwd-img {
 	width: 100%;
 	max-width: 100%;
@@ -68,54 +46,4 @@
 	max-width: 70%;
 	margin: 40px auto;
 	background: #fcf8e3;
-}
-
-@keyframes spiral {
-	0% {
-		transform: scale(0);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
-@-webkit-keyframes spiral {
-	0% {
-		transform: scale(0);
-	}
-	100% {
-		transform: scale(1);
-	}
-}
-.loader {
-	position: fixed;
-	display: none;
-	z-index: 3;
-	height: 100%;
-	height: 100;
-	width: 100%;
-	background: rgba(#fff, 1);
-}
-.spiral {
-	display: none;
-	background: transparent;
-	position: fixed;
-	z-index: 4;
-	width: 100%;
-	height: 100%;
-	border-radius: 100%;
-	animation-name: spiral;
-	animation-duration: 1s;
-	animation-iteration-count: 10;
-	animation-direction: alternate;
-	animation-timing-function: ease-out;
-	animation-fill-mode: forwards;
-	animation-delay: 2s;
-	-webkit-animation-name: spiral;
-	-webkit-animation-duration: 1s;
-	 -webkit-animation-iteration-count: 10;
-	 -webkit-animation-direction: alternate;
-	 -webkit-animation-timing-function: ease-out;
-	 -webkit-animation-fill-mode: forwards;
-	 -webkit-animation-delay: 2s;
-	 -webkit-transform-origin: center center;
 }

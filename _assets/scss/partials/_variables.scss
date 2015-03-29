@@ -12,7 +12,6 @@ $is-IE9 : true;
 $cp-grey: #cccccc;
 
 // Images Paths
-
 $img-path: '/images/css';
 // Typography Base Config
 
@@ -60,11 +59,13 @@ $typo_scale : (
 );
 
 // Color Palette
-$cp-white       : #ffffff;
-$cp-black       : #000000;
-$cp-light-black : #444444;
-$cp-grey        : #cccccc;
-$cp-orange      : #F8AC48;
+$cp-white       		: #ffffff;
+$cp-black       		: #000000;
+$cp-body-text			: #444444;
+$cp-body-text-alternate	: #979797;
+$cp-line-gray			: #D8D8D8;
+$cp-link				: #4183D7;
+$cp-orange      		: #F8AC48;
 
 // Breakpoints bp / 18
 

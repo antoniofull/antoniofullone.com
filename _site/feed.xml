@@ -44,25 +44,21 @@
 		<!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="loader"></div>
-<div class="spiral"></div>
-<div id="page" class="page">
+    <div id="page" class="page">
 	<!--</header>-->
-	<div class="header--top"></div>
-	<div class="page__wrapper">
-		<header class="header" role="banner">
-			<a href="/" class="logo" id="logo">
-				<span class="logo__circle">
-					<span class="logo--text">A</span>
-				</span>
-			</a>
-			<nav class="nav" role="navigation">
-				<a href="/antonio/" title="About me">About</a>
-				<a href="/journal/" title="Journal">Journal</a>
-				<!-- <a href="https://bitbucket.org/afullone" title="">Lab</a> -->
-				<a href="/lab" title="">Lab</a>
-			</nav>
-		</header>
+	<!-- <div class="header--top"></div> -->	
+	<header class="header" role="banner">
+		<a href="/" class="logo" id="logo">
+			<span class="logo__circle">
+				<span class="logo--text">A</span>
+			</span>
+		</a>
+		<nav class="nav" role="navigation">
+			<a href="/antonio/" title="About me">About</a>
+			<a href="/journal/" title="Journal">Journal</a>
+			<a href="/lab" title="">Lab</a>
+		</nav>
+	</header>
 
       <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -71,8 +67,8 @@
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
     <link>http://antoniofullone.com/</link>
     <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 22 Mar 2015 14:38:00 +0100</pubDate>
-    <lastBuildDate>Sun, 22 Mar 2015 14:38:00 +0100</lastBuildDate>
+    <pubDate>Sun, 29 Mar 2015 11:22:42 +0200</pubDate>
+    <lastBuildDate>Sun, 29 Mar 2015 11:22:42 +0200</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
