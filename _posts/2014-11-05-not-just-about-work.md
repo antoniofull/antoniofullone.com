@@ -3,14 +3,11 @@ layout: post
 title:  Not just about work.
 date:   2014-11-05 21:30:00
 categories: expat-life
+image:  "team.png"
+imageDesc: "With the team in barcelona for the final"
 ---
 
-<figure class="img--post">
-		<img src="/images/posts/team.png" alt="2009 - in Mare Magnum, after Barcelona won the Champions league against Manchester" />
-		<figcaption>2009 - in Mare Magnum, after Barcelona won the Champions League against Manchester</figcaption>
-</figure>	
-
-Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2009/2010 and we had a very nice time. I was *leading* that team, so I am proud we built this *lovely friendship* which is lasting for years.
+Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2008/2009 and we had a very nice time. I was *leading* that team, so I am proud we built this *lovely friendship* which is lasting for years.
 
 This is the list of the countries represented in this meeting : 
 

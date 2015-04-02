@@ -2,142 +2,81 @@
 //    Lab
 //    ========================================================================== */
  
-// .presentation {
-//     display: block;
-//     width: 100%;
-//     padding: 20px;
-//     margin-bottom: 2em;
-//       font-family: Arial, sans-serif;
-//       font-style: normal;
-//       font-weight: normal;
-//       color: #444;
-// }
+.lab {
+	@extend .grid;
+	max-width: 980px;
+	margin: auto;
+	.flexy-container {
+		margin-top: 2.5em;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+		@include mq(768px, min-width) {
+			flex-direction: row;
+		}
+		.flexy-item {
+			@include mq(768px, min-width) {
+				flex: 1;
+				margin: 30px;
+			}
+			figure {
+				max-height: 200px;
+			}
+		}
+	}	
 
+	h1 { 
+		text-align: center;
+		max-width: 95%;
+		margin: auto;
+		@include toRem(map-get($scale, bigger));
+		@include mq(768px, min-width) {
+			@include toRem(map-get($scale, extra));
+		}
+	}
 
-// .lab { 
-//   h1 {
-//     font-size: 1.3em;
-//     line-height: 1.4;
-//     text-align: left;
-//     margin: 0 0 0.5em 0;
-//   }
-// }
-
-// .flexy-container {
-//   display: -webkit-flex;
-//   -webkit-flex-direction: row;
-  
-//   display: flex;
-//   flex-direction: row;
-
-//   padding: 5px;
-//   margin-bottom: 30px;
-// }
-
-// .flexy-item {
-//   -webkit-flex: 1;
-//   flex: 1;
-//   margin: 5px 25px 5px 5px;
-//   vertical-align: top;
-// }
-// .lab__code {
-//   text-align: center;
-//   &:last-child {
-//     margin-right: 0;  
-//   }
-//   figure {
-//     display: block;
-//     text-align: center;
-//     position: relative;
-//     overflow: hidden;
-//     img {
-//       display: block;
-//       max-width: 100%;
-//       height: auto;
-//     }
-//     figcaption {
-//       display: block;
-//       padding: 5px;
-//       height: 60px;
-//       background: rgba(#222, 0.6); 
-//       color: #fff;
-//       position: absolute;
-//       bottom: -65px;
-//       height: 0;
-//       opacity: 1;
-//       transition: all 0.2s ease-out;
-//       font-family: Arial, sans-serif;
-//       font-style: normal;
-//       font-weight: normal;
-//     }
-//     img {
-//       filter: grayscale(100%); 
-//       -webkit-filter: grayscale(100%); 
-//       transition: all 0.3s ease-out;
-//       cursor: pointer;
-//       &:hover {
-//         filter: grayscale(100%); 
-//         -webkit-filter: grayscale(0);       
-//       }
-//     }
-//     &:hover {
-//       figcaption {
-//         height: 50px;
-//         opacity: 1;
-//         bottom: 0;
-//       }
-//     }
-//   }
-// }
-
-// .button {
-//   @include  toRem(map-get($typo_scale, small));
-//   width: auto;
-//   min-width: 100px;
-//   background: rgba(#4183d7, 1);
-//   height: 30px;
-//   padding: 5px;
-//   line-height: 20px;
-//   display: inline-block;
-//   vertical-align: top;
-//   color: white;
-//   font-style: italic;
-//   position: relative;
-//   cursor: pointer;
-//   text-indent: 25px;
-//   border: 1px solid rgba(#59ABE3, 0.8);
-//   margin-top: 2em;
-//   margin-right: 2em;
-//   a {
-//       display: block;
-//       width: 100%;
-//       text-decoration: none;
-//       color: white;
-//     }
-//   span{
-//     display: block;
-//     width: 20px;
-//     background: url('#{$img-path}/action_sprite.png') 0 0 no-repeat;
-//   }
-//   &:active,
-//   &:focus {
-//     outline: none;
-//   }
-//   &:active {
-//     position: relative;
-//     top: 1px;
-//   }
-//   &.download {
-//    span {
-//       background-position: -34px 0;
-//     } 
-//   }
-//   &.source {
-    
-//   }
-// }
-
-// .actions {
-//   border-top: 1px solid #222;
-//   margin-top: 1.5em;
-// }
+	article h2 {
+		@include toRem(24);
+	}
+	.desc {
+		display: block;
+		margin: .5em 0;
+		color: rgba(#222, 1);
+	}
+}
+.actions {
+	@extend %group; 
+}
+.btn {
+	width: auto;
+	min-width: 120px;
+	padding: 10px;
+	border-radius: 1px;
+	background: rgba($cp-link, 0.8);
+	color: #fff;
+	font-size: 12px;
+	font-style: italic;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px; 
+	border: none;
+	&:hover {
+		background: lighten($cp-link, 5%);
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	// border: 1px solid darken($cp-link, 20%);
+	a {
+		color: #fff;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

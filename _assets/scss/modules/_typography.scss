@@ -1,247 +1,186 @@
 // // Typography Mixins
+@mixin proxima($fontWeight: 100) {
+	font-family: "proxima-nova-1","proxima-nova-2", sans-serif;
+	font-style: normal;
+	font-weight: $fontWeight;
+}
 
-// @mixin freight {
-// 	font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
-// 	font-style: normal;
-// 	font-weight: 400;
-// }
+@mixin livory($fontWeight: 400, $fontStyle: normal) {
+	font-family: "livory-1","livory-2", sans-serif;
+	font-style: $fontStyle;
+	font-weight: $fontWeight;
+}
 
-// @mixin freightBold() {
-// 	font-family: "freight-sans-pro-1", "freight-sans-pro-2", sans-serif;
-// 	font-style: normal;
-// 	font-weight: 700;
-// }
+a {
+	color : $cp-link;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+pre {
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-weight: normal;
+  font-style: italic;
+  padding: 10px;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid #fbeed5;
+  border-radius: 4px;
+  max-width: 90%;
+  background: #222;
+  overflow-x: auto; 
+}
+blockquote {
+	font-style: italic;
+	font-size: 17px;
+	padding-left:10px;
+	border-left: 5px solid $cp-line-gray;
+	width: 80%;
+	max-width: 450px;
+	margin: 0 1.5em;
+	@include mq(1024px, min-width) {
+		@include toRem(map-get($scale, medium));
+		margin: auto;
+		display: block;
+		max-width: 650px; 
+	}
+	font-size: 1.1rem;
 
-// @mixin skolar {
-// 	font-family: "skolar", "skolar-1", serif;
-// 	font-style: normal;
-// 	font-weight: 400;
-// }
+}
 
-// @mixin scala {
-// 	font-family: "ff-scala-web-1","ff-scala-web-2",sans-serif;
-// 	font-style: normal;
-// 	font-weight: 400;
+body {
+	@include livory(); 
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-// }
+	line-height: 1.5;
+	letter-spacing: 0.01rem;
 
+	text-rendering: optimizeLegibility;
 
-// @mixin freight-text-pro {
-// 	font-family: "freight-text-pro-1", "freight-text-pro-2", sans-serif;
-// 	font-style: normal;
-// 	font-weight: 300;
-// }
+	-moz-font-feature-settings: “liga” on;
 
+	-webkit-hyphens: auto;
+	-webkit-hyphenate-limit-before: 2;
+	-webkit-hyphenate-limit-after: 3;
+	-webkit-hyphenate-limit-lines: 2;
 
+	color: rgba($cp-body-text, 1);
 
+	@include mq(768px, min-width) {
+		@include toRem(22);
+	}
+}
 
-// // Return an em value based on the $base-font-size or contextual size. Thanks @ijy https://gist.github.com/ijy/1441967
-// @function em($target, $context: $base-font-size) {
-// 	@if $target == 0 {
-// 		@return 0
-// 	}
-// 	@return $target / $context + 0em;
-// }
+nav {
+	@include proxima();	
+	@include toRem(18);
+	width: 100%;
+	margin-top: #{map-get($scale, ms8)}em;
+	margin-bottom: #{map-get($scale, ms8)}em;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
 
-// // Generate a baseline guide equal to the rhythm unit
-// @mixin baseline-guide {
-// 	background-image: linear-gradient($guide-color 1px, transparent 1px);
-// 	background-size: 100% px($rhythm-unit);
-// }
+	a {
+		text-decoration: none;
+		color: rgba($cp-body-text-alternate, 1);
+		display: inline-block;
+		flex: 1;
+		flex-basis: auto;
+		width:90px;
+		min-height: 25px;
+		text-align: center;
+	}
 
-// .typogrid {}
+}
 
-// html {
-// 	font-size: 100%;
-// 	-webkit-font-smoothing: antialiased;
-// 	-ms-text-size-adjust: 100%;
-// 	-webkit-text-size-adjust: 100%;
-// 	&.baseline {
-// 		@include baseline-guide;
-// 		@include mq($bp-large-screen) {
-// 			background-size: 100% 1.875em; 
-// 		}
-// 	}
-// } 
+.welcome {
+	position: relative;
+	@include mq(768px, min-width) {
+			margin: #{map-get($scale, ms11)}em auto;
+	}
+	margin: #{map-get($scale, ms9)}em auto;
+	.big-quote {
+		@include toRem(map-get($scale, large));
+		
+		@include mq(768px, min-width) {
+			@include toRem(map-get($scale, extra));
+		}
+		
+		font-weight: 400;
+		text-align: center;
+	}
+	.small-quote {
+		@include toRem(map-get($scale, small));
+		font-style: italic;
+		color: rgba($cp-body-text-alternate, 1);
+		text-align: right;
+		max-width: 90%;
+	}
+}
 
-// body {
-// 	//@include scala;
-// 	@include freight-text-pro;
-// 	font-size: #{$base-font-size}px;
-// 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-// 	text-rendering: optimizeLegibility;
-// 	-webkit-font-smoothing: antialiased;
-// 	color: $cp-light-black;
-// 	line-height: $base-line-height;
-// }
+.what__header {
+	@include toRem(36);
+	font-weight: normal;
+	text-align: center;
+}
 
-// p {
-// 	line-height: 1.5;
-// 	margin-bottom: 1.5em;
-// 	@include mq($bp-large-screen) {
+.skills_header {
+	@include toRem(map-get($scale, large));
+	font-weight: 400;
+	text-align: center;
+	text-decoration: underline;
+	margin: 0;
+	@include mq(768px, min-width) {
+		@include toRem(map-get($scale, extra));
+	}
+}
 
-// 	}
-// 	-webkit-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-// 	-moz-font-feature-settings: 'kern=1, onum=1, liga=1';
-// 	-ms-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-// 	-o-font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-// 	font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-// }
+picture,
+figure  {
+	max-height: 400px;
+	overflow: hidden; 
+	position: relative;
+	margin: 0;
+}
 
-// a {
-// 	color: $cp-light-black;
-// 	&:hover {
-// 	}
-// 	&:link {
-// 	}
-// 	&:active {
-// 	}
-// 	&:visited {
-// 		color: $cp-light-black;
-// 	}
-// }
+.date {
+@include toRem(map-get($scale, small));
+	color : $cp-body-text-alternate;
+}
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-// 	@include freightBold;
-// 	-webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-// 	-moz-font-feature-settings: 'dlig=1, liga=1, lnum=1, kern=1';
-// 	-ms-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-// 	-o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-// 	font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-// }
+.desc {
+	@include toRem(18);
+	@include mq(1024px, min-width) {
+		@include toRem(20);
+	}
+}
 
-// h1 {
-// 	font-size: #{$base-font-size * map-get($typo_scale, ms9)}px; // Pixel :/
-// 	font-size: #{map-get($typo_scale, ms9)}rem; // Rem
-// 	line-height: 1.667;
-// 	&.welcome-quote {
-// 		@include skolar;  
-// 		$typo_value: map-get($typo_scale, ms7) + map-get($typo_scale, ms3);
-// 		@include toRem(map-get($typo_scale, x-large));
-// 		text-align: center; 
-// 		line-height: $typo_value;
-// 		transition: all 0.3s ease-in;
-// 		margin: #{round($typo_value * $base-font-size)}px auto;
-// 		margin: #{$typo_value}rem auto;
-// 		@include mq($bp-medium-screen) {
-// 			@include toRem(map-get($typo_scale, x-large) + 2);
-// 			line-height: map-get($typo_scale, ms7);
-// 		}
-// 		@include mq($bp-large-screen) {
-// 			@include toRem(map-get($typo_scale, extra));
-// 			line-height: map-get($typo_scale, ms7);
-// 		}
-// 		&.title--about {
-// 			margin: 0.667em 0;
-// 		}
- 
-// 	}
-// }
+.contact {
+	li {
+		@include toRem(map-get($scale, small));
+		list-style: none;
+		margin-bottom: 1em;
+		display: inline-block;
+		width: 40%;
+		margin-right: 10px;
+		@include mq(1024px, min-width) {
+			display: block;
+		}
 
-// h2 {
-// }
-
-// h3 {
-// }
-
-// h4,
-// h5 {
-// }
-
-// h6 {
-// }
-
-// .blink {
-// 	text-decoration: line-through;
-// }
-
-// blockquote {
-// 	font-style: italic;
-// 	border-left : 4px solid $cp-grey;
-// 	padding-left:10px;
-// 	max-width: 85%;
-// 	margin: auto;
-// }
-
-// ul,
-// ol {
-	
-// }
-// ul {
-// 	li {
-// 	}
-// }
-
-// ol {
-// 	li {
-// 	}
-// }
-
-// em, 
-// strong, 
-// code {
-// 	line-height: 1;
-// }
-
-
-// .meta {
-// 	font-style: italic;
-// 	display:block;
-// 	text-align: center;
-// 	line-height: map-get($typo_scale, ms9);
-// }
-
-// pre {
-// 	font-size: #{$base-font-size - 3}px;
-// 	line-height: 1.5;
-// 	font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-// 	font-weight: normal;
-// 	font-style: italic;
-// 	padding: 10px;
-// 	color: #c09853;
-// 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-// 	border: 1px solid #fbeed5;
-// 	border-radius: 4px;
-// 	max-width: 90%;
-// 	background: #fcf8e3;
-// 	overflow-x: auto;	
-// }
-// figure {
-// 	position: relative;
-// 	figcaption {
-// 		@include toRem(map-get($typo_scale, small));
-// 		font-style: italic;
-// 		margin-top: 0.6667em;
-// 		border-bottom: 1px dotted $cp-grey;
-// 		width: auto;
-// 		display: inline-block;
-// 	}
-// }
-
-
-// .nav {
-// 	@include toRem(18);
-// 	@include freight;
-	
-// }
-
-// .post-content {
-// 	& > p:first-of-type:first-letter {
-// 		@include skolar;
-// 		color: #444444;
-// 		font-size: 72px;
-// 		font-size: 4.5rem;
-// 		float: left;
-// 		line-height: .7;
-// 		margin: 0.117em .1em 0 0;
-// 		-webkit-transition: color 0.5s ease;
-// 		-moz-transition: color 0.5s ease;
-// 		-o-transition: color 0.5s ease;
-// 		transition: color 0.5s ease;
-// 	}
-// }
+		a {
+			color: $cp-body-text;
+			display: block;
+			font-style: italic;
+		}
+	}
+}
+.journal .list-header {
+	text-align: center;
+}

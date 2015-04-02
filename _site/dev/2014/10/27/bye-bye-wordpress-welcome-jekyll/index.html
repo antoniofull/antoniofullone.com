@@ -11,7 +11,7 @@
     <title>Bye Bye Wordpress, welcome Jekyll!</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="description" content="Antonio Fullone. Life, food, travelling and coding.">
-	<link rel="canonical" href="http://antoniofullone.com/dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/">
+	<link rel="canonical" href="http://antoniofullone.com//dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/">
 	<link rel="shortcut icon" href="/img/favicon.ico"/>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/css/style.css">
@@ -45,40 +45,58 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div id="page" class="page">
+	
 	<!--</header>-->
-	<!-- <div class="header--top"></div> -->	
-	<header class="header" role="banner">
-		<a href="/" class="logo" id="logo">
-			<span class="logo__circle">
-				<span class="logo--text">A</span>
-			</span>
-		</a>
-		<nav class="nav" role="navigation">
-			<a href="/antonio/" title="About me">About</a>
-			<a href="/journal/" title="Journal">Journal</a>
-			<a href="/lab" title="">Lab</a>
-		</nav>
-	</header>
+		<header class="main-header" role="banner">
+			<div class="logo-container">
+				<a href="/" class="logo">
+					<img src="/images/logo.png" alt="" class="img-logo">  	
+				</a>		
+			</div>
+			<nav class="nav" role="navigation">
+				<a href="/antonio/" title="About me">ABOUT</a>
+				<a href="/journal/" title="Journal">JOURNAL</a>
+				<a href="/lab" title="">LAB</a>
+				<a href="#contact" title="">CONTACT</a>
+			</nav>
+		</header>
 
-      <div class="post">
+
+      <section class="post">
+ 
   <header class="post-header">
     <h1>Bye Bye Wordpress, welcome Jekyll!</h1>
-  <span class="meta"> - Oct 27, 2014 -</span>
-	<h3>
-		
-	</h3>
+  <h3 class="meta"> - Oct 27, 2014 -</h3>
+  <h4>
+    
+
+  </h4>
   </header>	
+  
+<figure class="img--post">
+     <img src="/images/posts/jekyll.png" alt="">
+    <figcaption>With the team in barcelona for the final</figcaption>
+</figure> 
 
   <article class="post-content">
-  <figure class="img--post-large">
-		<img src="/images/posts/jekyll.png" alt="Jekyll home page" />
-		<figcaption>Jekyll is easy to install</figcaption>
-</figure>
-<p>I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.</p>
+  <aside class="info">
+  <ul>
+    <li>
+    Reading Time:  3 min.
+    </li>
+    <li>
+      <a href="/journal" class="all-posts">
+      Back to all posts   
+      </a>
+    </li>
+  </ul>
+  
+</aside>
+  <p>I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.</p>
 
 <p>Also the template system in Wordpress is complex while I, as you can see, I like to keep this site much simple as possible.</p>
 
-<p>The answer to all my questions is Jekyll. I was intrigued to use it, but a little bit “scared”,  I found out instead that is really easy to set up and use. I installed the Mac version, opened my Textmate and started moving the code from Wordpress to static pages in less than a weekend. </p>
+<p>The answer to all my questions is Jekyll. I was intrigued to use it, but a little bit “scared”,  I found out instead that is really easy to set up and use. I installed the Mac version, opened my Textmate and started moving the code from Wordpress to static pages in less than a weekend.</p>
 
 <p>Jekyll has his own template system, and once you do the build, the only thing is to use the same name pattern for the posts.</p>
 
@@ -88,7 +106,7 @@
 
 <p>Next step is to move also my italian blog (which basically will just be a copy of this one, but probably different contents) where I use to blog more often, like 6/7 times a year.</p>
 
-<p>I am very happy now with the results, here some simple advantages I found on Jekyll: </p>
+<p>I am very happy now with the results, here some simple advantages I found on Jekyll:</p>
 
 <ul>
   <li>Template : as I said above, easy, simple faster.</li>
@@ -101,17 +119,78 @@
 
   </article>
 
-</div>  
+</section>  
 
-        </div>
-</div>
-<footer role="contentinfo">
-	<p class="footer__contact">
-		<a href="http://www.antoniofullone.it">Italian</a>
-		<a href="#">Top</a>
-	</p>
-	<p class="footer_copyright">Antonio Fullone - &copy;2009 - 2014</p>
-</footer>
+    		<footer>
+			<div class="flexy">
+				<div class="contact" id="contact">
+					<ul>
+						<li>
+							<a href="http://nl.linkedin.com/in/antoniofullone" class="social linkedin">Linkedin</a>
+						</li>
+						<li>
+							<a href="https://bitbucket.org/afullone" class="social bitbucket">BitBucket</a>
+						</li>
+						<li>
+							<a href="https://github.com/lastwebdesigner" class="social github">Github</a>
+						</li>
+						<li>
+							<a href="https://dribbble.com/lastwebdesigner" class="social twitter">Dribbble</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/LastWebdesigner" class="social dribbble">Twitter</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/Antonio.Fullone" class="social facebook">Facebook</a>
+						</li>
+						<li>
+							<a href="https://plus.google.com/+antoniofullone/" class="social twitter">Google</a>
+						</li>
+						<li>
+							<a href="mailto:antonio.fullone@gmail.com" class="social gplus">Email</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nerdy">
+					<div class="footer-info">
+						<p>
+							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He would love to own a Tiger.
+						</p>
+					</div>
+					<h3 class="colophon__header">Nerdy Stuff</h3>
+					<div class="colophon">
+						<div class="col typgraphy">
+						<h4>Typography</h4>
+							<p>
+								<strong>Body text:</strong> 
+								Livory by HVD Fonts
+								<strong>Navigation:</strong> 
+								Proxima Nova by Mark Simonson Studio.							
+							</p>
+						</div>
+						<div class="col coding">
+						<h4>Design/Coding</h4>
+						<p>
+							Made with: <strong>Mac Book Pro 2013.</strong>
+							Designed with: <strong>Sketch.</strong> 
+							Coded with:  <strong>Sublime Text</strong> Html, Css Sass, Js.						
+						</p>
+						</div>
+						<div class="col powered">
+						<h4>Powered By</h4>
+						<p>
+							Proudly powered by
+							<strong>Jekyll</strong> and hosted by
+							<strong>Media Temple</strong>.						
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="copyright"> &copy;  2009-2015 </p>
+		</footer>
+	</div>
+
 <script src="/main.js" async="true"></script> 
 
     </body>

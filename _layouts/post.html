@@ -1,17 +1,37 @@
 ---
 layout: default
 ---
-<div class="post">
+<section class="post">
+ 
   <header class="post-header">
     <h1>{{ page.title }}</h1>
-  <span class="meta"> - {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} -</span>
-	<h3>
-		
-	</h3>
-  </header>	
+  <h3 class="meta"> - {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} -</h3>
+  <h4>
+    
 
+  </h4>
+  </header>	
+  {% if page.image %}
+<figure class="img--post">
+     <img src="/images/posts/{{ page.image }}" alt="">
+    <figcaption>{{ page.imageDesc }}</figcaption>
+</figure> 
+{% endif %}
   <article class="post-content">
+  <aside class="info">
+  <ul>
+    <li>
+    Reading Time:  {{ content.size | readtime }} min.
+    </li>
+    <li>
+      <a href="/journal" class="all-posts">
+      Back to all posts   
+      </a>
+    </li>
+  </ul>
+  
+</aside>
   {{ content }}
   </article>
 
-</div>
+</section>

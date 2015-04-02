@@ -24,15 +24,3 @@
 @mixin line_height($font) {
 	line-height: lineHeight($font);
 }
-
-// Media Queries
-@mixin mq($bp) {
-	@media only screen and (max-width:$bp){  
-		@content;
-	}
-}
-@mixin custom-mq($min-bp, $max-bp) {
-	@media only screen and (min-width:$min-bp) and (max-width: $max-bp) {  
-		@content;
-	}
-}

@@ -11,7 +11,7 @@
     <title>Antonio Fullone</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="description" content="Antonio Fullone. Life, food, travelling and coding.">
-	<link rel="canonical" href="http://antoniofullone.com/feed.xml">
+	<link rel="canonical" href="http://antoniofullone.com//feed.xml">
 	<link rel="shortcut icon" href="/img/favicon.ico"/>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/css/style.css">
@@ -45,31 +45,33 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div id="page" class="page">
+	
 	<!--</header>-->
-	<!-- <div class="header--top"></div> -->	
-	<header class="header" role="banner">
-		<a href="/" class="logo" id="logo">
-			<span class="logo__circle">
-				<span class="logo--text">A</span>
-			</span>
-		</a>
-		<nav class="nav" role="navigation">
-			<a href="/antonio/" title="About me">About</a>
-			<a href="/journal/" title="Journal">Journal</a>
-			<a href="/lab" title="">Lab</a>
-		</nav>
-	</header>
+		<header class="main-header" role="banner">
+			<div class="logo-container">
+				<a href="/" class="logo">
+					<img src="/images/logo.png" alt="" class="img-logo">  	
+				</a>		
+			</div>
+			<nav class="nav" role="navigation">
+				<a href="/antonio/" title="About me">ABOUT</a>
+				<a href="/journal/" title="Journal">JOURNAL</a>
+				<a href="/lab" title="">LAB</a>
+				<a href="#contact" title="">CONTACT</a>
+			</nav>
+		</header>
+
 
       <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Antonio Fullone</title>
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
-    <link>http://antoniofullone.com/</link>
-    <atom:link href="http://antoniofullone.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 29 Mar 2015 11:22:42 +0200</pubDate>
-    <lastBuildDate>Sun, 29 Mar 2015 11:22:42 +0200</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <link>http://antoniofullone.com//</link>
+    <atom:link href="http://antoniofullone.com//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 31 Mar 2015 20:19:22 +0200</pubDate>
+    <lastBuildDate>Tue, 31 Mar 2015 20:19:22 +0200</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>My simple rules when writing Sass</title>
@@ -80,7 +82,7 @@ I have some simple rules that I apply every time I am writing code with &lt;stro
 
 &lt;h2 id=&quot;dont-extend-everything&quot;&gt;Don’t @extend everything.&lt;/h2&gt;
 
-&lt;p&gt;Is an easy one. You start using the @&lt;em&gt;extend&lt;/em&gt; feature, you get excited, you think you are doing &lt;strong&gt;OOCSS&lt;/strong&gt; the right way, and at some point you end up having code like that &lt;/p&gt;
+&lt;p&gt;Is an easy one. You start using the @&lt;em&gt;extend&lt;/em&gt; feature, you get excited, you think you are doing &lt;strong&gt;OOCSS&lt;/strong&gt; the right way, and at some point you end up having code like that&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;.class1, .class2,  .class3,  .class4,  .class5,  .class6,  .class7,  .class8,  .class9,  .class10,  .class11,  .class12,  .class12,  .class14, .and-so-on {
 	text-align: center;
@@ -89,7 +91,7 @@ I have some simple rules that I apply every time I am writing code with &lt;stro
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;While it would have been much more easy to just use one class and add it to the html &lt;/p&gt;
+&lt;p&gt;While it would have been much more easy to just use one class and add it to the html&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;.one-class { 
 	text-align: center;
@@ -98,7 +100,7 @@ I have some simple rules that I apply every time I am writing code with &lt;stro
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Or even worse you not only extend, but also adding new css code to the extended class, so your code end up in this &lt;/p&gt;
+&lt;p&gt;Or even worse you not only extend, but also adding new css code to the extended class, so your code end up in this&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;.class1, .class2,  .class3,  .class4,  .class5,  .class6,  .class7,  .class8,  .class9,  .class10,  .class11,  .class12,  .class12,  .class14, .and-so-on {
 	text-align: center;
@@ -115,7 +117,7 @@ I have some simple rules that I apply every time I am writing code with &lt;stro
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;In this case, might be simpler just to use a mixin &lt;/p&gt;
+&lt;p&gt;In this case, might be simpler just to use a mixin&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;@mixin text-align($color: blue) {
 	text-align: center;
@@ -141,9 +143,9 @@ I have some simple rules that I apply every time I am writing code with &lt;stro
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;In this case I am creating a sort of “namespace” for my module. Usually the class, like in this case .landing, is the body or the main container. &lt;/p&gt;
+&lt;p&gt;In this case I am creating a sort of “namespace” for my module. Usually the class, like in this case .landing, is the body or the main container.&lt;/p&gt;
 
-&lt;p&gt;Many Sass experts suggest to do not nest more than 3 levels, I am not an expert but in my opinion 3 level is already a lot, especially if using ID’s or just simple selectors. &lt;/p&gt;
+&lt;p&gt;Many Sass experts suggest to do not nest more than 3 levels, I am not an expert but in my opinion 3 level is already a lot, especially if using ID’s or just simple selectors.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;.class {
   #div {
@@ -155,13 +157,13 @@ I have some simple rules that I apply every time I am writing code with &lt;stro
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;This is wrong, and not only for the nesting. &lt;/p&gt;
+&lt;p&gt;This is wrong, and not only for the nesting.&lt;/p&gt;
 
 &lt;h2 id=&quot;use-less-id-or-not-at-all&quot;&gt;Use less ID (or not at all)&lt;/h2&gt;
 
 &lt;p&gt;Well .. we all know that there is hot a debate here, which is not strictly related to Sass but in somehow it is since Sass is perfect for those who love &lt;strong&gt;OOCSS&lt;/strong&gt;. I am not a religious fan of &lt;strong&gt;OOCSS&lt;/strong&gt;, I am a fan of the &lt;em&gt;right approach for each project&lt;/em&gt; (not always means OOCSS or sass), but when writing code for a large codebase, which is probably modular and using a preprocessor (that might not be sass), &lt;em&gt;the use of ID&lt;/em&gt;, or at least the massive use of it, is likely to create a lot of specificity problems.&lt;/p&gt;
 
-&lt;p&gt;A good solution suggested is using &lt;strong&gt;div[id=test&lt;/strong&gt;] instead of #&lt;strong&gt;test&lt;/strong&gt; this is because the latter has a higher specificity while the first has the same specificity of the class. To be honest I don’t see any reason, or at least could not find any use case, to use div[id=test] while I can just use a class. &lt;/p&gt;
+&lt;p&gt;A good solution suggested is using &lt;strong&gt;div[id=test&lt;/strong&gt;] instead of #&lt;strong&gt;test&lt;/strong&gt; this is because the latter has a higher specificity while the first has the same specificity of the class. To be honest I don’t see any reason, or at least could not find any use case, to use div[id=test] while I can just use a class.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Harry Roberts&lt;/strong&gt; has released a very interesting tool lately, &lt;a href=&quot;http://csswizardry.com/2014/10/the-specificity-graph/&quot;&gt;the Specificity Graph&lt;/a&gt;, I suggest you to give a look at it.&lt;/p&gt;
 
@@ -208,7 +210,7 @@ also important, the problem of naming variables.&lt;/p&gt;
 
 &lt;p&gt;Writing modular is the best approach ever to writing css code. No matter if you are using &lt;a href=&quot;http://oocss.org&quot;&gt;OOCSS&lt;/a&gt;, &lt;a href=&quot;https://smacss.com&quot;&gt;SMACCS&lt;/a&gt; or whatsoever, using a modular approach to your code can only brings benefits to the team. The Sass @import does the magic for you, importing directly the modules in the main file without doing any http request.&lt;/p&gt;
 
-&lt;p&gt;Usually my style.scss file looks like this : &lt;/p&gt;
+&lt;p&gt;Usually my style.scss file looks like this :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;@import “partial/variables”;
 @import “partial/functions”;
@@ -220,12 +222,12 @@ also important, the problem of naming variables.&lt;/p&gt;
 
 &lt;p&gt;I never write sass code directly in the main file, I only use import and everything is written inside small modules that are then imported. It makes the code much easier to maintain, update and understand for your new colleagues.&lt;/p&gt;
 
-&lt;p&gt;So here they are, some simple rules that help me to get out the most of Sass without bloat the code, keeping it clean and reusable. &lt;/p&gt;
+&lt;p&gt;So here they are, some simple rules that help me to get out the most of Sass without bloat the code, keeping it clean and reusable.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 18 Nov 2014 23:00:00 +0100</pubDate>
-        <link>http://antoniofullone.com/dev/2014/11/18/my-simple-rules-when-writing-sass-code/</link>
-        <guid isPermaLink="true">http://antoniofullone.com/dev/2014/11/18/my-simple-rules-when-writing-sass-code/</guid>
+        <link>http://antoniofullone.com//dev/2014/11/18/my-simple-rules-when-writing-sass-code/</link>
+        <guid isPermaLink="true">http://antoniofullone.com//dev/2014/11/18/my-simple-rules-when-writing-sass-code/</guid>
         
         
         <category>dev</category>
@@ -234,14 +236,9 @@ also important, the problem of naming variables.&lt;/p&gt;
     
       <item>
         <title>Not just about work.</title>
-        <description>&lt;figure class=&quot;img--post&quot;&gt;
-		&lt;img src=&quot;/images/posts/team.png&quot; alt=&quot;2009 - in Mare Magnum, after Barcelona won the Champions league against Manchester&quot; /&gt;
-		&lt;figcaption&gt;2009 - in Mare Magnum, after Barcelona won the Champions League against Manchester&lt;/figcaption&gt;
-&lt;/figure&gt;
+        <description>&lt;p&gt;Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2008/2009 and we had a very nice time. I was &lt;em&gt;leading&lt;/em&gt; that team, so I am proud we built this &lt;em&gt;lovely friendship&lt;/em&gt; which is lasting for years.&lt;/p&gt;
 
-&lt;p&gt;Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2009/2010 and we had a very nice time. I was &lt;em&gt;leading&lt;/em&gt; that team, so I am proud we built this &lt;em&gt;lovely friendship&lt;/em&gt; which is lasting for years.&lt;/p&gt;
-
-&lt;p&gt;This is the list of the countries represented in this meeting : &lt;/p&gt;
+&lt;p&gt;This is the list of the countries represented in this meeting :&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Italy&lt;/li&gt;
@@ -254,7 +251,7 @@ also important, the problem of naming variables.&lt;/p&gt;
   &lt;li&gt;Argentina (probably)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I met these amazing people because I went to live and work abroad, and this is the best part of being an &lt;strong&gt;expat&lt;/strong&gt;, something I never regret I did. &lt;/p&gt;
+&lt;p&gt;I met these amazing people because I went to live and work abroad, and this is the best part of being an &lt;strong&gt;expat&lt;/strong&gt;, something I never regret I did.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;The ideal place for me is the one in which it is most natural to live as a foreigner. - Italo Calvino.&lt;/p&gt;
@@ -262,8 +259,8 @@ also important, the problem of naming variables.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 05 Nov 2014 22:30:00 +0100</pubDate>
-        <link>http://antoniofullone.com/expat-life/2014/11/05/not-just-about-work/</link>
-        <guid isPermaLink="true">http://antoniofullone.com/expat-life/2014/11/05/not-just-about-work/</guid>
+        <link>http://antoniofullone.com//expat-life/2014/11/05/not-just-about-work/</link>
+        <guid isPermaLink="true">http://antoniofullone.com//expat-life/2014/11/05/not-just-about-work/</guid>
         
         
         <category>expat-life</category>
@@ -272,15 +269,11 @@ also important, the problem of naming variables.&lt;/p&gt;
     
       <item>
         <title>Bye Bye Wordpress, welcome Jekyll!</title>
-        <description>&lt;figure class=&quot;img--post-large&quot;&gt;
-		&lt;img src=&quot;/images/posts/jekyll.png&quot; alt=&quot;Jekyll home page&quot; /&gt;
-		&lt;figcaption&gt;Jekyll is easy to install&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.&lt;/p&gt;
+        <description>&lt;p&gt;I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.&lt;/p&gt;
 
 &lt;p&gt;Also the template system in Wordpress is complex while I, as you can see, I like to keep this site much simple as possible.&lt;/p&gt;
 
-&lt;p&gt;The answer to all my questions is Jekyll. I was intrigued to use it, but a little bit “scared”,  I found out instead that is really easy to set up and use. I installed the Mac version, opened my Textmate and started moving the code from Wordpress to static pages in less than a weekend. &lt;/p&gt;
+&lt;p&gt;The answer to all my questions is Jekyll. I was intrigued to use it, but a little bit “scared”,  I found out instead that is really easy to set up and use. I installed the Mac version, opened my Textmate and started moving the code from Wordpress to static pages in less than a weekend.&lt;/p&gt;
 
 &lt;p&gt;Jekyll has his own template system, and once you do the build, the only thing is to use the same name pattern for the posts.&lt;/p&gt;
 
@@ -290,7 +283,7 @@ also important, the problem of naming variables.&lt;/p&gt;
 
 &lt;p&gt;Next step is to move also my italian blog (which basically will just be a copy of this one, but probably different contents) where I use to blog more often, like 6/7 times a year.&lt;/p&gt;
 
-&lt;p&gt;I am very happy now with the results, here some simple advantages I found on Jekyll: &lt;/p&gt;
+&lt;p&gt;I am very happy now with the results, here some simple advantages I found on Jekyll:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Template : as I said above, easy, simple faster.&lt;/li&gt;
@@ -302,8 +295,8 @@ also important, the problem of naming variables.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 27 Oct 2014 22:48:02 +0100</pubDate>
-        <link>http://antoniofullone.com/dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/</link>
-        <guid isPermaLink="true">http://antoniofullone.com/dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/</guid>
+        <link>http://antoniofullone.com//dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/</link>
+        <guid isPermaLink="true">http://antoniofullone.com//dev/2014/10/27/bye-bye-wordpress-welcome-jekyll/</guid>
         
         
         <category>dev</category>
@@ -314,15 +307,76 @@ also important, the problem of naming variables.&lt;/p&gt;
 </rss>
   
 
-        </div>
-</div>
-<footer role="contentinfo">
-	<p class="footer__contact">
-		<a href="http://www.antoniofullone.it">Italian</a>
-		<a href="#">Top</a>
-	</p>
-	<p class="footer_copyright">Antonio Fullone - &copy;2009 - 2014</p>
-</footer>
+    		<footer>
+			<div class="flexy">
+				<div class="contact" id="contact">
+					<ul>
+						<li>
+							<a href="http://nl.linkedin.com/in/antoniofullone" class="social linkedin">Linkedin</a>
+						</li>
+						<li>
+							<a href="https://bitbucket.org/afullone" class="social bitbucket">BitBucket</a>
+						</li>
+						<li>
+							<a href="https://github.com/lastwebdesigner" class="social github">Github</a>
+						</li>
+						<li>
+							<a href="https://dribbble.com/lastwebdesigner" class="social twitter">Dribbble</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/LastWebdesigner" class="social dribbble">Twitter</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/Antonio.Fullone" class="social facebook">Facebook</a>
+						</li>
+						<li>
+							<a href="https://plus.google.com/+antoniofullone/" class="social twitter">Google</a>
+						</li>
+						<li>
+							<a href="mailto:antonio.fullone@gmail.com" class="social gplus">Email</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nerdy">
+					<div class="footer-info">
+						<p>
+							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He would love to own a Tiger.
+						</p>
+					</div>
+					<h3 class="colophon__header">Nerdy Stuff</h3>
+					<div class="colophon">
+						<div class="col typgraphy">
+						<h4>Typography</h4>
+							<p>
+								<strong>Body text:</strong> 
+								Livory by HVD Fonts
+								<strong>Navigation:</strong> 
+								Proxima Nova by Mark Simonson Studio.							
+							</p>
+						</div>
+						<div class="col coding">
+						<h4>Design/Coding</h4>
+						<p>
+							Made with: <strong>Mac Book Pro 2013.</strong>
+							Designed with: <strong>Sketch.</strong> 
+							Coded with:  <strong>Sublime Text</strong> Html, Css Sass, Js.						
+						</p>
+						</div>
+						<div class="col powered">
+						<h4>Powered By</h4>
+						<p>
+							Proudly powered by
+							<strong>Jekyll</strong> and hosted by
+							<strong>Media Temple</strong>.						
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="copyright"> &copy;  2009-2015 </p>
+		</footer>
+	</div>
+
 <script src="/main.js" async="true"></script> 
 
     </body>

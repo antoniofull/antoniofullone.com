@@ -16,15 +16,14 @@ $img-path: '/images/css';
 // Typography Base Config
 
 $base-line-height: 1.875;
-$base-font-size: 18; // 1.5 / 16 = x / 20
+$base-font-size: 16; // 1.5 / 16 = x / 20
 $rhythm-unit: 27;
 $guide-color: $cp-grey; 
 
 // modular scale values
-// Pixel TODO maybe remove
 // http://modularscale.com/scale/?px1=16&px2=48&ra1=1.5&ra2=0
 
-$typo_scale : (
+$scale : (
 	
 	ms1: 0.088,
 	ms2: 0.132,
@@ -55,7 +54,7 @@ $typo_scale : (
 	large    : 32,
 	x-large  : 36,
 	bigger   : 48,
-	extra    : 54			
+	extra    : 64			
 );
 
 // Color Palette
@@ -63,9 +62,10 @@ $cp-white       		: #ffffff;
 $cp-black       		: #000000;
 $cp-body-text			: #444444;
 $cp-body-text-alternate	: #979797;
-$cp-line-gray			: #D8D8D8;
+$cp-line-gray			: #e5e5e5;
 $cp-link				: #4183D7;
 $cp-orange      		: #F8AC48;
+$cp-body-bg				: #F0E5C9;
 
 // Breakpoints bp / 18
 

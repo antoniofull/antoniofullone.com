@@ -3,14 +3,17 @@ title: Antonio Fullone
 email: antonio@antoniofullone.com
 description: "Antonio Fullone. Life, food, travelling and coding."
 baseurl: ""
-url: "http://antoniofullone.com"
+url: "http://antoniofullone.com/"
 twitter_username: lastwebdesigner
 github_username:  lastwebdesigner
 ftp_host: 'antoniofullone.com'
 ftp_dir: '/t'
 ftp_passive: false
+exclude: ['node_modules', 'bower_components', 'gulpfile.js', 'grunt_package.json', 'package.json', 'bower.json', 'Gruntfile.js', 'README.md','gulp']
 
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+

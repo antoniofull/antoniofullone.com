@@ -1,14 +1,64 @@
-// footer {
-// 	clear:right;
-// 	height: 120px;
-// 	width:100%;
-// 	max-width: 960px;
-// 	border-top: 1px dotted $cp-grey;
-// 	margin: 0 auto;
-// 	position: relative;
-// 	top: calc(100%-120px);
-// 	text-align: center;
-// 	p {
-// 		margin-top: 1.5em;
-// 	}
-// }
+footer {
+	@include toRem(16);
+	margin-top: 5em;
+	border-top:  1px solid $cp-line-gray;
+	padding-top: 10px;
+	.flexy {
+		display: flex;
+		@include mq(768px, min-width) {flex-direction: row;}
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+		height: 90%;
+		.contact {
+			flex: 1;
+			@include mq(768px, min-width) {border-right: 1px solid $cp-line-gray;}
+			height: 100%;
+		}
+		.nerdy {
+			@include mq(768px, min-width) {flex: 2; }
+			flex: 1;
+			margin-left: 1em;
+		}
+		.colophon__header {
+			@include toRem(16);
+			display: none;
+			margin: 0;
+			@include mq(768px, min-width) { 
+				display: block;
+				@include toRem(18);
+			}
+		}
+		.colophon {
+			@include toRem(map-get($scale, small));
+			@include mq(768px, min-width) { 
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+			}
+			display: none;
+		}
+		.col {
+			flex: 1;
+			margin-left:  15px;
+			width: 25%;
+			@include mq(768px, min-width) { margin: 0; padding: 5px;}
+			p {
+				max-width: 90%;
+			}
+		}
+
+		.footer-info {
+			align-self: flex-start;
+			font-style: italic;
+			  max-width: 980px;
+		}
+	}
+	.copyright {
+		@include toRem(12);
+		text-align: right;
+		width: 100%;
+		border-top: 1px dotted $cp-line-gray;
+		padding-top: 5px;
+	}
+	
+}

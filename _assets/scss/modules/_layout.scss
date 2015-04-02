@@ -1,310 +1,293 @@
-// /* ==========================================================================
-//    Reset
-//    ========================================================================== */
+body {
+	min-height: 100vh;
+	height: 100%;
+	background: $cp-body-bg;
+	padding: 10px;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.page {
+	flex: 1;
+	background: $cp-white;
+	box-sizing: border-box;
+	padding: 10px;
+}
+.grid {
+	max-width: 980px;
+	margin: 2.25em auto 0 auto; 
+}
+
+.content {
+	max-width: 1440px;
+	margin: auto;
+}  
+
+// ==================
+// 	HEADER 
+// ==================
+
+.main-header {
+	position: relative;
+	margin-bottom: #{map-get($scale, ms6)}em;
+	@include mq(768px, min-width) {
+			margin-bottom: #{map-get($scale, ms8)}em;
+			display: flex;
+			flex-direction: row;
+		.logo-container {	
+			flex: 1 0 0;
+			
+			@include mq(1135px, min-width) {
+				flex: 2 0 0;
+			}
+			position: relative;
+			margin: 0;
+			img {
+				max-width: 70px;
+			}
+		}		
+
+		nav {
+			flex: 1 0 0;
+			align-self: flex-end;
+			margin-left: auto;
+		}
+	}
+
+	@include mq(1024px, min-width) {
+		margin-bottom: #{map-get($scale, ms11)}em;
+	}
+
+}
+.logo {
+	width: 70px;
+	height: 70px;
+	max-width: 70px;
+	display: block;
+	margin: auto;
+	@include mq(768px,min-width) {
+		margin: 0;
+	}
+	img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+footer {
+	height: 320px;
+}
 
 
-// article,
-// aside,
-// details,
-// figcaption,
-// figure,
-// footer,
-// header,
-// hgroup,
-// main,
-// nav,
-// section,
-// summary {
-// 	display: block;
-// 	margin: 0;
-// }
+// ==================
+// 	HOME 
+// ==================
 
-// /* ==========================================================================
-//    Layout
-//    ========================================================================== */
-
-// *,
-// *:before,
-// *:after {
-// 	-webkit-box-sizing: border-box;
-// 	-moz-box-sizing: border-box;
-// 	box-sizing: border-box;
-// }
-
-// html {
-// 	position: relative;
-// 	z-index: 2;
-// 	min-height: 100%;
-// }
-
-// body {
-// 	max-width: 2000px;
-// 	min-height: 100%;
-// 	position: relative;
-// 	top: 0;
-// }
-
-// .rwd-img {
-// 	@include mq($bp-large-screen) {
-// 		width: auto;
-// 		max-width: 100%;
-// 	}
-// 	max-width: 100%;
-// 	height: auto;
-// 	width: 100%;
-
-// }
-
-// #page {
-// 	@include mq($bp-large-screen) {
-// 		max-width: 960px;
-// 		margin: auto;
-// 	} 
-// }
-// .page__wrapper {
-// 	@extend %group;	
-// 	max-width: 95%;
-// 	margin: auto;
-// }
-
-// /* ==========================================================================
-//    Elements : Images
-//    ========================================================================== */
-
-// .img--me {
-// 	display: block;
-// 	margin: 1.5rem auto;
-// }
-
-// .img--about {
-// 	display: block;
-// 	opacity: 0.9;
-// 	transition: border 0.3s ease-out;
-// 	border: 1px solid inherit;  
-// 	@include mq($bp-large-screen) {
-// 		width: calc(1000% + 200px);
-// 		max-width: 700px;
-// 		margin-left: -200px;
-// 	}
-// 	figcaption {
-// 		max-width: 180px;
-// 	}
-// 	& > img:hover {
-// 		border: 1px solid $cp-orange;  
-// 	}
-// }
-// .img--post-default {
-// 	position: relative;
-// 	max-width: 100%;
-// 	img {
-// 		@extend .rwd-img;
-// 	}
-// 	figcaption {
-// 		@include mq($bp-large-screen) {
-// 			position: absolute;
-// 			z-index: 1;
-// 			left: -90px;
-// 			top: 0;
-// 			max-width: 70px;		
-// 		}
-// 		max-width: 180px;
-// 	}
-// }
-// .img--post-large {
-// 	@include mq($bp-large-screen) {
-// 		width: calc(100% + 140px);
-// 		max-width: calc(100% + 140px);
-// 		margin-left: -140px; 
-// 	}
+.whatIdo {
+	display: flex;
+	flex-direction: column;
+	margin: 1.5em 0 0 0;
 	
-// 	@include mq(1280px) {
-// 		@include mq($bp-large-screen) {
-// 			width: calc(100% + 200px);
-// 			max-width: calc(100% + 200px);
-// 			margin-left: -200px;
-// 		}
-// 	}
-// 	img {
-// 		@extend .rwd-img;
-// 		figcaption {
-// 			max-width: 180px;
-// 		}
-// 	}
-// }
-
-// /* ==========================================================================
-//    Page : Home
-//    ========================================================================== */
-
-// .separator {
-// 	background: url(/images/separator.png) no-repeat center center ;
-// 	width: 100%;
-// 	height: 27px;
-// 	display: block;
-// 	margin: auto;
-// 	@include mq($bp-large-screen) {
-// 		max-width: 68%;
-// 	}
-	 
-	
-// }
-// .home {
-// 	@include container(430px);
-// 	@include mq($bp-large-screen) {
-// 		@include container(100%);
-// 	}	
-// }
-// .home__introduction {
-// 	width: 100%;
-// 	margin-left: auto;
-// 	margin-right: auto;
-// 	@include mq($bp-large-screen) {
-// 		@include span(10 of 12);
-// 	}
-// }
-
-// .home__entry {
-// 	@include mq($bp-large-screen) {
-// 		@include span(9 of 12 last);
+	@include mq(768px, min-width) {
+		flex-direction: row;
 		
-// 	}
-// }
+			header {
+			display: block;
+			flex: none;
+		}
+		img {
+			width: 100%;
+			max-width: 10;
+		}
+	}
 
-// .home__info {
-// 	figure {
-// 		max-width: 130px;
-// 		margin: auto;
-// 		display: block;
-// 		img {
-// 			@extend .rwd-img;
-// 		}
-// 	}
-// 	@include mq($bp-medium-screen) {
-		
-// 	}
-// 	@include mq($bp-large-screen) {
-// 		@include span(2 of 12);
-		
-// 	}
-// 	figure { 
-// 		img {
-// 			@include mq($bp-medium-screen) {
-// 				@include rwd-img;
-// 			}			
-// 		}
-// 	}
-	
-// }
-// .home__social {
-// 	display: none;
-// 	@include mq($bp-large-screen) {
-// 		display: block;
-// 		@include span(2 of 12 last);
-// 	}	
-// 	ul {
-// 		@include toRem(map-get($typo_scale, base));
-// 		font-style: italic;
-// 		margin-top: #{map-get($typo_scale, ms8)}em;
-// 		li { 
-// 			border-bottom:1px dotted $cp-grey;
-// 			transition: all 0.3s ease-out;
-// 			&:hover {
-// 				border-bottom:1px dotted $cp-orange;
-// 			}
-// 		}
-// 		a {
-// 			text-decoration: none;
-// 		}
-// 	}
-// }
+	.what {
+		flex: 1;
+		img {
+			display: block;
+			max-width: 120px;
+			width: 120px;
+			@include mq(1024px, min-width) {
+				max-width: 150px;
+				width: 150px;
+			}
+			height: auto;
+			margin: auto;
+		}
+		p {
+			max-width: 250px;
+			@include mq(1024px, min-width) {max-width: 350px;}
+			width: 80%;
+			margin: 1.5em auto;
+			text-align: center;
+		}
+	}
+}
 
-// /* ==========================================================================
-//    Page : About
-//    ========================================================================== */
+// ==================
+// 	ABOUT
+// ==================
 
-// .title--about {
-// 	margin-top:0;	
-// }
-// .about__me {
-// 	@extend .home__introduction;
-// }
-// .about {
-// 	@include custom-mq(640px, 1024px) {
-// 		max-width: 34.172em;
-// 		margin: auto;
-// 	}
-// 	@include mq($bp-large-screen) {
-// 		@include container(100%); 
-// 	}
-	
-// }
-// .about__info {
-// 	@include mq($bp-large-screen) {
-// 		@include span(4 of 12); 
-// 		margin-top: #{map-get($typo_scale, ms12)}em;
-// 	}
-// }
-// .about__me { 
-// 	@include mq($bp-large-screen) {
-// 		@include span(7 of 12 last); 
-// 	}
-// }
+.about {
+	width: 100%;
+	max-width: 980px;
+	margin:  auto;
+	figcaption {
+		@include toRem(11);
+		position: absolute;
+		bottom: -20px;
+	}	
+}
+.about__me {
+	@include mq(1024px, min-width) {
+		max-width: 700px;	
+		margin-left:  25%;
+	}
+}
 
-// /* ==========================================================================
-//    Page : Journal
-//    ========================================================================== */
+figcaption {
+	@include toRem(11);
+	position: absolute;
+	bottom: -20px;
+}
 
-// .title--journal {
+// ==================
+// 	JOURNAL
+// ==================
 
-// }
+.journal {
+	max-width: 980px;
+	margin: auto;
+	header h1 {
+		@include mq(1024px, min-width) {
+			@include toRem(map-get($scale, bigger));
+		}
+		@include toRem(map-get($scale, large));
+		text-align: center;
+		width: 100%;
+	}
+	.journal__posts {
+		margin: 3em auto 5em auto;
+		max-width: 660px;
+		li {
+			list-style: none;
+			border-left: 6px solid $cp-line-gray;
+			margin-bottom: 1.5em;
+			padding-left: 15px;
+		}
+		a {
+			color: $cp-body-text;
+			display: block;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	} 
+}
 
+// ==================
+// 	POST
+// ==================
 
-// .journal__posts {
-// 	list-style-type: hiragana-iroha;
-// 	max-width: 70%;
-// 	margin: auto;
-// 	li a { 
-// 		text-decoration: none;
-// 	}
-// }
-// .journal {
-// 	@extend .post;
-// 	h1 {
-// 		text-align: center;
-// 		line-height: 1;
-// 	}
-// }
-// .post {
-// 	@include mq($bp-medium-screen) {
-// 		max-width: 34.172em;
-// 		margin: auto;
-// 	}
-// }
-// .post-content {
-// 	img {
-// 		height: auto;
-// 		max-width: 100%;
-// 		@include mq($bp-large-screen) {
-// 			height: auto;
-// 			max-height: 100%;
-// 		}
-// 	}
-// }
-// /* ==========================================================================
-//    Global.
-//    ========================================================================== */
+.post {
+	width: 100%;
+	margin: 0;
+	h1 {
+		text-align: center;
+		@include toRem(map-get($scale, large));
+		@include mq(768px, min-width) {
+			@include toRem(map-get($scale, extra));
+		}
+	}
+	.meta {
+		@include toRem(map-get($scale, small));
+		@include mq(768px, min-width) {
+			@include toRem(16);
+		}
+		color: $cp-body-text-alternate;
+		display: block;
+		text-align: center;
+		font-style: italic;
+	} 
+	.post-content {
+		max-width: 700px;
+		margin: auto;
+		position: relative;
+		.info {
+			display: block;
+			@include toRem(13);
+			font-style: italic;
+			color: darken($cp-body-text-alternate, 20%);
+			position: absolute;
+			left: -220px;
+			width: 190px;
+			@include custom-mq(320px, 1024px) {
+				width: 300px;
+				max-width: 320px;
+				position: relative;
+				margin: 2em auto 0 auto;
+				left: 0;
+				ul {
+					margin: 0;
+					padding:0;
+					display: flex;
+					flex-direction: row-reverse;
+				} 
+				li {
+					display: inline-block;
+					margin-right: 1.5em;
+					flex: 1 0 0;
+					text-align: center;
+				}
+			}
+			@include custom-mq(768px, 1024px) {
+				position: relative;
+				left: 0;
+				li {
+					display: inline-block;
+				}
+			}
 
-// .nav {
-// 	float: right;
-// 	text-transform: uppercase;
-// 	margin: 1.5em 0 1.5em 1.5em;
-// 	a {
-// 		display: inline-block;
-// 		margin-right:0.889em;
-// 		text-decoration: none;
-// 		color: #999999;
-// 		&:last-child {
-// 			margin-right: 0;
-// 		}
-// 	}
-// }
+			a {
+				color : $cp-body-text-alternate;
+			}
+		  	ul {
+		  		list-style-type: none;
+		  	}
+		  	li {
+		  		margin-bottom: 1em;
+		  		border-bottom: 1px dotted $cp-line-gray;
+		  	}
+		}
+	}
+	.post-content > p:first-of-type:first-letter {
+	  font-style: normal;
+	  font-weight: 400;
+	  color: #444444;
+	  font-size: 72px;
+	  font-size: 4.5rem;
+	  float: left;
+	  line-height: .7;
+	  margin: 0.117em .1em 0 0;
+	  transition: color 0.5s ease;  
+	}
+
+}
+
+.img--post {
+		position: relative;
+		overflow: hidden;
+		display: block;
+		height: 250px;
+		@include mq(768px, min-width) {height: 100%; max-height: 450px;}
+		img {
+			display: block;
+ 			width: 100%;
+ 			margin-bottom: 1em;
+		}
+	}
+.about__me {
+	max-width: 700px;
+  	margin: auto;
+}

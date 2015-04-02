@@ -11,7 +11,7 @@
     <title>My simple rules when writing Sass</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="description" content="Antonio Fullone. Life, food, travelling and coding.">
-	<link rel="canonical" href="http://antoniofullone.com/dev/2014/11/18/my-simple-rules-when-writing-sass-code/">
+	<link rel="canonical" href="http://antoniofullone.com//dev/2014/11/18/my-simple-rules-when-writing-sass-code/">
 	<link rel="shortcut icon" href="/img/favicon.ico"/>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/css/style.css">
@@ -45,31 +45,48 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div id="page" class="page">
+	
 	<!--</header>-->
-	<!-- <div class="header--top"></div> -->	
-	<header class="header" role="banner">
-		<a href="/" class="logo" id="logo">
-			<span class="logo__circle">
-				<span class="logo--text">A</span>
-			</span>
-		</a>
-		<nav class="nav" role="navigation">
-			<a href="/antonio/" title="About me">About</a>
-			<a href="/journal/" title="Journal">Journal</a>
-			<a href="/lab" title="">Lab</a>
-		</nav>
-	</header>
+		<header class="main-header" role="banner">
+			<div class="logo-container">
+				<a href="/" class="logo">
+					<img src="/images/logo.png" alt="" class="img-logo">  	
+				</a>		
+			</div>
+			<nav class="nav" role="navigation">
+				<a href="/antonio/" title="About me">ABOUT</a>
+				<a href="/journal/" title="Journal">JOURNAL</a>
+				<a href="/lab" title="">LAB</a>
+				<a href="#contact" title="">CONTACT</a>
+			</nav>
+		</header>
 
-      <div class="post">
+
+      <section class="post">
+ 
   <header class="post-header">
     <h1>My simple rules when writing Sass</h1>
-  <span class="meta"> - Nov 18, 2014 -</span>
-	<h3>
-		
-	</h3>
-  </header>	
+  <h3 class="meta"> - Nov 18, 2014 -</h3>
+  <h4>
+    
 
+  </h4>
+  </header>	
+  
   <article class="post-content">
+  <aside class="info">
+  <ul>
+    <li>
+    Reading Time:  8 min.
+    </li>
+    <li>
+      <a href="/journal" class="all-posts">
+      Back to all posts   
+      </a>
+    </li>
+  </ul>
+  
+</aside>
   <p><strong>Sass</strong> is awesome. It is an incredible tool that gives a lot of power to our css code but, as we know, “<em>with great power comes great responsibility</em>”.</p>
 
 <p>When writing <strong>Sass</strong>, especially at the beginning, it’s easy to <strong>bloat</strong> your code. The reason is the <em>misuse</em> of the various features without, often, thinking forward to the compiled code. 
@@ -77,7 +94,7 @@ I have some simple rules that I apply every time I am writing code with <strong>
 
 <h2 id="dont-extend-everything">Don’t @extend everything.</h2>
 
-<p>Is an easy one. You start using the @<em>extend</em> feature, you get excited, you think you are doing <strong>OOCSS</strong> the right way, and at some point you end up having code like that </p>
+<p>Is an easy one. You start using the @<em>extend</em> feature, you get excited, you think you are doing <strong>OOCSS</strong> the right way, and at some point you end up having code like that</p>
 
 <pre><code>.class1, .class2,  .class3,  .class4,  .class5,  .class6,  .class7,  .class8,  .class9,  .class10,  .class11,  .class12,  .class12,  .class14, .and-so-on {
 	text-align: center;
@@ -86,7 +103,7 @@ I have some simple rules that I apply every time I am writing code with <strong>
 }
 </code></pre>
 
-<p>While it would have been much more easy to just use one class and add it to the html </p>
+<p>While it would have been much more easy to just use one class and add it to the html</p>
 
 <pre><code>.one-class { 
 	text-align: center;
@@ -95,7 +112,7 @@ I have some simple rules that I apply every time I am writing code with <strong>
 }
 </code></pre>
 
-<p>Or even worse you not only extend, but also adding new css code to the extended class, so your code end up in this </p>
+<p>Or even worse you not only extend, but also adding new css code to the extended class, so your code end up in this</p>
 
 <pre><code>.class1, .class2,  .class3,  .class4,  .class5,  .class6,  .class7,  .class8,  .class9,  .class10,  .class11,  .class12,  .class12,  .class14, .and-so-on {
 	text-align: center;
@@ -112,7 +129,7 @@ I have some simple rules that I apply every time I am writing code with <strong>
 }
 </code></pre>
 
-<p>In this case, might be simpler just to use a mixin </p>
+<p>In this case, might be simpler just to use a mixin</p>
 
 <pre><code>@mixin text-align($color: blue) {
 	text-align: center;
@@ -138,9 +155,9 @@ I have some simple rules that I apply every time I am writing code with <strong>
 }
 </code></pre>
 
-<p>In this case I am creating a sort of “namespace” for my module. Usually the class, like in this case .landing, is the body or the main container. </p>
+<p>In this case I am creating a sort of “namespace” for my module. Usually the class, like in this case .landing, is the body or the main container.</p>
 
-<p>Many Sass experts suggest to do not nest more than 3 levels, I am not an expert but in my opinion 3 level is already a lot, especially if using ID’s or just simple selectors. </p>
+<p>Many Sass experts suggest to do not nest more than 3 levels, I am not an expert but in my opinion 3 level is already a lot, especially if using ID’s or just simple selectors.</p>
 
 <pre><code>.class {
   #div {
@@ -152,13 +169,13 @@ I have some simple rules that I apply every time I am writing code with <strong>
 }
 </code></pre>
 
-<p>This is wrong, and not only for the nesting. </p>
+<p>This is wrong, and not only for the nesting.</p>
 
 <h2 id="use-less-id-or-not-at-all">Use less ID (or not at all)</h2>
 
 <p>Well .. we all know that there is hot a debate here, which is not strictly related to Sass but in somehow it is since Sass is perfect for those who love <strong>OOCSS</strong>. I am not a religious fan of <strong>OOCSS</strong>, I am a fan of the <em>right approach for each project</em> (not always means OOCSS or sass), but when writing code for a large codebase, which is probably modular and using a preprocessor (that might not be sass), <em>the use of ID</em>, or at least the massive use of it, is likely to create a lot of specificity problems.</p>
 
-<p>A good solution suggested is using <strong>div[id=test</strong>] instead of #<strong>test</strong> this is because the latter has a higher specificity while the first has the same specificity of the class. To be honest I don’t see any reason, or at least could not find any use case, to use div[id=test] while I can just use a class. </p>
+<p>A good solution suggested is using <strong>div[id=test</strong>] instead of #<strong>test</strong> this is because the latter has a higher specificity while the first has the same specificity of the class. To be honest I don’t see any reason, or at least could not find any use case, to use div[id=test] while I can just use a class.</p>
 
 <p><strong>Harry Roberts</strong> has released a very interesting tool lately, <a href="http://csswizardry.com/2014/10/the-specificity-graph/">the Specificity Graph</a>, I suggest you to give a look at it.</p>
 
@@ -205,7 +222,7 @@ also important, the problem of naming variables.</p>
 
 <p>Writing modular is the best approach ever to writing css code. No matter if you are using <a href="http://oocss.org">OOCSS</a>, <a href="https://smacss.com">SMACCS</a> or whatsoever, using a modular approach to your code can only brings benefits to the team. The Sass @import does the magic for you, importing directly the modules in the main file without doing any http request.</p>
 
-<p>Usually my style.scss file looks like this : </p>
+<p>Usually my style.scss file looks like this :</p>
 
 <pre><code>@import “partial/variables”;
 @import “partial/functions”;
@@ -217,22 +234,83 @@ also important, the problem of naming variables.</p>
 
 <p>I never write sass code directly in the main file, I only use import and everything is written inside small modules that are then imported. It makes the code much easier to maintain, update and understand for your new colleagues.</p>
 
-<p>So here they are, some simple rules that help me to get out the most of Sass without bloat the code, keeping it clean and reusable. </p>
+<p>So here they are, some simple rules that help me to get out the most of Sass without bloat the code, keeping it clean and reusable.</p>
 
 
   </article>
 
-</div>  
+</section>  
 
-        </div>
-</div>
-<footer role="contentinfo">
-	<p class="footer__contact">
-		<a href="http://www.antoniofullone.it">Italian</a>
-		<a href="#">Top</a>
-	</p>
-	<p class="footer_copyright">Antonio Fullone - &copy;2009 - 2014</p>
-</footer>
+    		<footer>
+			<div class="flexy">
+				<div class="contact" id="contact">
+					<ul>
+						<li>
+							<a href="http://nl.linkedin.com/in/antoniofullone" class="social linkedin">Linkedin</a>
+						</li>
+						<li>
+							<a href="https://bitbucket.org/afullone" class="social bitbucket">BitBucket</a>
+						</li>
+						<li>
+							<a href="https://github.com/lastwebdesigner" class="social github">Github</a>
+						</li>
+						<li>
+							<a href="https://dribbble.com/lastwebdesigner" class="social twitter">Dribbble</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/LastWebdesigner" class="social dribbble">Twitter</a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/Antonio.Fullone" class="social facebook">Facebook</a>
+						</li>
+						<li>
+							<a href="https://plus.google.com/+antoniofullone/" class="social twitter">Google</a>
+						</li>
+						<li>
+							<a href="mailto:antonio.fullone@gmail.com" class="social gplus">Email</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nerdy">
+					<div class="footer-info">
+						<p>
+							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He would love to own a Tiger.
+						</p>
+					</div>
+					<h3 class="colophon__header">Nerdy Stuff</h3>
+					<div class="colophon">
+						<div class="col typgraphy">
+						<h4>Typography</h4>
+							<p>
+								<strong>Body text:</strong> 
+								Livory by HVD Fonts
+								<strong>Navigation:</strong> 
+								Proxima Nova by Mark Simonson Studio.							
+							</p>
+						</div>
+						<div class="col coding">
+						<h4>Design/Coding</h4>
+						<p>
+							Made with: <strong>Mac Book Pro 2013.</strong>
+							Designed with: <strong>Sketch.</strong> 
+							Coded with:  <strong>Sublime Text</strong> Html, Css Sass, Js.						
+						</p>
+						</div>
+						<div class="col powered">
+						<h4>Powered By</h4>
+						<p>
+							Proudly powered by
+							<strong>Jekyll</strong> and hosted by
+							<strong>Media Temple</strong>.						
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="copyright"> &copy;  2009-2015 </p>
+		</footer>
+	</div>
+
 <script src="/main.js" async="true"></script> 
 
     </body>

@@ -13,11 +13,12 @@ Tags: 			#lazy
 CONTENTS:
 ===========================
 */
-@import "lib/susy/susy";
+
 @import "lib/fmix";
 @import "partials/variables";
 @import "partials/functions";
 @import "partials/utils";
+@import "modules/normalize";
 @import "modules/animations";
 //@import "modules/normalize";
 @import "modules/typography";

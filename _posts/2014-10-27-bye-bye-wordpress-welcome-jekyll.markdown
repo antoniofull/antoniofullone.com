@@ -3,11 +3,9 @@ layout: post
 title:  "Bye Bye Wordpress, welcome Jekyll!"
 date:   2014-10-27 21:48:02
 categories: dev
----
-<figure class="img--post-large">
-		<img src="/images/posts/jekyll.png" alt="Jekyll home page" />
-		<figcaption>Jekyll is easy to install</figcaption>
-</figure>	
+image:  "jekyll.png"
+imageDesc: "With the team in barcelona for the final"
+---	
 I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.
 
 Also the template system in Wordpress is complex while I, as you can see, I like to keep this site much simple as possible.

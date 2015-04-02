@@ -2,15 +2,21 @@
 layout: default
 ---
 
-<section class="journal">
+<section class="journal grid">
 	<article class="">
 		<header>
-			<h1 class="title--journal"> Life Food Coding Travelling.</h1>
+			<h1 class="title--journal"> Antonio Fullone's Personal Blog.</h1>
 		</header>
+		<p>
+			Welcome to my personal blog. Here you can find articles about design and coding. But also suggestions
+about expat life, cooking recipes and travelling. All the code published on this blog is available with 
+examples in my lab and in my online code repository on <a href="">BitBucket</a> and <a href="">GitHub</a>. 
+		</p>
 		<ul class="journal__posts">
 			{% for post in site.posts %}
 		    <li>
 		      <a href="{{ post.url }}">{{ post.title }}</a>
+		      <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
 		    </li>
 		  {% endfor %}
 		</ul>
