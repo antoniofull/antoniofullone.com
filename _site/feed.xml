@@ -48,16 +48,16 @@
 	
 	<!--</header>-->
 		<header class="main-header" role="banner">
-			<div class="logo-container">
-				<a href="/" class="logo">
-					<img src="/images/logo.png" alt="" class="img-logo">  	
+			<div class="logo">
+				<a href="/" class="logo__link">
+					<img class="logo__image" src="/images/logo.png" alt="" class="img-logo">  	
 				</a>		
 			</div>
-			<nav class="nav" role="navigation">
-				<a href="/antonio/" title="About me">ABOUT</a>
-				<a href="/journal/" title="Journal">JOURNAL</a>
-				<a href="/lab" title="">LAB</a>
-				<a href="#contact" title="">CONTACT</a>
+			<nav class="main-nav" role="navigation">
+				<a class="main-nav__item" href="/antonio/" title="About me">ABOUT</a>
+				<a class="main-nav__item"  href="/journal/" title="Journal">JOURNAL</a>
+				<a class="main-nav__item"  href="/lab" title="">LAB</a>
+				<a class="main-nav__item"  href="#email" title="">CONTACT</a>
 			</nav>
 		</header>
 
@@ -69,9 +69,33 @@
     <description>Antonio Fullone. Life, food, travelling and coding.</description>
     <link>http://antoniofullone.com//</link>
     <atom:link href="http://antoniofullone.com//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 31 Mar 2015 20:19:22 +0200</pubDate>
-    <lastBuildDate>Tue, 31 Mar 2015 20:19:22 +0200</lastBuildDate>
+    <pubDate>Fri, 03 Apr 2015 19:59:54 +0200</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2015 19:59:54 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Off Canvas with :target pseudo selector</title>
+        <description>&lt;p&gt;Yesterday evening I was bored at home (as usual) and the weather was cold (as usual) so I decided to spend some time fixing some bug on this site.&lt;/p&gt;
+
+&lt;p&gt;I linked the “contact” link in the navigation to the contact section in the footer. My friend &lt;a href=&quot;https://twitter.com/twittgrinder&quot;&gt;Marco&lt;/a&gt; suggested me that this way was not clear on how to find to contact so I looked for a solution, which I founded in the :target &lt;a href=&quot;http://www.w3.org/wiki/CSS/Selectors/pseudo-classes/:target&quot;&gt;pseudo selector&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How :target work is pretty simple, it just matches the selector id with the hash in the url. So if you have a url like this mysite.com/#contact you can style your element with #contact:target. And so I did for the email link in the footer and highlight the email link in bold-red when matching the target.&lt;/p&gt;
+
+&lt;p&gt;After that I started to experiment a little bit with this selector, and i came up with this (kinda of silly) off canvas.
+Basically with no javascript and no &lt;a href=&quot;https://css-tricks.com/the-checkbox-hack/&quot;&gt;checkbox hack&lt;/a&gt; it is possible to create a complete menu. Another trick I used is on the close button, where I just change the #hash and so removing the style to the sidebar. You can check the example &lt;a href=&quot;/off-canvas/&quot;&gt;here&lt;/a&gt; and on &lt;a href=&quot;http://codepen.io/lastwebdesigner/pen/JoVVOp&quot;&gt;codepen&lt;/a&gt;, and the code &lt;a href=&quot;https://bitbucket.org/afullone/off-canvas-with-css&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Of course keep in mind that is something that would never end up in production but it was fun to play with it. Highliting the section I think is ok to use it, as it is just an enhancement. :D&lt;/p&gt;
+
+&lt;p&gt;Go to example : &lt;a href=&quot;/off-canvas/&quot;&gt;Off Canvas with only Css using the :target pseudo selector&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Apr 2015 21:40:00 +0200</pubDate>
+        <link>http://antoniofullone.com//dev/2015/04/03/off-canvas-with-target-pseudo-selector/</link>
+        <guid isPermaLink="true">http://antoniofullone.com//dev/2015/04/03/off-canvas-with-target-pseudo-selector/</guid>
+        
+        
+        <category>dev</category>
+        
+      </item>
     
       <item>
         <title>My simple rules when writing Sass</title>
@@ -307,40 +331,40 @@ also important, the problem of naming variables.&lt;/p&gt;
 </rss>
   
 
-    		<footer>
+    		<footer class="main-footer">
 			<div class="flexy">
 				<div class="contact" id="contact">
 					<ul>
-						<li>
+						<li class="contact__item">
 							<a href="http://nl.linkedin.com/in/antoniofullone" class="social linkedin">Linkedin</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://bitbucket.org/afullone" class="social bitbucket">BitBucket</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://github.com/lastwebdesigner" class="social github">Github</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://dribbble.com/lastwebdesigner" class="social twitter">Dribbble</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://twitter.com/LastWebdesigner" class="social dribbble">Twitter</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://www.facebook.com/Antonio.Fullone" class="social facebook">Facebook</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://plus.google.com/+antoniofullone/" class="social twitter">Google</a>
 						</li>
-						<li>
-							<a href="mailto:antonio.fullone@gmail.com" class="social gplus">Email</a>
+						<li class="contact__item">
+							<a href="mailto:antonio.fullone@gmail.com" id="email" class="social email">Email</a>
 						</li>
 					</ul>
 				</div>
 				<div class="nerdy">
 					<div class="footer-info">
 						<p>
-							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He would love to own a Tiger.
+							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He loves Tigers.
 						</p>
 					</div>
 					<h3 class="colophon__header">Nerdy Stuff</h3>

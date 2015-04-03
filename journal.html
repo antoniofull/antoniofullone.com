@@ -3,8 +3,8 @@ layout: default
 ---
 
 <section class="journal grid">
-	<article class="">
-		<header>
+	<article class="journal__home">
+		<header >
 			<h1 class="title--journal"> Antonio Fullone's Personal Blog.</h1>
 		</header>
 		<p>
@@ -12,10 +12,10 @@ layout: default
 about expat life, cooking recipes and travelling. All the code published on this blog is available with 
 examples in my lab and in my online code repository on <a href="">BitBucket</a> and <a href="">GitHub</a>. 
 		</p>
-		<ul class="journal__posts">
+		<ul class="journal__list">
 			{% for post in site.posts %}
-		    <li>
-		      <a href="{{ post.url }}">{{ post.title }}</a>
+		    <li class="journal__post">
+		      <a class="journal__post-title" href="{{ post.url }}">{{ post.title }}</a>
 		      <span class="date">{{ page.date | date: "%-d %B %Y" }}</span>
 		    </li>
 		  {% endfor %}

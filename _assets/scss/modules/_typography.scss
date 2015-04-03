@@ -48,9 +48,15 @@ blockquote {
 		max-width: 650px; 
 	}
 	font-size: 1.1rem;
-
 }
 
+picture,
+figure  {
+	max-height: 400px;
+	overflow: hidden; 
+	position: relative;
+	margin: 0;
+}
 body {
 	@include livory(); 
 	-webkit-font-smoothing: antialiased;
@@ -75,7 +81,7 @@ body {
 	}
 }
 
-nav {
+.main-nav {
 	@include proxima();	
 	@include toRem(18);
 	width: 100%;
@@ -86,42 +92,41 @@ nav {
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
+}
 
-	a {
-		text-decoration: none;
-		color: rgba($cp-body-text-alternate, 1);
-		display: inline-block;
-		flex: 1;
-		flex-basis: auto;
-		width:90px;
-		min-height: 25px;
-		text-align: center;
+.main-nav__item {
+	text-decoration: none;
+	color: rgba($cp-body-text-alternate, 1);
+	display: inline-block;
+	flex: 1;
+	flex-basis: auto;
+	width:90px;
+	min-height: 25px;
+	text-align: center;
+}
+
+.big-quote {
+	@include toRem(map-get($scale, large));
+	font-weight: 400;
+	text-align: center;
+	@include mq(768px, min-width) {
+		@include toRem(map-get($scale, extra));
 	}
+}
 
+.small-quote {
+	@include toRem(map-get($scale, small));
+	font-style: italic;
+	color: rgba($cp-body-text-alternate, 1);
+	text-align: right;
+	max-width: 90%;
 }
 
 .welcome {
 	position: relative;
-	@include mq(768px, min-width) {
-			margin: #{map-get($scale, ms11)}em auto;
-	}
 	margin: #{map-get($scale, ms9)}em auto;
-	.big-quote {
-		@include toRem(map-get($scale, large));
-		
-		@include mq(768px, min-width) {
-			@include toRem(map-get($scale, extra));
-		}
-		
-		font-weight: 400;
-		text-align: center;
-	}
-	.small-quote {
-		@include toRem(map-get($scale, small));
-		font-style: italic;
-		color: rgba($cp-body-text-alternate, 1);
-		text-align: right;
-		max-width: 90%;
+	@include mq(768px, min-width) {
+		margin: #{map-get($scale, ms11)}em auto;
 	}
 }
 
@@ -131,7 +136,7 @@ nav {
 	text-align: center;
 }
 
-.skills_header {
+.skills-header {
 	@include toRem(map-get($scale, large));
 	font-weight: 400;
 	text-align: center;
@@ -142,16 +147,8 @@ nav {
 	}
 }
 
-picture,
-figure  {
-	max-height: 400px;
-	overflow: hidden; 
-	position: relative;
-	margin: 0;
-}
-
 .date {
-@include toRem(map-get($scale, small));
+	@include toRem(map-get($scale, small));
 	color : $cp-body-text-alternate;
 }
 
@@ -162,25 +159,6 @@ figure  {
 	}
 }
 
-.contact {
-	li {
-		@include toRem(map-get($scale, small));
-		list-style: none;
-		margin-bottom: 1em;
-		display: inline-block;
-		width: 40%;
-		margin-right: 10px;
-		@include mq(1024px, min-width) {
-			display: block;
-		}
-
-		a {
-			color: $cp-body-text;
-			display: block;
-			font-style: italic;
-		}
-	}
-}
 .journal .list-header {
 	text-align: center;
 }

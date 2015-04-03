@@ -6,31 +6,6 @@
 	@extend .grid;
 	max-width: 980px;
 	margin: auto;
-	.flexy-container {
-		margin-top: 2.5em;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		img {
-			width: 100%;
-			max-width: 100%;
-			height: auto;
-		}
-		@include mq(768px, min-width) {
-			flex-direction: row;
-		}
-		.flexy-item {
-			@include mq(768px, min-width) {
-				flex: 1;
-				margin: 30px;
-			}
-			figure {
-				max-height: 200px;
-			}
-		}
-	}	
-
 	h1 { 
 		text-align: center;
 		max-width: 95%;
@@ -40,14 +15,38 @@
 			@include toRem(map-get($scale, extra));
 		}
 	}
-
 	article h2 {
 		@include toRem(24);
 	}
-	.desc {
-		display: block;
-		margin: .5em 0;
-		color: rgba(#222, 1);
+}
+.flexy-container {
+	margin-top: 2.5em;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+	}
+	@include mq(768px, min-width) {
+		flex-direction: row;
+	}
+	
+}
+.desc {
+	display: block;
+	margin: .5em 0;
+	color: rgba(#222, 1);
+}
+.flexy-item {
+	figure {
+		max-height: 200px;
+	}
+	@include mq(768px, min-width) {
+		flex: 1;
+		margin: 30px;
 	}
 }
 .actions {

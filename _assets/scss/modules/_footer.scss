@@ -1,64 +1,107 @@
-footer {
+.main-footer {
 	@include toRem(16);
 	margin-top: 5em;
 	border-top:  1px solid $cp-line-gray;
 	padding-top: 10px;
-	.flexy {
-		display: flex;
-		@include mq(768px, min-width) {flex-direction: row;}
-		flex-direction: column-reverse;
-		flex-wrap: wrap;
-		height: 90%;
-		.contact {
-			flex: 1;
-			@include mq(768px, min-width) {border-right: 1px solid $cp-line-gray;}
-			height: 100%;
-		}
-		.nerdy {
-			@include mq(768px, min-width) {flex: 2; }
-			flex: 1;
-			margin-left: 1em;
-		}
-		.colophon__header {
-			@include toRem(16);
-			display: none;
-			margin: 0;
-			@include mq(768px, min-width) { 
-				display: block;
-				@include toRem(18);
-			}
-		}
-		.colophon {
-			@include toRem(map-get($scale, small));
-			@include mq(768px, min-width) { 
-				display: flex;
-				flex-direction: row;
-				justify-content: flex-end;
-			}
-			display: none;
-		}
-		.col {
-			flex: 1;
-			margin-left:  15px;
-			width: 25%;
-			@include mq(768px, min-width) { margin: 0; padding: 5px;}
-			p {
-				max-width: 90%;
-			}
-		}
+}
+.flexy {
+	display: flex;
+	flex-direction: column-reverse;
+	flex-wrap: wrap;
+	height: 90%;
+	@include mq(768px, min-width) {flex-direction: row;}
+}
+.col {
+	flex: 1;
+	margin-left:  15px;
+	width: 25%;
+	p {
+		max-width: 90%;
+	}
+	@include mq(768px, min-width) { margin: 0; padding: 5px;}
+}
+.contact {
+	flex: 1;
+	height: 100%;
+	@include mq(768px, min-width) {border-right: 1px solid $cp-line-gray;}
+}
 
-		.footer-info {
-			align-self: flex-start;
-			font-style: italic;
-			  max-width: 980px;
-		}
+.contact__item {
+	@include toRem(map-get($scale, small));
+	list-style: none;
+	margin-bottom: 1em;
+	display: inline-block;
+	width: 40%;
+	margin-right: 10px;
+	@include mq(1024px, min-width) {
+		display: block;
 	}
-	.copyright {
-		@include toRem(12);
-		text-align: right;
-		width: 100%;
-		border-top: 1px dotted $cp-line-gray;
-		padding-top: 5px;
+}
+
+.social {
+	color: $cp-body-text;
+	display: block;
+	font-style: italic;
+}
+.footer-info {
+	align-self: flex-start;
+	font-style: italic;
+	max-width: 980px;
+}
+.nerdy {
+	flex: 1;
+	margin-left: 1em;
+	@include mq(768px, min-width) {flex: 2; }
+}
+.colophon {
+	@include toRem(map-get($scale, small));
+	display: none;
+	@include mq(768px, min-width) { 
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
 	}
-	
+}
+.colophon__header {
+	@include toRem(16);
+	display: none;
+	margin: 0;
+	@include mq(768px, min-width) { 
+		display: block;
+		@include toRem(18);
+	}
+}
+.copyright {
+	@include toRem(12);
+	text-align: right;
+	width: 100%;
+	border-top: 1px dotted $cp-line-gray;
+	padding-top: 5px;
+}
+@keyframes highlight {
+	0% {
+		opacity: 0;
+		color: red;
+	}
+	30%{
+		opacity: .3;
+		color: red;
+		font-weight: bold;
+	}
+	60%{
+		opacity: .7;
+		color: red;
+		font-weight: bolder;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#email {
+	&:target {
+	outline: none;
+	animation: highlight 1s;
+	animation-iteration-count: 3;
+	}
 }

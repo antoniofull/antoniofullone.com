@@ -48,50 +48,49 @@
 	
 	<!--</header>-->
 		<header class="main-header" role="banner">
-			<div class="logo-container">
-				<a href="/" class="logo">
-					<img src="/images/logo.png" alt="" class="img-logo">  	
+			<div class="logo">
+				<a href="/" class="logo__link">
+					<img class="logo__image" src="/images/logo.png" alt="" class="img-logo">  	
 				</a>		
 			</div>
-			<nav class="nav" role="navigation">
-				<a href="/antonio/" title="About me">ABOUT</a>
-				<a href="/journal/" title="Journal">JOURNAL</a>
-				<a href="/lab" title="">LAB</a>
-				<a href="#contact" title="">CONTACT</a>
+			<nav class="main-nav" role="navigation">
+				<a class="main-nav__item" href="/antonio/" title="About me">ABOUT</a>
+				<a class="main-nav__item"  href="/journal/" title="Journal">JOURNAL</a>
+				<a class="main-nav__item"  href="/lab" title="">LAB</a>
+				<a class="main-nav__item"  href="#email" title="">CONTACT</a>
 			</nav>
 		</header>
 
 
       <section class="post">
  
-  <header class="post-header">
-    <h1>Bye Bye Wordpress, welcome Jekyll!</h1>
-  <h3 class="meta"> - Oct 27, 2014 -</h3>
+  <header class="post__header">
+    <h1 class="post__title">Bye Bye Wordpress, welcome Jekyll!</h1>
+  <h3 class="post__meta"> - Oct 27, 2014 -</h3>
   <h4>
     
 
   </h4>
   </header>	
   
-<figure class="img--post">
-     <img src="/images/posts/jekyll.png" alt="">
-    <figcaption>With the team in barcelona for the final</figcaption>
+<figure class="post__image">
+     <img class="img--post" src="/images/posts/jekyll.png" alt="">
+    <figcaption class="image__caption">By Bye Wordpress</figcaption>
 </figure> 
 
-  <article class="post-content">
+  <article class="post__content">
   <aside class="info">
-  <ul>
-    <li>
-    Reading Time:  3 min.
-    </li>
-    <li>
-      <a href="/journal" class="all-posts">
-      Back to all posts   
-      </a>
-    </li>
-  </ul>
-  
-</aside>
+    <ul class="info__list">
+      <li class="info__reading">
+      Reading Time:  3 min.
+      </li>
+      <li>
+        <a href="/journal" class="info__link all-posts">
+        Back to all posts   
+        </a>
+      </li>
+    </ul>   
+  </aside>
   <p>I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.</p>
 
 <p>Also the template system in Wordpress is complex while I, as you can see, I like to keep this site much simple as possible.</p>
@@ -121,40 +120,40 @@
 
 </section>  
 
-    		<footer>
+    		<footer class="main-footer">
 			<div class="flexy">
 				<div class="contact" id="contact">
 					<ul>
-						<li>
+						<li class="contact__item">
 							<a href="http://nl.linkedin.com/in/antoniofullone" class="social linkedin">Linkedin</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://bitbucket.org/afullone" class="social bitbucket">BitBucket</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://github.com/lastwebdesigner" class="social github">Github</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://dribbble.com/lastwebdesigner" class="social twitter">Dribbble</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://twitter.com/LastWebdesigner" class="social dribbble">Twitter</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://www.facebook.com/Antonio.Fullone" class="social facebook">Facebook</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://plus.google.com/+antoniofullone/" class="social twitter">Google</a>
 						</li>
-						<li>
-							<a href="mailto:antonio.fullone@gmail.com" class="social gplus">Email</a>
+						<li class="contact__item">
+							<a href="mailto:antonio.fullone@gmail.com" id="email" class="social email">Email</a>
 						</li>
 					</ul>
 				</div>
 				<div class="nerdy">
 					<div class="footer-info">
 						<p>
-							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He would love to own a Tiger.
+							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He loves Tigers.
 						</p>
 					</div>
 					<h3 class="colophon__header">Nerdy Stuff</h3>

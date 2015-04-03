@@ -48,16 +48,16 @@
 	
 	<!--</header>-->
 		<header class="main-header" role="banner">
-			<div class="logo-container">
-				<a href="/" class="logo">
-					<img src="/images/logo.png" alt="" class="img-logo">  	
+			<div class="logo">
+				<a href="/" class="logo__link">
+					<img class="logo__image" src="/images/logo.png" alt="" class="img-logo">  	
 				</a>		
 			</div>
-			<nav class="nav" role="navigation">
-				<a href="/antonio/" title="About me">ABOUT</a>
-				<a href="/journal/" title="Journal">JOURNAL</a>
-				<a href="/lab" title="">LAB</a>
-				<a href="#contact" title="">CONTACT</a>
+			<nav class="main-nav" role="navigation">
+				<a class="main-nav__item" href="/antonio/" title="About me">ABOUT</a>
+				<a class="main-nav__item"  href="/journal/" title="Journal">JOURNAL</a>
+				<a class="main-nav__item"  href="/lab" title="">LAB</a>
+				<a class="main-nav__item"  href="#email" title="">CONTACT</a>
 			</nav>
 		</header>
 
@@ -75,14 +75,14 @@
 	</section>
 	<section class="skills">
 		<header>
-			<h1 class="skills_header">What Do I Do?</h1>
+			<h1 class="skills-header">What Do I Do?</h1>
 		</header>
 		<div class="whatIdo">
 			<article class="what">
 			<h3 class="what__header">Design</h3>
 			<picture>
-				<img src="/images/design.png" alt="Design"></picture>
-			<p>
+				<img class="what__visual" src="/images/design.png" alt="Design"></picture>
+			<p class="what__text"> 
 				Sketch - Photoshop.
 				<br>Web Designer with 	
 				several years of experience.
@@ -90,8 +90,10 @@
 		</article>
 		<article class="what">
 			<h3 class="what__header">Code</h3>
-			<picture><img src="/images/code.png" alt="Coding"></picture>
-			<p>
+			<picture>
+				<img class="what__visual" src="/images/code.png" alt="Coding">
+			</picture>
+			<p class="what__text"> 
 				Html5, CSS3, Javascript,
 				<br>Php and, recently, Swift.
 				Visit my lab for more.
@@ -99,8 +101,8 @@
 		</article>
 		<article class="what">
 			<h3 class="what__header">Cooking</h3>
-			<picture><img src="/images/cooking.png" alt="Cooking"></picture>
-			<p>
+			<picture><img class="what__visual" src="/images/cooking.png" alt="Cooking"></picture>
+			<p class="what__text"> 
 				Yes, not only design. I really
 				like cooking and enjoying
 				nice food with friends.
@@ -111,40 +113,40 @@
 	</section>
 </div>  
 
-    		<footer>
+    		<footer class="main-footer">
 			<div class="flexy">
 				<div class="contact" id="contact">
 					<ul>
-						<li>
+						<li class="contact__item">
 							<a href="http://nl.linkedin.com/in/antoniofullone" class="social linkedin">Linkedin</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://bitbucket.org/afullone" class="social bitbucket">BitBucket</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://github.com/lastwebdesigner" class="social github">Github</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://dribbble.com/lastwebdesigner" class="social twitter">Dribbble</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://twitter.com/LastWebdesigner" class="social dribbble">Twitter</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://www.facebook.com/Antonio.Fullone" class="social facebook">Facebook</a>
 						</li>
-						<li>
+						<li class="contact__item">
 							<a href="https://plus.google.com/+antoniofullone/" class="social twitter">Google</a>
 						</li>
-						<li>
-							<a href="mailto:antonio.fullone@gmail.com" class="social gplus">Email</a>
+						<li class="contact__item">
+							<a href="mailto:antonio.fullone@gmail.com" id="email" class="social email">Email</a>
 						</li>
 					</ul>
 				</div>
 				<div class="nerdy">
 					<div class="footer-info">
 						<p>
-							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He would love to own a Tiger.
+							This is the personal website of Antonio Fullone, a web designer from Italy actually living in Delft, Netherlands. He loves design, coding, cooking, travelling and so on .. He loves Tigers.
 						</p>
 					</div>
 					<h3 class="colophon__header">Nerdy Stuff</h3>
