@@ -36,5 +36,8 @@
     "transform": [
       "babelify"
     ]
+  },
+  "dependencies": {
+    "snapsvg": "^0.4.0"
   }
 }

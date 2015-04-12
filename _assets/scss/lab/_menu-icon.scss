@@ -1,0 +1,73 @@
+
+.menu-animations {
+	position: relative;
+	height: 100%;
+}
+.flexy {
+	flex: 1;
+}
+.menu {
+	display: flex;
+	flex-direction: row;
+	
+	.svg {
+		cursor: pointer;
+		svg {
+			padding: 20px;
+		}
+	}
+
+	%baseStyle {
+		width: 60px;
+		height: 10px;
+		background: #222;
+		position: absolute;
+		content: "";
+		transition: all 0.3s ease-out;
+	}	
+	
+	}
+	.css {
+		.menu-icon {
+			margin: 20px 0 0 20px;
+			cursor: pointer;
+			position: relative;
+			width: 100%;  
+			.first {
+				@extend %baseStyle;
+				transition: all 0.1s ease-out;
+				top: 40px;
+			}
+			&:after {
+				@extend %baseStyle;
+				top: 20px;
+			}
+			&:before {
+				@extend %baseStyle;
+				top: 0;
+			}
+		}
+		&.animate {
+			.menu-icon {
+				&:after {
+					opacity: 0;
+					width: 0;
+				}	
+				&:before {
+					transform: rotate(45deg);
+					transform-origin: 0 0;
+					background: rgba(0, 128, 0, 1);
+				}
+				.first {
+					transform: rotate(-45deg);
+					background: rgba(0, 128, 0, 1);
+					transform-origin: 0 10px;
+				}		
+			}
+		}
+
+	}
+	.svg-icon {
+			width: 100px;
+			height: 100px;
+		}
