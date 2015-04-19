@@ -1198,6 +1198,9 @@ body {
               flex: none;
       margin: 30px; } }
 
+.lab__code {
+  padding: 5px; }
+
 .btn {
   width: auto;
   min-width: 120px;
