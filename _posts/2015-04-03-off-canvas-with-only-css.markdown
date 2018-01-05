@@ -2,7 +2,7 @@
 layout: post
 title:  "Off Canvas with only Css"
 date:   2015-04-03 19:40:00
-categories: dev
+categories: writing
 image:  "off-canvas.png"
 imageDesc: "Off Canvas with Css"
 ---

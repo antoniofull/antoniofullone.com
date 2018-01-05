@@ -2,7 +2,7 @@
 layout: post
 title:  Not just about work.
 date:   2014-11-05 21:30:00
-categories: expat-life
+categories: writing
 image:  "team.png"
 imageDesc: "With the team in barcelona for the final"
 ---

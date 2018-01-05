@@ -469,10 +469,11 @@ html {
 }
 
 body {
-  background: #EEE5CB;
+  /* background: #EEE5CB; */
+  background: #f5f5f5;
   color: #444444;
   line-height: 1.7;
-  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2";
+  font-family: 'Roboto Slab', serif;
 }
 
 a {
@@ -489,13 +490,17 @@ a:visited {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "ff-tisa-sans-web-pro-1","ff-tisa-sans-web-pro-2", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   line-height: 1.1;
 }
 
@@ -504,12 +509,13 @@ p {
 }
 
 blockquote {
+  font-family: 'Josefin Sans', sans-serif;
   font-style: italic;
   text-align: center;
   line-height: 2;
   color: #999;
   margin: 40px auto;
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   max-width: 70%;
   position: relative;
   padding-bottom: 1rem;
@@ -567,7 +573,7 @@ blockquote:after {
 }
 
 .nav-list__link {
-  font-family: "fira-sans-2-1","fira-sans-2-2", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
   text-decoration: none;
   font-size: 1.2375rem;
@@ -585,7 +591,7 @@ blockquote:after {
 ==========================================*/
 
 .main-footer {
-  font-family: "ff-tisa-sans-web-pro-1","ff-tisa-sans-web-pro-2", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   background: #222;
   color: #FFFFFF;
   display: flex;
@@ -622,6 +628,11 @@ blockquote:after {
 /* ========================================
     CONTENT
 ==========================================*/
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 img {
   max-width: 100%;
@@ -640,7 +651,7 @@ img.animated:hover {
 
 figcaption {
   font-size: 12px;
-  font-family: "ff-tisa-sans-web-pro-1","ff-tisa-sans-web-pro-2", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
   text-align: right;
   margin-right: -200px;
@@ -649,6 +660,7 @@ figcaption {
 }
 
 .content {
+  flex: 1;
   background: #FFFFFF;
   margin: 10px;
   box-sizing: border-box;
@@ -661,6 +673,11 @@ figcaption {
 
 .title--home {
   text-align: center;
+}
+
+.title--wrapper {
+  text-align: center;
+  margin-top: 2em;
 }
 
 .sub-header {
@@ -722,3 +739,82 @@ article .first-letter {
   float: left;
 }
 
+.wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+
+
+/* ========================================
+    CATEGORIES
+==========================================*/
+
+.category-description {
+  font-family: 'Josefin Sans', sans-serif; 
+  font-weight: 300;
+  max-width: 760px;
+  margin: 1em auto;
+  font-size: 1.3rem;
+  padding: 20px 0;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.category-list__item {
+  flex: 1 1 45%;
+  margin-bottom: 2rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  max-width: 45%;
+  box-sizing: border-box;
+  padding: 1rem;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.category-list__title {
+  text-align: center;
+  font-size: 1.7rem;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 1rem;
+}
+
+.date {
+  font-family: 'Josefin Sans', sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 0.875rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.category-list__image {
+  border: 1px solid #E9E5EB;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.category-list__excerpt {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 0.875rem;
+}
+
+.read-more {
+  font-family: 'Josefin Sans', sans-serif;    
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

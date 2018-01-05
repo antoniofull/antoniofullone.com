@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<main class="content">
+	<div class="wrapper wrapper--articles">
+		<header >
+			<h1 class="title title--wrapper"> On Traveling.</h1>
+		</header>
+		<p class="category-description">
+			My thoughts about traveling. The places I visited and the (very crappy) photos I take. I love traveling and I plan to visit as many places as possible in my life.
+			I take photos too, I don't have a personal instagram but if you, for some reasons, want to see more of the photos I take, then you can follow
+			<a href="https://instagram.com/thexpatmagazine" alt="The expat magazine on instagram">my travel blog on Instagram</a>.		
+		</p>
+		<section class="category-list">
+			{% for post in site.posts %}
+			{% if post.categories contains "travel" %}
+		    <article class="category-list__item">
+					<header>
+						<h2 class="category-list__title title">{{ post.title }}</h2>
+						<span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
+					</header>
+		      <a class="category-list__link" href="{{ post.url }}">
+		      	{% if post.image %}	
+						<figure class="image-container">
+							<img class="category-list__image" src="/images/posts/{{ post.image }}" alt={{post.title}} />
+						</figure>	
+						{% endif %}
+		      </a>
+					<div class="category-list__excerpt">{{post.excerpt}}</div>
+					<a  href="{{ post.url }}" class="read-more">Read Post</a>
+		    </article>
+			{% endif %}
+		  {% endfor %}
+		</section>
+	</div>	
+</main>

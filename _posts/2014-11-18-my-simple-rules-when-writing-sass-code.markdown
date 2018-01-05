@@ -2,7 +2,7 @@
 layout: post
 title:  My simple rules when writing Sass
 date:   2014-11-18 22:00:00
-categories: dev
+categories: writing
 ---
 
 **Sass** is awesome. It is an incredible tool that gives a lot of power to our css code but, as we know, “*with great power comes great responsibility*”.

@@ -2,7 +2,7 @@
 layout: post
 title:  Circular Menu inspired by Path.
 date:   2015-04-19 17:25:00
-categories: dev
+categories: writing
 image:  "circular.png"
 imageDesc: "Circular menu in CSS"
 ---
