@@ -7,7 +7,7 @@ image:  "team.png"
 imageDesc: "With the team in barcelona for the final"
 ---
 
-Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2008/2009 and we had a very nice time. I was *leading* that team, so I am proud we built this *lovely friendship* which is lasting for years.
+Tomorrow I am flying to Barcelona for a long weekend, I will meet some very nice friends there. We used to work together in Barcelona, back in 2008/2009 and we had a very nice time. I am proud we built this *lovely friendship* which is lasting for years.
 
 This is the list of the countries represented in this meeting : 
 

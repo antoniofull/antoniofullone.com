@@ -514,12 +514,12 @@ blockquote {
   text-align: center;
   line-height: 2;
   color: #999;
-  margin: 40px auto;
-  font-size: 1.5rem;
+  margin: 40px auto 20px auto;
+  font-size: 1.7rem;
   max-width: 70%;
   position: relative;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
+  text-transform: capitalize;
 }
 
 blockquote:after {
@@ -579,11 +579,18 @@ blockquote:after {
   font-size: 1.2375rem;
   color: #666666;
   display: block;
+  padding: 0 10px;
 }
 
-.nav-list__item  s.nav-list__link:hover {
+.nav-list__link:hover:not(.logo--link) {
   transition: all 0.2s linear;
-  tect-decoration: none;
+  text-decoration: none;
+  color: #4A90E2;
+  background: #f9f9f9;
+}
+
+.logo--link:hover {
+  transform: scale(1.1);
 }
 
 /* ========================================
@@ -652,10 +659,8 @@ img.animated:hover {
 figcaption {
   font-size: 12px;
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   text-align: right;
-  margin-right: -200px;
-  margin-top: 10px;
   color: #999;
 }
 
@@ -680,7 +685,8 @@ figcaption {
   margin-top: 2em;
 }
 
-.sub-header {
+.sub-header,
+.post__meta {
   font-weight: 100;
   font-style: italic;
   font-size: 0.875rem;
@@ -708,10 +714,9 @@ figcaption {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  max-width: 170%;
-  width: calc(100% + 400px);
-  margin-left: -200px;
-  margin-right: -200px;
+  width: calc(100% + 200px);
+  margin-left: -100px;
+  margin-right: -100px;
 }
 
 img.animated {
@@ -728,7 +733,8 @@ img.animated {
   height: 100%;
 }
 
-article .first-letter {
+.post__content .first-letter,
+.home--article .first-letter {
   font-size: 85px;
   line-height: 65px;
   font-weight: bold;
@@ -817,4 +823,190 @@ article .first-letter {
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+
+/* ========================================
+    POST
+==========================================*/
+
+.post {
+  max-width: 960px;
+  margin: 1em auto;
+}
+
+.post__content {
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.title--post {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.post__sub-text {
+  font-family: 'Josefin Sans', sans-serif;    
+  font-style: italic;
+  max-width: 600px;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+}
+
+.reading-time {
+  font-family: 'Josefin Sans', sans-serif;    
+  font-size: 0.875rem;
+  fontwe: 100;
+  display: block;
+  text-align: center;
+}
+
+.video {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  max-width: 700px;
+}
+
+@media screen and (min-width: 1024px) {
+  .video iframe {
+    margin: 0 auto;
+    position: absolute;
+    width: 130%;
+    margin-left: -15%;
+    margin-right: -15%;
+  }  
+}
+
+.video iframe {
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+}  
+
+.comments {
+  margin: 0 auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+.fb-comments {
+  margin: 0 auto;
+}
+
+/* ========================================
+    JAVASCRIPT ANIMATIONS
+==========================================*/
+
+.shrink {
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.shrink .logo--link {
+  position: relative;
+}
+
+.shrink .logo {
+  max-height: 40px;
+  top: 5px;
+}
+
+.shrink .main-nav {
+  max-height: 50px;
+}
+
+/* ========================================
+    MEDIA QUERIES
+==========================================*/
+
+@media screen and (min-width: 1024px) {
+  .image-container--home {
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    max-width: 170%;
+    width: calc(100% + 400px);
+    margin-left: -200px;
+    margin-right: -200px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .nav-list__link {
+    font-size: 0.875rem;
+  }
+  .logo {
+    max-width: 50px;
+    top: 5px;
+  }
+  
+  figure {
+    margin: 0;
+  }
+  
+  .image-container {
+    margin: 0;
+    width: 100%;
+    height: 350px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  .home--article {
+    font-size: 1rem;
+  }
+  
+  .category-list__item {
+    min-width: 100%;
+  }
+  
+  .main-footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  
+  .main-nav {
+    max-width: 650px;
+  }
+  
+  .nav-list__link {
+    font-size: 1.2rem;
+  }
+  
+  .post__content {
+    max-width: 600px;
+    font-size: 1.2rem;
+  }
+  
+  .home--article {
+    max-width: 600px;
+  }
+  .category-list__item {
+    background: none;
+  }
+  
+  .category-list__excerpt {
+    max-width: 500px;
+    margin: 1em auto;
+  }
+  
+}
+
+@media screen and (min-width: 1025px) {
+  figcaption {
+    width: 130%;
+    margin-top: 10px;
+  }
 }

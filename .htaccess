@@ -28,3 +28,11 @@ AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css a
 
 # pass the default character set
 AddDefaultCharset utf-8
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html
+RewriteRule ^index\.php$ / [L,R=301]

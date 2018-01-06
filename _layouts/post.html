@@ -1,36 +1,33 @@
 ---
 layout: default
 ---
-<section class="post">
+<section class="content">
+  <div class="post">
  
   <header class="post__header">
-    <h1 class="post__title">{{ page.title }}</h1>
-  <h3 class="post__meta"> - {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} -</h3>
-  <h4>
-    
-
-  </h4>
+    <h1 class="title title--post">{{ page.title }}</h1>
+    <h3 class="post__meta"> - {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} -</h3>
+    <aside class="info">
+      <span class="reading-time">Reading Time:  {{ content.size | readtime }} min.</span>     
+    </aside>
+    {% if page.subtext %}
+      <p class="post__sub-text">{{page.subtext}} </p>
+    {% endif %}
+  
   </header>	
   {% if page.image %}
-<figure class="post__image">
-     <img class="img--post" src="/images/posts/{{ page.image }}" alt="">
-    <figcaption class="image__caption">{{ page.imageDesc }}</figcaption>
-</figure> 
+  <figure class="">
+    <div class="image-container image-container--home">
+      <img class="animated" src="/images/posts/{{ page.image }}" alt="New York City, Brooklyn Bridge. Summer 2017">
+     </div>
+    <figcaption>{{ page.imageDesc }}</figcaption>
+  </figure>	
 {% endif %}
   <article class="post__content">
-  <aside class="info">
-    <ul class="info__list">
-      <li class="info__reading">
-      Reading Time:  {{ content.size | readtime }} min.
-      </li>
-      <li>
-        <a href="/journal" class="info__link all-posts">
-        Back to all posts   
-        </a>
-      </li>
-    </ul>   
-  </aside>
   {{ content }}
   </article>
-
+</div>
+<div class="comments">
+  <div class="fb-comments"></div>
+</div>
 </section>

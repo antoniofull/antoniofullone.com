@@ -5,15 +5,15 @@ layout: default
 <main class="content">
 	<div class="wrapper wrapper--articles">
 		<header >
-			<h1 class="title title--wrapper">Reading.</h1>
+			<h1 class="title title--wrapper"> My Projects</h1>
 		</header>
 		<p class="category-description">
-			In this space I review the books I read, or listen to. I read a lot and most of them are not about technical or Javascript but about life, personal development and life improvement.
-      Sometimes I can add a referral link to the book link (usually Amazon, where I buy most of them). Don't worry if I will ever make money out of those links, I will give it to charity.
+      As every developer on this world, I also have my little side projects. Most of the times are not updated or finished but I just do it for fun.
+      I am now rebuilding this section, so for now it is empty. However you can look at my <a href="http://github.com/antoniofull/digitalnomadlove">github</a> where you will find the open source project I did.
 		</p>
 		<section class="category-list">
 			{% for post in site.posts %}
-			{% if post.categories contains "reading" %}
+			{% if post.categories contains "projects" %}
 		    <article class="category-list__item">
 					<header>
 						<h2 class="category-list__title title">{{ post.title }}</h2>

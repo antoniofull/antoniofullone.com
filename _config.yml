@@ -1,7 +1,7 @@
 # Site settings
 title: Antonio Fullone
 email: antonio@antoniofullone.com
-description: "Antonio Fullone. Life, food, travelling and coding."
+description: "Antonio Fullone personal website. Based in Spain but traveling the World. He Writes about Life, Love, spirituality, coding and traveling."
 baseurl: ""
 url: "http://antoniofullone.com/"
 twitter_username: lastwebdesigner
@@ -10,7 +10,16 @@ ftp_host: 'antoniofullone.com'
 ftp_dir: '/t'
 ftp_passive: false
 exclude: ['node_modules', 'bower_components', 'gulpfile.js', 'grunt_package.json', 'package.json', 'bower.json', 'Gruntfile.js', 'README.md','gulp']
-
+sitemap:
+    filename: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
 
 # Build settings
 markdown: kramdown
