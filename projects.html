@@ -9,7 +9,7 @@ layout: default
 		</header>
 		<p class="category-description">
       As every developer on this world, I also have my little side projects. Most of the times are not updated or finished but I just do it for fun.
-      I am now rebuilding this section, so for now it is empty. However you can look at my <a href="http://github.com/antoniofull/digitalnomadlove">github</a> where you will find the open source project I did.
+      I am now rebuilding this section, so for now it is empty. However you can look at my <a href="http://github.com/antoniofull">github</a> where you will find the open source projects I did.
 		</p>
 		<section class="category-list">
 			{% for post in site.posts %}
@@ -20,10 +20,10 @@ layout: default
 						<span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
 					</header>
 		      <a class="category-list__link" href="{{ post.url }}">
-		      	{% if post.image %}	
+		      	{% if post.image %}
 						<figure class="image-container">
 							<img class="category-list__image" src="/images/posts/{{ post.image }}" alt={{post.title}} />
-						</figure>	
+						</figure>
 						{% endif %}
 		      </a>
 					<div class="category-list__excerpt">{{post.excerpt}}</div>
@@ -32,5 +32,5 @@ layout: default
 			{% endif %}
 		  {% endfor %}
 		</section>
-	</div>	
+	</div>
 </main>

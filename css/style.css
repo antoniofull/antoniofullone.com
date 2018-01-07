@@ -6,7 +6,7 @@ Description: 	My Personal theme
 Version: 		2.0
 Author: 		Antonio Fullone
 Author URI: 	http://antoniofullone.com
-Tags: 			#lazy 
+Tags: 			#lazy
 */
 /*
 
@@ -459,7 +459,7 @@ template {
 }
 
 /* ========================================
-    GENERAL 
+    GENERAL
 ==========================================*/
 
 body,
@@ -515,7 +515,7 @@ blockquote {
   line-height: 2;
   color: #999;
   margin: 40px auto 20px auto;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   max-width: 70%;
   position: relative;
   padding-bottom: 1rem;
@@ -531,8 +531,16 @@ blockquote:after {
   height: 30px;
   width: 30px;
 }
+
+.underline {
+  text-decoration: underline;
+}
+
+.hide {
+  display: none !important;
+}
 /* ========================================
-    HEADER 
+    HEADER
 ==========================================*/
 
 .main-header {
@@ -552,7 +560,7 @@ blockquote:after {
 
 .main-nav {
   max-width: 1200px;
-  margin: 0 auto;  
+  margin: 0 auto;
   height: 100%;
 }
 
@@ -570,15 +578,18 @@ blockquote:after {
 .nav-list__item {
   display: flex;
   align-items: center;
+  flex: 1 1 20%;
 }
 
 .nav-list__link {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   text-decoration: none;
   font-size: 1.2375rem;
   color: #666666;
   display: block;
+  width: 100%;
+  text-align: center;
   padding: 0 10px;
 }
 
@@ -599,7 +610,7 @@ blockquote:after {
 
 .main-footer {
   font-family: 'Josefin Sans', sans-serif;
-  background: #222;
+  background: #5B1857;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -641,10 +652,10 @@ blockquote:after {
   min-height: 100vh;
 }
 
-img {
+img:not(.emoji) {
   max-width: 100%;
   width: 100%;
-  height: auto;  
+  height: auto;
 }
 
 img.animated {
@@ -725,7 +736,7 @@ img.animated {
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0;  
+  right: 0;
 }
 
 .image-container--home img {
@@ -759,7 +770,7 @@ img.animated {
 ==========================================*/
 
 .category-description {
-  font-family: 'Josefin Sans', sans-serif; 
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   max-width: 760px;
   margin: 1em auto;
@@ -818,7 +829,7 @@ img.animated {
 }
 
 .read-more {
-  font-family: 'Josefin Sans', sans-serif;    
+  font-family: 'Josefin Sans', sans-serif;
   cursor: pointer;
   position: absolute;
   bottom: 10px;
@@ -845,7 +856,7 @@ img.animated {
 }
 
 .post__sub-text {
-  font-family: 'Josefin Sans', sans-serif;    
+  font-family: 'Josefin Sans', sans-serif;
   font-style: italic;
   max-width: 600px;
   margin: 2rem auto;
@@ -853,7 +864,7 @@ img.animated {
 }
 
 .reading-time {
-  font-family: 'Josefin Sans', sans-serif;    
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 0.875rem;
   fontwe: 100;
   display: block;
@@ -874,19 +885,39 @@ img.animated {
     width: 130%;
     margin-left: -15%;
     margin-right: -15%;
-  }  
+  }
 }
 
 .video iframe {
   margin: 0 auto;
   position: absolute;
   width: 100%;
-}  
+}
+
+.show-comments {
+  margin: 0 auto;
+  background-color: #5B1857;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 14px;
+  padding: 10px;
+  display: block;
+  min-width: 160px;
+}
+
+.call-comments {
+  margin: 2em auto 0 auto;
+  border-top: 1px solid #dedede;
+  padding: 2em 0 0 0;
+}
 
 .comments {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 700px;
   text-align: center;
+  width: 100%;
 }
 
 .fb-comments {
@@ -924,7 +955,7 @@ img.animated {
     MEDIA QUERIES
 ==========================================*/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .image-container--home {
     height: 600px;
     margin: 0 auto;
@@ -937,7 +968,25 @@ img.animated {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
+  .logo {
+    max-height: 50px;
+  }
+
+  .category-list {
+    max-width: 550px;
+    margin: 1em auto;
+  }
+
+  .comments {
+    max-width: 550px;
+  }
+
+}
+
+
+
+@media screen and (max-width: 1024px) {
   .nav-list__link {
     font-size: 0.875rem;
   }
@@ -945,68 +994,155 @@ img.animated {
     max-width: 50px;
     top: 5px;
   }
-  
+
   figure {
     margin: 0;
+    margin-left: -20px;
+    margin-right: -20px;
   }
-  
+
   .image-container {
     margin: 0;
     width: 100%;
-    height: 350px;
+    height: 200px;
   }
-  
+
   .image-container img {
     width: 100%;
     object-fit: cover;
     height: 100%;
   }
-  
+
   .home--article {
     font-size: 1rem;
   }
-  
+
   .category-list__item {
     min-width: 100%;
   }
-  
+
   .main-footer {
     font-size: 0.8rem;
   }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1024px) {
-  
+
   .main-nav {
     max-width: 650px;
   }
-  
+
   .nav-list__link {
     font-size: 1.2rem;
   }
-  
+
   .post__content {
     max-width: 600px;
     font-size: 1.2rem;
   }
-  
+
   .home--article {
     max-width: 600px;
   }
   .category-list__item {
     background: none;
   }
-  
+
   .category-list__excerpt {
     max-width: 500px;
     margin: 1em auto;
   }
-  
+
+  .image-container {
+    margin: 0;
+    width: 100%;
+    height: 500px;
+  }
+
+  .image-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
 }
 
 @media screen and (min-width: 1025px) {
   figcaption {
-    width: 130%;
+    width: 120%;
     margin-top: 10px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  html,
+  body {
+    font-size: 19px;
+  }
+
+  body blockquote {
+    font-size: 1.5rem;
+  }
+}
+
+/* ====================================
+  LOADER
+======================================*/
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #5B1857;
+  font-size: 10px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
   }
 }

@@ -8,11 +8,11 @@ layout: default
 			<h1 class="title title--wrapper"> Writing.</h1>
 		</header>
 		<p class="category-description">
-			This is my personal space. Here I write my daily thoughts about life, love, nature, meditation and, sometimes, work. 
-			I try to live my life filling it with love and living in harmony with the nature. 
-			I am just a human being and so I do mistakes, like everyone else. I like to talk about it on this blog. 
+			This is my personal space. Here I write my daily thoughts about life, love, nature, meditation and, sometimes, work.
+			I try to live my life filling it with love and living in harmony with the nature.
+			I am just a human being and so I do mistakes, like everyone else. I like to talk about it on this blog.
 			Sometimes you can find geeky articles about my work, but in most of the cases I write about my personal life.
-			You might find it boring, if so there is also a section about <a href="/reading" alt="books that I read">reading</a> and <a href="/travel" alt="Antonio traveling">travel</a>  
+			There is also a section about <a href="/reading" alt="books that I read">reading</a> and <a href="/travel" alt="Antonio traveling">travel</a>  
 		</p>
 		<section class="category-list">
 			{% for post in site.posts %}
@@ -23,10 +23,10 @@ layout: default
 						<span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
 					</header>
 		      <a class="category-list__link" href="{{ post.url }}">
-		      	{% if post.image %}	
+		      	{% if post.image %}
 						<figure class="image-container">
 							<img class="category-list__image" src="/images/posts/{{ post.image }}" alt={{post.title}} />
-						</figure>	
+						</figure>
 						{% endif %}
 		      </a>
 					<div class="category-list__excerpt">{{post.excerpt}}</div>
@@ -35,5 +35,5 @@ layout: default
 			{% endif %}
 		  {% endfor %}
 		</section>
-	</div>	
+	</div>
 </main>

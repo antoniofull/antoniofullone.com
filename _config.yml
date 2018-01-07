@@ -9,6 +9,7 @@ github_username:  lastwebdesigner
 ftp_host: 'antoniofullone.com'
 ftp_dir: '/t'
 ftp_passive: false
+plugins: ["emoji_for_jekyll"]
 exclude: ['node_modules', 'bower_components', 'gulpfile.js', 'grunt_package.json', 'package.json', 'bower.json', 'Gruntfile.js', 'README.md','gulp']
 sitemap:
     filename: "/sitemap.xml"
@@ -24,5 +25,4 @@ sitemap:
 # Build settings
 markdown: kramdown
 permalink: pretty
-
-
+future: false

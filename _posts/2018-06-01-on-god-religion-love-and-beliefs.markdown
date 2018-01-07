@@ -1,16 +1,17 @@
 ---
 layout: post
-title:  On God, religion and love
+title:  On God, Faith and love
 date:   2018-01-06 19:30:00
 categories: writing
-image:  
-imageDesc:
-subtext: This post is dedicated to R.S. A person who briefly entered in my life and then (too) quickly exit it. Leaving a huge  void in my life. But R. taught me about Love, not the one between man and woman or brother and sister, but the universal love. Something that I missed, or avoided, in my life for long time. R. gave me new hopes for a better World, for a better me and helped me to see what is our real purpose in life. Give love, unconditionally, to every one.
+image:  "faith.jpg"
+imageDesc: "We all need to believe in something. We need faith."
+subtext: This post is dedicated to R., a person who briefly entered in my life and then (too) quickly exited it. Leaving a huge void inside me. R. taught me about Love, not the one between man and woman or brother and sister, but the universal love. Something that I missed, or avoided, in my life for long time. R. gave me new hopes for a better World, for a better me and helped me to see what is our real purpose in life. Give love and love life, unconditionally.
 ---
 
 
-<span class="first-letter">S</span>ince the beginning of the human race, humans have always felt the need to believe in something bigger, something that cannot be seen but that gave them faith, hopes, peace of mind.
-Some call it **God**, other **Allah**, other **Buddah**. For some were multiple Gods but it doesn't matter who or what it is.
+<span class="first-letter">S</span>ince the beginning humans have always felt the need to believe in something bigger, something that cannot be seen but that gave them faith, hopes, peace of mind.
+
+Some call it **God**, other **Allah**, other **Buddha**. For some were multiple Gods but it doesn't matter who or what it is.
 
 What really matters is that we always felt the need to believe. Even atheist believe, they believe in science. We all need to believe in something that helps us to understand the biggest mistery of human beings, the mistery of life.
 
@@ -29,7 +30,7 @@ But then her son got sick, he also fought for his life for a month in the hospit
 I kept wondering how my sister could resist to this pain, how my mum did all that years with my father, how they could not lose faith in this so-called God, how they could love someone (or something) who gave them so much suffering.
 
 In the last months I went trough a very hard inner pain, so immense that in certain moments I felt I would not make it. Until one day I understood: it is not about believing in a God or a religion. Is about love, is about loving life. These women taught me the best lessons I could learn in my life. As [Marianne Williamson](https://en.wikiquote.org/wiki/Marianne_Williamson) pointed out in her book **"Return to love"**,
-> ***without love we live in Hell, but with love we live in Heaven***.
+> without love we live in Hell, but with love we live in Heaven.
 
 I lived in Hell for so long that I totally forgot what loving meant.
 

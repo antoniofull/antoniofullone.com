@@ -3,31 +3,32 @@ layout: default
 ---
 <section class="content">
   <div class="post">
- 
+
   <header class="post__header">
     <h1 class="title title--post">{{ page.title }}</h1>
     <h3 class="post__meta"> - {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} -</h3>
     <aside class="info">
-      <span class="reading-time">Reading Time:  {{ content.size | readtime }} min.</span>     
+      <span class="reading-time">Reading Time:  {{ content.size | readtime }} min.</span>
     </aside>
     {% if page.subtext %}
       <p class="post__sub-text">{{page.subtext}} </p>
     {% endif %}
-  
-  </header>	
+
+  </header>
   {% if page.image %}
   <figure class="">
     <div class="image-container image-container--home">
       <img class="animated" src="/images/posts/{{ page.image }}" alt="New York City, Brooklyn Bridge. Summer 2017">
      </div>
     <figcaption>{{ page.imageDesc }}</figcaption>
-  </figure>	
+  </figure>
 {% endif %}
   <article class="post__content">
   {{ content }}
   </article>
 </div>
 <div class="comments">
-  <div class="fb-comments"></div>
+  <div class="loader">Loading...</div>
+  <div class="fb-comments" data-width="100%"></div>
 </div>
 </section>
