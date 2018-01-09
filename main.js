@@ -13,11 +13,10 @@
 
 
 function attachFbScript() {
-  const script = document.createElement("script");
   const head = document.querySelector("head");
-  script.src = "/fb.js";
   const loader = document.querySelector(".loader");
-  const button = document.querySelector(".show-comments");
+  const script = document.createElement("script");
+  script.src = "/fb.js";
 
   if (!document.querySelector('script[src*="fb.js"]')) {
       head.appendChild(script);
@@ -31,20 +30,20 @@ function attachFbScript() {
 
 
 function isElementInViewport(el) {
+  if(el) {
     var rect = el.getBoundingClientRect();
     return rect.bottom > 0 &&
         rect.right > 0 &&
         rect.left < (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */ &&
         rect.top < (window.innerHeight || document.documentElement.clientHeight) /* or $(window).height() */;
+  }
 }
 
 (function showComments() {
-  const footer = document.querySelector('.comments');
+  const lastpar = document.querySelector('.post__content p:last-child');
   window.addEventListener('scroll', function() {
-    if(isElementInViewport(footer)) {
+    if(lastpar && isElementInViewport(lastpar)) {
       attachFbScript();
-    } else {
-
     }
   })
 })();
