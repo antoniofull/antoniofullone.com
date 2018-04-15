@@ -713,7 +713,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
   line-height: 1.1;
 }
 
@@ -918,6 +918,7 @@ figcaption {
 }
 
 .title {
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
 
@@ -944,6 +945,15 @@ figcaption {
   max-width: 700px;
   margin: 0 auto;
   font-size: 1.3rem;
+}
+
+.home--article .title {
+  font-size: 3.5rem;
+}
+
+.home--article .sub-header--home {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
 }
 
 .home--article p:first-of-type {
@@ -1090,13 +1100,13 @@ img.animated {
 .post__content h4,
 .post__content h5 {
   text-align:  center;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  font-size: 33px;
-  font-style: italic;
+  font-size: 2.3rem;
 }
 
 .title--post {
+  font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   font-size: 2.5rem;
 }
@@ -1138,6 +1148,32 @@ img.animated {
   margin: 0 auto;
   position: absolute;
   width: 100%;
+}
+
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page-navigation a:hover {
+  transition: all 0.3s linear;
+  border-color: #c1e3fe;
+  background-color: #f2f9ff;
+}
+
+.page-navigation .prev,
+.page-navigation .next {
+  font-size: 0.875rem;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 3em 0 1em 0;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px;
+  text-decoration: none;
+  color: #444;
+  display: block;
 }
 
 .show-comments {
@@ -1268,6 +1304,10 @@ img.animated {
 
   .home--article {
     font-size: 1rem;
+  }
+
+  .home--article .title {
+    font-size: 2.5rem;
   }
 
   .category-list__item {

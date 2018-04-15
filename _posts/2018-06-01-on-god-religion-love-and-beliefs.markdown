@@ -1,6 +1,9 @@
 ---
 layout: post
 title:  On God, Faith and love
+headtitle:  "God, faith love. A reflection on my life"
+description: "God, faith, love. A brief reflection on my life and the lessons I learned from it"
+metatag: "God, faith, religion, spirituality"
 date:   2018-01-06 19:30:00
 categories: writing
 image:  "faith.jpg"
@@ -36,10 +39,10 @@ I lived in Hell for so long that I totally forgot what loving meant.
 
 Love is what drives our lives, love is what gives our life a meaning. Living our life full of love means living a meaningful, beautiful life.
 
-I decided to surrender my life to Love and I found my inner peace. I will never feel anger or hate again. I put my past aside. I lived for so many years with hate, anger, envy ... with a void that now, finally, I understand what it was.
+I decided to surrender my life to Love and I started looking for the inner peace. I cannot feel anger or hate again. I try to put my past aside. I lived for so many years replacing love, faith and respect with fear, hate and anger ... with a void that now, finally, I understand what it was.
 
-Thanks to meditation and the "God of my heart", I found my peace. I can now feel love again. Is a strange feeling, impossible to describe but easy to feel, it just takes one simple thing: ***Open your heart and fill it with Love.***
+Thanks to meditation and the "God of my heart", I am finding, slowly, my inner peace. I can now feel love again. Is a strange feeling, impossible to describe but easy to feel, it just takes one simple thing: ***Open your heart and fill it with Love.***
 
 So yes I believe again, because in the end everyone of us, in one way or another, needs to believe. Either if is a God, a religion or, like me, just the God of my heart.
 
-I cannot change the past, I cannot correct the mistakes I did, but I can now look to the future with a heart full of love, believing that this world and this life are beautiful. And willing to fully living every moment of it.
+I cannot change the past, I cannot correct the mistakes I did, but at least I can look to the future with a heart full of love, believing that this world and this life are beautiful. And willing to fully living every moment of it.

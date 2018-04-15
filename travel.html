@@ -1,5 +1,7 @@
 ---
 layout: default
+description: "Antonio Fullone - Writing about my travels around the world."
+metatag: "travel, love, digital nomad"
 ---
 
 <main class="content">
@@ -10,7 +12,7 @@ layout: default
 		<p class="category-description">
 			My thoughts about traveling. The places I visited and the (very crappy) photos I take. I love traveling and I plan to visit as many places as possible in my life.
 			I take photos too, I don't have a personal instagram but if you, for some reasons, want to see more of the photos I take, then you can follow
-			<a href="https://instagram.com/thexpatmagazine" alt="The expat magazine on instagram">my travel blog on Instagram</a>.		
+			<a href="https://instagram.com/thexpatmagazine" alt="The expat magazine on instagram">my travel blog on Instagram</a>.
 		</p>
 		<section class="category-list">
 			{% for post in site.posts %}
@@ -21,10 +23,10 @@ layout: default
 						<span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
 					</header>
 		      <a class="category-list__link" href="{{ post.url }}">
-		      	{% if post.image %}	
+		      	{% if post.image %}
 						<figure class="image-container">
 							<img class="category-list__image" src="/images/posts/{{ post.image }}" alt={{post.title}} />
-						</figure>	
+						</figure>
 						{% endif %}
 		      </a>
 					<div class="category-list__excerpt">{{post.excerpt}}</div>
@@ -33,5 +35,5 @@ layout: default
 			{% endif %}
 		  {% endfor %}
 		</section>
-	</div>	
+	</div>
 </main>

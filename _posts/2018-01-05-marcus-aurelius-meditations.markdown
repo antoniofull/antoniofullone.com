@@ -1,5 +1,7 @@
 ---
 layout: post
+headtitle:  "Review of Meditations by Marcus Aurelius"
+description: "Review of Meditations by Marcus Aurelius"
 title:  Meditations by Marcus Aurelius.
 date:   2018-01-05 18:30:00
 categories: reading

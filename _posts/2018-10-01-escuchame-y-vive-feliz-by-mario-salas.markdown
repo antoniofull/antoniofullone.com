@@ -1,15 +1,18 @@
 ---
 layout: post
+headtitle:  "Escuchame y vive Feliz. A book by Mario Salas."
+description: "Written by Mario Salas, Gran Maestro de la orden RosaCruz of latin America"
 title:  Escuchame y vive feliz - by Mario Salas
 date:   2018-01-09 10:30:00
 categories: reading
+metatag: "books, rosa cruz, mario salas, happiness, spirituality, escuchame y vive feliz"
 image:  "escuchame-y-vive-feliz-mario-salas.jpg"
 imageDesc: "Escuchame y Vive Feliz, by Mario Salas. A book full of wisdom, peace and love"
 ---
 
 <span class="first-letter">A</span>s you can guess from the title, this book is in Spanish. I wish I could translate it butI do not have any contact with the family or editor of this book.
 
-Anyway if you are learning spanish it would be a good exercise. The book uses a very simple language, and this is what I really like about it.
+Anyway if you are learning Spanish it would be a good exercise. The book uses a very simple language, and this is what I really like about it.
 
 It is written by **Mario Salas**, which was one of the **Gran Maestro of the Hispano/America lodge of the Rosicrucian**. But don't worry you don't need to be a **Rosicrucian** neither be religious to read this book.
 
@@ -39,8 +42,6 @@ The chapter are easy to read and to assimilate, I read many parts at least once 
 
  > When we are born we cry, while every one is happy. But when we die, every one around is crying. But we need to be happy. Because we have reached our inner peace, and we know we lived the life we wanted. Death is just a transition, a temporary passage in to a new, better life.
 
-This is the way I am living my life now, and this is how I want it to end. Smiling, knowing that I lived my life in the best possible way and ready to accept and enter whatever will be after it.
-
-Thank you ***Mario Salas*** for your inspiring words, I bring this book with every day in my kindle, and every time I feel the need or anytime that fear arises in my heart, I start reading it, inspiring me every day to live a life full of love, peace and wisdom.
+This book from  ***Mario Salas*** is simple and yet incredibly inspiring, I bring this book with every day in my kindle as it has quickly become one of my favourite book.
 
  You can read the book for free [here](https://www.scribd.com/doc/88616320/Escuchame-y-Vive-Feliz-por-Mario-Salas-FRC)
