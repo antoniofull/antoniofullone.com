@@ -1020,7 +1020,7 @@ figcaption {
   color: #999;
 }
 
-.content {
+.content {  
   flex: 1;
   background: #FFFFFF;
   margin: 10px;
@@ -1031,15 +1031,19 @@ figcaption {
 .title {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
+  font-size: 36px;
 }
-
+@media screen and (min-width: 1024px) {
+  .title {
+    font-size: 144px;
+  }
+}
 .title--home {
   text-align: center;
 }
 
 .title--wrapper {
   text-align: center;
-  margin-top: 2em;
 }
 
 .sub-header,
@@ -1058,12 +1062,14 @@ figcaption {
   font-size: 1.3rem;
 }
 
+@media screen and (min-width: )
+
 .home--article .title {
-  font-size: 3.5rem;
+  font-size: 144px;
 }
 
 .home--article .sub-header--home {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 1rem;
 }
 
@@ -1125,7 +1131,7 @@ img.animated {
 ==========================================*/
 
 .category-description {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-weight: 300;
   max-width: 760px;
   margin: 1em auto;
@@ -1143,12 +1149,10 @@ img.animated {
 .category-list__item {
   flex: 1 1 45%;
   margin-bottom: 2rem;
-  border: 1px solid #e5e5e5;
   border-radius: 3px;
   max-width: 45%;
   box-sizing: border-box;
   padding: 1rem;
-  background: #f9f9f9;
   position: relative;
 }
 
@@ -1184,7 +1188,7 @@ img.animated {
 }
 
 .read-more {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   cursor: pointer;
   position: absolute;
   bottom: 10px;
