@@ -1,7 +1,7 @@
 {
   "name": "my-blog",
   "version": "1.0.0",
-  "description": "I use **_Sass_** for everything. The css is organized in modules which are build using sass and a grunt plugin inside the _assets folder.",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
