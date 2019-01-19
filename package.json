@@ -2,11 +2,14 @@
   "name": "antoniofullone.com",
   "version": "5.0.0",
   "description": "Antonio Fullone Personal Website",
-  "main": "index.html",
+  "main": "src/index.js",
   "repository": "git@github.com:antoniofull/my-blog.git",
   "author": "Antonio <antonio.fullone@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "parcel-bundler": "^1.11.0"
   },
   "scripts": {
@@ -14,6 +17,7 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   }
