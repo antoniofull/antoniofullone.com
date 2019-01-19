@@ -21,6 +21,52 @@ export const navigation = [
     },
 ];
 
+export const portfolio = [
+    {
+        id: 1,
+        title: 'Project 1 with quite long title so that we can see how the text wraps',
+        text: `A personal project
+                without Markdown, just simple text 
+
+                on multiple lines
+              `,
+        tech: ['React', 'Js'],
+        links: [{
+            title: '',
+            link: ''
+        }],
+        images: [{
+            type: 'main',
+            source: '',
+        },{
+            type: 'main',
+            source: '',
+        }]
+    },
+    {
+        id: 2,
+        title: 'title 2',
+        text: `A personal Projects
+
+                with ## Markdown
+              `,
+        tech: ['React Native', 'IOS'],
+        links: [{
+            title: '',
+            link: ''
+        }],
+        images: [{
+            type: 'main',
+            source: '',
+        },{
+            type: 'main',
+            source: '',
+        }]
+    }    
+];
+
+
+
 export const about = `# Ciao nice to meet you! 
 
 Born in the beautiful and always sunny Calabria, in Italy, Antonio isa designer & developer and — as he like to call himself— a wannabe cook. Eleven years ago, he left his home town and moved abroad. Since then he lived in different cities in Italy, Spain and The Netherlands. He has travelled to several countries between Europe and North America and in the last two years he has been working remotely as a consultant. Thanks to this he kept  travelling to his favorite places while working with different companies to improve their UI’s and Websites.
@@ -38,3 +84,4 @@ A man's worth is no greater than his ambitions.
 
 The most inspiring person he met was his father and he follows the principles he taught him: Respect, Honesty, Humility and Kindness.  He learned from his father another important life skill: listen more than you speak.
 `;
+
