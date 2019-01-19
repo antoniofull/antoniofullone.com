@@ -1,11 +1,11 @@
 import React from 'react'
 
-import * as data from '../../data';
+import {navItems} from '../../data';
 
 const Navigation = props => (
     <nav className=''>
         <ul>
-            {data.navigation.map(navItem => (
+            {navItems && navItems.map(navItem => (
                 <li className='' key={navItem.id}>
                     {navItem.text}
                 </li>

@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import * as data from '../../data';
+import {aboutText}  from '../../data';
 
 const About = props => (
     <section>
         <div>
-            <ReactMarkdown source={data.about} />
+            <ReactMarkdown source={aboutText} />
         </div>
     </section>
 );
