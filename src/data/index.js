@@ -45,77 +45,139 @@ const projects = [
     {
         id: 1,
         title: 'Project 1 with quite long title so that we can see how the text wraps',
-        text: `A personal project
+        description: `A personal project
                 without Markdown, just simple text 
 
                 on multiple lines
               `,
-        tech: ['React', 'Js'],
+        stack: ['React', 'Js'],
         links: [{
             title: '',
             link: ''
         }],
-        images: [{
-            type: 'main',
-            source: '',
-        },{
-            type: 'main',
-            source: '',
+        mainImage: '',
+        sections: [{
+            text: '',
+            anchor: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
+        },
+        {
+            text: '',
+            anchor: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
+        },
+        {
+            text: '',
+            anchor: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
+        },
+        {
+            text: '',
+            anchor: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
         }]
     },
     {
         id: 2,
-        title: 'title 2',
-        text: `A personal Projects
+        title: 'Project 1 with quite long title so that we can see how the text wraps',
+        mainText: `A personal project
+                without Markdown, just simple text 
 
-                with ## Markdown
+                on multiple lines
               `,
-        tech: ['React Native', 'IOS'],
+        stack: ['React', 'Js'],
         links: [{
-            title: '',
-            link: ''
+            id: 1,
+            title: 'title Link',
+            url: '/'
         }],
-        images: [{
-            type: 'main',
-            source: '',
-        },{
-            type: 'main',
-            source: '',
-        }]
-    }    
+        mainImage: '',
+        sections: [{
+            id: 1,
+            text: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
+        },
+        {
+            id: 2,
+            text: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
+        },
+        {
+            id: 3,
+            text: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
+        },
+        {
+            id: 4,
+            text: '',
+            images: [{
+                id: 1,
+                label: '',
+                source: ''
+            }]
+        }] 
+    }
 ];
 
 const icons = [{
     id: 1,
     link: '',
-    labe: 'Icon 1',
+    label: 'Icon 1',
 },
 {
     id: 2,
     link: '',
-    labe: 'Icon 2',
+    label: 'Icon 2',
 }];
 
 const design = [{
     id: 1,
     link: '',
-    labe: 'Design 1',
+    label: 'Design 1',
 },
 {
     id: 2,
     link: '',
-    labe: 'Design 2',
+    label: 'Design 2',
 }];
 
 const code = [{
     id: 1,
     link: '',
-    labe: 'Code 1',
+    label: 'Code 1',
 },
 {
     id: 2,
     link: '',
-    labe: 'Code 2',
+    label: 'Code 2',
 }];
 
 export const work = {
