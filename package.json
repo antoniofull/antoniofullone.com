@@ -1,0 +1,9 @@
+{
+  "name": "antoniofullone.com",
+  "version": "5.0.0",
+  "description": "Antonio Fullone Personal Website",
+  "main": "index.html",
+  "repository": "git@github.com:antoniofull/my-blog.git",
+  "author": "Antonio <antonio.fullone@gmail.com>",
+  "license": "MIT"
+}
