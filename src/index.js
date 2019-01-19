@@ -2,18 +2,20 @@ import React, { Component } from 'react'
 import * as ReactDOM from 'react-dom';
 import PropTypes from 'prop-types'
 
-import Hello from './components/Hello';
+import Header from './components/Header';
+import Logo from './components/Logo';
+import Navigation from './components/Navigation';
 
-class HelloWorld extends Component {
+class App extends Component {
     render() {
         return (
-            <div>
-                <Hello name="Antonio" />
-            </div>
+            <Header>
+                <Logo />    
+            </Header>
         )
     }
 }
 
 let page = document.getElementById('page');
 
-ReactDOM.render(<HelloWorld />, page);
+ReactDOM.render(<App />, page);
