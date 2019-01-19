@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Logo from './components/Logo';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
+import About from './components/About';
 
 class App extends Component {
     render() {
@@ -17,6 +18,7 @@ class App extends Component {
                 </Header>
                 <main>
                     <Main />
+                    <About />
                 </main>
             </React.Fragment>    
         )
