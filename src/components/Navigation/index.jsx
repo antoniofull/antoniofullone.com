@@ -1,6 +1,6 @@
 import React from 'react'
 
-import * as data from '../data';
+import * as data from '../../data';
 
 const Navigation = props => (
     <nav className=''>

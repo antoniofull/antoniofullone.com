@@ -5,14 +5,20 @@ import PropTypes from 'prop-types'
 import Header from './components/Header';
 import Logo from './components/Logo';
 import Navigation from './components/Navigation';
+import Main from './components/Main';
 
 class App extends Component {
     render() {
         return (
-            <Header>
-                <Logo />    
-                <Navigation />
-            </Header>
+            <React.Fragment>
+                <Header>
+                    <Logo />    
+                    <Navigation />
+                </Header>
+                <main>
+                    <Main />
+                </main>
+            </React.Fragment>    
         )
     }
 }
