@@ -13,10 +13,10 @@ const Footer = props => (
     <footer>
         <FooterTitle />
         <BlogPosts />
-        <Address />
-        <ReadingList />
         <GeekStuff />
+        <ReadingList />
         <Social />
+        <Address />
         <FooterTagline />
         <SubFooter />
     </footer>

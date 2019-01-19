@@ -1,0 +1,95 @@
+/* 
+    Name: Antonio Fullone Personal Website
+    Version: V 5.0
+    URI: https://antoniofullone.com
+    Author: Antonio Fullone
+    Licence: MIT
+
+
+        1 - Reset
+        2 - Base
+        3 - Typography
+*/
+
+/* ==================== 
+    1 - Reset    
+    Credits: 
+        - https://bitsofco.de/my-css-reset-base/
+        - https://meyerweb.com/eric/tools/css/reset/reset.css
+===================== */
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img, 
+video {
+    max-width: 100%;
+}
+
+ol, ul, dl {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* 
+ Prevent Zoom on Focus only IOS devices
+ -webkit-overflow-scrolling is supported only in IOS Safari
+ https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
+*/
+@supports (-webkit-overflow-scrolling: touch) {
+    select, textarea, input[type="text"],input[type="password"],
+    input[type="number"], input[type="tel"], input[type="email"] {
+        font-size: 16px;
+    }
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
