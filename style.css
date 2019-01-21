@@ -7,7 +7,7 @@
 
 
         1 - Reset
-        2 - Base
+        2 - Custom Properties
         3 - Typography
 */
 
@@ -78,10 +78,12 @@ q:before, q:after {
 }
 
 /* 
- Prevent Zoom on Focus only IOS devices
+
+Prevent Zoom on Focus only IOS devices
  -webkit-overflow-scrolling is supported only in IOS Safari
  https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
-*/
+
+ */
 @supports (-webkit-overflow-scrolling: touch) {
     select, textarea, input[type="text"],input[type="password"],
     input[type="number"], input[type="tel"], input[type="email"] {
@@ -89,7 +91,99 @@ q:before, q:after {
     }
 }
 
+/*=========================
+    2 - Custom Properties
+==========================*/
+:root {
+    --color-text: hsla(60, 3%, 12%, 1);
+    --color-text-light: hsla(60, 1%, 48%, 1);
+    --color-text-dark: hsla(70, 16%, 7%, 1);
+
+    --color-accent: hsla(0, 96%, 72%, 1);
+    --color-accent-700: hsla(0, 56%, 32%, 1);
+    
+    --base-font: 18px;
+    --baseline: 28px;
+
+    --margin-bottom-xxl: calc(var(--baseline) * 2);
+    --margin-left-xxl: calc(var(--baseline) * 2);
+
+    --padding-half: calc(var(--baseline) / 2);
+    --padding: var(--baseline);
+    --padding-xxl: calc(var(--baseline) * 2);
+}
+
+/*=========================
+    3 - Typography
+==========================*/
+
 html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
+    font-size: var(--base-font);
+}
+
+body {
+    font-family: alegreya, serif;
+    font-size: 100%;
+    line-height: var(--baseline);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+a:visited {
+    color: var(--color-accent-700);
+}
+
+p {
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: var(--baseline);
+    
+    /* Serif Numbers are not looking good, let's make it better */
+    font-variant: lining-nums;
+    -moz-font-feature-settings: "lnum";
+    -webkit-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
+h3 {
+    font-size: 1rem;
+}
+h4 {
+    font-size: 0.667rem;
+}
+h5,
+h6 {
+    font-size: 0.444rem;
+}
+
+/* Enable Alegreya Opentype features */
+.fractional {
+    font-variant: diagonal-fractions;
+    -moz-font-feature-settings: "frac";
+    -webkit-font-feature-settings: "frac";
+    font-feature-settings: "frac";
+} 
+.ordinal {
+    font-variant-numeric: ordinal;
+    -moz-font-feature-settings: "ordn";
+    -webkit-font-feature-settings: "ordn";
+    font-feature-settings: "ordn";
+}
+.ligature {
+    font-variant-numeric: common-ligatures;
+    -moz-font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    font-feature-settings: "liga";
 }
