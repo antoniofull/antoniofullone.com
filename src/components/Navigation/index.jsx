@@ -1,12 +1,10 @@
 import React from 'react'
 
-import {navItems} from '../../data';
-
-const Navigation = props => (
-    <nav className=''>
-        <ul>
-            {navItems && navItems.map(navItem => (
-                <li className='' key={navItem.id}>
+const Navigation = ({ items }) => (
+    <nav className='site-nav' role='navigation' aria-label='Main Site Navigation'>
+        <ul className='nav-list'>
+            {items && items.map(navItem => (
+                <li className='nav-list__item' key={navItem.id}>
                     {navItem.text}
                 </li>
             ))}

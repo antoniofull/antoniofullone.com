@@ -5,7 +5,7 @@ import {work} from '../../data';
 const Project = () => (
     <div>
         {work.projects.length > 0 && work.projects.map(project => (
-            <article>
+            <article key={project.id}>
                 <header>
                     <h2>{project.title}</h2>
                 </header>
@@ -28,7 +28,7 @@ const Project = () => (
                 </div>
                 <div>
                     {project.sections.map(section => (
-                        <div>
+                        <div key={section.id}>
                             <p>{section.text}</p>
                             <div>
                                 {section.images.map(img => (

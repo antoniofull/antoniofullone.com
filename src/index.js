@@ -10,15 +10,17 @@ import About from './components/About';
 import Work from './components/Work';
 import Footer from './components/Footer';
 
+import {navItems} from './data';
+
 class App extends Component {
     render() {
         return (
             <React.Fragment>
                 <Header>
                     <Logo />    
-                    <Navigation />
+                    <Navigation items={navItems} />
                 </Header>
-                <main>
+                <main className='index' role='main'>
                     <Main />
                     <About />
                     <Work />

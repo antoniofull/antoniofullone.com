@@ -4,18 +4,18 @@
     URI: https://antoniofullone.com
     Author: Antonio Fullone
     Licence: MIT
-
-
         1 - Reset
         2 - Custom Properties
         3 - Typography
+        4 - Globals
 */
 
 /* ==================== 
-    1 - Reset    
+    1 - RESET    
     Credits: 
         - https://bitsofco.de/my-css-reset-base/
         - https://meyerweb.com/eric/tools/css/reset/reset.css
+
 ===================== */
 
 html, body,
@@ -78,11 +78,9 @@ q:before, q:after {
 }
 
 /* 
-
-Prevent Zoom on Focus only IOS devices
+ Prevent Zoom on Focus only for IOS devices
  -webkit-overflow-scrolling is supported only in IOS Safari
  https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
-
  */
 @supports (-webkit-overflow-scrolling: touch) {
     select, textarea, input[type="text"],input[type="password"],
@@ -92,11 +90,13 @@ Prevent Zoom on Focus only IOS devices
 }
 
 /*=========================
-    2 - Custom Properties
+    2 - CUSTOM PROPERTIES
 ==========================*/
+
 :root {
     --color-text: hsla(60, 3%, 12%, 1);
     --color-text-light: hsla(60, 1%, 48%, 1);
+    --color-text-light-800: hsla(60, 1%, 80%, .4);
     --color-text-dark: hsla(70, 16%, 7%, 1);
 
     --color-accent: hsla(0, 96%, 72%, 1);
@@ -105,16 +105,11 @@ Prevent Zoom on Focus only IOS devices
     --base-font: 18px;
     --baseline: 28px;
 
-    --margin-bottom-xxl: calc(var(--baseline) * 2);
-    --margin-left-xxl: calc(var(--baseline) * 2);
-
-    --padding-half: calc(var(--baseline) / 2);
-    --padding: var(--baseline);
-    --padding-xxl: calc(var(--baseline) * 2);
+   
 }
 
 /*=========================
-    3 - Typography
+    3 - TYPOGRAPHY
 ==========================*/
 
 html {
@@ -186,4 +181,108 @@ h6 {
     -moz-font-feature-settings: "liga";
     -webkit-font-feature-settings: "liga";
     font-feature-settings: "liga";
+}
+
+/*=========================
+    4 - GLOBAL
+==========================*/
+
+.index {
+    padding: 0 14px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/*=========================
+    5 - HELPERS
+==========================*/
+.m-bottom {
+    margin-bottom: var(--baseline);
+}
+
+.m-bottom--xl {
+    margin-bottom: calc(var(--baseline) * 2);
+}
+
+.m-left {
+    margin-left: var(--baseline);   
+}
+
+.m-left--xl {
+    margin-left: calc(var(--baseline) * 2);
+}
+
+.padding-x {
+    padding-left: var(--baseline);
+    padding-right: var(--baseline);
+}
+
+.padding-y {
+    padding-top: var(--baseline);
+    padding-bottom: var(--baseline);
+}
+
+.padding-x-half {
+    padding-left: calc(var(--baseline) / 2);
+    padding-right: calc(var(--baseline) / 2);
+}
+
+.padding-y-half {
+    padding-top: calc(var(--baseline) / 2);
+    padding-bottom: calc(var(--baseline) / 2);
+}
+
+.padding-x-2 {
+    padding-left: calc(var(--baseline) * 2);
+    padding-right: calc(var(--baseline) * 2);
+}
+
+.padding-x-2 {
+    padding-top: calc(var(--baseline) * 2);
+    padding-bottom: calc(var(--baseline) * 2);
+}
+
+.has-baseline {
+    background-image: repeating-linear-gradient(180deg, transparent, transparent calc(var(--baseline) - 1px), var(--color-text-light-800) calc(var(--baseline) - 1px), var(--color-text-light-800) var(--baseline));
+    background-size: 1px var(--baseline);
+}
+
+.has-grid {
+    background-image: url('/src/images/grid-mobile.png');
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+
+/*=========================
+    6 - HEADER
+==========================*/
+
+.site-header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    flex: 1 1 40px;
+    max-width: 40px;
+}
+.logo__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.logo__img {
+    width: 100%;
+    height: 100%;
+}
+
+.site-nav {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
 }

@@ -57,6 +57,7 @@ const projects = [
         }],
         mainImage: '',
         sections: [{
+            id: 1,
             text: '',
             anchor: '',
             images: [{
@@ -66,6 +67,7 @@ const projects = [
             }]
         },
         {
+            id: 2,
             text: '',
             anchor: '',
             images: [{
@@ -75,6 +77,7 @@ const projects = [
             }]
         },
         {
+            id: 3,
             text: '',
             anchor: '',
             images: [{
@@ -84,6 +87,7 @@ const projects = [
             }]
         },
         {
+            id: 4,
             text: '',
             anchor: '',
             images: [{
