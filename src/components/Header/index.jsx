@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Header = props => (
-    <header className='site-header padding-x-half' role='banner'>
+    <header className='site-header' role='banner'>
         {props.children}
     </header>
 );

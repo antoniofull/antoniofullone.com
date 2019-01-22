@@ -55,7 +55,8 @@ tr, th, td {
 }
 
 img, 
-video {
+video,
+svg {
     max-width: 100%;
 }
 
@@ -93,6 +94,11 @@ q:before, q:after {
     2 - CUSTOM PROPERTIES
 ==========================*/
 
+/*
+ There is no better way than experiment and learn new things 
+ Using your own website as lab 
+ but how cool is doing it with css? :-)
+*/
 :root {
     --color-text: hsla(60, 3%, 12%, 1);
     --color-text-light: hsla(60, 1%, 48%, 1);
@@ -102,10 +108,28 @@ q:before, q:after {
     --color-accent: hsla(0, 96%, 72%, 1);
     --color-accent-700: hsla(0, 56%, 32%, 1);
     
-    --base-font: 18px;
-    --baseline: 28px;
+    --base-font: 20px;
+    --baseline: 30px;
 
-   
+    --margin: var(--baseline);
+    --margin-half: calc( var(--baseline) / 2 ); 
+    --margin-xl: calc( var(--baseline) * 2 ); 
+
+    --padding: var(--baseline);
+    --padding-half: calc( var(--baseline) / 2 ); 
+    --padding-xl: calc( var(--baseline) * 2 );     
+
+   /* Mobile Grid: 4 Column with Margin outside */
+    --grid-columns: 4;
+    --grid-gutters: 3;
+    --grid-gutter: 15px;
+    /* 
+        Some calculations that could be used if not planning to use grid 
+        just to see how cool is CSS when you can add some logic :-)
+    */
+    --grid-total-gutter: calc(var(--grid-gutter) * var(--grid-gutters));
+    --grid-width: calc(100% - var(--grid-total-gutter));
+    --grid-unit: calc( var(--grid-width) / 4 ); 
 }
 
 /*=========================
@@ -258,21 +282,27 @@ h6 {
 ==========================*/
 
 .site-header {
-    height: 56px;
-    display: flex;
-    align-items: center;
+    height: calc(var(--baseline) * 2);
+    width: calc(100% - var(--margin));
+    max-width: calc(100% - var(--margin));
+    margin: 0 auto;
 }
 
+@supports (display: grid) {
+    .site-header {
+        display: grid;
+        align-content: center;
+        grid-template-columns: repeat(4, minmax(70px, 1fr));
+        grid-column-gap: var(--grid-gutter);
+    }
+}
 .logo {
-    width: 40px;
-    height: 40px;
-    flex: 1 1 40px;
-    max-width: 40px;
+    grid-column: 1 / 1;
 }
 .logo__link {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
 }
 .logo__img {
     width: 100%;
@@ -280,9 +310,28 @@ h6 {
 }
 
 .site-nav {
-    margin-left: auto;
+    max-width: 100%;
+    grid-column: auto / span 3;
 }
 
 .nav-list {
-    display: flex;
+    font-family: alegreya-sans-sc, sans-serif;
+    text-align: right;
+}
+.nav-list__item {
+    width: auto;
+    margin-left: var(--margin-half);
+    vertical-align: top;
+    display: inline-block;
+    text-align: right;
+    font-size: .667rem;
+}
+
+@media screen and (min-width: 600px) {
+    .site-header {
+        max-width: calc(100% - var(--margin-xl));
+    }
+    .site-nav {
+        grid-column: 3 / span 2;
+    }
 }
