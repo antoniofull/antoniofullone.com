@@ -5,12 +5,14 @@ import {aboutText}  from '../../data';
 
 import Thanks from '../../images/thanks.svg';
 
+const padding = {
+    padding: '30px'
+}
+
 const About = props => (
-    <section>
-        <div>
-            <ReactMarkdown source={aboutText} />
-            <Thanks />
-        </div>
+    <section className='grid-margin' style={padding}>
+        <ReactMarkdown source={aboutText} />
+        <Thanks />
     </section>
 );
 

@@ -43,6 +43,7 @@ tr, th, td {
     margin: 0;
     padding: 0;
     border: 0;
+    
 }
 
 * {
@@ -108,12 +109,34 @@ q:before, q:after {
     --color-accent: hsla(0, 96%, 72%, 1);
     --color-accent-700: hsla(0, 56%, 32%, 1);
     
-    --base-font: 20px;
-    --baseline: 30px;
+
+    /* 
+        Modular Scale
+        dy = dynamic fonts  
+    */
+    --base-font: 18px;
+    --baseline: 28px;
+
+    /* Second important number for the scale
+       I use this as a intertistial value to balance between 2 big values 
+       The value is equal to the Logo Size 
+    */
+    --intertistial-value: 40px;
+    
+    --font-xxl: 5.063rem;
+    --font-xl: 3.375rem;
+    --font-l: 2.25rem;
+    --font-m: 1.5rem;
+    --font-s: 0.667rem;
+    --font-xs: 0.444rem;
+    --font-dy-l: 11.391vw;
+    --font-dy-m: 7.594vw;
+    --font-dy-s: 3.375vw;
 
     --margin: var(--baseline);
     --margin-half: calc( var(--baseline) / 2 ); 
     --margin-xl: calc( var(--baseline) * 2 ); 
+    --margin-xxl: calc( var(--baseline) * 3 ); 
 
     --padding: var(--baseline);
     --padding-half: calc( var(--baseline) / 2 ); 
@@ -131,6 +154,14 @@ q:before, q:after {
     --grid-width: calc(100% - var(--grid-total-gutter));
     --grid-unit: calc( var(--grid-width) / 4 ); 
 }
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --base-font: 21px;
+        --baseline: 32px;
+    }
+}
+
 
 /*=========================
     3 - TYPOGRAPHY
@@ -171,20 +202,25 @@ p {
 }
 
 h1 {
-    font-size: 2.25rem;
+    font-size: var(--font-l);
+    margin-bottom: var(--margin);
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: var(--font-m);
+    margin-bottom: var(--margin);
 }
 h3 {
-    font-size: 1rem;
+    font-size: var(--base-font);
+    margin-bottom: var(--margin-half);
 }
 h4 {
-    font-size: 0.667rem;
+    font-size: var(--font-s);
+    margin-bottom: var(--margin-half);
 }
 h5,
 h6 {
-    font-size: 0.444rem;
+    font-size: var(--font-xs);
+    margin-bottom: var(--margin-half);
 }
 
 /* Enable Alegreya Opentype features */
@@ -212,14 +248,31 @@ h6 {
 ==========================*/
 
 .index {
-    padding: 0 14px;
     width: 100%;
     max-width: 100%;
+    margin-top: var(--margin-xl);
+}
+
+.grid-margin {
+    margin: 0 var(--margin);
+}
+
+.grid-margin--half {
+    margin: 0 var(--margin-half);
+}
+
+@media screen and (min-width: 768px) {
+    .index {
+        /* margin-top: calc(var(--margin-xxl) * 1.5); */
+    }
 }
 
 /*=========================
     5 - HELPERS
 ==========================*/
+.text--center {
+    text-align: center;
+}
 .m-bottom {
     margin-bottom: var(--baseline);
 }
@@ -283,17 +336,25 @@ h6 {
 
 .site-header {
     height: calc(var(--baseline) * 2);
-    width: calc(100% - var(--margin));
-    max-width: calc(100% - var(--margin));
+    /* width: calc(100% - var(--margin)); */
+    width: 100%;
+    /* max-width: calc(100% - var(--margin)); */
     margin: 0 auto;
+    padding: 0 var(--margin-half);
+    background-color: hsla(0, 0%, 100%, 1);
+    box-shadow: 0 1px 5px hsla(60, 1%, 88%, 1);
+    /* background: red; */
 }
 
 @supports (display: grid) {
     .site-header {
         display: grid;
         align-content: center;
-        grid-template-columns: repeat(4, minmax(70px, 1fr));
+        grid-template-columns: repeat(4, minmax(50px, 1fr));
         grid-column-gap: var(--grid-gutter);
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
     }
 }
 .logo {
@@ -301,8 +362,8 @@ h6 {
 }
 .logo__link {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 24px;
+    height: 24px;
 }
 .logo__img {
     width: 100%;
@@ -326,6 +387,11 @@ h6 {
     text-align: right;
     font-size: .667rem;
 }
+.nav-list__link,
+.nav-list__link:visited {
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
 
 @media screen and (min-width: 600px) {
     .site-header {
@@ -333,5 +399,60 @@ h6 {
     }
     .site-nav {
         grid-column: 3 / span 2;
+    }
+}
+
+/*=========================
+    7 - SECTION - INTRO
+==========================*/
+.intro {
+    background-image: url('src/images/background_mobile.svg');
+    background-repeat: no-repeat;
+}
+
+/* dynamic font sizes */
+.intro__header {
+    font-family: alegreya-sc, serif;
+    font-size: var(--font-dy-l);
+    line-height: var(--font-s);
+    line-height: .667;
+}
+
+.intro__tagline,
+.i-am-cool {
+    font-size: var(--font-dy-m);
+    font-weight: normal;
+    line-height: .667;
+    margin-bottom: var(--margin-half);
+    display: block;
+}
+
+.intro__qualified {
+    font-size: var(--font-dy-s);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+    .intro__tagline,
+    .i-am-cool {
+        line-height: 1;
+    }
+    .i-am-cool {
+        margin-bottom: var(--intertistial-value);
+    }
+}
+
+@media screen and (min-width: 57em) {
+    /* Here text needs to be fixed again */
+    .intro__header {
+        font-size: var(--font-xl);
+    }
+    .intro__tagline,
+    .i-am-cool {
+        font-size: var(--font-m);
+    }
+    .intro__qualified { 
+        font-size: var(--base-font);
     }
 }

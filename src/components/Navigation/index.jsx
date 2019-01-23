@@ -5,7 +5,7 @@ const Navigation = ({ items }) => (
         <ul className='nav-list'>
             {items && items.map(navItem => (
                 <li className='nav-list__item' key={navItem.id}>
-                    {navItem.text}
+                    <a className='nav-list__link' href={navItem.link}>{navItem.text}</a>
                 </li>
             ))}
         </ul>
