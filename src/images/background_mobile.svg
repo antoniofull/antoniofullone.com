@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="375px" height="422px" viewBox="0 0 375 422" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="375px" height="428px" viewBox="0 0 375 428" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
     <title>Path 9</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Mobile" transform="translate(0.000000, -273.000000)" fill="#1F1F1D" fill-rule="nonzero">
-            <path d="M-2.27373675e-13,692.284175 C60.9671818,511.755331 138.733828,421.728972 233.299939,422.205098 C327.86605,422.681223 375.149106,369.761317 375.149106,263.445379 L375.149106,694.284175 L-2.27373675e-13,692.284175 Z" id="Path-9"></path>
+        <g id="Mobile" transform="translate(0.000000, -305.000000)" fill="#1F1F1D" fill-rule="nonzero">
+            <path d="M-1.13375975e-12,733 C-14.5167227,533.513809 29.1812063,430.857156 131.093787,425.03004 C233.006368,419.202924 314.358141,379.220397 375.149106,305.08246 L375.149106,733 L-1.13375975e-12,733 Z" id="Path-9"></path>
         </g>
     </g>
 </svg>

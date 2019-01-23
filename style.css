@@ -246,13 +246,16 @@ h6 {
 /*=========================
     4 - GLOBAL
 ==========================*/
-
+.dark-theme {
+    background-color: var(--color-black);
+}
 .index {
     width: 100%;
     max-width: 100%;
-    margin-top: var(--margin-xl);
 }
-
+.home-section {
+    padding: var(--padding-xl) var(--padding-half) 0 var(--padding-half);
+}
 .grid-margin {
     margin: 0 var(--margin);
 }
@@ -405,9 +408,12 @@ h6 {
 /*=========================
     7 - SECTION - INTRO
 ==========================*/
-.intro {
+.main-section {
+    background-color: #fff;
     background-image: url('src/images/background_mobile.svg');
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
 }
 
 /* dynamic font sizes */
@@ -431,6 +437,27 @@ h6 {
     font-size: var(--font-dy-s);
     font-weight: normal;
     font-style: italic;
+}
+
+.illustration {
+    position: relative;
+    min-height: 300px;
+}
+
+.vespa {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.italy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {

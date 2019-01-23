@@ -7,15 +7,14 @@
   "author": "Antonio <antonio.fullone@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-env": "^2.4.1",
+    "@babel/preset-stage-2": "^7.0.0",
     "babel-plugin-inline-react-svg": "^1.0.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "parcel-bundler": "^1.11.0",
-    "parcel-plugin-inlinesvg": "^0.1.0"
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "parcel-bundler": "^1.11.0"
   },
   "scripts": {
     "dev": "parcel index.html",
