@@ -101,10 +101,10 @@ q:before, q:after {
  but how cool is doing it with css? :-)
 */
 :root {
-    --color-text: hsla(60, 3%, 12%, 1);
-    --color-text-light: hsla(60, 1%, 48%, 1);
-    --color-text-light-800: hsla(60, 1%, 80%, .4);
-    --color-text-dark: hsla(70, 16%, 7%, 1);
+    --color-black: hsla(60, 3%, 12%, 1);
+    --color-black-light: hsla(60, 1%, 48%, 1);
+    --color-black-light-800: hsla(60, 1%, 80%, .4);
+    --color-black-dark: hsla(70, 16%, 7%, 1);
 
     --color-accent: hsla(0, 96%, 72%, 1);
     --color-accent-700: hsla(0, 56%, 32%, 1);
@@ -320,7 +320,7 @@ h6 {
 }
 
 .has-baseline {
-    background-image: repeating-linear-gradient(180deg, transparent, transparent calc(var(--baseline) - 1px), var(--color-text-light-800) calc(var(--baseline) - 1px), var(--color-text-light-800) var(--baseline));
+    background-image: repeating-linear-gradient(180deg, transparent, transparent calc(var(--baseline) - 1px), var(--color-black-light-800) calc(var(--baseline) - 1px), var(--color-black-light-800) var(--baseline));
     background-size: 1px var(--baseline);
 }
 
@@ -390,7 +390,7 @@ h6 {
 .nav-list__link,
 .nav-list__link:visited {
     font-weight: 600;
-    color: var(--color-text-dark);
+    color: var(--color-black-dark);
 }
 
 @media screen and (min-width: 600px) {
