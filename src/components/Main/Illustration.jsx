@@ -5,8 +5,8 @@ import Vespa from '../../images/vespa.svg';
 
 const Illustration = props => (
     <div className='illustration'>
-        <ItalianBanner className='italy' />
-        <Vespa className='vespa' />
+        <ItalianBanner className='italy'/>
+        <Vespa className='vespa'/>
     </div>
 );
 
