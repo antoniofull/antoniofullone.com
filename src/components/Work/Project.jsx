@@ -6,7 +6,7 @@ const Project = () => (
     <div>
         {work.projects.length > 0 && work.projects.map(project => (
             <article key={project.id}>
-                <header>
+                <header className={`padding-y ${project.className}`} >
                     <h2>{project.title}</h2>
                 </header>
                 <p>{project.description}</p>

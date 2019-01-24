@@ -7,7 +7,7 @@ import Code from './Code';
 import Design from './Design';
 
 const Work = () => (
-    <section>
+    <section class='grid-margin--half work-section'>
         <WorkNavigation />
         <Project />
         <Code />

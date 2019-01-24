@@ -171,6 +171,11 @@ body {
     font-family: alegreya, serif;
     font-size: 100%;
     line-height: var(--baseline);
+    /* Serif Numbers are not looking good, let's make it better */
+    font-variant: lining-nums;
+    -moz-font-feature-settings: "lnum";
+    -webkit-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
 }
 
 a {
@@ -185,12 +190,6 @@ p {
     font-size: inherit;
     line-height: inherit;
     margin-bottom: var(--baseline);
-    
-    /* Serif Numbers are not looking good, let's make it better */
-    font-variant: lining-nums;
-    -moz-font-feature-settings: "lnum";
-    -webkit-font-feature-settings: "lnum";
-    font-feature-settings: "lnum";
 }
 
 h1 {
@@ -490,5 +489,35 @@ h6 {
 ==========================*/
 .about-section {
     /* padding: var(--padding) var(--padding-half) 0 var(--padding-half); */
+    background: #fff;
+}
+
+
+/*=========================
+    8 - SECTION - WORK
+==========================*/
+.work-section {
+    font-family: alegreya-sans, sans-serif;
+    font-size: 14px;
+}
+.work-nav {
+    position: sticky;
+    z-index: 1000;
+    height: 55px;
+    top: 0;
+    font-family: alegreya-sans, sans-serif;
+    background: #fff;
+    width: 100%;
+    padding: var(--padding-half) 0;
+    transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045)
+}
+
+.nav-list__item ul {
+    display: none;
+}
+
+.is-sticky {
+    position: sticky;
+    top: var(--margin-xl);
     background: #fff;
 }

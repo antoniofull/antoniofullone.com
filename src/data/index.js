@@ -44,13 +44,13 @@ The most inspiring person he met was his father and he follows the principles he
 const projects = [
     {
         id: 1,
-        title: 'Project 1 with quite long title so that we can see how the text wraps',
-        description: `A personal project
-                without Markdown, just simple text 
-
-                on multiple lines
+        title: 'Mosalingua V 9.0',
+        className: 'is-sticky',
+        description: `I was hired by the co-founder to build the version 9.0 of Mosalingua, a popular learning languages app. 
+                I worked closely with the designer during all the design process
+                and then implemented the new design.
               `,
-        stack: ['React', 'Js'],
+        stack: ['BackboneJs', 'Sass', 'Cordoba'],
         links: [{
             title: '',
             link: ''
