@@ -117,10 +117,6 @@ q:before, q:after {
     --base-font: 18px;
     --baseline: 28px;
 
-    /* Second important number for the scale
-       I use this as a intertistial value to balance between 2 big values 
-       The value is equal to the Logo Size 
-    */
     --intertistial-value: 40px;
     
     --font-xxl: 5.063rem;
@@ -369,8 +365,8 @@ h6 {
 }
 .logo__link {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: var(--baseline);
+    height: var(--baseline);
 }
 .logo__img {
     width: 100%;
@@ -401,9 +397,6 @@ h6 {
 }
 
 @media screen and (min-width: 600px) {
-    .site-header {
-        max-width: calc(100% - var(--margin-xl));
-    }
     .site-nav {
         grid-column: 3 / span 2;
     }
