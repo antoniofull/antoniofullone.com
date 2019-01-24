@@ -175,10 +175,6 @@ body {
 
 a {
     color: var(--color-accent);
-    text-decoration: none;
-}
-a:hover,
-a:focus {
     text-decoration: underline;
 }
 a:visited {
@@ -441,6 +437,7 @@ h6 {
     font-size: var(--font-dy-s);
     font-weight: normal;
     font-style: italic;
+    line-height: 1;
 }
 
 .illustration {
