@@ -4,7 +4,7 @@ import {work} from '../../data';
 
 const WorkNavigation = () => (
     <nav class='work-nav margin-y-xl'>
-        <ul className='nav-list'>
+        <ul className='nav-list padding-x-half'>
             <li className='nav-list__item text--center'>
                 <a href="#Projects">Projects</a>
                 <ul>

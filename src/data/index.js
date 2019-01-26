@@ -40,6 +40,56 @@ A man's worth is no greater than his ambitions.
 The most inspiring person he met was his father and he follows the principles he taught him: Respect, Honesty, Humility and Kindness.  He learned from his father another important life skill: listen more than you speak.
 `;
 
+export const workTmp = [
+    {
+        id: 1,
+        label: 'WPML',
+        link: '',
+        img: ''
+    },
+    {
+        id: 2,
+        label: 'Toolset',
+        link: '',
+        img: '',
+    },
+    {
+        id: 3,
+        label: 'Lodgify',
+        link: '',
+        img: './images/logos/lodgify.svg'
+    },
+    {
+        id: 4,
+        label: 'Mosalingua',
+        link: '',
+        img: ''
+    },
+    {
+        id: 5,
+        label: 'William Hill',
+        link: '',
+        img: ''
+    },
+    {
+        id: 6,
+        label: 'Symbaloo',
+        link: '',
+        img: ''
+    },
+    {
+        id: 7,
+        label: 'Comune di Paola',
+        link: '',
+        img: ''
+    },
+    {
+        id: 8,
+        label: 'Barcelona Home',
+        link: '',
+        img: ''
+    }
+];
 
 const projects = [
     {

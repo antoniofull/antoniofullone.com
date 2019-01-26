@@ -12,6 +12,9 @@ import Footer from './components/Footer';
 
 import {navItems} from './data';
 
+import classes from './styles.css';
+
+console.log(classes);
 class App extends Component {
     render() {
         return (
