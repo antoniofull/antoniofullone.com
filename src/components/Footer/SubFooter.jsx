@@ -1,10 +1,8 @@
 import React from 'react';
 
 const SubFooter = () => (
-    <div>
-        <p>
+    <div className='subfooter'>
             That's all. Thank you. - <a href="#">Back to Top</a>
-        </p>
     </div>
 );
 
