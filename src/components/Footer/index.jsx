@@ -8,6 +8,7 @@ import GeekStuff from './GeekStuff';
 import Social from './Social';
 import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
+import Logo from '../Logo';
 
 const Footer = props => (
     <footer className='site-footer padding-y padding-x-half'>
@@ -19,6 +20,7 @@ const Footer = props => (
         </section>
         <Social />
         <Address />
+        <Logo />
         <FooterTagline />
         <SubFooter />
     </footer>

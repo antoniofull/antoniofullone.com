@@ -333,10 +333,11 @@ export const geekItems = [{
     link: '',
 }];
 
-export const addressData = `
-    87027 Paola, Calabria. Italy
-    29005, Malaga, Andalucia. Spain
-    Always down south
+export const addressData = `87027 Paola, Calabria. Italy 
+
+29005, Malaga, Andalucia. Spain
+
+Always down south
     `;
 
 export const socialData = [{
