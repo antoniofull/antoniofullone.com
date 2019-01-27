@@ -171,6 +171,7 @@ body {
     font-family: alegreya, serif;
     font-size: 100%;
     line-height: var(--baseline);
+    text-rendering: optimizeLegibility;
     /* Serif Numbers are not looking good, let's make it better */
     font-variant: lining-nums;
     -moz-font-feature-settings: "lnum";
@@ -193,12 +194,14 @@ p {
 }
 
 h1 {
-    font-size: var(--font-l);
+    font-size: var(--font-xl);
     margin-bottom: var(--margin);
+    line-height: 1;
 }
 h2 {
-    font-size: var(--font-m);
-    margin-bottom: var(--margin-half);
+    font-size: var(--font-l);
+    margin-bottom: var(--margin);
+    line-height: 1;
 }
 h3 {
     font-size: var(--base-font);
@@ -407,11 +410,11 @@ h6 {
     background-repeat: no-repeat;
     background-position: top var(--margin-xxl) right 0;
     background-size: 100% 100%;
-    /* background: var(--color-black); */
+    height: calc(100vh - var(--margin-xxl));
 }
 .intro {
     padding: var(--padding-xl) var(--padding-half) var(--padding-half);
-    background: #fff;   
+    /* background: #fff;    */
 }
 /* dynamic font sizes */
 .intro__header {
@@ -492,23 +495,53 @@ h6 {
     background: #fff;
 }
 
+.about-section > p:first-of-type:first-letter {
+    float: left;
+    font-size: var(--font-xl);
+    padding-top: 12px;
+    padding-right: 0;
+    padding-left: 0;
+} 
 
 /*=========================
     8 - SECTION - WORK
 ==========================*/
+.work--temp {
+    padding: 0 var(--margin-half);
+}
+.work--temp h2 {
+    text-align: center;
+    font-weight: 900;
+}
 
+.work-intro {
+    margin: var(--margin) 0 var(--margin-xxl);
+}
 .companies {
     display: grid;
     align-content: center;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
-    grid-column-gap: var(--grid-gutter);
+    grid-column-gap: calc(var(--grid-gutter) * 2);
+    grid-row-gap: calc(var(--grid-gutter) * 3);
+    margin-bottom: calc(var(--margin-xxl) * 2);
 }
-.work--temp {
-    padding: 0 var(--margin-half);
+
+.companies figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
 }
+
+.companies img {
+    height: auto;
+    object-fit: contain;
+    flex: 1 1 50px;
+}
+
 .work-section {
     font-family: alegreya-sans, sans-serif;
-    font-size: 14px;
 }
 .work-nav {
     position: -webkit-sticky;
@@ -542,4 +575,13 @@ h6 {
 
 .project__header {
     margin-bottom: var(--margin-xl);
+}
+
+/*=========================
+    8 - FOOTER
+==========================*/
+
+.site-footer {
+    background-color: var(--color-black);
+    color: var(--color-black-light);
 }

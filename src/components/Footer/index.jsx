@@ -10,7 +10,7 @@ import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
 
 const Footer = props => (
-    <footer>
+    <footer className='site-footer'>
         <FooterTitle />
         <BlogPosts />
         <GeekStuff />

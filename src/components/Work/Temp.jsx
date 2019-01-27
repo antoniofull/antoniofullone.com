@@ -5,7 +5,7 @@ const Temp = props => (
         <header>
             <h2>Work</h2>
         </header>
-        <p>
+        <p class='work-intro'>
             Most of the projects and code are stored in private repositories and protected by DNA.
             A new portfolio with personal and work projects is coming soon. You can have a look at the link
             in the <a href="#about">about</a> section. 
