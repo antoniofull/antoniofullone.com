@@ -244,17 +244,20 @@ export const work = {
 export const blogData = [{
     id: 1,
     title: 'Blog post title number one',
-    img: 'images/ny.jpg'
+    img: './images/blog/1.png',
+    link: ''
 },
 {
     id: 2,
     title: 'Blog post title two, with a very long title that at least should take about 3 lines',
-    img: ''
+    img: './images/blog/2.png',
+    link: ''
 },
 {
     id: 3,
     title: 'Five one line coding solution for every day use',
-    img: ''
+    img: './images/blog/2.png',
+    link: ''
 }];
 
 export const readingItems = [{
@@ -284,49 +287,49 @@ export const geekItems = [{
 },
 {
     id: 2,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'Jekyll',
+    author: '',
     link: '',
 },
 {
     id: 3,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'Alegreya Fonts',
+    author: '',
     link: '',
 },
 {
     id: 4,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'Netlify',
+    author: 'Netlify',
     link: '',
 },
 {
     id: 5,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'Simple Icons',
+    author: 'Simple Icons',
     link: '',
 },
 {
     id: 6,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'Visual Studio Code',
+    author: 'Microsoft',
     link: '',
 },
 {
     id: 7,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'VIM',
+    author: '',
     link: '',
 },
 {
     id: 8,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'MacBook Pro',
+    author: 'Apple',
     link: '',
 },{
     id: 9,
-    title: 'ReactJs 16',
-    author: 'Facebook',
+    title: 'HTML/CSS',
+    author: 'W3C',
     link: '',
 }];
 
@@ -338,61 +341,65 @@ export const addressData = `
 
 export const socialData = [{
     id: 1,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'Linkedin',
+    icon: 'linkedin-in',
+    style: 'fab',
     link: ''
 },
 {
     id: 2,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'CodePen',
+    icon: 'codepen',
+    style: 'fab',
     link: ''
 },
 {
     id: 3,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'Github',
+    icon: 'github',
+    style: 'fab',
     link: ''
 },
 {
     id: 4,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'Twitter',
+    icon: 'twitter',
+    style: 'fab',
     link: ''
 },
 {
     id: 5,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'Email',
+    icon: 'at',
+    style: 'fas',
     link: ''
 },
 {
     id: 6,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'Rss',
+    icon: 'rss',
+    style: 'fas',
     link: ''
 },
 {
     id: 7,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'Pinterest',
+    icon: 'pinterest',
+    style: 'fab',
     link: ''
 },
 {
     id: 8,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
+    label: 'Dribbble',
+    icon: 'dribbble',
+    style: 'fab',
     link: ''
 },
 {
     id: 9,
     label: 'Facebook',
-    icon: 'images/fb.svg',
+    icon: 'facebook',
+    style: 'fab',
     link: ''
-},
-{
-    id: 10,
-    label: 'Facebook',
-    icon: 'images/fb.svg',
-    link: ''
-}];
+}
+];

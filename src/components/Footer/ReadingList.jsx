@@ -2,8 +2,8 @@ import React from 'react';
 import {readingItems} from '../../data';
 
 const ReadingList = () => (
-    <div>
-        <h3>Reading List</h3>
+    <section className='reading'>
+        <h3 className='footer-header'>Reading List</h3>
         <ul>
             {readingItems.length > 0 && readingItems.map(book => (
               <li key={book.id}>
@@ -11,7 +11,7 @@ const ReadingList = () => (
               </li>  
             ))}
         </ul>
-    </div>
+    </section>
 );
 
 export default ReadingList;

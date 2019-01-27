@@ -3,15 +3,19 @@ import React from 'react';
 import {socialData} from '../../data';
 
 const Social = () => (
-    <div>
+    <section className='social social--footer margin-y-l'>
         <ul>
-            {socialData.length > 0 && socialData.map(item => (
-                <li key={item.id}>
-                    <a href={item.link}>{item.label}</a>
-                </li>
-            ))}
+        {
+            socialData.map(social => (
+                <li key={social.id}>
+                <a href={social.link}>
+                    <i className={`${social.style} fa-${social.icon}`}></i>
+                </a>
+            </li>
+            ))
+        }
         </ul>
-    </div>
+    </section>
 );
 
 export default Social;
