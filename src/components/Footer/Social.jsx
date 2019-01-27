@@ -3,7 +3,7 @@ import React from 'react';
 import {socialData} from '../../data';
 
 const Social = () => (
-    <section className='social social--footer margin-y-l'>
+    <section className='social social--footer'>
         <ul>
         {
             socialData.map(social => (

@@ -11,17 +11,17 @@ import SubFooter from './SubFooter';
 import Logo from '../Logo';
 
 const Footer = props => (
-    <footer className='site-footer padding-y padding-x-half'>
-        <FooterTitle />
-        <BlogPosts />
-        <section className='extra'>
+    <footer className='site-footer'>
+        <div className="footer-container padding-x-half">
+            <FooterTitle />
+            <BlogPosts />
             <GeekStuff />
             <ReadingList />
-        </section>
-        <Social />
-        <Address />
-        <Logo />
-        <FooterTagline />
+            <Social />
+            <Address />
+            <Logo />
+            <FooterTagline />        
+        </div>
         <SubFooter />
     </footer>
 );
