@@ -407,7 +407,7 @@ h6 {
     background-repeat: no-repeat;
     background-position: top var(--margin-xxl) right 0;
     background-size: 100% 100%;
-    background: var(--color-black);
+    /* background: var(--color-black); */
 }
 .intro {
     padding: var(--padding-xl) var(--padding-half) var(--padding-half);
@@ -446,10 +446,10 @@ h6 {
 
 .vespa {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 45%;
+    top: 40%;
     transform: translate(-50%, -50%);
-    max-width: 11.391rem;
+    max-width: 8rem;
 }
 
 .italy {
@@ -457,7 +457,7 @@ h6 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 70%;
 }
 
 @media screen and (min-width: 768px) {
@@ -496,6 +496,16 @@ h6 {
 /*=========================
     8 - SECTION - WORK
 ==========================*/
+
+.companies {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-column-gap: var(--grid-gutter);
+}
+.work--temp {
+    padding: 0 var(--margin-half);
+}
 .work-section {
     font-family: alegreya-sans, sans-serif;
     font-size: 14px;

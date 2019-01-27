@@ -12,12 +12,13 @@ const Temp = props => (
             Here is a list of the major companies I worked for in the last years.
         </p>
 
-        <div className=''>
+        <div className='companies'>
             {
                 props.companies.map(company => (
                     <a href={company.link} key={company.id}>
                         <figure>
                             <img src={company.img} alt={company.label} />
+                            {/* <figcaption>{company.label}</figcaption> */}
                         </figure>
                     </a>
                 ))
@@ -25,5 +26,6 @@ const Temp = props => (
         </div>
     </article>
 );
+
 
 export default Temp;

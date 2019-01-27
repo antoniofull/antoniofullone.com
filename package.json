@@ -14,11 +14,12 @@
     "@babel/preset-stage-2": "^7.0.0",
     "babel-plugin-inline-react-svg": "^1.0.1",
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
-    "parcel-bundler": "^1.11.0"
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-markdown": "^0.3.1"
   },
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.js && cp -R src/images/ dist/images && cp index.html dist/index.html"
   },
   "dependencies": {
     "prop-types": "^15.6.2",

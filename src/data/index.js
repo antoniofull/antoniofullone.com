@@ -45,13 +45,13 @@ export const workTmp = [
         id: 1,
         label: 'WPML',
         link: '',
-        img: ''
+        img: './images/logos/wpml.svg'
     },
     {
         id: 2,
         label: 'Toolset',
         link: '',
-        img: '',
+        img: './images/logos/toolset.svg',
     },
     {
         id: 3,
@@ -63,31 +63,31 @@ export const workTmp = [
         id: 4,
         label: 'Mosalingua',
         link: '',
-        img: ''
+        img: './images/logos/mosalingua.png'
     },
     {
         id: 5,
         label: 'William Hill',
         link: '',
-        img: ''
+        img: './images/logos/wh.jpg'
     },
     {
         id: 6,
         label: 'Symbaloo',
         link: '',
-        img: ''
+        img: './images/logos/symbaloo.png'
     },
     {
         id: 7,
         label: 'Comune di Paola',
         link: '',
-        img: ''
+        img: './images/logos/paola.png'
     },
     {
         id: 8,
         label: 'Barcelona Home',
         link: '',
-        img: ''
+        img: './images/logos/bh.png'
     }
 ];
 
