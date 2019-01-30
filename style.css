@@ -157,6 +157,9 @@ i, cite, em, var, address, dfn {
     --grid-total-gutter: calc(var(--grid-gutter) * var(--grid-gutters));
     --grid-width: calc(100% - var(--grid-total-gutter));
     --grid-unit: calc( var(--grid-width) / 4 ); 
+
+    /* Misc */
+    --header-height: 56px;
 }
 
         
@@ -243,6 +246,26 @@ h6 {
     margin-bottom: var(--margin-half);
 }
 
+/* Font Families */
+.freight-sans {
+    font-family: freight-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+.freight-sans--medium {
+    font-family: freight-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+.freight-sans--bold {
+    font-family: freight-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+.bodoni-24 {
+    font-family: 'Bodoni 24';
+    letter-spacing: 1px;
+}
 /* Enable Alegreya Opentype features */
 .fractional {
     font-variant: diagonal-fractions;
@@ -291,6 +314,11 @@ h6 {
 /*=========================
     5 - HELPERS
 ==========================*/
+
+.box-content {
+    box-sizing: content-box;
+}
+
 .bg-white {
     background-color: rgba(255, 255, 255, 1);
 }
@@ -376,7 +404,6 @@ h6 {
     background-repeat: repeat-y;
 }
 
-
 .container {
     max-width: 1160px;
     margin-left: auto;
@@ -428,9 +455,6 @@ h6 {
 
 .nav-list {
     text-align: right;
-    font-family: freight-sans-pro, sans-serif;
-    font-style: normal;
-    font-weight: 300;
 }
 .nav-list__item {
     width: auto;
@@ -476,67 +500,76 @@ h6 {
 .main-section {
     position: relative;
     background-color: #fff;    
-    /* background-image: url('src/images/background_mobile.svg'); */
     background-repeat: no-repeat;
-    background-position: top var(--margin-xxl) right 0;
-    background-size: 100% 100%;
+    max-height: calc(100vh - var(--header-height));
+}
+.index > section {
+    margin-bottom: var(--margin-xl);
 }
 .intro {
-    padding: var(--padding-xl) var(--padding-half) var(--padding-half);
-    /* background: #fff;    */
+    padding-top: var(--padding-xl);
 }
-/* dynamic font sizes */
+.intro > * {
+    margin-bottom: var(--margin);
+    display: block;
+}
 .intro__header {
-    font-family: alegreya-sc, serif;
-    font-family: freight-sans-pro, sans-serif;
-    font-family: 'Bodoni 11';
-    letter-spacing: -1px;
     font-size: var(--font-dy-l);
     line-height: var(--font-s);
     line-height: .667;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--color-black-light-800);
+    position: relative;
+}
+
+.intro__header:after {
+    display: block;
+    content: " ";
+    height: 1px;
+    background-color: var(--color-black-light-800);
+    width: 50%;
+    margin: var(--margin) auto;
+}
+.tagline {
+    position: relative;
 }
 
 .intro__tagline,
 .i-am-cool {
     font-size: var(--font-dy-m);
-    letter-spacing: 0;
     font-weight: normal;
     line-height: 1;
     margin-bottom: var(--margin-half);
-    font-family: 'Bodoni 11';
     display: block;
 }
 .i-am-cool {
     margin-bottom: var(--margin);
-    border-bottom: 1px solid var(--color-black-light-800);
+    /* border-bottom: 1px solid var(--color-black-light-800); */
 }
 .intro__qualified {
     font-size: var(--font-dy-s);
     font-weight: normal;
     font-style: italic;
     line-height: 1;
+    display: block;
 }
 
 .illustration {
     position: relative;
     position: relative;
-    background-color: var(--color-blue-light);
+    background-color: var(--color-primary-light);
 }
 .illustration:before {
     content: "";
     width: 100%;
     height: 40px;
     display: block;
-    background-image: linear-gradient(to right top,var(--color-blue-light) 50%,#fff 0);
+    background-image: linear-gradient(to right top,var(--color-primary-light) 50%,#fff 0);
 }
 .illustration:after {
     content: "";
     width: 100%;
-    height: 80px;
+    height: 40px;
     display: block;
-    background-image: linear-gradient(to bottom right,var(--color-blue-light) 50%,#fff 0);
+    background-image: linear-gradient(to left bottom,var(--color-primary-light) 50%,#fff 0);
 }
 .illustration__container {
     height: 11.391rem;
@@ -588,16 +621,32 @@ h6 {
     background: #fff;
 }
 
-.about-section > p:first-of-type:first-letter {
+.about-section p:first-of-type:first-letter {
     float: left;
     font-size: var(--font-xl);
     padding-top: 12px;
     padding-right: 0;
     padding-left: 0;
 } 
+.about-section article p:not(:first-of-type) {
+    text-indent: var(--margin-half);
+}
+
+.about-section p:first-of-type {
+    font-style: italic;
+}
 
 .about-section h2 {
     font-size: var(--font-l);
+}
+.about__img {
+    margin-bottom: var(--margin-half);
+    display: block;
+    max-width: calc(100% + 30px);
+    margin-left: -15px;
+}
+.about__content {
+    padding: 0 5px;
 }
 /*=========================
     8 - SECTION - WORK
@@ -608,7 +657,7 @@ h6 {
 .work--temp h2 {
     text-align: center;
     font-weight: 900;
-    font-size: var(--font-xl);
+    font-size: 2.25rem; 
 }
 
 .work-intro {
@@ -682,14 +731,14 @@ h6 {
 .site-footer {
     background-color: var(--color-black-dark);
     color: var(--color-black-light);
-    font-family: alegreya-sans, sans-serif;
-    font-family: freight-sans-pro, sans-serif;
-font-style: normal;
-font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.3;
     position: relative;
     
+}
+
+.site-footer p {
+    margin-bottom: 0;
 }
 
 .footer-container {
@@ -711,9 +760,8 @@ font-weight: 500;
 .site-footer__header {
     color: #fff;
     line-height: 1.3;
-    padding-bottom: var(--baseline);
     grid-area: heading;
-
+    
 }
 .blog {
     margin-bottom: var(--margin-xl);
@@ -722,9 +770,8 @@ font-weight: 500;
 .footer-header {
     border-bottom: 1px solid var(--color-black-light);
     padding-bottom: 4px;
-    font-family: freight-text-pro, serif;
-font-style: normal;
-font-weight: 600;
+    font-family: freight-sans, sans-serif;
+    font-weight: 700;
 }
 .post-container {
     display: flex;
@@ -746,6 +793,8 @@ font-weight: 600;
     overflow: hidden;
     text-overflow: ellipsis;
     height: calc(1.3 * 3 * var(--font-s));
+    font-family: freight-sans, sans-serif;
+    font-weight: 700;
 }
 
 .credits {
