@@ -110,6 +110,8 @@ i, cite, em, var, address, dfn {
     --color-black-light-800: hsla(60, 1%, 80%, .4);
     --color-black-dark: hsla(60, 14%, 7%, 1);
 
+    --color-blue-light: hsla(213, 53%, 97%, 1);
+
     --color-accent: hsla(0, 96%, 72%, 1);
     --color-accent-700: hsla(0, 56%, 32%, 1);
 
@@ -174,8 +176,12 @@ html {
 }
 
 body {
-    font-family: alegreya, serif;
+    /* font-family: alegreya, serif; */
+    font-family: ff-tisa-web-pro, serif;
     font-size: 100%;
+    font-family: freight-text-pro, serif;
+font-style: normal;
+font-weight: 500;
     line-height: var(--baseline);
     text-rendering: optimizeLegibility;
     /* Serif Numbers are not looking good, let's make it better */
@@ -203,11 +209,13 @@ h1 {
     font-size: var(--font-l);
     margin-bottom: var(--margin);
     line-height: 1;
+    font-family: freight-text-pro, serif;
 }
 h2 {
     font-size: var(--font-m);
     margin-bottom: var(--margin);
     line-height: 1;
+    font-family: freight-text-pro, serif;   
 }
 h3 {
     font-size: var(--base-font);
@@ -357,6 +365,7 @@ h6 {
     padding: 0 var(--margin-half);
     background-color: hsla(0, 0%, 100%, 1);
     box-shadow: 0 1px 5px hsla(60, 1%, 88%, 1);
+    
 }
 
 @supports (display: grid) {
@@ -392,7 +401,10 @@ h6 {
 
 .nav-list {
     font-family: alegreya-sans, sans-serif;
+    font-family: freight-sans-pro, sans-serif;
     text-align: right;
+    font-style: normal;
+    font-weight: 300;
 }
 .nav-list__item {
     width: auto;
@@ -424,7 +436,6 @@ h6 {
     background-repeat: no-repeat;
     background-position: top var(--margin-xxl) right 0;
     background-size: 100% 100%;
-    height: calc(100vh - var(--margin-xxl));
 }
 .intro {
     padding: var(--padding-xl) var(--padding-half) var(--padding-half);
@@ -433,21 +444,29 @@ h6 {
 /* dynamic font sizes */
 .intro__header {
     font-family: alegreya-sc, serif;
+    font-family: freight-sans-pro, sans-serif;
+    font-family: 'Bodoni 11';
+    letter-spacing: -1px;
     font-size: var(--font-dy-l);
     line-height: var(--font-s);
     line-height: .667;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color-black-light-800);
 }
 
 .intro__tagline,
 .i-am-cool {
     font-size: var(--font-dy-m);
+    letter-spacing: 0;
     font-weight: normal;
     line-height: 1;
     margin-bottom: var(--margin-half);
+    font-family: 'Bodoni 11';
     display: block;
 }
 .i-am-cool {
     margin-bottom: var(--margin);
+    border-bottom: 1px solid var(--color-black-light-800);
 }
 .intro__qualified {
     font-size: var(--font-dy-s);
@@ -458,23 +477,40 @@ h6 {
 
 .illustration {
     position: relative;
-    min-height: calc(var(--margin) * 10);
+    position: relative;
+    background-color: var(--color-blue-light);
 }
-
+.illustration:before {
+    content: "";
+    width: 100%;
+    height: 40px;
+    display: block;
+    background-image: linear-gradient(to right top,var(--color-blue-light) 50%,#fff 0);
+}
+.illustration:after {
+    content: "";
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-image: linear-gradient(to bottom right,var(--color-blue-light) 50%,#fff 0);
+}
+.illustration__container {
+    height: 11.391rem;
+}
 .vespa {
     position: absolute;
-    left: 45%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 8rem;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 44%;
 }
 
 .italy {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
+    transform: translateX(-50%);
+    width: 80%;
 }
 
 @media screen and (min-width: 768px) {
@@ -528,6 +564,7 @@ h6 {
 .work--temp h2 {
     text-align: center;
     font-weight: 900;
+    font-size: var(--font-xl);
 }
 
 .work-intro {
@@ -558,6 +595,9 @@ h6 {
 
 .work-section {
     font-family: alegreya-sans, sans-serif;
+    font-family: freight-text-pro, serif;
+font-style: normal;
+font-weight: 500;
 }
 .work-nav {
     position: -webkit-sticky;
@@ -601,6 +641,9 @@ h6 {
     background-color: var(--color-black-dark);
     color: var(--color-black-light);
     font-family: alegreya-sans, sans-serif;
+    font-family: freight-sans-pro, sans-serif;
+font-style: normal;
+font-weight: 500;
     font-size: 14px;
     line-height: 1.3;
     position: relative;
@@ -628,6 +671,7 @@ h6 {
     line-height: 1.3;
     padding-bottom: var(--baseline);
     grid-area: heading;
+
 }
 .blog {
     margin-bottom: var(--margin-xl);
@@ -636,6 +680,9 @@ h6 {
 .footer-header {
     border-bottom: 1px solid var(--color-black-light);
     padding-bottom: 4px;
+    font-family: freight-text-pro, serif;
+font-style: normal;
+font-weight: 600;
 }
 .post-container {
     display: flex;
