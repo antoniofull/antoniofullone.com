@@ -6,12 +6,10 @@ const Temp = props => (
             <h2>Work</h2>
         </header>
         <p className='work-intro'>
-            Most of the projects and code are stored in private repositories and protected by DNA.
-            A new portfolio with personal and work projects is coming soon. You can have a look at the link
-            in the <a href="#about">about</a> section. 
+            A new portfolio with personal and work projects not protected by DNA is coming soon.
+            You can check the links in the <a href="#about">about</a> section.
             Here is a list of the major companies I worked for in the last years.
         </p>
-
         <div className='companies'>
             {
                 props.companies.map(company => (

@@ -246,6 +246,12 @@ h6 {
     margin-bottom: var(--margin-half);
 }
 
+blockquote {
+    margin-left: var(--margin);
+    border-left: 5px solid var(--color-black-light);
+    padding-left: var(--margin-half);
+}
+
 /* Font Families */
 .freight-sans {
     font-family: freight-sans-pro, sans-serif;
@@ -625,7 +631,7 @@ h6 {
     background: #fff;
 }
 
-.about-section p:first-of-type:first-letter {
+.about__content > p:first-of-type:first-letter {
     float: left;
     font-size: var(--font-xl);
     padding-top: 12px;
@@ -672,9 +678,6 @@ h6 {
     font-size: 2.25rem; 
 }
 
-.work-intro {
-    margin: var(--margin) 0 var(--margin-xxl);
-}
 .companies {
     display: grid;
     align-content: center;
@@ -714,10 +717,6 @@ h6 {
     padding: var(--padding-half) 0;
     transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     box-shadow: 0 1px 5px hsla(60, 1%, 88%, 1);
-}
-
-.work-section p {
-    line-height: 24px;
 }
 .nav-list__item ul {
     display: none;
