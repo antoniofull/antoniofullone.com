@@ -24,7 +24,7 @@ export const navItems = [
 
 export const aboutText = ` 
 
-Born in the beautiful and always sunny Calabria in Italy, Antonio is a designer & developer and — as he like to call himself— a wannabe cook. Eleven years ago, he left his home town and moved abroad. Since then he lived in different cities in Italy, Spain and The Netherlands. 
+Born in the beautiful and sunny [Calabria](https://en.wikipedia.org/wiki/Calabria), Antonio is a designer & developer and — as he like to call himself— a wannabe cook. Eleven years ago, he left his home town and moved abroad. Since then he lived in different cities in Italy,  Spain and The Netherlands. 
 
 He has travelled to several countries between Europe and North America and in the last two years he has been working remotely as a consultant. Thanks to this he kept  travelling to his favorite places while working with different companies to improve their UI’s and Websites.
 
