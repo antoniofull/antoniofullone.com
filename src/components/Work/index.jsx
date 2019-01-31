@@ -13,14 +13,14 @@ import Design from './Design';
         <Design />
         <Icons />
 */
- 
-import {workTmp} from '../../data/index';
+
+import { workTmp } from '../../data/index';
 import Temp from './Temp';
 
 const Work = () => (
-    <section className='work-section'>
-        <Temp companies={workTmp} />
-    </section>
+  <section className="work-section">
+    <Temp companies={workTmp} />
+  </section>
 );
 
 export default Work;

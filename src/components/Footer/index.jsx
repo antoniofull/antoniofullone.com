@@ -10,20 +10,20 @@ import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
 import Logo from '../Logo';
 
-const Footer = props => (
-    <footer className='site-footer'>
-        <div className="footer-container padding-x-half">
-            <FooterTitle />
-            <BlogPosts />
-            <GeekStuff />
-            <ReadingList />
-            <Social />
-            <Address />
-            <Logo />
-            <FooterTagline />        
-        </div>
-        <SubFooter />
-    </footer>
+const Footer = () => (
+  <footer className="site-footer">
+    <div className="footer-container padding-x-half">
+      <FooterTitle />
+      <BlogPosts />
+      <GeekStuff />
+      <ReadingList />
+      <Social />
+      <Address />
+      <Logo />
+      <FooterTagline />
+    </div>
+    <SubFooter />
+  </footer>
 );
 
 export default Footer;
