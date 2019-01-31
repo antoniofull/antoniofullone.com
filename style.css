@@ -301,7 +301,7 @@ blockquote {
     4 - GLOBAL
 ==========================*/
 .dark-theme {
-    /* background-color: var(--color-black); */
+    background-color: var(--color-black);
 }
 .index {
     width: 100%;
@@ -314,13 +314,6 @@ blockquote {
 .grid-margin--half {
     margin: 0 var(--margin-half);
 }
-
-@media screen and (min-width: 768px) {
-    .index {
-        /* margin-top: calc(var(--margin-xxl) * 1.5); */
-    }
-}
-
 
 /*=========================
     5 - HELPERS
@@ -638,10 +631,11 @@ blockquote {
     padding-right: 1px;
     padding-left: 0;
 } 
+/*
 .about-section article p:not(:first-of-type) {
-    /* text-indent: var(--grid-gutter); */
+     text-indent: var(--grid-gutter); 
 }
-
+*/
 .about-section p:first-of-type {
     font-style: italic;
 }
