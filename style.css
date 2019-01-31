@@ -639,7 +639,7 @@ blockquote {
     padding-left: 0;
 } 
 .about-section article p:not(:first-of-type) {
-    text-indent: var(--margin-half);
+    /* text-indent: var(--grid-gutter); */
 }
 
 .about-section p:first-of-type {
