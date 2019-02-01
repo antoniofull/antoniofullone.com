@@ -10,148 +10,6 @@
         4 - Globals
 */
 
-/* ==================== 
-    1 - RESET    
-    Credits: 
-        - https://bitsofco.de/my-css-reset-base/
-        - https://meyerweb.com/eric/tools/css/reset/reset.css
-
-===================== */
-
-html,
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a,
-p,
-span,
-em,
-small,
-strong,
-sub,
-sup,
-mark,
-del,
-ins,
-strike,
-abbr,
-dfn,
-blockquote,
-q,
-cite,
-code,
-pre,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-div,
-section,
-article,
-main,
-aside,
-nav,
-header,
-hgroup,
-footer,
-img,
-figure,
-figcaption,
-address,
-time,
-audio,
-video,
-canvas,
-iframe,
-details,
-summary,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-img,
-video,
-svg {
-  max-width: 100%;
-}
-
-ol,
-ul,
-dl {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-
-[hidden] {
-  display: none !important;
-}
-
-i,
-cite,
-em,
-var,
-address,
-dfn {
-  font-style: inherit;
-}
-
-/* 
- Prevent Zoom on Focus only for IOS devices
- -webkit-overflow-scrolling is supported only in IOS Safari
- https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
- */
-@supports (-webkit-overflow-scrolling: touch) {
-  select,
-  textarea,
-  input[type='text'],
-  input[type='password'],
-  input[type='number'],
-  input[type='tel'],
-  input[type='email'] {
-    font-size: 16px;
-  }
-}
-
 /*=========================
     2 - CUSTOM PROPERTIES
 ==========================*/
@@ -166,12 +24,9 @@ dfn {
   --color-black-light: hsla(60, 1%, 40%, 1);
   --color-black-light-800: hsla(60, 1%, 80%, 0.4);
   --color-black-dark: hsla(60, 14%, 7%, 1);
-
   --color-primary-light: hsla(213, 53%, 97%, 1);
-
   --color-accent: hsla(0, 96%, 72%, 1);
   --color-accent-700: hsla(0, 56%, 32%, 1);
-
   --color-white: hsla(204, 45%, 98%, 1);
   /*
     Modular Scale
@@ -179,9 +34,7 @@ dfn {
   */
   --base-font: 18px;
   --baseline: 28px;
-
   --intertistial-value: 40px;
-
   --font-xxl: 5.063rem;
   --font-xl: 3.375rem;
   --font-l: 2.25rem;
@@ -201,16 +54,10 @@ dfn {
   --padding-half: calc(var(--baseline) / 2);
   --padding-xl: calc(var(--baseline) * 2);
 
-  /* Mobile Grid: 4 Column with Margin outside */
-  --grid-columns: 4;
-  --grid-gutters: 3;
-  --grid-gutter: 10px;
-  /*
-    Let's see how far cal and custom properties can go
-  */
-  --grid-total-gutter: calc(var(--grid-gutter) * var(--grid-gutters));
-  --grid-width: calc(100% - var(--grid-total-gutter));
-  --grid-unit: calc(var(--grid-width) / 4);
+  /* Mobile first Grid: 4 Column with Margin outside */
+  --grid-column-gutter: 10px;
+  --grid-row-gutter: 20px;
+  --grid-colun-min-width: 50px;
 
   /* Misc */
   --header-height: 56px;
@@ -218,12 +65,18 @@ dfn {
 
 @media screen and (min-width: 330px) {
   :root {
-    --grid-gutter: 15px;
+    --grid-column-gutter: 15px;
+    --grid-row-gutter: 30px;
+    --grid-colun-min-width: 50px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   :root {
+    --grid-column-gutter: 15px;
+    --grid-row-gutter: 30px;
+    --grid-colun-min-width: 50px;
+
     --base-font: 21px;
     --baseline: 32px;
   }
@@ -471,20 +324,6 @@ blockquote {
   margin-right: auto;
 }
 
-.container--grid {
-  display: grid;
-  grid-column-gap: var(--grid-gutter);
-  grid-row-gap: var(--grid-gutter);
-}
-
-.grid-col-4 {
-  grid-template-columns: repeat(4, minmax(50px, 1fr));
-}
-
-.grid-align-center {
-  align-content: center;
-}
-
 /*=========================
     6 - HEADER
 ==========================*/
@@ -493,7 +332,7 @@ blockquote {
   height: calc(var(--baseline) * 2);
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--grid-gutter);
+  padding: 0 var(--grid-column-gutter);
 
   /* Position Sticky creates a new stack */
   position: sticky;
@@ -676,7 +515,7 @@ blockquote {
 }
 /*
 .about-section article p:not(:first-of-type) {
-     text-indent: var(--grid-gutter); 
+  text-indent: var(--grid-column-gutter);
 }
 */
 .about-section p:first-of-type {
@@ -719,8 +558,8 @@ blockquote {
   display: grid;
   align-content: center;
   grid-template-columns: repeat(2, minmax(150px, 1fr));
-  grid-column-gap: calc(var(--grid-gutter) * 2);
-  grid-row-gap: calc(var(--grid-gutter) * 3);
+  grid-column-gap: calc(var(--grid-column-gutter) * 2);
+  grid-row-gap: calc(var(--grid-column-gutter) * 3);
   margin-bottom: calc(var(--margin-xxl) * 2);
 }
 
@@ -790,7 +629,7 @@ blockquote {
 
 .footer-container {
   display: grid;
-  grid-column-gap: var(--grid-gutter);
+  grid-column-gap: var(--grid-column-gutter);
   grid-row-gap: var(--margin-xl);
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
@@ -880,7 +719,7 @@ blockquote {
 
 .extra li {
   margin-bottom: 4px;
-  padding-left: var(--grid-gutter);
+  padding-left: var(--grid-column-gutter);
 }
 
 .social {
@@ -895,7 +734,7 @@ blockquote {
 .social li {
   flex: 1 1 20%;
   max-width: 20%;
-  margin-bottom: var(--grid-gutter);
+  margin-bottom: var(--grid-column-gutter);
 }
 
 .social .fab,
@@ -927,7 +766,7 @@ blockquote {
   font-size: 16px;
   border-bottom: 1px solid var(--color-black-light);
   grid-area: tagline;
-  padding-bottom: var(--grid-gutter);
+  padding-bottom: var(--grid-column-gutter);
 }
 
 .subfooter {
@@ -959,25 +798,34 @@ blockquote {
 }
 
 @media screen and (min-width: 960px) {
+  .container {
+    max-width: 960px;
+  }
   :root {
-    --grid-gutter: 30px;
+    --grid-column-gutter: 30px;
   }
   .index > section {
     margin-bottom: 0;
     padding-top: var(--padding-xl);
   }
   .main-section {
-    display: flex;
-    flex-wrap: wrap;
-    padding: var(--margin-xxl) var(--grid-gutter);
-    background-image: url('./src/images/bg_main_desktop.png');
-    background-size: contain;
-    background-position: top right;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(50px, 1fr));
   }
-  .vespa,
-  .illustration {
-    flex: 1;
+  .intro {
+    padding: 0;
     background: none;
+    grid-column: 1 / 8;
+    position: relative;
+    top: var(--margin-xl);
+  }
+  .illustration {
+    background: none;
+    grid-column: 8 / -1;
+  }
+  .illustration__container {
+    background: url('./src/images/bg_vespa_desktop.svg') no-repeat center;
+    background-size: contain;
   }
   .illustration:before,
   .illustration:after {
@@ -997,4 +845,26 @@ blockquote {
   .intro__qualified {
     font-size: var(--base-font);
   }
+}
+
+@media screen and (max-height: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+  .index > section {
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+  .main-section {
+    height: calc(100vh - (var(--header-height)));
+    align-items: center;
+  }
+  .site-header {
+    position: static;
+  }
+}
+
+.grid--12 {
+}
+.grid--16 {
 }
