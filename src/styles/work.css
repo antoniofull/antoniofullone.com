@@ -1,0 +1,68 @@
+/*=========================
+    WORK
+==========================*/
+.work--temp {
+  padding: 0 var(--margin-half);
+}
+.work--temp h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.25rem;
+}
+
+.companies {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-column-gap: calc(var(--grid-column-gutter) * 2);
+  grid-row-gap: calc(var(--grid-column-gutter) * 3);
+  margin-bottom: calc(var(--margin-xxl) * 2);
+}
+
+.companies figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+.companies img {
+  height: auto;
+  object-fit: contain;
+  flex: 1 1 50px;
+}
+
+.work-section {
+  font-style: normal;
+  font-weight: 500;
+}
+.work-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1000;
+  height: var(--margin-xl);
+  top: 0;
+  font-family: alegreya-sans, sans-serif;
+  background: #fff;
+  width: 100%;
+  padding: var(--padding-half) 0;
+  transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  box-shadow: 0 1px 5px hsla(60, 1%, 88%, 1);
+}
+.nav-list__item ul {
+  display: none;
+}
+
+.is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: var(--margin-xl);
+  margin-top: 1px;
+  background: #fff;
+  z-index: 100;
+}
+
+.project__header {
+  margin-bottom: var(--margin-xl);
+}

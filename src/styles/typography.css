@@ -1,0 +1,118 @@
+/*=========================
+    TYPOGRAPHY
+==========================*/
+
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 330px) {
+  html {
+    font-size: var(--base-font);
+  }
+}
+body {
+  font-family: ff-tisa-web-pro, serif;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--baseline);
+  text-rendering: optimizeLegibility;
+
+  /* Serif Numbers are not looking good, let's make it better */
+  font-variant: lining-nums;
+  -moz-font-feature-settings: 'lnum';
+  -webkit-font-feature-settings: 'lnum';
+  font-feature-settings: 'lnum';
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--color-accent-700);
+}
+
+p {
+  font-size: inherit;
+  line-height: inherit;
+  margin-bottom: var(--baseline);
+}
+
+h1 {
+  font-size: var(--font-l);
+  margin-bottom: var(--margin);
+  line-height: 1;
+  font-family: freight-text-pro, serif;
+}
+h2 {
+  font-size: var(--font-m);
+  margin-bottom: var(--margin);
+  line-height: 1;
+  font-family: freight-text-pro, serif;
+}
+h3 {
+  font-size: var(--base-font);
+  margin-bottom: var(--margin-half);
+}
+h4 {
+  font-size: var(--font-s);
+  margin-bottom: var(--margin-half);
+}
+h5,
+h6 {
+  font-size: var(--font-xs);
+  margin-bottom: var(--margin-half);
+}
+
+blockquote {
+  margin-left: var(--margin);
+  border-left: 5px solid var(--color-black-light);
+  padding-left: var(--margin-half);
+}
+
+/* Font Families */
+.freight-sans {
+  font-family: freight-sans-pro, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+.freight-sans--light {
+  font-family: freight-sans-compressed-pro-l, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+}
+.freight-sans--medium {
+  font-family: freight-sans-pro, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+.freight-sans--bold {
+  font-family: freight-sans-pro, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.bodoni-24 {
+  font-family: 'Bodoni 24';
+  letter-spacing: 1px;
+}
+/* Enable Alegreya Opentype features */
+.fractional {
+  font-variant: diagonal-fractions;
+  -moz-font-feature-settings: 'frac';
+  -webkit-font-feature-settings: 'frac';
+  font-feature-settings: 'frac';
+}
+.ordinal {
+  font-variant-numeric: ordinal;
+  -moz-font-feature-settings: 'ordn';
+  -webkit-font-feature-settings: 'ordn';
+  font-feature-settings: 'ordn';
+}
+.ligature {
+  font-variant-numeric: common-ligatures;
+  -moz-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+}

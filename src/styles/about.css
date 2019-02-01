@@ -1,0 +1,43 @@
+/*=========================
+  ABOUT
+==========================*/
+.about-section {
+  background: #fff;
+}
+
+.about__content > p:first-of-type:first-letter {
+  float: left;
+  font-size: var(--font-xl);
+  padding-top: 12px;
+  padding-right: 1px;
+  padding-left: 0;
+}
+/*
+.about-section article p:not(:first-of-type) {
+  text-indent: var(--grid-column-gutter);
+}
+*/
+.about-section p:first-of-type {
+  font-style: italic;
+}
+
+.about-section h2 {
+  font-size: var(--font-l);
+}
+.about__img {
+  margin-bottom: var(--margin-half);
+  display: block;
+  max-width: calc(100% + 30px);
+  margin-left: -15px;
+}
+.img-caption {
+  font-weight: 100;
+  font-size: 0.667rem;
+  line-height: 1.5;
+  width: 100%;
+  color: var(--color-black-light);
+  margin-bottom: var(--margin-half);
+}
+.about__content {
+  padding: 0 5px;
+}

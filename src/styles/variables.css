@@ -1,0 +1,65 @@
+/*=========================
+    CUSTOM PROPERTIES
+==========================*/
+:root {
+  --color-black: hsla(60, 3%, 12%, 1);
+  --color-black-light: hsla(60, 1%, 40%, 1);
+  --color-black-light-800: hsla(60, 1%, 80%, 0.4);
+  --color-black-dark: hsla(60, 14%, 7%, 1);
+  --color-primary-light: hsla(213, 53%, 97%, 1);
+  --color-accent: hsla(0, 96%, 72%, 1);
+  --color-accent-700: hsla(0, 56%, 32%, 1);
+  --color-white: hsla(204, 45%, 98%, 1);
+  /*
+    Modular Scale
+    dy = dynamic fonts
+  */
+  --base-font: 18px;
+  --baseline: 28px;
+  --intertistial-value: 40px;
+  --font-xxl: 5.063rem;
+  --font-xl: 3.375rem;
+  --font-l: 2.25rem;
+  --font-m: 1.5rem;
+  --font-s: 0.667rem;
+  --font-xs: 0.444rem;
+  --font-dy-l: 11.391vw;
+  --font-dy-m: 7.594vw;
+  --font-dy-s: 3.375vw;
+
+  --margin: var(--baseline);
+  --margin-half: calc(var(--baseline) / 2);
+  --margin-xl: calc(var(--baseline) * 2);
+  --margin-xxl: calc(var(--baseline) * 3);
+
+  --padding: var(--baseline);
+  --padding-half: calc(var(--baseline) / 2);
+  --padding-xl: calc(var(--baseline) * 2);
+
+  /* Mobile first Grid: 4 Column with Margin outside */
+  --grid-column-gutter: 10px;
+  --grid-row-gutter: 20px;
+  --grid-colun-min-width: 50px;
+
+  /* Misc */
+  --header-height: 56px;
+}
+
+@media screen and (min-width: 330px) {
+  :root {
+    --grid-column-gutter: 15px;
+    --grid-row-gutter: 30px;
+    --grid-colun-min-width: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --grid-column-gutter: 15px;
+    --grid-row-gutter: 30px;
+    --grid-colun-min-width: 50px;
+
+    --base-font: 21px;
+    --baseline: 32px;
+  }
+}
