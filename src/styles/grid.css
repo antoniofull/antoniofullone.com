@@ -20,7 +20,7 @@
   grid-column: 1 / -1;
 }
 @media screen and (min-width: 600px) {
-  /* Grid now is 12 columns */
+  /* Grid now is 8 columns */
   .grid {
     grid-template-columns: repeat(8, minmax(var(--grid-column-width), 1fr));
   }
@@ -29,7 +29,6 @@
 @media screen and (min-width: 980px) {
   /* Grid now is 12 columns */
   .grid {
-    width: 960px;
     grid-template-columns: repeat(12, minmax(var(--grid-column-width), 1fr));
   }
 }

@@ -17,9 +17,9 @@ const Footer = () => (
       <BlogPosts />
       <GeekStuff />
       <ReadingList />
-      <Social />
       <Address />
       <Logo />
+      <Social />
       <FooterTagline />
     </div>
     <SubFooter />

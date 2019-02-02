@@ -8,8 +8,6 @@
   font-size: 13px;
   line-height: 1.3;
   position: relative;
-  background: var(--color-black);
-  padding: 0 var(--grid-column-gutter);
 }
 
 .site-footer p {
@@ -22,10 +20,10 @@
     'heading heading heading heading'
     'blog blog blog blog'
     'credits credits reading reading'
-    'social social . .'
-    'address address . logo'
-    'tagline tagline tagline tagline'
-    'subfooter subfooter subfooter subfooter';
+    'address address address .'
+    'social social social .'
+    'tagline tagline tagline tagline';
+  padding: 0 var(--grid-column-gutter);
 }
 .site-footer__header {
   color: #fff;
@@ -125,8 +123,8 @@
 }
 
 .social li {
-  flex: 1 1 20%;
-  max-width: 20%;
+  flex: 1 1 18%;
+  max-width: 18%;
   margin-bottom: var(--grid-column-gutter);
 }
 
@@ -134,12 +132,16 @@
 .social .fas {
   font-size: var(--base-font);
 }
+.social--footer {
+  max-width: 240px;
+}
 .social--footer a {
   color: var(--color-black-light);
 }
 
 .info-address {
   grid-area: address;
+  max-width: 180px;
 }
 .info-address p {
   margin-bottom: 8px;
@@ -149,6 +151,7 @@
 .site-footer .logo {
   grid-area: logo;
   justify-self: center;
+  display: none;
 }
 .site-footer .logo__link {
   width: 40px;
@@ -160,6 +163,7 @@
   border-bottom: 1px solid var(--color-black-light);
   grid-area: tagline;
   padding-bottom: var(--grid-column-gutter);
+  display: inline-table;
 }
 
 .subfooter {
@@ -167,6 +171,7 @@
   text-align: center;
   grid-area: subfooter;
   min-height: 44px;
+  margin-top: var(--margin-xl);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,4 +181,43 @@
 }
 .subfooter a {
   color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-column-gap: 20px;
+    grid-template-areas:
+      'heading heading heading heading heading heading . .'
+      'blog blog blog blog blog blog blog blog'
+      'credits credits credits . reading reading reading .'
+      'address address address . social social social .'
+      'tagline tagline tagline tagline tagline . . .';
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .site-footer .logo {
+    display: block;
+    margin-top: var(--margin-xl);
+  }
+  .site-footer__header {
+    padding: 0;
+  }
+  .footer-container {
+    max-width: 940px;
+    padding: 0;
+    grid-template-areas:
+      'logo . . . . . . . . . . .'
+      'address address address heading heading heading heading heading heading . reading reading'
+      '. . . blog blog blog blog blog blog blog credits credits'
+      'social social social tagline tagline tagline tagline tagline tagline tagline . .';
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .footer-container {
+    max-width: 1280px;
+  }
 }

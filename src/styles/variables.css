@@ -41,7 +41,7 @@
   /* Mobile first Grid: 4 Column with Margin outside */
   --grid-column-gutter: 10px;
   --grid-row-gutter: 20px;
-  --grid-column-width: 50px;
+  --grid-column-width: 40px;
 
   /* Misc */
   --header-height: 56px;
@@ -51,7 +51,13 @@
   :root {
     --grid-column-gutter: 15px;
     --grid-row-gutter: 30px;
-    --grid-colun-min-width: 50px;
+    --grid-column-min-width: 40px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  :root {
+    --grid-column-gutter: 20px;
   }
 }
 
@@ -59,15 +65,15 @@
   :root {
     --grid-column-gutter: 15px;
     --grid-row-gutter: 30px;
-    --grid-colun-min-width: 50px;
+    --grid-column-min-width: 50px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   :root {
-    --grid-column-gutter: 15px;
-    --grid-row-gutter: 30px;
-    --grid-colun-min-width: 60px;
+    --grid-column-gutter: 30px;
+    --grid-row-gutter: 60px;
+    --grid-column-min-width: 60px;
 
     --base-font: 21px;
     --baseline: 32px;

@@ -17,8 +17,7 @@ const About = () => (
           alt="Surfing in the Canary Islands"
         />
         <figcaption className="img-caption freight-sans--light">
-          Surfing in the Canary Islands. Credits:
-          {'https://surfingtherapy.es'}
+          Surfing in the Canary Islands. Photo credits:
           <a href="https://surfingtherapy.es">Surfing Therapy</a>
         </figcaption>
       </figure>

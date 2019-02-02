@@ -34,12 +34,6 @@
 }
 
 @media screen and (min-width: 980px) {
-  .container {
-    max-width: 960px;
-  }
-  :root {
-    --grid-column-gutter: 30px;
-  }
   .index > section {
     margin-bottom: 0;
     padding-top: var(--padding-xl);
@@ -84,7 +78,6 @@
 @media screen and (max-height: 768px) {
   .index > section {
     margin-bottom: 0;
-    padding-top: 0;
   }
   .main-section {
     min-height: calc(100vh - (var(--header-height)));

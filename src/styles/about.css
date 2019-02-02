@@ -33,10 +33,11 @@
 .img-caption {
   font-weight: 100;
   font-size: 0.667rem;
+  font-style: italic;
   line-height: 1.5;
   width: 100%;
   color: var(--color-black-light);
-  margin-bottom: var(--margin-half);
+  margin-bottom: var(--margin);
 }
 .about__content {
   padding: 0 5px;
