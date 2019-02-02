@@ -3,7 +3,7 @@
 ==========================*/
 
 .site-header {
-  height: calc(var(--baseline) * 2);
+  height: var(--header-height);
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--grid-column-gutter);
@@ -24,20 +24,18 @@
 
 .site-header .site-nav {
   max-width: 100%;
-  grid-column: auto / span 3;
+  grid-column: auto / -1;
 }
 
 .nav-list {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 }
 .nav-list__item {
   width: auto;
-  margin-left: var(--margin-half);
-  vertical-align: top;
-  display: inline-block;
-  text-align: right;
   text-transform: uppercase;
   font-size: 0.667rem;
+  margin-left: var(--grid-column-gutter);
 }
 .nav-list__link,
 .nav-list__link:visited {
@@ -47,8 +45,8 @@
 }
 
 .logo {
-  width: var(--baseline);
-  height: var(--baseline);
+  width: 28px;
+  height: 28px;
 }
 
 .logo__link {
@@ -62,8 +60,16 @@
   height: 100%;
 }
 
-@media screen and (min-width: 600px) {
-  .site-nav {
-    grid-column: 3 / span 2;
+@media screen and (min-width: 340px) {
+  .nav-list__item {
+    margin-left: var(--grid-column-gutter);
+  }
+}
+@media screen and (min-width: 980px) {
+  .site-header {
+    padding: 0;
+  }
+  .site-header .site-nav {
+    grid-column: 8 / -1;
   }
 }

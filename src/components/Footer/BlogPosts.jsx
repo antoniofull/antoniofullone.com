@@ -10,7 +10,7 @@ const BlogPosts = () => (
         blogData.map(item => (
           <article key={item.id} className="post">
             <h3 className="post__title text-white">{item.title}</h3>
-            <a href={item.link}>
+            <a href={item.link} className="post__link">
               <img className="post__image" src={item.img} alt={item.title} />
             </a>
           </article>

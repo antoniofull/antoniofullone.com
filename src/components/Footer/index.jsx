@@ -12,7 +12,7 @@ import Logo from '../Logo';
 
 const Footer = () => (
   <footer className="site-footer">
-    <div className="footer-container padding-x-half">
+    <div className="container footer-container grid grid-large-rowgap">
       <FooterTitle />
       <BlogPosts />
       <GeekStuff />

@@ -4,7 +4,7 @@ import ItalianBanner from '../../images/italy_banner.svg';
 import Vespa from '../../images/vespa.svg';
 
 const Illustration = () => (
-  <div className="illustration">
+  <div className="illustration grid__item--full-width">
     <div className="illustration__container">
       <ItalianBanner className="italy" />
       <Vespa className="vespa" />

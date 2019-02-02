@@ -14,10 +14,12 @@
 @import './src/styles/typography.css';
 @import './src/styles/helpers.css';
 @import './src/styles/global.css';
-@import './src/styles/headers.css';
+@import './src/styles/header.css';
+@import './src/styles/footer.css';
 @import './src/styles/intro.css';
 @import './src/styles/about.css';
 @import './src/styles/work.css';
+@import './src/styles/grid.css';
 
 /* Media queries */
 
@@ -31,7 +33,7 @@
   }
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 980px) {
   .container {
     max-width: 960px;
   }
@@ -42,20 +44,14 @@
     margin-bottom: 0;
     padding-top: var(--padding-xl);
   }
-  .main-section {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(50px, 1fr));
-  }
+
   .intro {
     padding: 0;
     background: none;
-    grid-column: 1 / 8;
     position: relative;
-    top: var(--margin-xl);
   }
   .illustration {
     background: none;
-    grid-column: 8 / -1;
   }
   .illustration__container {
     background: url('./src/images/bg_vespa_desktop.svg') no-repeat center;
@@ -80,25 +76,18 @@
     font-size: var(--base-font);
   }
 }
-
-@media screen and (max-height: 768px) {
-  :root {
-    --header-height: 64px;
+@media screen and (max-height: 450px) {
+  .intro {
+    padding-top: var(--padding);
   }
+}
+@media screen and (max-height: 768px) {
   .index > section {
     margin-bottom: 0;
     padding-top: 0;
   }
   .main-section {
-    height: calc(100vh - (var(--header-height)));
+    min-height: calc(100vh - (var(--header-height)));
     align-items: center;
   }
-  .site-header {
-    position: static;
-  }
-}
-
-.grid--12 {
-}
-.grid--16 {
 }

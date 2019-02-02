@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Text = () => (
-  <div className="intro container">
+  <div className="intro container grid__item--full-width">
     <h1 className="intro__header text-center bodoni-24">Antonio Fullone</h1>
     <div className="tagline">
       <h2 className="intro__tagline text-center bodoni-24">

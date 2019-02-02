@@ -16,6 +16,7 @@
   */
   --base-font: 18px;
   --baseline: 28px;
+
   --intertistial-value: 40px;
   --font-xxl: 5.063rem;
   --font-xl: 3.375rem;
@@ -23,9 +24,9 @@
   --font-m: 1.5rem;
   --font-s: 0.667rem;
   --font-xs: 0.444rem;
-  --font-dy-l: 11.391vw;
-  --font-dy-m: 7.594vw;
-  --font-dy-s: 3.375vw;
+  --font-dy-l: 12vw;
+  --font-dy-m: 8vw;
+  --font-dy-s: 4vw;
 
   --margin: var(--baseline);
   --margin-half: calc(var(--baseline) / 2);
@@ -35,11 +36,12 @@
   --padding: var(--baseline);
   --padding-half: calc(var(--baseline) / 2);
   --padding-xl: calc(var(--baseline) * 2);
+  --padding-xl: calc(var(--baseline) * 3);
 
   /* Mobile first Grid: 4 Column with Margin outside */
   --grid-column-gutter: 10px;
   --grid-row-gutter: 20px;
-  --grid-colun-min-width: 50px;
+  --grid-column-width: 50px;
 
   /* Misc */
   --header-height: 56px;
@@ -53,11 +55,19 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   :root {
     --grid-column-gutter: 15px;
     --grid-row-gutter: 30px;
     --grid-colun-min-width: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --grid-column-gutter: 15px;
+    --grid-row-gutter: 30px;
+    --grid-colun-min-width: 60px;
 
     --base-font: 21px;
     --baseline: 32px;
