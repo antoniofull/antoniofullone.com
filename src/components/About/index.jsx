@@ -5,7 +5,7 @@ import { aboutText } from '../../data';
 import img from '../../images/me.png';
 
 const About = () => (
-  <section className="grid-margin--half about-section" id="about">
+  <section className="about-section" id="about">
     <article>
       <header>
         <h1 className="freight-sans--bold">Ciao! Nice to meet you!</h1>

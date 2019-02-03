@@ -2,29 +2,24 @@
     WORK
 ==========================*/
 .work--temp {
-  padding: 0 var(--margin-half);
+  padding: 0 var(--grid-outer-gutter);
 }
 .work--temp h2 {
   text-align: center;
   font-weight: 900;
   font-size: 2.25rem;
 }
-
-.companies {
-  display: grid;
-  align-content: center;
-  grid-template-columns: repeat(2, minmax(150px, 1fr));
-  grid-column-gap: calc(var(--grid-column-gutter) * 2);
-  grid-row-gap: calc(var(--grid-column-gutter) * 3);
-  margin-bottom: calc(var(--margin-xxl) * 2);
+.companies > a {
+  grid-column: auto / span 2;
 }
-
 .companies figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   height: 100%;
+  max-width: 240px;
+  margin: 0 auto;
 }
 
 .companies img {
@@ -65,4 +60,10 @@
 
 .project__header {
   margin-bottom: var(--margin-xl);
+}
+
+@media screen and (min-width: 600px) {
+  .companies > a {
+    grid-column: auto / span 4;
+  }
 }

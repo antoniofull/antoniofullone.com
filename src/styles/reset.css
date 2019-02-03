@@ -1,5 +1,5 @@
 /* ====================
-    RESET
+    RESETtest
     Credits:
         - https://bitsofco.de/my-css-reset-base/
         - https://meyerweb.com/eric/tools/css/reset/reset.css
@@ -124,9 +124,11 @@ dfn {
 }
 
 /*
- Prevent Zoom on Focus only for IOS devices
+
+Prevent Zoom on Focus only for IOS devices
  -webkit-overflow-scrolling is supported only in IOS Safari
  https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
+
  */
 @supports (-webkit-overflow-scrolling: touch) {
   select,

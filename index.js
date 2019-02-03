@@ -13,8 +13,6 @@ import Footer from './src/components/Footer';
 
 import { navItems } from './src/data';
 
-import './src/styles/reset.css';
-
 class App extends Component {
   render() {
     return (

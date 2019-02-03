@@ -35,8 +35,7 @@
 
 @media screen and (min-width: 980px) {
   .index > section {
-    margin-bottom: 0;
-    padding-top: var(--padding-xl);
+    margin-bottom: var(--margin-xxl);
   }
 
   .intro {

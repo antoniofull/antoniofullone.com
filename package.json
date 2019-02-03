@@ -27,7 +27,7 @@
     "prettier": "1.16.3"
   },
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "cp -R src/images/ dist/images && cp index.html dist/index.html && parcel index.html",
     "build": "parcel build index.js && cp -R src/images/ dist/images && cp index.html dist/index.html"
   },
   "dependencies": {

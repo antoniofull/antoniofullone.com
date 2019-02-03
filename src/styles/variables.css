@@ -42,6 +42,7 @@
   --grid-column-gutter: 10px;
   --grid-row-gutter: 20px;
   --grid-column-width: 40px;
+  --grid-outer-gutter: 10px;
 
   /* Misc */
   --header-height: 56px;
@@ -52,12 +53,14 @@
     --grid-column-gutter: 15px;
     --grid-row-gutter: 30px;
     --grid-column-min-width: 40px;
+    --grid-outer-gutter: 15px;
   }
 }
 
 @media screen and (min-width: 600px) {
   :root {
-    --grid-column-gutter: 20px;
+    --grid-column-gutter: 30px;
+    --grid-outer-gutter: 30px;
   }
 }
 
