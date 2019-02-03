@@ -19,12 +19,12 @@
 }
 
 .site-header .logo {
-  grid-column: 1 / 1;
+  grid-column: 1 / 2;
 }
 
 .site-header .site-nav {
   max-width: 100%;
-  grid-column: auto / -1;
+  grid-column: 2 / -1;
 }
 
 .nav-list {

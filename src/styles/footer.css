@@ -17,12 +17,12 @@
 .footer-container {
   grid-template-rows: auto;
   grid-template-areas:
-    'heading heading heading heading'
-    'blog blog blog blog'
-    'credits credits reading reading'
-    'address address . .'
-    'social social . .'
-    'tagline tagline tagline tagline';
+    'heading heading heading heading heading heading'
+    'blog blog blog blog blog blog'
+    'credits credits credits reading reading reading'
+    'address address address . . .'
+    'social social social . . .'
+    'tagline tagline tagline tagline tagline tagline';
   padding: 0 var(--grid-outer-gutter);
 }
 .site-footer__header {
@@ -35,21 +35,20 @@
   grid-area: blog;
 }
 .footer-header {
-  border-bottom: 1px solid var(--color-black-light);
+  border-bottom: 1px inset var(--color-black-light-800);
   padding-bottom: 8px;
   font-family: freight-sans, sans-serif;
   font-weight: 700;
   margin: var(--margin-half) 0;
 }
-.post-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.footer-header--full {
+  max-width: 100%;
 }
+
 .post {
-  flex: 1 1 30%;
-  max-width: 31%;
+  grid-column: auto / span 2;
 }
+
 .post__title {
   display: block;
   display: -webkit-box;
@@ -133,16 +132,12 @@
 .social .fas {
   font-size: var(--base-font);
 }
-.social--footer {
-  max-width: 200px;
-}
 .social--footer a {
   color: var(--color-black-light);
 }
 
 .info-address {
   grid-area: address;
-  max-width: 200px;
 }
 .info-address p {
   margin-bottom: 8px;
@@ -187,13 +182,16 @@
 
 @media screen and (min-width: 600px) {
   .footer-container {
-    grid-column-gap: 20px;
     grid-template-areas:
-      'heading heading heading heading heading heading . .'
-      'blog blog blog blog blog blog blog blog'
-      'credits credits credits reading reading reading . .'
-      'address address address social social social . .'
-      'tagline tagline tagline tagline tagline tagline tagline .';
+      'heading heading heading heading heading heading'
+      'blog blog blog blog blog blog'
+      'credits credits credits reading reading reading'
+      'address address address social social social'
+      'tagline tagline tagline tagline tagline tagline';
+  }
+
+  .social ul {
+    max-width: 250px;
   }
 }
 
