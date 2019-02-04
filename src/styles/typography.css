@@ -96,6 +96,9 @@ blockquote {
   font-style: normal;
   font-weight: 700;
 }
+.tisa {
+  font-family: ff-tisa-web-pro, serif;
+}
 .bodoni-24 {
   font-family: 'Bodoni 24';
   letter-spacing: 1px;

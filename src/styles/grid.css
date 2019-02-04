@@ -19,12 +19,6 @@
 .grid__item--full-width {
   grid-column: 1 / -1;
 }
-@media screen and (min-width: 600px) {
-  /* Grid now is 6 columns */
-  .grid {
-    grid-template-columns: repeat(6, minmax(var(--grid-column-width), 1fr));
-  }
-}
 
 @media screen and (min-width: 768px) {
   /* Grid now is 12 columns */

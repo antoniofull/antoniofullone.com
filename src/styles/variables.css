@@ -4,7 +4,7 @@
 :root {
   --color-black: hsla(60, 3%, 12%, 1);
   --color-black-light: hsla(60, 1%, 60%, 1);
-  --color-black-light-800: hsla(60, 1%, 20%, 1);
+  --color-black-light-800: hsla(60, 1%, 15%, 1);
   --color-black-dark: hsla(60, 14%, 7%, 1);
   --color-primary-light: hsla(213, 53%, 97%, 1);
   --color-accent: hsla(0, 96%, 72%, 1);
@@ -66,7 +66,6 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --grid-column-gutter: 15px;
     --grid-row-gutter: 30px;
     --grid-column-min-width: 50px;
   }

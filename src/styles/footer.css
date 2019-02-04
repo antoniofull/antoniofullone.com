@@ -3,15 +3,24 @@
 ==========================*/
 
 .site-footer {
-  background-color: var(--color-black-dark);
   color: var(--color-black-light);
   font-size: 13px;
   line-height: 1.3;
   position: relative;
 }
-
+.site-footer:before {
+  content: '';
+  display: block;
+  width: 100%;
+  position: relative;
+  bottom: -1px;
+  left: -1px;
+  height: 217px;
+  background: url('../images/bg_footer.svg') no-repeat left bottom;
+  background-size: contain;
+}
 .site-footer p {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 .footer-container {
@@ -20,19 +29,27 @@
     'heading heading heading heading heading heading'
     'blog blog blog blog blog blog'
     'credits credits credits reading reading reading'
-    'address address address . . .'
     'social social social . . .'
+    'address address address . . logo'
     'tagline tagline tagline tagline tagline tagline';
   padding: 0 var(--grid-outer-gutter);
+}
+.footer-wrapper {
+  background-color: var(--color-black-dark);
+  max-width: 100%;
 }
 .site-footer__header {
   color: #fff;
   line-height: 1.3;
   grid-area: heading;
+  margin-bottom: 0;
 }
 .blog {
-  margin-bottom: var(--margin-xl);
+  /* margin-bottom: var(--margin-xl); */
   grid-area: blog;
+}
+.blog .footer-header {
+  margin: 0;
 }
 .footer-header {
   border-bottom: 1px inset var(--color-black-light-800);
@@ -45,6 +62,10 @@
   max-width: 100%;
 }
 
+.footer-header--blog {
+  margin-bottom: 0;
+}
+
 .post {
   grid-column: auto / span 2;
 }
@@ -52,14 +73,14 @@
 .post__title {
   display: block;
   display: -webkit-box;
-  font-size: var(--font-s);
-  line-height: 1.3;
+  font-size: 14px;
+  line-height: 1.5;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: calc(1.3 * 3 * var(--font-s));
+  height: calc(1.5 * 3 * 14px);
   font-family: freight-sans, sans-serif;
   font-weight: 700;
 }
@@ -120,6 +141,7 @@
 .social ul {
   display: flex;
   flex-wrap: wrap;
+  max-width: 220px;
 }
 
 .social li {
@@ -146,8 +168,7 @@
 
 .site-footer .logo {
   grid-area: logo;
-  justify-self: center;
-  display: none;
+  align-self: center;
 }
 .site-footer .logo__link {
   width: 40px;
@@ -161,6 +182,7 @@
   padding-bottom: var(--grid-column-gutter);
   display: inline-table;
   align-self: end;
+  margin-bottom: var(--margin-xl);
 }
 
 .subfooter {
@@ -168,7 +190,6 @@
   text-align: center;
   grid-area: subfooter;
   min-height: 44px;
-  margin-top: var(--margin-xl);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,33 +201,13 @@
   color: #fff;
 }
 
-@media screen and (min-width: 600px) {
-  .footer-container {
-    grid-template-areas:
-      'heading heading heading heading heading heading'
-      'blog blog blog blog blog blog'
-      'credits credits credits reading reading reading'
-      'address address address social social social'
-      'tagline tagline tagline tagline tagline tagline';
+@media screen and (min-width: 768px) {
+  .credits ul {
+    display: flex;
+    flex-wrap: wrap;
   }
-
-  .social ul {
-    max-width: 250px;
-  }
-}
-
-@media screen and (min-width: 980px) {
-  .site-footer .logo {
-    display: block;
-    margin-top: var(--margin-xl);
-  }
-  .site-footer__header {
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .footer-container {
-    max-width: 1280px;
+  .credits li {
+    flex: 1 1 50%;
+    max-width: 50%;
   }
 }

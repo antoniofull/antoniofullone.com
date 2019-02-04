@@ -12,17 +12,19 @@ import Logo from '../Logo';
 
 const Footer = () => (
   <footer className="site-footer">
-    <div className="container footer-container grid grid-large-rowgap">
-      <FooterTitle />
-      <BlogPosts />
-      <GeekStuff />
-      <ReadingList />
-      <Address />
-      <Logo />
-      <Social />
-      <FooterTagline />
+    <div className="footer-wrapper">
+      <div className="container footer-container grid grid-large-rowgap">
+        <FooterTitle />
+        <BlogPosts />
+        <GeekStuff />
+        <ReadingList />
+        <Address />
+        <Logo />
+        <Social />
+        <FooterTagline />
+      </div>
+      <SubFooter />
     </div>
-    <SubFooter />
   </footer>
 );
 

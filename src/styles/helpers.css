@@ -96,9 +96,3 @@
   background-size: contain;
   background-repeat: repeat-y;
 }
-
-.container {
-  max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-}
