@@ -83,7 +83,7 @@
   );
 }
 .illustration__container {
-  min-height: 17.086rem;
+  min-height: 17rem;
 }
 .vespa {
   position: absolute;
@@ -101,4 +101,36 @@
   transform: translateX(-50%);
   width: 80%;
   max-width: 390px;
+}
+
+@media screen and (min-width: 600px) {
+  .intro__header {
+    font-size: var(--font-xl);
+  }
+  .intro__tagline,
+  .i-am-cool {
+    font-size: var(--font-m);
+    line-height: 1;
+  }
+  .intro__qualified {
+    font-size: var(--base-font);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-section {
+    align-items: end;
+    min-height: 45vh;
+  }
+  .intro {
+    grid-column: 1 / 8;
+    margin: 0;
+    padding: 0;
+  }
+  .illustration {
+    grid-column: 8 / 13;
+  }
+  .illustration__container {
+    max-height: 50%;
+  }
 }

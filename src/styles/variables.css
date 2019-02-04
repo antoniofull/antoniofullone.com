@@ -18,8 +18,8 @@
   --baseline: 28px;
 
   --intertistial-value: 40px;
-  --font-xxl: 5.063rem;
-  --font-xl: 3.375rem;
+  --font-xxl: 5rem;
+  --font-xl: 3.3rem;
   --font-l: 2.25rem;
   --font-m: 1.5rem;
   --font-s: 0.667rem;
@@ -79,5 +79,6 @@
 
     --base-font: 21px;
     --baseline: 32px;
+    --header-height: 72px;
   }
 }

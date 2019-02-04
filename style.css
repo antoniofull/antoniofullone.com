@@ -12,6 +12,7 @@
 @import './src/styles/reset.css';
 @import './src/styles/variables.css';
 @import './src/styles/typography.css';
+@import './src/styles/grid.css';
 @import './src/styles/helpers.css';
 @import './src/styles/global.css';
 @import './src/styles/header.css';
@@ -19,30 +20,8 @@
 @import './src/styles/intro.css';
 @import './src/styles/about.css';
 @import './src/styles/work.css';
-@import './src/styles/grid.css';
-
-/* Media queries */
-
-@media screen and (min-width: 768px) {
-  .intro__tagline,
-  .i-am-cool {
-    line-height: 1;
-  }
-  .i-am-cool {
-    margin-bottom: var(--intertistial-value);
-  }
-}
 
 @media screen and (min-width: 980px) {
-  .index > section {
-    margin-bottom: var(--margin-xxl);
-  }
-
-  .intro {
-    padding: 0;
-    background: none;
-    position: relative;
-  }
   .illustration {
     background: none;
   }
@@ -57,17 +36,6 @@
   .about-section {
     /* background: var(--color-black); */
   }
-  /* Here text needs to be fixed size again */
-  .intro__header {
-    font-size: var(--font-xl);
-  }
-  .intro__tagline,
-  .i-am-cool {
-    font-size: var(--font-m);
-  }
-  .intro__qualified {
-    font-size: var(--base-font);
-  }
 }
 @media screen and (max-height: 450px) {
   .intro {
@@ -75,11 +43,8 @@
   }
 }
 @media screen and (max-height: 768px) {
-  .index > section {
-    margin-bottom: 0;
-  }
   .main-section {
-    min-height: calc(100vh - (var(--header-height)));
+    min-height: calc(95vh - (var(--header-height)));
     align-items: center;
   }
 }
