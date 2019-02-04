@@ -11,10 +11,6 @@
   align-items: center;
 }
 
-.grid-large-rowgap {
-  grid-row-gap: var(--margin-xxl);
-}
-
 /* Utils */
 .grid__item--full-width {
   grid-column: 1 / -1;
