@@ -20,7 +20,7 @@
   background-size: contain;
 }
 .site-footer p {
-  /* margin-bottom: 0; */
+  margin-bottom: 0;
 }
 
 .footer-container {
@@ -185,6 +185,10 @@
   margin-bottom: var(--margin-xl);
 }
 
+.footer-tagline > p {
+  max-width: 600px;
+}
+
 .subfooter {
   background: var(--color-black);
   text-align: center;
@@ -209,5 +213,47 @@
   .credits li {
     flex: 1 1 50%;
     max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-container {
+    padding: 0;
+    grid-template-areas:
+      'logo . . . . . . . . . . .'
+      'address address address heading heading heading heading heading heading heading heading heading'
+      '. . . blog blog blog blog blog blog blog blog blog'
+      '. . . credits credits credits credits credits reading reading reading reading'
+      'social social social tagline tagline tagline tagline tagline tagline tagline tagline tagline';
+  }
+  .site-footer__header {
+    padding: 0;
+  }
+  .blog.grid {
+    grid-template-columns: repeat(9, minmax(var(--grid-column-width), 1fr));
+  }
+  .post {
+    grid-column: auto / span 3;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .footer-container {
+    padding: 0;
+    grid-template-areas:
+      'logo . . . . . . . . . . .'
+      'address address . heading heading heading heading heading heading . reading reading'
+      '. . . blog blog blog blog blog blog . credits credits'
+      'social social . tagline tagline tagline tagline tagline tagline . . .';
+  }
+  .credits ul {
+    display: block;
+  }
+  .credits li {
+    max-width: 100%;
+  }
+  .social li {
+    flex-basis: 20%;
+    max-width: 22%;
   }
 }

@@ -20,6 +20,9 @@
   grid-column: 1 / -1;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   /* Grid now is 12 columns */
+  .grid {
+    grid-template-columns: repeat(12, minmax(var(--grid-column-width), 1fr));
+  }
 }
