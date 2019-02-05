@@ -22,6 +22,7 @@ const About = () => (
         <figcaption className="img-caption freight-sans--light">
           Surfing in the Canary Islands. Photo credits:
           <a href="https://surfingtherapy.es">Surfing Therapy</a>
+          <div className="img-divider" />
         </figcaption>
       </figure>
       <div className="about__content">

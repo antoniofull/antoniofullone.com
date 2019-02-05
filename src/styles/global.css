@@ -38,6 +38,33 @@
   width: 44px;
   height: 44px;
 }
+.img-divider {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  position: relative;
+  margin: var(--margin-half) auto;
+}
+.img-divider:before {
+  position: absolute;
+  content: ' ';
+  width: 8px;
+  height: 8px;
+  left: -16px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+.img-divider:after {
+  position: absolute;
+  content: ' ';
+  width: 8px;
+  height: 8px;
+  right: -16px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
 @media screen and (min-width: 980px) {
   .has-gutter-outside {
     padding: 0;
