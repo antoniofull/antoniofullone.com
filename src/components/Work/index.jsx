@@ -18,7 +18,7 @@ import { workTmp } from '../../data/index';
 import Temp from './Temp';
 
 const Work = () => (
-  <section className="work-section">
+  <section className="work-section container has-gutter-outside">
     <Temp companies={workTmp} />
   </section>
 );

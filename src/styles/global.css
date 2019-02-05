@@ -22,6 +22,17 @@
   margin-right: auto;
 }
 
+.has-gutter-outside {
+  padding-right: var(--grid-outer-gutter);
+  padding-left: var(--grid-outer-gutter);
+}
+
+@media screen and (min-width: 980px) {
+  .has-gutter-outside {
+    padding: 0;
+  }
+}
+
 @media screen and (min-width: 1300px) {
   .container {
     max-width: 1280px;

@@ -41,6 +41,32 @@ His favorite quote is from Marcus Aurelius, author of [Meditations](), his favor
 The most inspiring person he met was his father and he follows the principles he taught him: Respect, Honesty, Humility and Kindness.  He learned from his father another important life skill: listen more than you speak.
 `;
 
+export const files = [
+  {
+    id: 1,
+    label: 'Antonios resume',
+    link: 'https://www.antoniofullone.com'
+  },
+  {
+    id: 2,
+    label: 'Website StyleGuides',
+    link: 'https://www.antoniofullone.com/styleguides.html'
+  }
+];
+
+export const websites = [
+  {
+    id: 1,
+    label: 'Cooking Website',
+    link: 'https://www.thelonechef.com'
+  },
+  {
+    id: 2,
+    label: 'Expat Website',
+    link: 'https://www.thexpatmagazine.com'
+  }
+];
+
 export const workTmp = [
   {
     id: 1,

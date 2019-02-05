@@ -3,7 +3,6 @@
 ==========================*/
 .about-section {
   background: #fff;
-  padding: 0 var(--grid-outer-gutter);
 }
 
 .about__content > p:first-of-type:first-letter {
@@ -65,4 +64,14 @@
   width: 8px;
   height: 8px;
   background-color: var(--color-accent);
+}
+.home-section {
+  padding-left: var(--grid-outer-gutter);
+  padding-right: var(--grid-outer-gutter);
+}
+
+@media screen and (min-width: 980px) {
+  .home-section {
+    padding: 0 !important;
+  }
 }

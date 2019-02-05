@@ -6,7 +6,6 @@
   height: var(--header-height);
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--grid-outer-gutter);
 
   /* Position Sticky creates a new stack */
   position: sticky;

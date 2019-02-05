@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-import { aboutText } from '../../data';
+import { aboutText, socialData, files, websites } from '../../data';
 import img from '../../images/me.png';
+import Social from '../social';
+import Files from '../files/Files';
+import Websites from '../websites';
 
 const About = () => (
-  <section className="about-section" id="about">
-    <article>
+  <section className="about-section container has-gutter-outside" id="about">
+    <article className="about">
       <header>
         <h1 className="freight-sans--bold">Ciao! Nice to meet you!</h1>
       </header>
@@ -24,6 +27,11 @@ const About = () => (
       <div className="about__content">
         <ReactMarkdown source={aboutText} />
       </div>
+      <aside className="about__links">
+        <Social data={socialData} />
+        <Files data={files} />
+        <Websites data={websites} />
+      </aside>
     </article>
   </section>
 );

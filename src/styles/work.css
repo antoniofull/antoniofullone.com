@@ -1,9 +1,6 @@
 /*=========================
     WORK
 ==========================*/
-.work--temp {
-  padding: 0 var(--grid-outer-gutter);
-}
 .work--temp h2 {
   text-align: center;
   font-weight: 900;

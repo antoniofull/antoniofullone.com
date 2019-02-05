@@ -1,11 +1,13 @@
 import React from 'react';
 
+import { socialData } from '../../data';
+
 import FooterTitle from './FooterTitle';
 import BlogPosts from './BlogPosts';
 import Address from './Address';
 import ReadingList from './reading/Reading';
 import Credits from './credits/Credits';
-import Social from './Social';
+import Social from '../social/Social';
 import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
 import Logo from '../logo';
@@ -20,7 +22,9 @@ const Footer = () => (
         <ReadingList />
         <Address />
         <Logo />
-        <Social />
+        <section className="social social--footer">
+          <Social data={socialData} />
+        </section>
         <FooterTagline />
       </div>
       <SubFooter />
