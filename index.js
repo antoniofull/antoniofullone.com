@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import * as ReactDOM from 'react-dom';
 // import PropTypes from 'prop-types'
 
-import Header from './src/components/Header';
-import Logo from './src/components/Logo';
-import Navigation from './src/components/Navigation';
-import Main from './src/components/Main';
-import About from './src/components/About';
-import Work from './src/components/Work';
-import Footer from './src/components/Footer';
+import Header from './src/components/header';
+import Logo from './src/components/logo';
+import Navigation from './src/components/navigation';
+import Main from './src/components/main';
+import About from './src/components/about';
+import Work from './src/components/work';
+import Footer from './src/components/footer';
 
 import { navItems } from './src/data';
 

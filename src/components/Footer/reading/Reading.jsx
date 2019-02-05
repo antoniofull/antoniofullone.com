@@ -1,5 +1,5 @@
 import React from 'react';
-import { readingItems } from '../../data';
+import { readingItems } from '../../../data';
 
 const ReadingList = () => (
   <section className="reading extra">

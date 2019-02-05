@@ -3,12 +3,12 @@ import React from 'react';
 import FooterTitle from './FooterTitle';
 import BlogPosts from './BlogPosts';
 import Address from './Address';
-import ReadingList from './ReadingList';
-import GeekStuff from './GeekStuff';
+import ReadingList from './reading/Reading';
+import Credits from './credits/Credits';
 import Social from './Social';
 import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
-import Logo from '../Logo';
+import Logo from '../logo';
 
 const Footer = () => (
   <footer className="site-footer">
@@ -16,7 +16,7 @@ const Footer = () => (
       <div className="container footer-container grid grid-large-rowgap">
         <FooterTitle />
         <BlogPosts />
-        <GeekStuff />
+        <Credits />
         <ReadingList />
         <Address />
         <Logo />

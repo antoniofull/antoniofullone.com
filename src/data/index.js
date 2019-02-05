@@ -316,7 +316,7 @@ export const readingItems = [
   }
 ];
 
-export const geekItems = [
+export const credits = [
   {
     id: 1,
     title: 'ReactJs 16',
