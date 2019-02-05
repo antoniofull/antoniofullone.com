@@ -26,7 +26,18 @@
   padding-right: var(--grid-outer-gutter);
   padding-left: var(--grid-outer-gutter);
 }
-
+.btn {
+  display: inline-block;
+}
+.btn--cta {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+.btn--rounded {
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
 @media screen and (min-width: 980px) {
   .has-gutter-outside {
     padding: 0;

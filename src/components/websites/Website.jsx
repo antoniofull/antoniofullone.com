@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const Link = ({ l }) => (
   <li>
+    <i className="fas fa-cloud-download-alt" />
     <a href={l.link}>{l.label}</a>
   </li>
 );

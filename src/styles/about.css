@@ -28,6 +28,7 @@
   padding-bottom: 8px;
   border-bottom: 1px solid var(--color-black-light);
   position: relative;
+  text-indent: 4px;
 }
 .about h3:before {
   content: '';
@@ -54,25 +55,29 @@
   width: 100%;
   max-width: 300px;
   padding: var(--margin);
-  background-color: var(--color-primary-light);
+  background-color: #fff;
   font-size: 14px;
+  border-radius: 15px 0 15px 0;
+  box-shadow: 1px 1px 30px #d9d7dd;
+}
+.about__links .fas {
+  margin-right: 10px;
+  font-size: 12px;
+  color: var(--color-accent);
 }
 .btn--about {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
   position: fixed;
   bottom: 20px;
   left: 20px;
+  z-index: 1000;
 }
+
 .about__links > div {
   margin-bottom: var(--margin);
 }
 .about__links .social ul {
   max-width: 100%;
 }
-
 .about__img {
   --pad-width: calc(var(--grid-outer-gutter) * 2);
   margin-bottom: var(--margin-half);

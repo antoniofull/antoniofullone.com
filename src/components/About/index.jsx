@@ -39,7 +39,7 @@ const About = () => (
         </div>
       </aside>
     </article>
-    <button type="button" className="btn rounded cta btn--about">
+    <button type="button" className="btn btn--rounded btn--cta btn--about">
       <i className="fas fa-link" />
     </button>
   </section>
