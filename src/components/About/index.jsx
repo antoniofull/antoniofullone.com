@@ -3,9 +3,7 @@ import ReactMarkdown from 'react-markdown';
 
 import { aboutText, socialData, files, websites } from '../../data';
 import img from '../../images/me.png';
-import Social from '../social';
-import Files from '../files';
-import Websites from '../websites';
+import Aside from './Aside';
 
 const About = () => (
   <section className="about-section container has-gutter-outside" id="about">
@@ -28,17 +26,7 @@ const About = () => (
       <div className="about__content">
         <ReactMarkdown source={aboutText} />
       </div>
-      <aside className="about__links has-shadows">
-        <div className="social">
-          <Social data={socialData} />
-        </div>
-        <div className="files">
-          <Files data={files} />
-        </div>
-        <div className="websites">
-          <Websites data={websites} />
-        </div>
-      </aside>
+      <Aside socialData={socialData} files={files} websites={websites} />
     </article>
     <button type="button" className="btn btn--rounded btn--cta btn--about">
       <i className="fas fa-link" />
