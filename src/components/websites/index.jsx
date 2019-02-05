@@ -4,7 +4,7 @@ import Website from './Website';
 
 const Links = ({ data }) => (
   <React.Fragment>
-    <h3 className="">Other Links</h3>
+    <h3>Other Links</h3>
     <ul>
       {data.map(l => (
         <Website l={l} key={l.id} />

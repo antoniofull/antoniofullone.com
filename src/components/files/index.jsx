@@ -4,7 +4,7 @@ import File from './File';
 
 const Files = ({ data }) => (
   <React.Fragment>
-    <h3 className="">Files</h3>
+    <h3>Files</h3>
     <ul>
       {data.map(file => (
         <File file={file} key={file.id} />

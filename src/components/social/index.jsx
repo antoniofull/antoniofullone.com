@@ -6,7 +6,7 @@ import SocialIcon from './SocialIcon';
 
 const Social = ({ data }) => (
   <React.Fragment>
-    <h3 className="footer-header">Connect</h3>
+    <h3>Connect</h3>
     <ul>
       {data.map(icon => (
         <SocialIcon icon={icon} key={icon.id} />

@@ -7,7 +7,7 @@ import BlogPosts from './BlogPosts';
 import Address from './Address';
 import ReadingList from './reading/Reading';
 import Credits from './credits/Credits';
-import Social from '../social/Social';
+import Social from '../social';
 import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
 import Logo from '../logo';
