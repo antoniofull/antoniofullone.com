@@ -10,6 +10,6 @@ const NavItem = ({ item }) => (
 );
 
 NavItem.propTypes = {
-  item: PropTypes.objectOf(PropTypes.string).isRequired
+  item: PropTypes.objectOf(PropTypes.any).isRequired
 };
 export default NavItem;

@@ -10,15 +10,16 @@
 }
 .site-footer:before {
   content: '';
-  display: block;
+  display: inline-block;
   width: 100%;
   position: relative;
-  bottom: -1px;
-  left: -1px;
-  height: 217px;
+  bottom: -3px;
+  left: 0;
+  height: 200px;
   background: url('../images/bg_footer.svg') no-repeat left bottom;
   background-size: contain;
 }
+
 .site-footer p {
   margin-bottom: 0;
 }

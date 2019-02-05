@@ -8,7 +8,8 @@ const BlogPosts = () => (
     <h3 className="text-white footer-header footer-header--blog footer-header--full grid__item--full-width">
       Latest from the Blog
     </h3>
-    {blogData.length > 0 && blogData.map(item => <Article item={item} />)}
+    {blogData.length > 0 &&
+      blogData.map(item => <Article key={item.id} item={item} />)}
   </section>
 );
 
