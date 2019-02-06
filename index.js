@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import * as ReactDOM from 'react-dom';
-// import PropTypes from 'prop-types'
+import styled from 'styled-components';
 
 import Header from './src/components/header';
 import Logo from './src/components/logo';
@@ -13,10 +13,14 @@ import Footer from './src/components/footer';
 
 import { navItems } from './src/data';
 
+const PageContainer = styled.div`
+  background-color: ${props => props.theme.primary};
+`;
+
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <PageContainer>
         <Header>
           <Logo />
           <Navigation items={navItems} />
@@ -27,7 +31,7 @@ class App extends Component {
           <Work />
         </main>
         <Footer />
-      </React.Fragment>
+      </PageContainer>
     );
   }
 }
