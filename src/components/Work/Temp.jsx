@@ -17,8 +17,7 @@ const Temp = ({ companies }) => (
       {companies.map(company => (
         <a href={company.link} key={company.id}>
           <figure>
-            <img src={company.img} alt={company.label} />
-            {/* <figcaption>{company.label}</figcaption> */}
+            <img data-src={company.img} alt={company.label} />
           </figure>
         </a>
       ))}

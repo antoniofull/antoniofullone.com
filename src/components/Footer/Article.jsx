@@ -5,7 +5,7 @@ const Article = ({ item }) => (
   <article key={item.id} className="post">
     <h3 className="post__title">{item.title}</h3>
     <a href={item.link} className="post__link">
-      <img className="post__image" src={item.img} alt={item.title} />
+      <img className="post__image" data-src={item.img} alt={item.title} />
     </a>
   </article>
 );

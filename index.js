@@ -19,40 +19,37 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: 'primary-light',
-      visibleElement: false
+      theme: 'primary-light'
     };
     this.onIntersection = this.onIntersection.bind(this);
-    this.aboutRef = React.createRef();
   }
 
   componentDidMount() {
-    this.observeElements();
-  }
-  onIntersection(entries) {
-    const e = entries[0];
-    let d = entries[0].boundingClientRect.bottom;
-    if (entries[0].isIntersecting) {
-      this.setState({
-        theme: this.state.theme === 'primary-light' ? 'white' : 'primary-light',
-        visibleElement: !this.state.visibleElement
-      });
-      console.log(this.state, d);
-    }
+    this.LazyLoadImages();
   }
 
-  observeElements() {
+  onIntersection(entries) {
+    entries.forEach(e => {
+      if (e.intersectionRect.x > 0) {
+        e.target.src = e.target.dataset.src;
+      }
+    });
+  }
+
+  LazyLoadImages() {
     const config = {
-      rootMargin: '0px',
-      threshold: 1
+      rootMargin: '60px',
+      threshold: 0.5
     };
 
-    let observer = new IntersectionObserver(this.onIntersection, config);
-    observer.observe(document.querySelector('.about__img'));
+    let imgObserver = new IntersectionObserver(this.onIntersection, config);
+    const images = document.querySelectorAll('img');
+    images.forEach(image => {
+      imgObserver.observe(image);
+    });
   }
 
   render() {
-    console.log(this.state);
     return (
       <ThemeProvider value={this.state}>
         <PageContainer>

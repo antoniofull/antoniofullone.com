@@ -25,8 +25,8 @@ const About = () => (
           <figure>
             <img
               className="about__img"
-              src={img}
               alt="Surfing in the Canary Islands"
+              data-src={img}
             />
             <figcaption className="img-caption freight-sans--light">
               Surfing in the Canary Islands. Photo credits:
