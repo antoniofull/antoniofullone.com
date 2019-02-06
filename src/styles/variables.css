@@ -11,7 +11,7 @@
   --color-accent: hsla(0, 96%, 72%, 1);
   --color-accent-light: hsla(0, 88%, 97%, 1);
   --color-accent-dark: hsla(3, 42%, 36%, 1);
-  --color-white: hsla(204, 45%, 98%, 1);
+  --color-white: rgb(255, 255, 255);
   /*
     Modular Scale
     dy = dynamic fonts

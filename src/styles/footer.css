@@ -23,7 +23,9 @@
 .site-footer p {
   margin-bottom: 0;
 }
-
+.site-footer .social {
+  grid-area: social;
+}
 .footer-container {
   grid-template-rows: auto;
   grid-row-gap: var(--margin-xxl);
@@ -55,7 +57,8 @@
 .blog .footer-header {
   margin: 0;
 }
-.footer-header {
+.footer-header,
+.site-footer section h3 {
   border-bottom: 1px inset var(--color-black-light-800);
   padding-bottom: 8px;
   font-family: freight-sans, sans-serif;
@@ -186,7 +189,7 @@
   padding-bottom: var(--grid-column-gutter);
   display: inline-table;
   align-self: end;
-  margin-bottom: var(--margin-xl);
+  margin-bottom: var(--margin);
 }
 
 .footer-tagline > p {

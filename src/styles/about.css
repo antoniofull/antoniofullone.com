@@ -1,6 +1,11 @@
 /*=========================
   ABOUT
 ==========================*/
+.about {
+  position: relative;
+  opacity: 0;
+  transition: all 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
 .about-section {
   background: #fff;
 }
@@ -24,9 +29,6 @@
 
 .about-section h2 {
   font-size: var(--font-l);
-}
-.about {
-  position: relative;
 }
 .about h3 {
   padding-bottom: 8px;
@@ -67,8 +69,6 @@
 }
 .about__links .fas {
   margin-right: 10px;
-  font-size: 12px;
-  color: var(--color-accent);
 }
 .btn--about {
   position: fixed;
@@ -147,6 +147,7 @@
     width: 100%;
   }
   .about__links {
+    display: block;
     z-index: 10;
     left: 0;
     bottom: 0;
