@@ -31,6 +31,9 @@
     "build": "parcel build index.js && cp -R src/images/ dist/images && cp index.html dist/index.html"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
+    "aos": "^3.0.0-beta.6",
+    "classnames": "^2.2.6",
     "fitty": "^2.2.6",
     "intersection-observer": "^0.5.1",
     "prop-types": "^15.6.2",

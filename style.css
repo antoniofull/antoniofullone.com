@@ -11,6 +11,8 @@
 */
 @import './src/styles/reset.css';
 @import './src/styles/variables.css';
+/* @import './node_modules/animate.css/animate.min.css'; */
+@import './src/styles/animations.css';
 @import './src/styles/typography.css';
 @import './src/styles/grid.css';
 @import './src/styles/helpers.css';

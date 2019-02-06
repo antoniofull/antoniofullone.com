@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
+import classNames from 'classnames';
 
 import { aboutText, socialData, files, websites } from '../../data';
 import img from '../../images/me.png';
 import Aside from './AsideContent';
 import { ThemeConsumer } from '../ThemeContext';
 
-const Article = styled.article`
-  opacity: ${props => props.element && 1};
-`;
+const Article = styled.article``;
 
 const About = () => (
   <ThemeConsumer>
@@ -17,12 +16,14 @@ const About = () => (
       <section className="about-section" id="about">
         <Article
           element={visibleElement}
-          className="about container has-gutter-outside"
+          className={classNames('about', 'container', 'has-gutter-outside', {
+            animated: visibleElement === 'about'
+          })}
         >
-          <header>
+          <header data-animation="about">
             <h1 className="freight-sans--bold">Ciao! Nice to meet you!</h1>
           </header>
-          <figure>
+          <figure data-animation="about">
             <img
               className="about__img"
               alt="Surfing in the Canary Islands"
@@ -34,10 +35,10 @@ const About = () => (
               <div className="img-divider" />
             </figcaption>
           </figure>
-          <div className="about__content">
+          <div data-animation="about" className="about__content">
             <ReactMarkdown source={aboutText} />
           </div>
-          <aside className="about__links has-shadows">
+          <aside data-animation="about" className="about__links has-shadows">
             <Aside socialData={socialData} files={files} websites={websites} />
           </aside>
         </Article>

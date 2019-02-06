@@ -1,0 +1,59 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 5%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.about header {
+  opacity: 0;
+}
+.about .about__content {
+  opacity: 0;
+}
+.about figure {
+  opacity: 0;
+}
+.about .about__links {
+  opacity: 0;
+}
+.about.animated header {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-delay: 0s;
+}
+.about.animated .about__content {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-delay: 0.5s;
+}
+.about.animated figure {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  animation-delay: 1s;
+}
+.about.animated .about__links {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-delay: 1.5s;
+}
