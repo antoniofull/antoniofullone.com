@@ -4,7 +4,11 @@
 .about-section {
   background: #fff;
 }
-
+.about__content {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .about__content > p:first-of-type:first-letter {
   float: left;
   font-size: var(--font-xl);
@@ -48,6 +52,7 @@
   background-color: #c35864;
 }
 .about__links {
+  display: none;
   position: fixed;
   z-index: 1000;
   bottom: 100px;
@@ -108,5 +113,75 @@
 @media screen and (min-width: 980px) {
   .home-section {
     padding: 0 !important;
+  }
+  .about__img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about__img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .about {
+    display: grid;
+    grid-column-gap: var(--grid-column-gutter);
+    grid-row-gap: var(--margin-l);
+    grid-template-columns: repeat(12, minmax(var(--grid-column-width), 1fr));
+    width: 100%;
+  }
+  .about > header {
+    grid-column: 1 / -1;
+  }
+  .about > figure {
+    grid-column: 1 / -1;
+  }
+  .about__content {
+    grid-column: 1 / 9;
+  }
+  .about__img {
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+  }
+  .about__links {
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    position: relative;
+    box-shadow: none;
+    background: transparent;
+    max-width: 100%;
+    grid-column: 9 / -1;
+  }
+  .about .social,
+  .about .files,
+  .about .websites {
+    max-width: 250px;
+    margin-left: 30%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about > figure {
+    grid-row: 2 / 2;
+    grid-column: 9 / -1;
+  }
+  .about__img {
+    height: 300px;
+  }
+  .about__content {
+    margin-left: 0;
+    margin-right: 0;
+    grid-row: 2 / 4;
+    grid-column: 1 / 9;
+    max-width: 760px;
+  }
+  .about__links {
+    grid-row: 3 / 3;
+    grid-column: 9 / -1;
   }
 }

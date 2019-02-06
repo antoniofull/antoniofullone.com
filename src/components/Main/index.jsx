@@ -4,9 +4,11 @@ import Text from './Text';
 import Illustration from './Illustration';
 
 const Main = () => (
-  <section id="intro" className="main-section container grid">
-    <Text />
-    <Illustration />
+  <section id="intro" className="main-section">
+    <div className="container container--intro grid">
+      <Text />
+      <Illustration />
+    </div>
   </section>
 );
 

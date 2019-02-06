@@ -10,8 +10,19 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-accent-light {
+  background-color: var(--color-accent-light);
+}
+.bg-secondary-light {
+  background-color: var(--color-secondary-light);
+}
+
 .has-shadows {
-  box-shadow: 0 1px 5px hsla(60, 1%, 88%, 1);
+  box-shadow: 0 1px 5px inherit;
 }
 
 .text-center {

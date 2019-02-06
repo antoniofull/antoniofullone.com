@@ -31,7 +31,7 @@ a {
 }
 
 a:visited {
-  color: var(--color-accent-700);
+  color: var(--color-accent-dark);
 }
 
 p {

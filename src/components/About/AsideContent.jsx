@@ -6,7 +6,7 @@ import Files from '../files';
 import Websites from '../websites';
 
 const AsideContent = ({ socialData, files, websites }) => (
-  <aside className="about__links has-shadows">
+  <React.Fragment>
     <div className="social">
       <Social data={socialData} />
     </div>
@@ -16,7 +16,7 @@ const AsideContent = ({ socialData, files, websites }) => (
     <div className="websites">
       <Websites data={websites} />
     </div>
-  </aside>
+  </React.Fragment>
 );
 
 AsideContent.propTypes = {

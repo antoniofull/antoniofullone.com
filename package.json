@@ -31,10 +31,13 @@
     "build": "parcel build index.js && cp -R src/images/ dist/images && cp index.html dist/index.html"
   },
   "dependencies": {
+    "fitty": "^2.2.6",
     "intersection-observer": "^0.5.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-markdown": "^4.0.6"
+    "react-markdown": "^4.0.6",
+    "react-responsive": "^6.1.1",
+    "styled-components": "^4.1.3"
   }
 }

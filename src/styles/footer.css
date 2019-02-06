@@ -122,7 +122,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--color-accent-700);
+  background: var(--color-accent-dark);
   left: -10px;
   top: 50%;
   transform: translateY(-50%);
@@ -138,7 +138,7 @@
   padding-left: var(--grid-column-gutter);
 }
 
-.social {
+.site-footer.social {
   grid-area: social;
 }
 
@@ -250,13 +250,13 @@
       '. . . blog blog blog blog blog blog . credits credits'
       'social social . tagline tagline tagline tagline tagline tagline . . .';
   }
-  .credits ul {
+  .site-footer .credits ul {
     display: block;
   }
-  .credits li {
+  .site-footer f.credits li {
     max-width: 100%;
   }
-  .social li {
+  .site-footer .social li {
     flex-basis: 20%;
     max-width: 22%;
   }

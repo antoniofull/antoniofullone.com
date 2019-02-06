@@ -3,14 +3,11 @@
 ==========================*/
 .main-section {
   position: relative;
-  background-color: #fff;
   background-repeat: no-repeat;
-}
-.index > section {
-  margin-bottom: var(--margin-xxl);
 }
 .intro {
   padding-top: var(--padding-xl);
+  min-width: 100%;
 }
 .intro > * {
   margin-bottom: var(--margin);
@@ -22,7 +19,6 @@
   line-height: 0.667;
   position: relative;
 }
-
 .intro__header:after {
   display: block;
   content: ' ';
@@ -34,7 +30,6 @@
 .tagline {
   position: relative;
 }
-
 .intro__tagline,
 .i-am-cool {
   font-size: var(--font-dy-m);
@@ -45,7 +40,6 @@
 }
 .i-am-cool {
   margin-bottom: var(--margin);
-  /* border-bottom: 1px solid var(--color-black-light-800); */
 }
 .intro__qualified {
   font-size: var(--font-dy-s);
@@ -93,7 +87,6 @@
   width: 50%;
   max-width: 230px;
 }
-
 .italy {
   position: absolute;
   top: 20%;
@@ -102,8 +95,8 @@
   width: 80%;
   max-width: 390px;
 }
-
 @media screen and (min-width: 600px) {
+  /*
   .intro__header {
     font-size: var(--font-xl);
   }
@@ -115,22 +108,52 @@
   .intro__qualified {
     font-size: var(--base-font);
   }
+  */
 }
 
 @media screen and (min-width: 1024px) {
   .main-section {
-    align-items: end;
-    min-height: 45vh;
+    min-height: calc(95vh - (var(--header-height)));
+    height: calc(100vh - (var(--header-height)));
   }
+  .container--intro {
+    height: 100%;
+    align-items: center;
+  }
+  .intro__header {
+    font-size: 7vw;
+  }
+  .intro__tagline,
+  .i-am-cool {
+    font-size: var(--font-l);
+    line-height: 1;
+  }
+  .intro__qualified {
+    font-size: var(--base-font);
+  }
+
   .intro {
-    grid-column: 1 / 8;
+    grid-column: 1 / 9;
     margin: 0;
     padding: 0;
   }
   .illustration {
-    grid-column: 8 / 13;
+    grid-column: 9 / 13;
   }
   .illustration__container {
     max-height: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .intro__header {
+    /* font-size: 7.5rem; */
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .main-section {
+    min-height: calc(95vh - (var(--header-height)));
+    align-items: center;
   }
 }

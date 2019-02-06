@@ -6,9 +6,11 @@
   --color-black-light: hsla(60, 1%, 60%, 1);
   --color-black-light-800: hsla(60, 1%, 15%, 1);
   --color-black-dark: hsla(60, 14%, 7%, 1);
-  --color-primary-light: hsla(213, 53%, 97%, 1);
+  --color-primary-light: hsla(60, 20%, 95%, 1);
+  --color-secondary-light: hsla(225, 40%, 96%, 1);
   --color-accent: hsla(0, 96%, 72%, 1);
-  --color-accent-700: hsla(0, 56%, 32%, 1);
+  --color-accent-light: hsla(0, 88%, 97%, 1);
+  --color-accent-dark: hsla(3, 42%, 36%, 1);
   --color-white: hsla(204, 45%, 98%, 1);
   /*
     Modular Scale
@@ -25,13 +27,14 @@
   --font-s: 0.667rem;
   --font-xs: 0.444rem;
   --font-dy-l: 12vw;
-  --font-dy-m: 8vw;
+  --font-dy-m: 7vw;
   --font-dy-s: 4vw;
 
   --margin: var(--baseline);
   --margin-half: calc(var(--baseline) / 2);
   --margin-xl: calc(var(--baseline) * 2);
   --margin-xxl: calc(var(--baseline) * 3);
+  --margin-desktop: calc(var(--baseline) * 4);
 
   --padding: var(--baseline);
   --padding-half: calc(var(--baseline) / 2);
@@ -68,6 +71,7 @@
   :root {
     --grid-row-gutter: 30px;
     --grid-column-min-width: 50px;
+    --header-height: 72px;
   }
 }
 
@@ -79,6 +83,6 @@
 
     --base-font: 21px;
     --baseline: 32px;
-    --header-height: 72px;
+    --header-height: 90px;
   }
 }
