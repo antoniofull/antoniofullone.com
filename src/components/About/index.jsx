@@ -13,7 +13,7 @@ const Article = styled.article``;
 const About = () => (
   <ThemeConsumer>
     {({ visibleElement }) => (
-      <section className="about-section" id="about">
+      <section data-area="about" className="about-section" id="about">
         <Article
           element={visibleElement}
           className={classNames('about', 'container', 'has-gutter-outside', {
@@ -35,7 +35,11 @@ const About = () => (
               <div className="img-divider" />
             </figcaption>
           </figure>
-          <div data-animation="fadeIn" className="js-animatable about__content">
+          <div
+            data-theme="white"
+            data-animation="fadeIn"
+            className="js-animatable about__content"
+          >
             <ReactMarkdown source={aboutText} />
           </div>
           <aside className="about__links has-shadows">

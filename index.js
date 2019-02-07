@@ -20,22 +20,76 @@ class App extends Component {
     super(props);
     this.state = {
       theme: 'primary-light',
-      element: {
-        isEntering: 0,
-        name: ''
-      }
+      area: 'intro'
     };
     this.onImagesIntersection = this.onImagesIntersection.bind(this);
     this.onAboutIntersection = this.onAboutIntersection.bind(this);
+    this.onIntroIntersection = this.onIntroIntersection.bind(this);
+
+    this.onIntersection = this.onIntersection.bind(this);
   }
 
   componentDidMount() {
     this.LazyLoadImages();
-    this.loadAboutSection();
+    // this.loadAboutSection();
+    // this.observeItro();
+
+    this.observeSections();
+  }
+
+  onIntersection(entries) {
+    entries.forEach(e => {
+      const area = e.target.dataset.area;
+      if (e.isIntersecting && area === 'intro') {
+        this.setState({
+          theme: 'primary-light'
+        });
+      }
+      if (e.isIntersecting && area === 'about') {
+        this.setState({
+          theme: 'white'
+        });
+      }
+      if (e.isIntersecting && area === 'work') {
+        this.setState({
+          theme: 'secondary-light'
+        });
+      }
+    });
+  }
+
+  observeSections() {
+    const config = {
+      rootMargin: '30px',
+      threshold: 0.4
+    };
+    const elements = document.querySelectorAll('[data-area]');
+    const observer = new IntersectionObserver(this.onIntersection, config);
+    elements.forEach(el => {
+      observer.observe(el);
+    });
+  }
+
+  onIntroIntersection(entries) {
+    if (entries[0].isIntersecting) {
+      this.setState({ theme: 'primary-light', activeElement: 'intro' });
+    }
+  }
+
+  observeItro() {
+    const config = {
+      rootMargin: '30px',
+      threshold: 1
+    };
+    const e = document.querySelector('.illustration__container');
+    let o = new IntersectionObserver(this.onIntroIntersection, config);
+    o.observe(e);
   }
 
   onAboutIntersection(entries) {
-    const el = this.state.element;
+    if (entries[0].isIntersecting) {
+      this.setState({ theme: 'white', activeElement: 'about' });
+    }
     entries.forEach((e, i) => {
       let n = i;
       const className = e.target.dataset.animation;
@@ -44,25 +98,7 @@ class App extends Component {
         window.setTimeout(() => {
           target.classList.remove('no-opacity');
           target.classList.add(className);
-        }, 500 * n);
-      }
-
-      if (i < 1 && e.isIntersecting) {
-        this.setState({
-          theme: 'white',
-          element: {
-            name: 'about',
-            isEntering: 1
-          }
-        });
-      } else {
-        this.setState({
-          theme: 'primary-light',
-          element: {
-            name: '',
-            isEntering: 0
-          }
-        });
+        }, 300 * n);
       }
     });
   }
@@ -77,6 +113,7 @@ class App extends Component {
       this.onAboutIntersection,
       config
     );
+
     const elements = [...document.querySelectorAll('.about .js-animatable')];
     elements.forEach(el => {
       el.classList.add('no-opacity');
@@ -86,7 +123,8 @@ class App extends Component {
 
   onImagesIntersection(entries) {
     entries.forEach(e => {
-      if (e.intersectionRect.bottom > 0) {
+      if (e.isIntersecting > 0 && e.target.dataset.src) {
+        e.target.classList.add('fadeIn');
         e.target.src = e.target.dataset.src;
       }
     });

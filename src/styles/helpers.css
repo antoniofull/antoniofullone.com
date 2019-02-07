@@ -17,10 +17,10 @@
 .bg-accent-light {
   background-color: var(--color-accent-light);
 }
+
 .bg-secondary-light {
   background-color: var(--color-secondary-light);
 }
-
 .has-shadows {
   box-shadow: 0 1px 5px inherit;
 }

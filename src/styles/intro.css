@@ -157,3 +157,15 @@
     align-items: center;
   }
 }
+
+.viewport {
+  border: 8px dashed #ccc;
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

@@ -4,10 +4,6 @@
 .about {
   position: relative;
 }
-
-.about-section {
-  background: #fff;
-}
 .about__content {
   max-width: 700px;
   margin-left: auto;
