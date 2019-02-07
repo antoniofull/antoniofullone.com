@@ -20,10 +20,10 @@ const About = () => (
             animated: visibleElement === 'about'
           })}
         >
-          <header data-animation="about">
+          <header className="js-animatable" data-animation="fadeInUp">
             <h1 className="freight-sans--bold">Ciao! Nice to meet you!</h1>
           </header>
-          <figure data-animation="about">
+          <figure data-animation="fadeIn" className="js-animatable">
             <img
               className="about__img"
               alt="Surfing in the Canary Islands"
@@ -35,10 +35,10 @@ const About = () => (
               <div className="img-divider" />
             </figcaption>
           </figure>
-          <div data-animation="about" className="about__content">
+          <div data-animation="fadeIn" className="js-animatable about__content">
             <ReactMarkdown source={aboutText} />
           </div>
-          <aside data-animation="about" className="about__links has-shadows">
+          <aside className="about__links has-shadows">
             <Aside socialData={socialData} files={files} websites={websites} />
           </aside>
         </Article>

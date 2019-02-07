@@ -20,7 +20,10 @@ class App extends Component {
     super(props);
     this.state = {
       theme: 'primary-light',
-      visibleElement: null
+      element: {
+        isEntering: 0,
+        name: ''
+      }
     };
     this.onImagesIntersection = this.onImagesIntersection.bind(this);
     this.onAboutIntersection = this.onAboutIntersection.bind(this);
@@ -32,16 +35,33 @@ class App extends Component {
   }
 
   onAboutIntersection(entries) {
-    entries.forEach(e => {
-      if (e.isIntersecting && this.state.visibleElement !== 'about') {
-        const target = e.target.dataset.animation;
+    const el = this.state.element;
+    entries.forEach((e, i) => {
+      let n = i;
+      const className = e.target.dataset.animation;
+      const target = e.target;
+      if (e.isIntersecting) {
+        window.setTimeout(() => {
+          target.classList.remove('no-opacity');
+          target.classList.add(className);
+        }, 500 * n);
+      }
+
+      if (i < 1 && e.isIntersecting) {
         this.setState({
           theme: 'white',
-          visibleElement: target
+          element: {
+            name: 'about',
+            isEntering: 1
+          }
         });
       } else {
         this.setState({
-          theme: 'primary-light'
+          theme: 'primary-light',
+          element: {
+            name: '',
+            isEntering: 0
+          }
         });
       }
     });
@@ -57,9 +77,11 @@ class App extends Component {
       this.onAboutIntersection,
       config
     );
-    const about = document.querySelector('.about__content');
-    aboutObserver.observe(about);
-    console.log(document.querySelector('.about__img').clientHeight);
+    const elements = [...document.querySelectorAll('.about .js-animatable')];
+    elements.forEach(el => {
+      el.classList.add('no-opacity');
+      aboutObserver.observe(el);
+    });
   }
 
   onImagesIntersection(entries) {
