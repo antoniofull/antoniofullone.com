@@ -13,17 +13,20 @@ const Article = styled.article``;
 const About = () => (
   <ThemeConsumer>
     {({ visibleElement }) => (
-      <section data-area="about" className="about-section" id="about">
+      <React.Fragment>
         <Article
           element={visibleElement}
           className={classNames('about', 'container', 'has-gutter-outside', {
             animated: visibleElement === 'about'
           })}
         >
-          <header className="js-animatable" data-animation="fadeInUp">
+          <header
+            className="js-animatable no-opacity"
+            data-animation="fadeInUp"
+          >
             <h1 className="freight-sans--bold">Ciao! Nice to meet you!</h1>
           </header>
-          <figure data-animation="fadeIn" className="js-animatable">
+          <figure data-animation="fadeIn" className="js-animatable no-opacity">
             <img
               className="about__img"
               alt="Surfing in the Canary Islands"
@@ -36,9 +39,8 @@ const About = () => (
             </figcaption>
           </figure>
           <div
-            data-theme="white"
             data-animation="fadeIn"
-            className="js-animatable about__content"
+            className="js-animatable no-opacity about__content"
           >
             <ReactMarkdown source={aboutText} />
           </div>
@@ -49,7 +51,7 @@ const About = () => (
         <button type="button" className="btn btn--rounded btn--cta btn--about">
           <i className="fas fa-link" />
         </button>
-      </section>
+      </React.Fragment>
     )}
   </ThemeConsumer>
 );

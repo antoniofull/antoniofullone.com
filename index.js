@@ -1,5 +1,4 @@
 /* eslint-disable */
-import 'intersection-observer';
 import React, { Component } from 'react';
 import * as ReactDOM from 'react-dom';
 import PageContainer from './src/components/PageContainer';
@@ -11,6 +10,8 @@ import About from './src/components/about';
 import Work from './src/components/work';
 import Footer from './src/components/footer';
 
+import Observable from './src/components/Observable';
+
 import { navItems } from './src/data';
 
 import { ThemeProvider } from './src/components/ThemeContext';
@@ -20,104 +21,55 @@ class App extends Component {
     super(props);
     this.state = {
       theme: 'primary-light',
-      area: 'intro'
+      area: 'intro',
+      newArea: 'intro'
     };
     this.onImagesIntersection = this.onImagesIntersection.bind(this);
-    this.onAboutIntersection = this.onAboutIntersection.bind(this);
-    this.onIntroIntersection = this.onIntroIntersection.bind(this);
-
     this.onIntersection = this.onIntersection.bind(this);
   }
 
   componentDidMount() {
     this.LazyLoadImages();
-    // this.loadAboutSection();
-    // this.observeItro();
-
-    this.observeSections();
   }
 
   onIntersection(entries) {
+    const a = {
+      intro: {
+        bg: 'primary-light'
+      },
+      about: {
+        bg: 'white'
+      },
+      work: {
+        bg: 'secondary-light'
+      }
+    };
     entries.forEach(e => {
-      const area = e.target.dataset.area;
-      if (e.isIntersecting && area === 'intro') {
-        this.setState({
-          theme: 'primary-light'
-        });
-      }
-      if (e.isIntersecting && area === 'about') {
-        this.setState({
-          theme: 'white'
-        });
-      }
-      if (e.isIntersecting && area === 'work') {
-        this.setState({
-          theme: 'secondary-light'
-        });
-      }
-    });
-  }
-
-  observeSections() {
-    const config = {
-      rootMargin: '30px',
-      threshold: 0.4
-    };
-    const elements = document.querySelectorAll('[data-area]');
-    const observer = new IntersectionObserver(this.onIntersection, config);
-    elements.forEach(el => {
-      observer.observe(el);
-    });
-  }
-
-  onIntroIntersection(entries) {
-    if (entries[0].isIntersecting) {
-      this.setState({ theme: 'primary-light', activeElement: 'intro' });
-    }
-  }
-
-  observeItro() {
-    const config = {
-      rootMargin: '30px',
-      threshold: 1
-    };
-    const e = document.querySelector('.illustration__container');
-    let o = new IntersectionObserver(this.onIntroIntersection, config);
-    o.observe(e);
-  }
-
-  onAboutIntersection(entries) {
-    if (entries[0].isIntersecting) {
-      this.setState({ theme: 'white', activeElement: 'about' });
-    }
-    entries.forEach((e, i) => {
-      let n = i;
-      const className = e.target.dataset.animation;
-      const target = e.target;
       if (e.isIntersecting) {
-        window.setTimeout(() => {
-          target.classList.remove('no-opacity');
-          target.classList.add(className);
-        }, 300 * n);
+        this.setState({
+          ...this.state,
+          newArea: e.target.dataset.area
+        });
       }
-    });
-  }
+      const area = e.target.dataset.area;
+      if (area === this.state.area && !e.isIntersecting) {
+        const newArea = this.state.newArea;
 
-  loadAboutSection() {
-    const config = {
-      rootMargin: '0px',
-      threshold: 0.2
-    };
-
-    let aboutObserver = new IntersectionObserver(
-      this.onAboutIntersection,
-      config
-    );
-
-    const elements = [...document.querySelectorAll('.about .js-animatable')];
-    elements.forEach(el => {
-      el.classList.add('no-opacity');
-      aboutObserver.observe(el);
+        this.setState({
+          ...this.state,
+          theme: newArea ? a[newArea].bg : this.state.theme,
+          area: this.state.newArea
+        });
+        const target = document.querySelector(`[data-area="${newArea}"]`);
+        target.querySelectorAll('.js-animatable').forEach((t, i) => {
+          const className = t.dataset.animation || null;
+          let n = i;
+          window.setTimeout(() => {
+            t.classList.remove('no-opacity');
+            t.classList.add(className);
+          }, 300 * n);
+        });
+      }
     });
   }
 
@@ -155,9 +107,33 @@ class App extends Component {
             <Navigation items={navItems} />
           </Header>
           <main className="index" role="main">
-            <Main />
-            <About />
-            <Work />
+            <Observable
+              element="section"
+              id="intro"
+              data-area="intro"
+              className="main-section"
+              callBack={this.onIntersection}
+            >
+              <Main />
+            </Observable>
+            <Observable
+              element="section"
+              data-area="about"
+              className="about-section"
+              id="about"
+              callBack={this.onIntersection}
+            >
+              <About />
+            </Observable>
+            <Observable
+              element="section"
+              id="work"
+              data-area="work"
+              className="work-section container has-gutter-outside"
+              callBack={this.onIntersection}
+            >
+              <Work />
+            </Observable>
           </main>
           <Footer />
         </PageContainer>

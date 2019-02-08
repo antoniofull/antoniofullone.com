@@ -4,12 +4,12 @@ import Text from './Text';
 import Illustration from './Illustration';
 
 const Main = () => (
-  <section id="intro" data-area="intro" className="main-section">
+  <React.Fragment>
     <div className="container container--intro grid">
       <Text />
       <Illustration />
     </div>
-  </section>
+  </React.Fragment>
 );
 
 export default Main;

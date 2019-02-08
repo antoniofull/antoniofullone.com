@@ -2,7 +2,7 @@
   GLOBAL
 ==========================*/
 .page {
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .dark-theme {
   background-color: var(--color-black);
@@ -88,7 +88,9 @@
 }
 
 /* Extra important */
-
+.viewport {
+  display: none !important;
+}
 .no-opacity {
   opacity: 0 !important;
 }

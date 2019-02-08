@@ -96,7 +96,7 @@ export const workTmp = [
     id: 5,
     label: 'William Hill',
     link: '',
-    img: './images/logos/wh.jpg'
+    img: './images/logos/wh.svg'
   },
   {
     id: 6,

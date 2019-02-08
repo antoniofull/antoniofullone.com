@@ -23,12 +23,12 @@
 }
 
 .fadeIn {
-  animation-duration: 0.8s;
+  animation-duration: 0.3s;
   animation-name: fadeIn;
   animation-fill-mode: forwards;
 }
 .fadeInUp {
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-name: fadeInUp;
   animation-fill-mode: forwards;
 }

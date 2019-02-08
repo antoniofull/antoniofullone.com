@@ -6,8 +6,11 @@
   font-weight: 900;
   font-size: 2.25rem;
 }
+.companies {
+  padding-top: var(--margin-xl);
+}
 .companies > a {
-  grid-column: auto / span 3;
+  grid-column: 1 / -1;
 }
 .companies figure {
   display: flex;
@@ -28,6 +31,11 @@
 .work-section {
   font-style: normal;
   font-weight: 500;
+}
+.work-intro {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .work-nav {
   position: -webkit-sticky;
@@ -62,5 +70,14 @@
 @media screen and (min-width: 600px) {
   .companies > a {
     grid-column: auto / span 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .companies {
+    grid-row-gap: var(--margin-xxl);
+  }
+  .companies > a {
+    grid-column: auto / span 4;
   }
 }

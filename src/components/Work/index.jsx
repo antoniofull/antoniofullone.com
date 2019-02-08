@@ -18,12 +18,9 @@ import { workTmp } from '../../data/index';
 import Temp from './Temp';
 
 const Work = () => (
-  <section
-    data-area="work"
-    className="work-section container has-gutter-outside"
-  >
+  <React.Fragment>
     <Temp companies={workTmp} />
-  </section>
+  </React.Fragment>
 );
 
 export default Work;

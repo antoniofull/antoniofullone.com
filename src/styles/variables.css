@@ -12,12 +12,13 @@
   --color-accent-light: hsla(0, 88%, 97%, 1);
   --color-accent-dark: hsla(3, 42%, 36%, 1);
   --color-white: rgb(255, 255, 255);
+
   /*
     Modular Scale
     dy = dynamic fonts
   */
   --base-font: 18px;
-  --baseline: 28px;
+  --baseline: 34px;
 
   --intertistial-value: 40px;
   --font-xxl: 5rem;
@@ -82,7 +83,7 @@
     --grid-column-min-width: 60px;
 
     --base-font: 21px;
-    --baseline: 32px;
+    --baseline: 37px;
     --header-height: 90px;
   }
 }
