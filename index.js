@@ -14,13 +14,13 @@ import Observable from './src/components/Observable';
 
 import { navItems } from './src/data';
 
-import { ThemeProvider } from './src/components/ThemeContext';
+import { ThemeProvider, ThemeConsumer } from './src/components/ThemeContext';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: 'primary-light'
+      lastUsedThemes: []
     };
     this.onImagesIntersection = this.onImagesIntersection.bind(this);
     this.onSectionIntersection = this.onSectionIntersection.bind(this);
@@ -31,24 +31,37 @@ class App extends Component {
     this.LazyLoadImages();
   }
 
+  onSectionIntersection(entries) {
+    entries.map(e => {
+      const theme = e.target.dataset.theme;
+      if (e.isIntersecting) {
+        this.setState({
+          ...this.state,
+          theme: theme,
+          lastUsedThemes: [...this.state.lastUsedThemes, theme]
+        });
+      } else {
+        if (
+          this.state.lastUsedThemes.length >= 0 &&
+          theme === this.state.theme
+        ) {
+          const lastUsedThemes = this.state.lastUsedThemes;
+          const index = lastUsedThemes.indexOf(theme) - 1;
+          this.setState({
+            ...this.state,
+            theme: lastUsedThemes[index]
+          });
+        }
+      }
+    });
+  }
+
   onElementIntersection(entries, self) {
     entries.forEach(e => {
       const target = e.target;
       const animationClass = target.dataset.animation || null;
       if (e.isIntersecting) {
         target.classList.add(animationClass, 'animated');
-      }
-    });
-  }
-
-  onSectionIntersection(entries) {
-    entries.forEach(e => {
-      const theme = e.target.dataset.theme;
-      if (e.isIntersecting) {
-        this.setState({
-          ...this.state,
-          theme: theme
-        });
       }
     });
   }
