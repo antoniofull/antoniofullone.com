@@ -14,7 +14,7 @@ import Observable from './src/components/Observable';
 
 import { navItems } from './src/data';
 
-import { ThemeProvider, ThemeConsumer } from './src/components/ThemeContext';
+import { ThemeProvider } from './src/components/ThemeContext';
 
 class App extends Component {
   constructor(props) {

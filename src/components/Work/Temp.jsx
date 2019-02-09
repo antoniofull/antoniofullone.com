@@ -17,9 +17,9 @@ const Temp = ({ companies }) => (
         <a className="company" href={company.link} key={company.id}>
           <figure>
             <img data-src={company.img} alt={company.label} />
-            <caption className="animated company__label">
+            <figcaption className="animated company__label">
               {company.label}
-            </caption>
+            </figcaption>
           </figure>
         </a>
       ))}
