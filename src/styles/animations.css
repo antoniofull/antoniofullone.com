@@ -1,7 +1,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 80%, 0);
   }
 
   to {
@@ -23,12 +23,12 @@
 }
 
 .fadeIn {
-  animation-duration: 0.3s;
+  animation-duration: 1s;
   animation-name: fadeIn;
   animation-fill-mode: forwards;
 }
 .fadeInUp {
-  animation-duration: 0.3s;
+  animation-duration: 1s;
   animation-name: fadeInUp;
   animation-fill-mode: forwards;
 }

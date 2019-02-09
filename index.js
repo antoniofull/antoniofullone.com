@@ -20,54 +20,34 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: 'primary-light',
-      area: 'intro',
-      newArea: 'intro'
+      theme: 'primary-light'
     };
     this.onImagesIntersection = this.onImagesIntersection.bind(this);
-    this.onIntersection = this.onIntersection.bind(this);
+    this.onSectionIntersection = this.onSectionIntersection.bind(this);
+    this.onElementIntersection = this.onElementIntersection.bind(this);
   }
 
   componentDidMount() {
     this.LazyLoadImages();
   }
 
-  onIntersection(entries) {
-    const a = {
-      intro: {
-        bg: 'primary-light'
-      },
-      about: {
-        bg: 'white'
-      },
-      work: {
-        bg: 'secondary-light'
-      }
-    };
+  onElementIntersection(entries, self) {
     entries.forEach(e => {
+      const target = e.target;
+      const animationClass = target.dataset.animation || null;
+      if (e.isIntersecting) {
+        target.classList.add(animationClass);
+      }
+    });
+  }
+
+  onSectionIntersection(entries) {
+    entries.forEach(e => {
+      const theme = e.target.dataset.theme;
       if (e.isIntersecting) {
         this.setState({
           ...this.state,
-          newArea: e.target.dataset.area
-        });
-      }
-      const area = e.target.dataset.area;
-      if (area === this.state.area && !e.isIntersecting) {
-        const newArea = this.state.newArea;
-
-        this.setState({
-          ...this.state,
-          theme: newArea ? a[newArea].bg : this.state.theme,
-          area: this.state.newArea
-        });
-        const target = document.querySelector(`[data-area="${newArea}"]`);
-        target.querySelectorAll('.js-animatable').forEach((t, i) => {
-          const className = t.dataset.animation || null;
-          let n = i;
-          window.setTimeout(() => {
-            t.classList.remove('no-opacity');
-            t.classList.add(className);
-          }, 300 * n);
+          theme: theme
         });
       }
     });
@@ -99,8 +79,12 @@ class App extends Component {
   }
 
   render() {
+    const value = {
+      ...this.state,
+      animateElement: this.onElementIntersection
+    };
     return (
-      <ThemeProvider value={this.state}>
+      <ThemeProvider value={value}>
         <PageContainer>
           <Header>
             <Logo />
@@ -110,27 +94,30 @@ class App extends Component {
             <Observable
               element="section"
               id="intro"
-              data-area="intro"
+              data-theme="primary-light"
+              config={{ threshold: 0.4 }}
               className="main-section"
-              callBack={this.onIntersection}
+              callback={this.onSectionIntersection}
             >
               <Main />
             </Observable>
             <Observable
               element="section"
-              data-area="about"
+              data-theme="white"
               className="about-section"
               id="about"
-              callBack={this.onIntersection}
+              config={{ threshold: 0.2 }}
+              callback={this.onSectionIntersection}
             >
               <About />
             </Observable>
             <Observable
               element="section"
               id="work"
-              data-area="work"
+              data-theme="secondary-light"
+              config={{ threshold: 0.2 }}
               className="work-section container has-gutter-outside"
-              callBack={this.onIntersection}
+              callback={this.onSectionIntersection}
             >
               <Work />
             </Observable>

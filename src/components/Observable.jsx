@@ -16,13 +16,13 @@ export default class Observable extends Component {
   }
 
   observeElement() {
-    const { callBack, config } = this.props;
-    const observer = new IntersectionObserver(callBack, config);
+    const { callback, config } = this.props;
+    const observer = new IntersectionObserver(callback, config);
     observer.observe(this.ref.current);
   }
 
   render() {
-    const { config, callBack, element, children, ...props } = this.props;
+    const { config, callback, element, children, ...props } = this.props;
     return React.createElement(element, { ...props, ref: this.ref }, children);
   }
 }
@@ -30,6 +30,7 @@ export default class Observable extends Component {
 Observable.defaultProps = {
   children: null,
   element: 'div',
+  callback: () => {},
   config: {
     marginRoot: '0px',
     thresold: 1
@@ -37,7 +38,7 @@ Observable.defaultProps = {
 };
 
 Observable.propTypes = {
-  callBack: PropTypes.func.isRequired,
+  callback: PropTypes.func,
   children: PropTypes.node,
   element: PropTypes.string,
   config: PropTypes.objectOf(PropTypes.any)

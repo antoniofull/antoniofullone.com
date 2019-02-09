@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
@@ -7,26 +8,35 @@ import { aboutText, socialData, files, websites } from '../../data';
 import img from '../../images/me.png';
 import Aside from './AsideContent';
 import { ThemeConsumer } from '../ThemeContext';
+import Observable from '../Observable';
 
 const Article = styled.article``;
 
 const About = () => (
   <ThemeConsumer>
-    {({ visibleElement }) => (
+    {({ animateElement }) => (
       <React.Fragment>
         <Article
-          element={visibleElement}
-          className={classNames('about', 'container', 'has-gutter-outside', {
-            animated: visibleElement === 'about'
-          })}
+          className={classNames('about', 'container', 'has-gutter-outside')}
         >
-          <header
-            className="js-animatable no-opacity"
-            data-animation="fadeInUp"
-          >
-            <h1 className="freight-sans--bold">Ciao! Nice to meet you!</h1>
+          <header>
+            <Observable
+              element="h1"
+              data-animation="fadeInUp"
+              className="js-animatable no-opacity freight-sans--bold"
+              config={{ threshold: 1 }}
+              callback={animateElement}
+            >
+              Ciao! Nice to meet you!
+            </Observable>
           </header>
-          <figure data-animation="fadeIn" className="js-animatable no-opacity">
+          <Observable
+            element="figure"
+            data-animation="fadeIn"
+            className="js-animatable no-opacity"
+            config={{ threshold: 0.5 }}
+            callback={animateElement}
+          >
             <img
               className="about__img"
               alt="Surfing in the Canary Islands"
@@ -37,13 +47,15 @@ const About = () => (
               <a href="https://surfingtherapy.es">Surfing Therapy</a>
               <div className="img-divider" />
             </figcaption>
-          </figure>
-          <div
+          </Observable>
+          <Observable
             data-animation="fadeIn"
             className="js-animatable no-opacity about__content"
+            config={{ treshold: 0.2 }}
+            callback={animateElement}
           >
             <ReactMarkdown source={aboutText} />
-          </div>
+          </Observable>
           <aside className="about__links has-shadows">
             <Aside socialData={socialData} files={files} websites={websites} />
           </aside>

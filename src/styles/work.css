@@ -2,9 +2,9 @@
     WORK
 ==========================*/
 .work--temp h2 {
-  text-align: center;
+  text-align: left;
   font-weight: 900;
-  font-size: 2.25rem;
+  font-size: var(--font-l);
 }
 .companies {
   padding-top: var(--margin-xl);
@@ -34,7 +34,7 @@
 }
 .work-intro {
   max-width: 700px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 .work-nav {
@@ -78,6 +78,6 @@
     grid-row-gap: var(--margin-xxl);
   }
   .companies > a {
-    grid-column: auto / span 4;
+    grid-column: auto / span 3;
   }
 }

@@ -143,11 +143,11 @@
   }
   .about__links {
     display: block;
+    position: relative;
     z-index: 10;
     left: 0;
     bottom: 0;
     padding: 0;
-    position: relative;
     box-shadow: none;
     background: transparent;
     max-width: 100%;

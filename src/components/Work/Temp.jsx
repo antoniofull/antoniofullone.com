@@ -7,11 +7,10 @@ const Temp = ({ companies }) => (
       <h2>Work</h2>
     </header>
     <p className="work-intro margin-y-l">
-      A new portfolio with personal and work projects not protected by DNA is
-      coming soon. You can check the links in the
-      <a href="#about">about</a>
-      section. Here is a list of the major companies I worked for in the last
-      years.
+      Most of the projects and code I work on is hosted on private repositories
+      or protected by DNA. A portfolio of new projects is coming soon. Below
+      there is a list of the major companies I worked with in the last years.
+      For anything else you can check the <a href="/about">about</a> section
     </p>
     <div className="companies grid">
       {companies.map(company => (
