@@ -6,7 +6,7 @@ const Temp = ({ companies }) => (
     <header>
       <h2>Work</h2>
     </header>
-    <p className="work-intro margin-y-l">
+    <p className="work-intro">
       Most of the projects and code I work on is hosted on private repositories
       or protected by DNA. A portfolio of new projects is coming soon. Below
       there is a list of the major companies I worked with in the last years.
@@ -14,9 +14,12 @@ const Temp = ({ companies }) => (
     </p>
     <div className="companies grid">
       {companies.map(company => (
-        <a href={company.link} key={company.id}>
+        <a className="company" href={company.link} key={company.id}>
           <figure>
             <img data-src={company.img} alt={company.label} />
+            <caption className="animated company__label">
+              {company.label}
+            </caption>
           </figure>
         </a>
       ))}

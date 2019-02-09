@@ -70,6 +70,8 @@
   bottom: 20px;
   left: 20px;
   z-index: 1000;
+  opacity: 1;
+  border: none;
 }
 
 .about__links > div {
@@ -140,6 +142,9 @@
     object-fit: cover;
     height: 450px;
     width: 100%;
+  }
+  .btn--about {
+    display: none;
   }
   .about__links {
     display: block;

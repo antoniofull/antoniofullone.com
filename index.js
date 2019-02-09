@@ -36,7 +36,7 @@ class App extends Component {
       const target = e.target;
       const animationClass = target.dataset.animation || null;
       if (e.isIntersecting) {
-        target.classList.add(animationClass);
+        target.classList.add(animationClass, 'animated');
       }
     });
   }

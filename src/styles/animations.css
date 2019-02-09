@@ -22,13 +22,13 @@
   }
 }
 
-.fadeIn {
+.animated {
   animation-duration: 1s;
-  animation-name: fadeIn;
   animation-fill-mode: forwards;
 }
+.fadeIn {
+  animation-name: fadeIn;
+}
 .fadeInUp {
-  animation-duration: 1s;
   animation-name: fadeInUp;
-  animation-fill-mode: forwards;
 }

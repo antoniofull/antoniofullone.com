@@ -22,7 +22,7 @@
   background-color: var(--color-secondary-light);
 }
 .has-shadows {
-  box-shadow: 0 1px 5px inherit;
+  box-shadow: 0 1px 5px var(--color-gray-shadow);
 }
 
 .text-center {
@@ -55,7 +55,6 @@
   padding-left: var(--baseline);
   padding-right: var(--baseline);
 }
-
 .padding-y-l {
   padding-top: calc(var(--baseline) * 2);
   padding-bottom: calc(var(--baseline) * 2);

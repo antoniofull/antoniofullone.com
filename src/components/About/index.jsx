@@ -60,7 +60,10 @@ const About = () => (
             <Aside socialData={socialData} files={files} websites={websites} />
           </aside>
         </Article>
-        <button type="button" className="btn btn--rounded btn--cta btn--about">
+        <button
+          type="button"
+          className="has-shadows btn btn--rounded btn--cta btn--about"
+        >
           <i className="fas fa-link" />
         </button>
       </React.Fragment>

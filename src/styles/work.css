@@ -8,24 +8,48 @@
 }
 .companies {
   padding-top: var(--margin-xl);
+  grid-row-gap: var(--margin-xl);
 }
 .companies > a {
   grid-column: 1 / -1;
 }
 .companies figure {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   height: 100%;
-  max-width: 240px;
-  margin: 0 auto;
+  transition: background-color 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: var(--color-secondary);
+  padding: var(--margin);
+  border-radius: 8px;
+}
+.company__label {
+  position: absolute;
+  transform: translateY(0);
+  text-indent: var(--margin);
+  color: var(--color-accent);
+  display: block;
+  left: 0;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.company figure:hover .company__label {
+  opacity: 1;
+  transform: translateY(calc(-100% - 50px));
+}
+.company figure:hover {
+  transition: background-color 1s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: var(--color-accent);
 }
 
 .companies img {
   height: auto;
   object-fit: contain;
   flex: 1 1 50px;
+  max-width: 200px;
+  margin: auto;
 }
 
 .work-section {
@@ -67,7 +91,7 @@
   margin-bottom: var(--margin-xl);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .companies > a {
     grid-column: auto / span 3;
   }
@@ -75,7 +99,7 @@
 
 @media screen and (min-width: 1024px) {
   .companies {
-    grid-row-gap: var(--margin-xxl);
+    grid-row-gap: var(--margin-l);
   }
   .companies > a {
     grid-column: auto / span 3;

@@ -18,11 +18,14 @@
   line-height: var(--font-s);
   line-height: 0.667;
   position: relative;
+  margin-bottom: 0;
 }
 .intro__header:after {
   display: block;
   content: ' ';
   height: 1px;
+  top: 2px;
+  position: relative;
   background-color: var(--color-black-light-800);
   width: 50%;
   margin: var(--margin) auto;
@@ -34,7 +37,7 @@
 .i-am-cool {
   font-size: var(--font-dy-m);
   font-weight: normal;
-  line-height: 1;
+  line-height: var(--base-font);
   margin-bottom: var(--margin-half);
   display: block;
 }
@@ -52,29 +55,6 @@
 .illustration {
   position: relative;
   position: relative;
-  background-color: var(--color-primary-light);
-}
-.illustration:before {
-  content: none;
-  width: 100%;
-  height: 40px;
-  display: block;
-  background-image: linear-gradient(
-    to right top,
-    var(--color-primary-light) 50%,
-    #fff 0
-  );
-}
-.illustration:after {
-  content: none;
-  width: 100%;
-  height: 40px;
-  display: block;
-  background-image: linear-gradient(
-    to left bottom,
-    var(--color-primary-light) 50%,
-    #fff 0
-  );
 }
 .illustration__container {
   min-height: 17rem;

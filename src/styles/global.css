@@ -67,8 +67,8 @@
   border-radius: 50%;
   background-color: var(--color-accent);
 }
-.index > section:not(.main-section) {
-  padding-bottom: var(--margin-xxl);
+.index > section {
+  padding-bottom: var(--margin-xl);
 }
 
 @media screen and (min-width: 980px) {

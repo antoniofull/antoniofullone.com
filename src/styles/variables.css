@@ -3,14 +3,20 @@
 ==========================*/
 :root {
   --color-black: hsla(60, 3%, 12%, 1);
-  --color-black-light: hsla(60, 1%, 60%, 1);
-  --color-black-light-800: hsla(60, 1%, 15%, 1);
   --color-black-dark: hsla(60, 14%, 7%, 1);
+  --color-black-light-800: hsla(60, 1%, 15%, 1);
+  --color-black-light: hsla(60, 1%, 60%, 1);
+  --color-gray-shadow: hsla(60, 2%, 91%, 1);
+
   --color-primary-light: hsla(60, 20%, 95%, 1);
-  --color-secondary-light: hsla(225, 40%, 96%, 1);
+  --color-primary: hsla(60, 22%, 84%, 1);
+
+  --color-secondary-light: hsla(227, 35%, 92%, 1);
+  --color-secondary: hsla(229, 36%, 88%, 1);
   --color-accent: hsla(0, 96%, 72%, 1);
   --color-accent-light: hsla(0, 88%, 97%, 1);
   --color-accent-dark: hsla(3, 42%, 36%, 1);
+
   --color-white: rgb(255, 255, 255);
 
   /*
@@ -18,7 +24,7 @@
     dy = dynamic fonts
   */
   --base-font: 18px;
-  --baseline: 34px;
+  --baseline: 28px;
 
   --intertistial-value: 40px;
   --font-xxl: 5rem;
@@ -33,13 +39,13 @@
 
   --margin: var(--baseline);
   --margin-half: calc(var(--baseline) / 2);
-  --margin-xl: calc(var(--baseline) * 2);
-  --margin-xxl: calc(var(--baseline) * 3);
+  --margin-l: calc(var(--baseline) * 2);
+  --margin-xl: calc(var(--baseline) * 3);
   --margin-desktop: calc(var(--baseline) * 4);
 
   --padding: var(--baseline);
   --padding-half: calc(var(--baseline) / 2);
-  --padding-xl: calc(var(--baseline) * 2);
+  --padding-l: calc(var(--baseline) * 2);
   --padding-xl: calc(var(--baseline) * 3);
 
   /* Mobile first Grid: 4 Column with Margin outside */
@@ -83,7 +89,7 @@
     --grid-column-min-width: 60px;
 
     --base-font: 21px;
-    --baseline: 37px;
+    --baseline: 34px;
     --header-height: 90px;
   }
 }
