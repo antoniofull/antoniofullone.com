@@ -37,7 +37,7 @@
 .i-am-cool {
   font-size: var(--font-dy-m);
   font-weight: normal;
-  line-height: var(--base-font);
+  line-height: 1;
   margin-bottom: var(--margin-half);
   display: block;
 }
@@ -57,6 +57,8 @@
   position: relative;
 }
 .illustration__container {
+  background: url('../images/bg_vespa_desktop.svg') no-repeat center;
+  background-size: contain;
   min-height: 17rem;
 }
 .vespa {

@@ -1,12 +1,18 @@
 import React from 'react';
 import LogoImg from '../../images/logo.svg';
 
+import { ThemeConsumer } from '../ThemeContext';
+
 const Logo = () => (
-  <div className="logo">
-    <a href="/" className="logo__link">
-      <LogoImg className="logo__img" />
-    </a>
-  </div>
+  <ThemeConsumer>
+    {({ scroll }) => (
+      <div className="logo">
+        <a href="#intro" onClick={scroll} className="logo__link">
+          <LogoImg className="logo__img" />
+        </a>
+      </div>
+    )}
+  </ThemeConsumer>
 );
 
 export default Logo;

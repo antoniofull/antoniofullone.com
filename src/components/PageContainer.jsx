@@ -11,8 +11,8 @@ const Container = styled.div`
 
 const PageContainer = ({ children }) => (
   <ThemeConsumer>
-    {({ theme }) => (
-      <Container theme={theme} className="page">
+    {({ activeTheme }) => (
+      <Container theme={activeTheme} className="page">
         {children}
       </Container>
     )}

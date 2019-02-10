@@ -3,6 +3,7 @@
 ==========================*/
 .page {
   transition: all 0.5s ease-in-out;
+  background-color: var(--color-primary-light);
 }
 .dark-theme {
   background-color: var(--color-black);

@@ -20,11 +20,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lastUsedThemes: []
+      lastUsedThemes: [],
+      lastActiveAreas: []
     };
     this.onImagesIntersection = this.onImagesIntersection.bind(this);
     this.onSectionIntersection = this.onSectionIntersection.bind(this);
     this.onElementIntersection = this.onElementIntersection.bind(this);
+    this.scrollToSection = this.scrollToSection.bind(this);
   }
 
   componentDidMount() {
@@ -34,29 +36,35 @@ class App extends Component {
   onSectionIntersection(entries) {
     entries.map(e => {
       const theme = e.target.dataset.theme;
+      const id = e.target.getAttribute('id');
       if (e.isIntersecting) {
         this.setState({
           ...this.state,
           theme: theme,
+          activeArea: id,
+          lastActiveAreas: [...this.state.lastActiveAreas, id],
           lastUsedThemes: [...this.state.lastUsedThemes, theme]
         });
       } else {
         if (
-          this.state.lastUsedThemes.length >= 0 &&
-          theme === this.state.theme
+          this.state.lastActiveAreas.length >= 0 &&
+          id === this.state.activeArea
         ) {
           const lastUsedThemes = this.state.lastUsedThemes;
-          const index = lastUsedThemes.indexOf(theme) - 1;
+          const lastActiveAreas = this.state.lastActiveAreas;
+          const themeIndex = lastUsedThemes.indexOf(theme) - 1;
+          const areaIndex = lastActiveAreas.indexOf(id) - 1;
           this.setState({
             ...this.state,
-            theme: lastUsedThemes[index]
+            activeArea: lastActiveAreas[areaIndex],
+            theme: lastUsedThemes[themeIndex]
           });
         }
       }
     });
   }
 
-  onElementIntersection(entries, self) {
+  onElementIntersection(entries) {
     entries.forEach(e => {
       const target = e.target;
       const animationClass = target.dataset.animation || null;
@@ -91,10 +99,42 @@ class App extends Component {
     });
   }
 
+  scrollToSection(e) {
+    console.log(e.target);
+    const target = e.target.getAttribute('href');
+    const elementToScroll = document.querySelector(target);
+    const isLocalLink = target.startsWith('#');
+    if (isLocalLink && elementToScroll) {
+      e.preventDefault();
+      // Get Header height + some space
+      const height = document.querySelector('.site-header').clientHeight + 30;
+      // Get count where to scroll
+      let count = elementToScroll.offsetTop - document.body.scrollTop - height;
+      window.scrollTo({
+        top: count,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+
   render() {
+    let theme;
+    switch (this.state.activeArea) {
+      case 'about':
+        theme = 'white';
+        break;
+      case 'work':
+        theme = 'secondary-light';
+        break;
+      default:
+        theme = 'primary-light';
+    }
     const value = {
       ...this.state,
-      animateElement: this.onElementIntersection
+      activeTheme: theme,
+      animateElement: this.onElementIntersection,
+      scroll: this.scrollToSection
     };
     return (
       <ThemeProvider value={value}>
@@ -135,7 +175,16 @@ class App extends Component {
               <Work />
             </Observable>
           </main>
-          <Footer />
+          <Observable
+            element="footer"
+            id="site-footer"
+            data-theme="primary-light"
+            config={{ threshold: 0.3 }}
+            className="site-footer"
+            callback={this.onSectionIntersection}
+          >
+            <Footer />
+          </Observable>
         </PageContainer>
       </ThemeProvider>
     );

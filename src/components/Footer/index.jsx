@@ -13,23 +13,21 @@ import SubFooter from './SubFooter';
 import Logo from '../logo';
 
 const Footer = () => (
-  <footer className="site-footer">
-    <div className="footer-wrapper">
-      <div className="container footer-container grid grid-large-rowgap">
-        <FooterTitle />
-        <BlogPosts />
-        <Credits />
-        <ReadingList />
-        <Address />
-        <Logo />
-        <section className="social social--footer">
-          <Social data={socialData} />
-        </section>
-        <FooterTagline />
-      </div>
-      <SubFooter />
+  <div className="footer-wrapper">
+    <div className="container footer-container grid grid-large-rowgap">
+      <FooterTitle />
+      <BlogPosts />
+      <Credits />
+      <ReadingList />
+      <Address />
+      <Logo />
+      <section className="social social--footer">
+        <Social data={socialData} />
+      </section>
+      <FooterTagline />
     </div>
-  </footer>
+    <SubFooter />
+  </div>
 );
 
 export default Footer;

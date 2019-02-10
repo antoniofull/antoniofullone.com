@@ -31,18 +31,6 @@
   display: flex;
   justify-content: flex-end;
 }
-.nav-list__item {
-  width: auto;
-  text-transform: uppercase;
-  font-size: 0.667rem;
-  margin-left: var(--grid-column-gutter);
-}
-.nav-list__link,
-.nav-list__link:visited {
-  font-weight: 600;
-  color: var(--color-black-dark);
-  text-decoration: none;
-}
 
 .logo {
   --size: calc(var(--header-height) / 2);
