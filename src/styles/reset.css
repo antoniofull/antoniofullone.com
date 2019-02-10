@@ -123,6 +123,9 @@ dfn {
   font-style: inherit;
 }
 
+svg {
+  pointer-events: none;
+}
 /*
 
 Prevent Zoom on Focus only for IOS devices

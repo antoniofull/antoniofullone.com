@@ -49,10 +49,9 @@
   background-color: #c35864;
 }
 .about__links {
-  display: none;
   position: fixed;
   z-index: 1000;
-  bottom: 100px;
+  bottom: 80px;
   left: 20px;
   width: 100%;
   max-width: 300px;
@@ -64,7 +63,9 @@
 }
 .about__links .fas {
   margin-right: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 .btn--about {
   position: fixed;
   bottom: 20px;
@@ -72,6 +73,14 @@
   z-index: 1000;
   opacity: 1;
   border: none;
+}
+
+.btn--about .fas {
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn--about .fas.active {
+  transform: rotate(45deg);
 }
 
 .about__links > div {
@@ -149,9 +158,7 @@
     height: 450px;
     width: 100%;
   }
-  .btn--about {
-    display: none;
-  }
+
   .about__links {
     display: block;
     position: relative;

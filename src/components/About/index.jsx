@@ -11,10 +11,17 @@ import { ThemeConsumer } from '../ThemeContext';
 import Observable from '../Observable';
 
 const Article = styled.article``;
+const Button = styled.button``;
 
 const About = () => (
   <ThemeConsumer>
-    {({ animateElement }) => (
+    {({
+      animateElement,
+      activeArea,
+      viewport,
+      toggleMobileLinks,
+      showMobileLinks
+    }) => (
       <React.Fragment>
         <Article
           className={classNames('about', 'container', 'has-gutter-outside')}
@@ -56,16 +63,38 @@ const About = () => (
           >
             <ReactMarkdown source={aboutText} />
           </Observable>
-          <aside className="about__links has-shadows">
-            <Aside socialData={socialData} files={files} websites={websites} />
-          </aside>
+          {showMobileLinks && viewport < 1024 && activeArea === 'about' && (
+            <aside className="about__links has-shadows">
+              <Aside
+                socialData={socialData}
+                files={files}
+                websites={websites}
+              />
+            </aside>
+          )}
+          {viewport > 1023 && (
+            <aside className="about__links has-shadows">
+              <Aside
+                socialData={socialData}
+                files={files}
+                websites={websites}
+              />
+            </aside>
+          )}
         </Article>
-        <button
-          type="button"
-          className="has-shadows btn btn--rounded btn--cta btn--about"
-        >
-          <i className="fas fa-link" />
-        </button>
+        {activeArea === 'about' && viewport < 1024 && (
+          <Button
+            type="button"
+            className="has-shadows btn btn--rounded btn--cta btn--about"
+            onClick={toggleMobileLinks}
+          >
+            <i
+              className={classNames('fas', 'fa-link', {
+                active: showMobileLinks
+              })}
+            />
+          </Button>
+        )}
       </React.Fragment>
     )}
   </ThemeConsumer>

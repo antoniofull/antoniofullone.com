@@ -74,9 +74,6 @@
   transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   box-shadow: 0 1px 5px hsla(60, 1%, 88%, 1);
 }
-.nav-list__item ul {
-  display: none;
-}
 
 .is-sticky {
   position: -webkit-sticky;

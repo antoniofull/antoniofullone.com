@@ -34,6 +34,7 @@
     "animate.css": "^3.7.0",
     "aos": "^3.0.0-beta.6",
     "classnames": "^2.2.6",
+    "clipboard": "^2.0.4",
     "fitty": "^2.2.6",
     "intersection-observer": "^0.5.1",
     "prop-types": "^15.6.2",
@@ -41,6 +42,7 @@
     "react-dom": "^16.7.0",
     "react-markdown": "^4.0.6",
     "react-responsive": "^6.1.1",
+    "smoothscroll-polyfill": "^0.4.3",
     "styled-components": "^4.1.3"
   }
 }

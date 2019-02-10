@@ -4,6 +4,7 @@
 .page {
   transition: all 0.5s ease-in-out;
   background-color: var(--color-primary-light);
+  scroll-behavior: smooth;
 }
 .dark-theme {
   background-color: var(--color-black);
@@ -72,6 +73,41 @@
   padding-bottom: var(--margin-xl);
 }
 
+.msg {
+  font-size: var(--font-s);
+  padding: 8px 16px;
+  opacity: 0;
+  transform: scale3d(0, 0, 0);
+  right: var(--grid-outer-gutter);
+  transition: all 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
+  position: absolute;
+  z-index: 1000;
+  top: 100%;
+  border-radius: 8px;
+  border: 1px solid hsla(85, 88%, 65%, 1);
+}
+.msg.active {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
+.msg .close-icon {
+  position: absolute;
+  top: -8px;
+  right: -20px;
+  cursor: pointer;
+}
+.msg a {
+  text-decoration: none;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+.msg > i {
+  margin-right: 8px;
+  color: #8db350;
+}
+.msg--info {
+  background-color: hsla(85, 88%, 90%, 1);
+}
 @media screen and (min-width: 980px) {
   .has-gutter-outside {
     padding: 0;

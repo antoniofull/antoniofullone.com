@@ -1,4 +1,5 @@
 /* eslint-disable */
+import smoothscroll from 'smoothscroll-polyfill';
 import React, { Component } from 'react';
 import * as ReactDOM from 'react-dom';
 import PageContainer from './src/components/PageContainer';
@@ -21,18 +22,47 @@ class App extends Component {
     super(props);
     this.state = {
       lastUsedThemes: [],
-      lastActiveAreas: []
+      lastActiveAreas: [],
+      viewport: window.innerWidth,
+      mailTooltip: false
     };
     this.onImagesIntersection = this.onImagesIntersection.bind(this);
     this.onSectionIntersection = this.onSectionIntersection.bind(this);
     this.onElementIntersection = this.onElementIntersection.bind(this);
     this.scrollToSection = this.scrollToSection.bind(this);
+    this.onResize = this.onResize.bind(this);
+
+    this.renderEmailMenu = this.renderEmailMenu.bind(this);
+    this.toggleMobileLinks = this.toggleMobileLinks.bind(this);
+    this.closeEmailLink = this.closeEmailLink.bind(this);
+    this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
+    this.setEmailLink = this.setEmailLink.bind(this);
+    // Smooth Scrolling polifyll for IOS and old browsers
+    smoothscroll.polyfill();
   }
 
   componentDidMount() {
     this.LazyLoadImages();
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(this.onResize, 50);
+    });
   }
 
+  toggleMobileLinks() {
+    this.setState({
+      ...this.state,
+      showMobileLinks: !this.state.showMobileLinks
+    });
+  }
+
+  onResize() {
+    this.setState({
+      ...this.state,
+      viewport: window.innerWidth
+    });
+  }
   onSectionIntersection(entries) {
     entries.map(e => {
       const theme = e.target.dataset.theme;
@@ -40,6 +70,7 @@ class App extends Component {
       if (e.isIntersecting) {
         this.setState({
           ...this.state,
+          mailMenu: false,
           theme: theme,
           activeArea: id,
           lastActiveAreas: [...this.state.lastActiveAreas, id],
@@ -60,6 +91,10 @@ class App extends Component {
             theme: lastUsedThemes[themeIndex]
           });
         }
+        this.setState({
+          ...this.state,
+          showMobileLinks: false
+        });
       }
     });
   }
@@ -85,7 +120,7 @@ class App extends Component {
 
   LazyLoadImages() {
     const config = {
-      rootMargin: '60px',
+      rootMargin: '40px',
       threshold: 0.5
     };
 
@@ -99,11 +134,58 @@ class App extends Component {
     });
   }
 
+  renderEmailMenu(e) {
+    e.preventDefault();
+    this.setState({
+      mailMenu: !this.state.mailMenu
+    });
+  }
+
+  copyEmailToClipboard() {
+    const mail = 'hello@antoniofullone.com';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.value = mail;
+    input.setAttribute('readonly', '');
+    input.style.position = 'absolute';
+    input.style.left = '-9999px';
+    document.body.appendChild(input);
+    input.select();
+    if (document.execCommand('copy')) {
+      this.setState({
+        ...this.state,
+        mailMessage: true,
+        mailMenu: false
+      });
+    }
+    window.setTimeout(() => {
+      this.setState({
+        ...this.state,
+        mailMessage: false
+      });
+    }, 2500);
+    document.body.removeChild(input);
+  }
+
+  closeEmailLink(e) {
+    e.preventDefault();
+    this.setState({
+      ...this.state,
+      mailMessage: false
+    });
+  }
+
+  setEmailLink(e) {
+    const mail = 'hello@antoniofullone.com';
+    e.target.setAttribute('href', `mailto:${mail}`);
+  }
+
   scrollToSection(e) {
-    console.log(e.target);
     const target = e.target.getAttribute('href');
     const elementToScroll = document.querySelector(target);
     const isLocalLink = target.startsWith('#');
+    if (isLocalLink && target === '#contacts') {
+    }
     if (isLocalLink && elementToScroll) {
       e.preventDefault();
       // Get Header height + some space
@@ -127,6 +209,9 @@ class App extends Component {
       case 'work':
         theme = 'secondary-light';
         break;
+      case 'footer':
+        theme = 'primary-light';
+        break;
       default:
         theme = 'primary-light';
     }
@@ -134,14 +219,18 @@ class App extends Component {
       ...this.state,
       activeTheme: theme,
       animateElement: this.onElementIntersection,
-      scroll: this.scrollToSection
+      scroll: this.scrollToSection,
+      toggleMobileLinks: this.toggleMobileLinks,
+      toggleEmailMenu: this.renderEmailMenu,
+      copyEmailToClipboard: this.copyEmailToClipboard,
+      setEmailLink: this.setEmailLink
     };
     return (
       <ThemeProvider value={value}>
         <PageContainer>
           <Header>
             <Logo />
-            <Navigation items={navItems} />
+            <Navigation closeEmailLink={this.closeEmailLink} items={navItems} />
           </Header>
           <main className="index" role="main">
             <Observable

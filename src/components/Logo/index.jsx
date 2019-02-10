@@ -7,7 +7,7 @@ const Logo = () => (
   <ThemeConsumer>
     {({ scroll }) => (
       <div className="logo">
-        <a href="#intro" onClick={scroll} className="logo__link">
+        <a href="#home" onClick={scroll} className="logo__link">
           <LogoImg className="logo__img" />
         </a>
       </div>
