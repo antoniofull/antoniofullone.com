@@ -70,7 +70,7 @@
   background-color: var(--color-accent);
 }
 .index > section {
-  padding-bottom: var(--margin-xl);
+  margin-bottom: var(--margin-xl);
 }
 
 .msg {
@@ -119,7 +119,7 @@
     max-width: 1240px;
   }
   .index > section {
-    margin-bottom: var(--margin);
+    /* margin-bottom: var(--margin); */
   }
 }
 

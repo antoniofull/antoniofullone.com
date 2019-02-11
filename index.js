@@ -2,6 +2,8 @@
 import smoothscroll from 'smoothscroll-polyfill';
 import React, { Component } from 'react';
 import * as ReactDOM from 'react-dom';
+import scrollToElement from 'scroll-to-element';
+
 import PageContainer from './src/components/PageContainer';
 import Header from './src/components/header';
 import Logo from './src/components/logo';
@@ -63,6 +65,7 @@ class App extends Component {
       viewport: window.innerWidth
     });
   }
+
   onSectionIntersection(entries) {
     entries.map(e => {
       const theme = e.target.dataset.theme;
@@ -184,18 +187,18 @@ class App extends Component {
     const target = e.target.getAttribute('href');
     const elementToScroll = document.querySelector(target);
     const isLocalLink = target.startsWith('#');
-    if (isLocalLink && target === '#contacts') {
-    }
+
     if (isLocalLink && elementToScroll) {
       e.preventDefault();
       // Get Header height + some space
-      const height = document.querySelector('.site-header').clientHeight + 30;
-      // Get count where to scroll
-      let count = elementToScroll.offsetTop - document.body.scrollTop - height;
-      window.scrollTo({
-        top: count,
-        left: 0,
-        behavior: 'smooth'
+      const height =
+        target === '#home'
+          ? 0
+          : document.querySelector('.site-header').clientHeight + 15;
+      scrollToElement(elementToScroll, {
+        offset: height * -1,
+        ease: 'inBack',
+        duration: 600
       });
     }
   }

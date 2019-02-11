@@ -22,7 +22,8 @@ const NavLink = styled.a`
     color: var(--color-accent);
     text-decoration: none;
   }
-  &:visited {
+  &:visited,
+  &:active {
     color: ${props =>
       props.area === props.link
         ? 'var(--color-accent)'
@@ -59,7 +60,8 @@ const ContactNavLink = styled.a`
   color: var(--color-black-dark);
   text-decoration: none;
   transition: all 0.2s ease-in;
-  &:hover {
+  &:hover,
+  &:active {
     color: var(--color-accent);
   }
 `;
