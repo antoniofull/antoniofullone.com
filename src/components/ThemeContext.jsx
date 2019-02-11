@@ -1,6 +1,8 @@
 import React from 'react';
 
-// Create context to hold themes
-const ThemeContext = React.createContext({});
+// Create context
+const ThemeContext = React.createContext({
+  activeTheme: 'primary-light'
+});
 export const ThemeProvider = ThemeContext.Provider;
 export const ThemeConsumer = ThemeContext.Consumer;

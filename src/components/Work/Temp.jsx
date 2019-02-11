@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Temp = ({ companies }) => (
-  <article className="work--temp">
+  <article className="work--temp freight-sans">
     <header>
       <h2>Work</h2>
     </header>

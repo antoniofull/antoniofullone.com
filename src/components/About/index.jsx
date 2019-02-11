@@ -63,7 +63,7 @@ const About = () => (
           >
             <ReactMarkdown source={aboutText} />
           </Observable>
-          {showMobileLinks && viewport < 1024 && activeArea === 'about' && (
+          {showMobileLinks && activeArea === 'about' && (
             <aside className="about__links has-shadows">
               <Aside
                 socialData={socialData}
@@ -72,7 +72,7 @@ const About = () => (
               />
             </aside>
           )}
-          {viewport > 1023 && (
+          {viewport > 1024 && (
             <aside className="about__links has-shadows">
               <Aside
                 socialData={socialData}

@@ -37,9 +37,12 @@ const ContactNav = styled.ul`
   min-width: 180px;
   padding: 8px 16px;
   font-size: 12px;
-  left: 50%;
+  ${props =>
+    props.viewport > 1200
+      ? `left: 50%;
+    transform: translateX(-50%);`
+      : `right: 0;`}
   border-radius: 8px;
-  transform: translateX(-50%);
   background-color: ${props => {
     let color = '#EFEFE7';
     switch (props.area) {
@@ -74,7 +77,8 @@ const NavItem = ({ item }) => (
       toggleEmailMenu,
       mailMenu,
       copyEmailToClipboard,
-      setEmailLink
+      setEmailLink,
+      viewport
     }) => (
       <NavIListItem className="nav-list__item">
         <NavLink
@@ -89,6 +93,7 @@ const NavItem = ({ item }) => (
         {item.link === '#contacts' && mailMenu && (
           <ContactNav
             area={activeArea}
+            viewport={viewport}
             className={classNames('contact-nav', { active: mailMenu })}
           >
             <li>

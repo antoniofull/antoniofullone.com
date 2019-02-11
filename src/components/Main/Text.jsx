@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+import { ThemeConsumer } from '../ThemeContext';
 
 class Text extends Component {
   constructor(props) {
     super(props);
-    this.mainHeading = React.createRef();
     this.container = React.createRef();
     this.state = {};
     this.updateSize = this.updateSize.bind(this);
+    this.textElement = React.createRef();
   }
 
   componentDidMount() {
@@ -19,11 +22,13 @@ class Text extends Component {
   }
 
   updateSize() {
+    const { viewport } = this.props;
+
     if (this.container.current) {
       const parentWidth = this.container.current.clientWidth;
       const minFontSize = Number.NEGATIVE_INFINITY;
       const maxFontSize = Number.POSITIVE_INFINITY;
-      const comp = 0.8;
+      const comp = viewport < 600 ? 0.85 : 0.78;
       const fontSize = Math.max(
         Math.min(parentWidth / (comp * 10), parseFloat(maxFontSize)),
         parseFloat(minFontSize)
@@ -44,7 +49,7 @@ class Text extends Component {
         <h1
           id="intro-heading"
           className="intro__header text-center bodoni-24"
-          ref={this.mainHeading}
+          ref={this.textElement}
           style={fontSize ? { fontSize } : null}
         >
           Antonio Fullone
@@ -63,4 +68,14 @@ class Text extends Component {
   }
 }
 
-export default Text;
+Text.propTypes = {
+  viewport: PropTypes.number.isRequired
+};
+
+const TextContainer = () => (
+  <ThemeConsumer>
+    {({ viewport }) => <Text viewport={viewport} />}
+  </ThemeConsumer>
+);
+
+export default TextContainer;
