@@ -72,7 +72,7 @@ const About = () => (
               />
             </aside>
           )}
-          {viewport > 1024 && (
+          {viewport >= 1024 && (
             <aside className="about__links has-shadows">
               <Aside
                 socialData={socialData}

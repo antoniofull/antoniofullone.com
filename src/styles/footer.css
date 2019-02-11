@@ -77,6 +77,14 @@
 .post {
   grid-column: auto / span 2;
 }
+.post__title a {
+  color: var(--color-black-light);
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.post__title a:hover {
+  color: var(--color-white);
+}
 
 .post__title {
   display: block;
@@ -213,7 +221,7 @@
   color: #fff;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .credits ul {
     display: flex;
     flex-wrap: wrap;

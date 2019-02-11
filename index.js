@@ -45,11 +45,16 @@ class App extends Component {
 
   componentDidMount() {
     this.LazyLoadImages();
-    let resizeTimer;
+    this.resizeTimer;
     window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(this.onResize, 50);
+      clearTimeout(this.resizeTimer);
+      this.resizeTimer = setTimeout(this.onResize, 0);
     });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    clearTimeout(this.resizeTimer);
   }
 
   toggleMobileLinks() {
@@ -142,7 +147,8 @@ class App extends Component {
   renderEmailMenu(e) {
     e.preventDefault();
     this.setState({
-      mailMenu: !this.state.mailMenu
+      mailMenu: !this.state.mailMenu,
+      showMobileLinks: false
     });
   }
 

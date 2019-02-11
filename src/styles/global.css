@@ -1,6 +1,9 @@
 /*=========================
   GLOBAL
 ==========================*/
+body {
+  scroll-behavior: smooth;
+}
 .page {
   transition: all 0.5s ease-in-out;
   background-color: var(--color-primary-light);
@@ -108,6 +111,7 @@
 .msg--info {
   background-color: hsla(85, 88%, 90%, 1);
 }
+
 @media screen and (min-width: 980px) {
   .has-gutter-outside {
     padding: 0;
@@ -117,9 +121,6 @@
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1240px;
-  }
-  .index > section {
-    /* margin-bottom: var(--margin); */
   }
 }
 

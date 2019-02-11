@@ -14,13 +14,24 @@ const NavIListItem = styled.li`
 
 const NavLink = styled.a`
   font-weight: 600;
-  color: var(--color-black-dark);
+  color: ${props =>
+    props.area === props.link
+      ? 'var(--color-accent)'
+      : 'var(--color-black-dark)'};
   text-decoration: none;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
-  &:hover:visited {
-    color: var(--color-accent);
-    text-decoration: none;
+  &:hover {
+    ${props =>
+      props.area === props.link
+        ? 'var(--color-accent)'
+        : 'var(--color-black-dark)'};
+  }
+  &:hover:active {
+    ${props =>
+      props.area === props.link
+        ? 'var(--color-accent)'
+        : 'var(--color-black-dark)'};
   }
   &:visited,
   &:active {

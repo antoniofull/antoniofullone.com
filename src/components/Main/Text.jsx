@@ -28,7 +28,7 @@ class Text extends Component {
       const parentWidth = this.container.current.clientWidth;
       const minFontSize = Number.NEGATIVE_INFINITY;
       const maxFontSize = Number.POSITIVE_INFINITY;
-      const comp = viewport < 600 ? 0.85 : 0.78;
+      const comp = viewport < 600 ? 0.85 : 0.77;
       const fontSize = Math.max(
         Math.min(parentWidth / (comp * 10), parseFloat(maxFontSize)),
         parseFloat(minFontSize)
