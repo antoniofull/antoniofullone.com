@@ -77,23 +77,25 @@ class App extends Component {
           theme: theme,
           activeArea: id,
           lastActiveAreas: [...this.state.lastActiveAreas, id],
-          lastUsedThemes: [...this.state.lastUsedThemes, theme]
+          lastUsedThemes: [...this.state.lastUsedThemes, theme],
+          showMobileLinks: id === '#about'
+        });
+      } else if (
+        !e.isIntersecting &&
+        this.state.lastActiveAreas.length >= 0 &&
+        id === this.state.activeArea
+      ) {
+        const lastUsedThemes = this.state.lastUsedThemes;
+        const lastActiveAreas = this.state.lastActiveAreas;
+        const themeIndex = lastUsedThemes.indexOf(theme) - 1;
+        const areaIndex = lastActiveAreas.indexOf(id) - 1;
+        this.setState({
+          ...this.state,
+          activeArea: lastActiveAreas[areaIndex],
+          theme: lastUsedThemes[themeIndex],
+          showMobileLinks: id === '#about'
         });
       } else {
-        if (
-          this.state.lastActiveAreas.length >= 0 &&
-          id === this.state.activeArea
-        ) {
-          const lastUsedThemes = this.state.lastUsedThemes;
-          const lastActiveAreas = this.state.lastActiveAreas;
-          const themeIndex = lastUsedThemes.indexOf(theme) - 1;
-          const areaIndex = lastActiveAreas.indexOf(id) - 1;
-          this.setState({
-            ...this.state,
-            activeArea: lastActiveAreas[areaIndex],
-            theme: lastUsedThemes[themeIndex]
-          });
-        }
         this.setState({
           ...this.state,
           showMobileLinks: false

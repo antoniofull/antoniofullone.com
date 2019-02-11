@@ -7,12 +7,18 @@ export default class Observable extends Component {
     // Create a reference to the element
     this.ref = React.createRef();
     this.observeElement = this.observeElement.bind(this);
+    this.observer = {};
   }
 
   componentDidMount() {
-    const { element } = this.props;
+    const { element, callback, config } = this.props;
     this.ElementTag = React.createElement(element, null, '');
-    this.observeElement();
+    this.observer = new IntersectionObserver(callback, config);
+    this.observer.observe(this.ref.current);
+  }
+
+  componentWillUnmount() {
+    this.observer.unobserve(this.ref.current);
   }
 
   observeElement() {
