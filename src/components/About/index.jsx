@@ -17,8 +17,8 @@ const About = () => (
   <ThemeConsumer>
     {({
       animateElement,
-      activeArea,
       viewport,
+      theme,
       toggleMobileLinks,
       showMobileLinks
     }) => (
@@ -65,7 +65,7 @@ const About = () => (
           >
             <ReactMarkdown source={aboutText} />
           </Observable>
-          {showMobileLinks && activeArea === 'about' && (
+          {showMobileLinks && theme === 'white' && (
             <aside className="about__links has-shadows">
               <Aside
                 socialData={socialData}
@@ -84,7 +84,7 @@ const About = () => (
             </aside>
           )}
         </Article>
-        {activeArea === 'about' && viewport < 1024 && (
+        {theme === 'white' && viewport < 1024 && (
           <Button
             type="button"
             className="has-shadows btn btn--rounded btn--cta btn--about"

@@ -79,43 +79,43 @@ export const workTmp = [
     id: 2,
     label: 'Toolset',
     link: '',
-    img: './images/logos/toolset.svg'
+    img: '/images/logos/toolset.svg'
   },
   {
     id: 3,
     label: 'Lodgify',
     link: '',
-    img: './images/logos/lodgify.svg'
+    img: '/images/logos/lodgify.svg'
   },
   {
     id: 4,
     label: 'Mosalingua',
     link: '',
-    img: './images/logos/mosalingua.png'
+    img: '/images/logos/mosalingua.png'
   },
   {
     id: 5,
     label: 'William Hill',
     link: '',
-    img: './images/logos/wh.svg'
+    img: '/images/logos/wh.svg'
   },
   {
     id: 6,
     label: 'Symbaloo',
     link: '',
-    img: './images/logos/symbaloo.png'
+    img: '/images/logos/symbaloo.png'
   },
   {
     id: 7,
     label: 'Comune di Paola',
     link: '',
-    img: './images/logos/paola.png'
+    img: '/images/logos/paola.png'
   },
   {
     id: 8,
     label: 'Barcelona Home',
     link: '',
-    img: './images/logos/bh.png'
+    img: '/images/logos/bh.png'
   }
 ];
 

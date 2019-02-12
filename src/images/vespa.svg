@@ -41,11 +41,9 @@
                 <g id="Vespa-Illustration" transform="translate(1010.000000, 186.000000)">
                     <g id="Vespa-and-Driver" transform="translate(229.368178, 165.292856) rotate(4.000000) translate(-229.368178, -165.292856) translate(67.368178, 11.292856)">
                         <g id="ruota-anteriore" class='ruota-anteriore' transform="translate(244.712927, 200.759740)" fill-rule="nonzero">
-                        <ellipse  id="Oval" fill="#0D0B17" cx="39.317214" cy="37.9991018" rx="39.317214" ry="37.9991018">
                             <ellipse id="Oval" fill="#0D0B17" cx="39.317214" cy="37.9991018" rx="39.317214" ry="37.9991018"></ellipse>
                             <ellipse id="Oval" stroke="#5C6277" stroke-width="3" fill="#272727" cx="39.6150717" cy="39.4834417" rx="24.7221876" ry="24.6400426"></ellipse>
                             <ellipse id="Oval-Copy" stroke="#5C6277" stroke-width="2.1" fill="#FFFFFF" cx="39.6150717" cy="39.4834417" rx="12.8078803" ry="12.7653233"></ellipse>
-                           </ellipse>
                             <g id="Group-3" transform="translate(25.615761, 11.874719)">
                                 <polygon id="Path-8" fill="#E4E4E4" points="13.105738 1.42727219 23.8615374 21.6948307 27.1934177 18.1637823 15.8485829 0"></polygon>
                                 <path d="M24.5672671,16.8064117 C26.1900287,16.0840001 28.3045075,16.1522039 28.3266783,18.4339657 C28.348849,20.7157276 17.1038682,30.5941104 16.2053204,31.1470025 C15.3067726,31.6998945 13.2564765,30.5141574 9.62626003,27.7295988 C5.99604357,24.9450402 22.9445056,17.5288233 24.5672671,16.8064117 Z" id="Path-5" fill="#E4E4E4" transform="translate(18.722329, 23.839430) rotate(-6.000000) translate(-18.722329, -23.839430) "></path>

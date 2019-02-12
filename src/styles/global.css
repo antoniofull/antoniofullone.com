@@ -9,6 +9,47 @@ body {
   background-color: var(--color-primary-light);
   scroll-behavior: smooth;
 }
+
+/* Fix broken images credits: https://bitsofco.de/styling-broken-images/ */
+img {
+  position: relative;
+  color: white;
+  font-family: freight-sans-prop, sans-serif;
+  min-height: 40px;
+  font-weight: 900;
+}
+img:before {
+  content: ' ';
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(100% + 10px);
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  border: 2px dotted rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+img:after {
+  content: '\f1c5'' Broken Image of ' attr(alt);
+  display: block;
+  font-size: 12px;
+  padding: 5px;
+  font-style: normal;
+  font-family: 'Font Awesome\ 5 Free';
+  color: rgb(100, 100, 100);
+  font-weight: 900;
+
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
 .dark-theme {
   background-color: var(--color-black);
 }
