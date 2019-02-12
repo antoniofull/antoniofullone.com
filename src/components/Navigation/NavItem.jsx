@@ -40,25 +40,23 @@ const ContactNav = styled.ul`
   min-width: 180px;
   padding: 8px 16px;
   font-size: 12px;
+  border-width: 1px;
+  border-style: solid;
   ${props =>
     props.viewport > 1200
       ? `left: 50%;
     transform: translateX(-50%);`
       : `right: 0;`}
   border-radius: 8px;
-  background-color: ${props => {
-    let color = '#EFEFE7';
-    switch (props.area) {
-      case 'about':
-        color = '#FDF9FA';
-        break;
-      case 'work':
-        color = 'var(--color-secondary)';
-        break;
+  ${props => {
+    switch (props.theme) {
+      case 'white':
+        return 'background-color: #FBFBFA; border-color: #EFEFE6';
+      case 'secondary-light':
+        return 'background-color: #BCC4E0; border-color: #A2ACD4';
       default:
-        color = '#EFEFE7';
+        return 'background-color: #EFEFE7; border-color: #E9E9DC';
     }
-    return color;
   }};
 `;
 
