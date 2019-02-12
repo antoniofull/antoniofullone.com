@@ -43,6 +43,7 @@ const About = () => (
             className="js-animatable no-opacity"
             config={{ threshold: 0.5 }}
             callback={animateElement}
+            data-theme="white"
           >
             <img
               className="about__img"
@@ -57,6 +58,7 @@ const About = () => (
           </Observable>
           <Observable
             data-animation="fadeIn"
+            data-theme="white"
             className="js-animatable no-opacity about__content"
             config={{ treshold: 0.2 }}
             callback={animateElement}

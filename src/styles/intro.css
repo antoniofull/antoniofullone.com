@@ -95,8 +95,8 @@
 
 @media screen and (min-width: 1024px) {
   .main-section {
-    min-height: calc(95vh - (var(--header-height)));
-    height: calc(100vh - (var(--header-height)));
+    height: 450px;
+    min-height: calc(100vh - (var(--header-height)));
   }
   .container--intro {
     height: 100%;

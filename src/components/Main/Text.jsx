@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Observable from '../Observable';
 import { ThemeConsumer } from '../ThemeContext';
 
 class Text extends Component {
@@ -41,19 +42,23 @@ class Text extends Component {
 
   render() {
     const { fontSize } = this.state;
+    const { animateElement } = this.props;
     return (
       <div
         className="intro container grid__item--full-width"
         ref={this.container}
       >
-        <h1
-          id="intro-heading"
+        <Observable
+          element="h1"
+          callback={animateElement}
           className="intro__header text-center bodoni-24"
           ref={this.textElement}
+          data-theme="primary-light"
+          data-area="intro"
           style={fontSize ? { fontSize } : null}
         >
           Antonio Fullone
-        </h1>
+        </Observable>
         <div className="tagline">
           <h2 className="intro__tagline text-center bodoni-24">
             Designer &amp; Developer
@@ -69,12 +74,15 @@ class Text extends Component {
 }
 
 Text.propTypes = {
-  viewport: PropTypes.number.isRequired
+  viewport: PropTypes.number.isRequired,
+  animateElement: PropTypes.func.isRequired
 };
 
 const TextContainer = () => (
   <ThemeConsumer>
-    {({ viewport }) => <Text viewport={viewport} />}
+    {({ viewport, animateElement }) => (
+      <Text viewport={viewport} animateElement={animateElement} />
+    )}
   </ThemeConsumer>
 );
 

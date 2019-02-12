@@ -18,13 +18,12 @@ import Observable from './src/components/Observable';
 import { navItems } from './src/data';
 
 import { ThemeProvider } from './src/components/ThemeContext';
+import { isFulfilled } from 'q';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lastUsedThemes: [],
-      lastActiveAreas: [],
       viewport: window.innerWidth,
       mailTooltip: false
     };
@@ -39,6 +38,14 @@ class App extends Component {
     this.closeEmailLink = this.closeEmailLink.bind(this);
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
+    this.setBackground = this.setBackground.bind(this);
+
+    // Create refs for elements
+    this.introRef = React.createRef();
+    this.aboutRef = React.createRef();
+    this.workRef = React.createRef();
+    this.footerRef = React.createRef();
+
     // Smooth Scrolling polifyll for IOS and old browsers
     smoothscroll.polyfill();
   }
@@ -50,11 +57,20 @@ class App extends Component {
       clearTimeout(this.resizeTimer);
       this.resizeTimer = setTimeout(this.onResize, 0);
     });
+    this.setBackground();
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
+    window.removeEventListener('scroll', this.setBackground);
     clearTimeout(this.resizeTimer);
+  }
+
+  setBackground(theme = 'primary-light') {
+    this.setState({
+      ...this.state,
+      theme
+    });
   }
 
   toggleMobileLinks() {
@@ -71,52 +87,37 @@ class App extends Component {
     });
   }
 
+  setBackgroundTheme(el) {
+    const defaultValue = {
+      theme: 'primary-light',
+      area: 'intro'
+    };
+    const { theme, area } = window.pageYOffset > 400 ? el : defaultValue;
+    if (theme && area) {
+      this.setState({
+        ...this.state,
+        theme,
+        area
+      });
+    }
+  }
+
   onSectionIntersection(entries) {
-    entries.map(e => {
-      const theme = e.target.dataset.theme;
-      const id = e.target.getAttribute('id');
-      if (e.isIntersecting) {
-        this.setState({
-          ...this.state,
-          mailMenu: false,
-          theme: theme,
-          activeArea: id,
-          lastActiveAreas: [...this.state.lastActiveAreas, id],
-          lastUsedThemes: [...this.state.lastUsedThemes, theme],
-          showMobileLinks: id === '#about'
-        });
-      } else if (
-        !e.isIntersecting &&
-        this.state.lastActiveAreas.length >= 0 &&
-        id === this.state.activeArea
-      ) {
-        const lastUsedThemes = this.state.lastUsedThemes;
-        const lastActiveAreas = this.state.lastActiveAreas;
-        const themeIndex = lastUsedThemes.indexOf(theme) - 1;
-        const areaIndex = lastActiveAreas.indexOf(id) - 1;
-        this.setState({
-          ...this.state,
-          activeArea: lastActiveAreas[areaIndex],
-          theme: lastUsedThemes[themeIndex],
-          showMobileLinks: id === '#about'
-        });
-      } else {
-        this.setState({
-          ...this.state,
-          showMobileLinks: false
-        });
-      }
-    });
+    const visible = entries.filter(e => e.isIntersecting)[0];
   }
 
   onElementIntersection(entries) {
-    entries.forEach(e => {
-      const target = e.target;
+    const visible = entries.filter(entry => entry.isIntersecting)[0];
+    if (visible) {
+      const target = visible.target;
       const animationClass = target.dataset.animation || null;
-      if (e.isIntersecting) {
-        target.classList.add(animationClass, 'animated');
+      const theme = target.dataset.theme;
+      if (theme) {
+        this.setBackground(theme);
       }
-    });
+      // Animate element when visible
+      target.classList.add(animationClass, 'animated');
+    }
   }
 
   onImagesIntersection(entries) {
@@ -212,23 +213,9 @@ class App extends Component {
   }
 
   render() {
-    let theme;
-    switch (this.state.activeArea) {
-      case 'about':
-        theme = 'white';
-        break;
-      case 'work':
-        theme = 'secondary-light';
-        break;
-      case 'footer':
-        theme = 'primary-light';
-        break;
-      default:
-        theme = 'primary-light';
-    }
+    console.log(this.state);
     const value = {
       ...this.state,
-      activeTheme: theme,
       animateElement: this.onElementIntersection,
       scroll: this.scrollToSection,
       toggleMobileLinks: this.toggleMobileLinks,
@@ -239,7 +226,7 @@ class App extends Component {
     return (
       <ThemeProvider value={value}>
         <PageContainer>
-          <Header>
+          <Header theme={this.state.theme}>
             <Logo />
             <Navigation closeEmailLink={this.closeEmailLink} items={navItems} />
           </Header>
@@ -247,7 +234,7 @@ class App extends Component {
             <Observable
               element="section"
               id="intro"
-              data-theme="primary-light"
+              ref={this.introRef}
               config={{ threshold: 0.4 }}
               className="main-section"
               callback={this.onSectionIntersection}
@@ -257,9 +244,11 @@ class App extends Component {
             <Observable
               element="section"
               data-theme="white"
+              data-area="about"
+              ref={this.aboutRef}
               className="about-section"
               id="about"
-              config={{ threshold: 0.2 }}
+              config={{ threshold: 0.3 }}
               callback={this.onSectionIntersection}
             >
               <About />
@@ -268,6 +257,8 @@ class App extends Component {
               element="section"
               id="work"
               data-theme="secondary-light"
+              data-area="work"
+              ref={this.workRef}
               config={{ threshold: 0.2 }}
               className="work-section container has-gutter-outside"
               callback={this.onSectionIntersection}
@@ -279,6 +270,8 @@ class App extends Component {
             element="footer"
             id="site-footer"
             data-theme="primary-light"
+            data-area="intro"
+            ref={this.footerRef}
             config={{ threshold: 0.3 }}
             className="site-footer"
             callback={this.onSectionIntersection}

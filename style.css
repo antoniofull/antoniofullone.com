@@ -35,9 +35,6 @@
   .illustration:after {
     content: none;
   }
-  .about-section {
-    /* background: var(--color-black); */
-  }
 }
 @media screen and (max-height: 450px) {
   .intro {

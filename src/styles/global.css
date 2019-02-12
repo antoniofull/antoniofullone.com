@@ -74,6 +74,7 @@ body {
 }
 .index > section {
   margin-bottom: var(--margin-xl);
+  padding-bottom: var(--padding-xl);
 }
 
 .msg {
