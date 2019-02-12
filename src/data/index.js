@@ -23,15 +23,15 @@ export const navItems = [
 
 export const aboutText = ` 
 
-Born in the beautiful and sunny [Calabria](https://en.wikipedia.org/wiki/Calabria), Antonio is a designer & developer and — as he like to call himself — a wannabe cook. He left his home town several years ago, and moved abroad. Since then he lived in different cities and countries in Europe.
+Born in the beautiful and sunny [Calabria](https://en.wikipedia.org/wiki/Calabria), Antonio is a designer & developer and — as he likes to call himself — a wannabe cook.  He left his home town several years ago and moved abroad. Since then he lived in different cities and countries in Europe.
 
-He has travelled to several countries between Europe and North America and in the last two years he has been working remotely as a consultant, travelling to his favorite places while working with different companies to improve their UI’s and Websites.
+He has traveled to several countries between Europe and North America and in the last two years, he has been working remotely as a consultant, traveling to his favorite places while working with different companies to improve their UI’s and Websites.
 
 His long time dream was to become a chef and own a restaurant. His hero and inspiration is [Massimo Bottura](https://osteriafrancescana.it). Today he is more than happy to work in the tech industry. Cooking remains one of his favorite hobbies and activities. He writes [code](http://github.com/antoniofull/), he likes to experiment with [CSS](https://codepen.io/antoniofull/) and [design]() things and [icons](https://thenounproject.com/antonio.fullone/).
 
 He writes his thoughts on a [journal](https://www.antoniofullone.com/blog) and he sends some [(re)tweets](https://twitter.com/_antoniofullone) from time to time. He rarely uses [Facebook](https://www.facebook.com/antonio.fullone) and does not have a personal Instagram account.
 
-You can check his professional Bio (and photo) on [LinkedIn](www.linkedin.com/in/antoniofullone) or download his [Resume](https://www.dropbox.com/s/5pj04p723ov2hum/Antonio-Fullone-resume.pdf?dl=0). He loves to travel, read books, watching series on Netflix and take amateur photos. He practices meditation and he’s interested in __philosophy__ and __Stoicism__. His favorite cities are __New York__ and __Malaga.__
+You can check his professional Bio (and photo) on [LinkedIn](www.linkedin.com/in/antoniofullone) or download his [Resume](https://www.dropbox.com/s/5pj04p723ov2hum/Antonio-Fullone-resume.pdf?dl=0). He loves traveling, reading books, watching series on Netflix and taking amateur photos. He practices meditation and he’s interested in __philosophy__ and __Stoicism__. His favorite cities are __New York__ and __Malaga.__
 
 His favorite quote is from Marcus Aurelius, author of [Meditations](https://en.wikipedia.org/wiki/Meditations), his favorite book.
 
