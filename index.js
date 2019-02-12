@@ -178,10 +178,10 @@ class App extends Component {
 
   scrollToSection(e) {
     const target = e.target.getAttribute('href');
-    const elementToScroll = document.querySelector(target);
     const isLocalLink = target.startsWith('#');
 
-    if (isLocalLink && elementToScroll) {
+    if (isLocalLink) {
+      const elementToScroll = document.querySelector(target);
       e.preventDefault();
       // Get Header height + some space
       const height =
