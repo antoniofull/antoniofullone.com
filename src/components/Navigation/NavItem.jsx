@@ -15,30 +15,22 @@ const NavIListItem = styled.li`
 const NavLink = styled.a`
   font-weight: 600;
   color: ${props =>
-    props.area === props.link
-      ? 'var(--color-accent)'
-      : 'var(--color-black-dark)'};
+    props.active ? 'var(--color-accent)' : 'var(--color-black-dark)'};
   text-decoration: none;
   transition: color 0.3s ease-in-out;
   cursor: pointer;
   &:hover {
-    ${props =>
-      props.area === props.link
-        ? 'var(--color-accent)'
-        : 'var(--color-black-dark)'};
+    color: ${props =>
+      props.active ? 'var(--color-accent)' : 'var(--color-black-dark)'};
   }
   &:hover:active {
-    ${props =>
-      props.area === props.link
-        ? 'var(--color-accent)'
-        : 'var(--color-black-dark)'};
+    color: ${props =>
+      props.active ? 'var(--color-accent)' : 'var(--color-black-dark)'};
   }
   &:visited,
   &:active {
     color: ${props =>
-      props.area === props.link
-        ? 'var(--color-accent)'
-        : 'var(--color-black-dark)'};
+      props.active ? 'var(--color-accent)' : 'var(--color-black-dark)'};
   }
 `;
 
@@ -84,7 +76,7 @@ const NavItem = ({ item }) => (
   <ThemeConsumer>
     {({
       scroll,
-      activeArea,
+      theme,
       toggleEmailMenu,
       mailMenu,
       copyEmailToClipboard,
@@ -93,9 +85,13 @@ const NavItem = ({ item }) => (
     }) => (
       <NavIListItem className="nav-list__item">
         <NavLink
-          area={activeArea}
+          theme={theme}
           link={item.link.replace('#', '')}
           href={item.link}
+          active={
+            (item.link === '#about' && theme === 'white') ||
+            (item.link === '#work' && theme === 'secondary-light')
+          }
           className={item.link.startsWith('mailto') && 'js-contacts'}
           onClick={item.link === '#contacts' ? toggleEmailMenu : scroll}
         >
@@ -103,7 +99,7 @@ const NavItem = ({ item }) => (
         </NavLink>
         {item.link === '#contacts' && mailMenu && (
           <ContactNav
-            area={activeArea}
+            theme={theme}
             viewport={viewport}
             className={classNames('contact-nav', { active: mailMenu })}
           >
