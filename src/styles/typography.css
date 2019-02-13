@@ -119,3 +119,14 @@ blockquote {
   -webkit-font-feature-settings: 'liga';
   font-feature-settings: 'liga';
 }
+
+/* Drop caps */
+p.drop-caps:not(:focus)::first-letter {
+  font-size: var(--font-xxl);
+  float: left;
+  line-height: 0.68;
+  font-weight: 100;
+  margin: 0.05em 0.1em 0 0;
+  text-transform: uppercase;
+  font-style: normal;
+}

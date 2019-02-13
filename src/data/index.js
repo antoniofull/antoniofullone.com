@@ -72,49 +72,49 @@ export const workTmp = [
   {
     id: 1,
     label: 'WPML',
-    link: '',
+    link: 'https://wpml.org/',
     img: './images/logos/wpml.svg'
   },
   {
     id: 2,
     label: 'Toolset',
-    link: '',
+    link: 'https://toolset.com/',
     img: '/images/logos/toolset.svg'
   },
   {
     id: 3,
     label: 'Lodgify',
-    link: '',
+    link: 'https://www.lodgify.com/',
     img: '/images/logos/lodgify.svg'
   },
   {
     id: 4,
     label: 'Mosalingua',
-    link: '',
+    link: 'https://www.mosalingua.com/en/',
     img: '/images/logos/mosalingua.png'
   },
   {
     id: 5,
     label: 'William Hill',
-    link: '',
+    link: 'https://www.williamhill.com/',
     img: '/images/logos/wh.svg'
   },
   {
     id: 6,
     label: 'Symbaloo',
-    link: '',
+    link: 'https://edu.symbaloo.com/',
     img: '/images/logos/symbaloo.png'
   },
   {
     id: 7,
     label: 'Comune di Paola',
-    link: '',
+    link: 'http://www.comune.paola.cs.it/',
     img: '/images/logos/paola.png'
   },
   {
     id: 8,
     label: 'Barcelona Home',
-    link: '',
+    link: 'https://barcelona-home.com/',
     img: '/images/logos/bh.png'
   }
 ];

@@ -10,11 +10,12 @@
   margin-right: auto;
 }
 .about__content > p:first-of-type:first-letter {
+  font-size: var(--font-xxl);
   float: left;
-  font-size: var(--font-xl);
-  padding-top: 12px;
-  padding-right: 1px;
-  padding-left: 0;
+  line-height: 0.68;
+  font-weight: 100;
+  margin: 0.05em 0.1em 0 0;
+  text-transform: uppercase;
   font-style: normal;
 }
 

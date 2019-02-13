@@ -77,21 +77,6 @@
   width: 80%;
   max-width: 390px;
 }
-@media screen and (min-width: 600px) {
-  /*
-  .intro__header {
-    font-size: var(--font-xl);
-  }
-  .intro__tagline,
-  .i-am-cool {
-    font-size: var(--font-m);
-    line-height: 1;
-  }
-  .intro__qualified {
-    font-size: var(--base-font);
-  }
-  */
-}
 
 @media screen and (min-width: 1024px) {
   .main-section {
