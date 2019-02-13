@@ -1,55 +1,28 @@
-# Welcome to my site.
+# Personal Website of Antonio Fullone.
 
+This is the source code for my website, is built with React JS and Jekyll.
+Is a little bit of a work in progress and I am in the middle of redesigning the blog. (Check the Branch v5).
 
-## CSS 
+## CSS
 
-I use **_Sass_** for everything. The css is organized in modules which are build using sass and a grunt plugin inside the _assets folder.
+I use CSS GRID and CSS CUSTOM PROPERTIES. I ditched Sass and other pre/post processors.
 
-The **Partials** folder contains the variables and functions file. There is also the **utils** file, which contains many common utilities I use on that site and in other projects.
+## Javascript
 
-The **Modules** folder contains all the modules needed for the site, **layout typography** etc.
+I use ReactJS and vanilla ES6.
 
-Finally the **Lib** just contains the external libraries that I use. For the moment just mine plus Susy ( I wonder how I did to live before met this awesome library).
+## HTML Editors
 
-## Javascript 
-
-I used **_Browserify_** and **_Vanilla JS_**. As you can see, in this website Javascript is useless, but it's a good practice to keep your code modular.
-
-I also learnt how to properly user *Browserify with **_Grunt_**.
-
-## HTML 
-
-HTML 5 of course. I usually use **_Emmet_** with **_Textmate_**, but since the update to **Yosemite** the plugin crashes everytime, so this time I wrote everything basically "by hands".
+I used Visual Studio Code and Mac Vim.
 
 ## Typography
 
-Fonts used : 
+Fonts are served by Typekit :
 
-- Skolar for the introduction text in the home page and for styling the first letter of each post.
+- Freight sans pro, mostly for for Headings.
 
-- Freight text pro : for Headings
+- Tisa Pro for Text
 
-- Freight sans pro : for Text
+## Build
 
-- Cosmopolitan : for the "A" in the logo.
-
-- Typekit is serving the fonts.
-
-## Build 
-
-**Grunt**, a very simple file. I would prefer to use **Gulp** since it's faster, but the support and the ecosystem around Grunt is **bigger and much more reliable**, for the moment.
-
-Also because I used **Sass Maps**, which are not widely supported yet from all this "building tools".
-
-## Design, blog, everything else
-
-The first design happened during one of my insomniac night :) 
-It was time for a small refresh, I like keeping it simple so it reflects more myself :D
-
-There are no **comments**, I have very few visits a day and I have no time to deal with comments, if I had time I would probably write more often (justifying the use of comments).
-
-**Share** buttons are also not present, I guess everyone now know how to share a post (thanks to Upworthy!!)
-
-I am happy with feedbacks, so if you feel like to give me yours, I am happy to receive it. 
-
-Typos, errors : I write really bad, I do the same in Italian which is my mother language, so please be kind when reminding me of errors on his site, I am aware of my writing style :D
+Parcel is used for quick building with Yarn.
