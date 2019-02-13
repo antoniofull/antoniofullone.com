@@ -5,11 +5,11 @@ Is a little bit of a work in progress and I am in the middle of redesigning the 
 
 ## CSS
 
-I use CSS GRID and CSS CUSTOM PROPERTIES. I ditched Sass and other pre/post processors.
+CSS GRID and CSS CUSTOM PROPERTIES. No Sass no post/pre processors
 
 ## Javascript
 
-I use ReactJS and vanilla ES6.
+ReactJS and ES6.
 
 ## HTML Editors
 
@@ -19,10 +19,18 @@ I used Visual Studio Code and Mac Vim.
 
 Fonts are served by Typekit :
 
-- Freight sans pro, mostly for for Headings.
+- Freight sans pro.
 
-- Tisa Pro for Text
+- Tisa Pro
 
 ## Build
 
-Parcel is used for quick building with Yarn.
+Parcel and Yarn.
+
+### commands:
+
+install: `yarn`
+
+dev server: `yarn dev`
+
+build: `yarn build`
