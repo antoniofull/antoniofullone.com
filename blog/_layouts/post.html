@@ -1,47 +1,40 @@
 ---
 layout: default
 ---
-<section class="content">
-  <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <meta itemprop="keywords" content="{{ page.tags | join: ',' }}" />
-    <meta itemprop="description"
-          content="{{ content | strip_html | truncatewords: 40 }}" />
-  <header class="post__header">
-    <h1 itemprop="name" class="title title--post">{{ page.title }}</h1>
-    <h3 class="post__meta" itemprop="datePublished"> - {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} -</h3>
-    <aside class="info">
-      <span class="reading-time">Reading Time:  {{ content.size | readtime }} min.</span>
-    </aside>
-    {% if page.subtext %}
-      <p class="post__sub-text">{{page.subtext}} </p>
-    {% endif %}
 
-  </header>
-  {% if page.image %}
+<section class="content">
+  <h1 itemprop="name" class="title title--post">{{ page.title }}</h1>
+  <h3 class="post__meta" itemprop="datePublished">
+    - {{ page.date | date: '%b %-d, %Y' }}{% if page.author %} • {% endif %}{%
+    if page.meta %} • {{ page.meta }}{% endif %} -
+  </h3>
+  <span class="reading-time"
+    >Reading Time: {{ content.size | readtime }} min.</span
+  >
+  {% if page.subtext %}
+  <p class="post__sub-text">{{ page.subtext }}</p>
+  {% endif %} {% if page.image %}
   <figure class="">
     <div class="image-container image-container--home">
-      <img class="animated" src="/images/posts/{{ page.image }}" alt="New York City, Brooklyn Bridge. Summer 2017">
-     </div>
+      <img
+        class="animated"
+        src="/images/posts/{{ page.image }}"
+        alt="New York City, Brooklyn Bridge. Summer 2017"
+      />
+    </div>
     <figcaption>{{ page.imageDesc }}</figcaption>
   </figure>
-{% endif %}
+  {% endif %}
   <div class="post__content" itemprop="articleBody">
-  {{ content }}
+    {{ content }}
   </div>
-</article>
-<div class="page-navigation">
-  {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-  {% endif %}
-</div>
-<div class="share">
-  <div class="fb-like" data-href="{{page.url}}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-</div>
-<div class="comments">
-  <div class="loader">Loading...</div>
-  <div class="fb-comments" data-width="100%"></div>
-</div>
+  <div class="page-navigation">
+    {% if page.previous.url %}
+    <a class="prev" href="{{ page.previous.url }}"
+      >&laquo; {{ page.previous.title }}</a
+    >
+    {% endif %} {% if page.next.url %}
+    <a class="next" href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+    {% endif %}
+  </div>
 </section>

@@ -7,7 +7,7 @@ layout: lab
         <h1>Menu Icon Transform with Svg and Css</h1>
         <p>
            A simple animation with Svg and SnapSvg for a menu icon.
-           On the right the Css version using transform. 
+           On the right the Css version using transform.
         </p>
         <p>
             The code in the snippet is quite different from the code in the page(view source code).
@@ -23,9 +23,9 @@ layout: lab
         </button>
         <button class="btn source">
             <a href="https://bitbucket.org/afullone/menu-icon-morphing">
-                <span>Source Code</span>       
+                <span>Source Code</span>
             </a>
-        </button> 
+        </button>
         <div id="code">
             <pre>
                 <code>
@@ -37,7 +37,7 @@ function endAnimation() {
 export default class MenuIcon {
     constructor() {
         var icon = document.querySelector('.icon');
-        icon.addEventListener('click', this.CrossMorph.bind(this)); 
+        icon.addEventListener('click', this.CrossMorph.bind(this));
         this.toggle = true;
         this.toggleCss();
     }
