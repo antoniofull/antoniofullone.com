@@ -1,23 +1,15 @@
 # Site settings
 title: Antonio Fullone
-email: antonio@antoniofullone.com
-description: "Antonio Fullone personal website"
-baseurl: ""
-url: "http://antoniofullone.com"
-url: "http://antoniofullone.com"
-twitter_username: lastwebdesigner
-github_username:  lastwebdesigner
+email: antonio.fullone@gmail.com
+description: 'Antonio Fullone personal website'
+baseurl: ''
+url: 'http://antoniofullone.com'
+twitter_username: _antoniofullone
+github_username: antoniofull
 ftp_host: 'antoniofullone.com'
 ftp_dir: '/t'
 ftp_passive: false
-plugins: ["emoji_for_jekyll"]
-exclude: ['node_modules', 'bower_components', 'gulpfile.js', 'grunt_package.json', 'package.json', 'bower.json', 'Gruntfile.js', 'README.md','gulp']
-plugins:
-  - jekyll-sitemap
-  - gemoji
-  - jekyll-seo-tag
-  - jemoji
-# Build settings
-markdown: kramdown
+plugins: ['']
+exclude: ['node_modules', 'package.json', 'README.md']
 permalink: pretty
 future: false
