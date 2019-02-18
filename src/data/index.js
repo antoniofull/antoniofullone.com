@@ -36,7 +36,7 @@ You can check his professional Bio (and photo) on [LinkedIn](www.linkedin.com/in
 His favorite quote is from Marcus Aurelius, author of [Meditations](https://en.wikipedia.org/wiki/Meditations), his favorite book.
 
 > A man's worth is no greater than his ambitions. 
-— Marcus Aurelius		 	  
+— Marcus Aurelius
 
 The most inspiring person he met was his father and he follows the principles he taught him: Respect, Honesty, Humility and Kindness. He listens more than he speaks.
 `;

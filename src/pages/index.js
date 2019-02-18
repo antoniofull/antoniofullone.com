@@ -1,8 +1,8 @@
 /* eslint-disable */
 import smoothscroll from 'smoothscroll-polyfill';
 import React, { Component } from 'react';
-import * as ReactDOM from 'react-dom';
 import scrollToElement from 'scroll-to-element';
+import { Helmet } from 'react-helmet';
 
 import PageContainer from '../components/PageContainer';
 import Header from '../components/header';
@@ -18,6 +18,7 @@ import Observable from '../components/Observable';
 import { navItems } from '../data';
 import { ThemeProvider } from '../components/ThemeContext';
 
+// Import CSS Files
 import '../../style.css';
 
 class HomePage extends Component {
@@ -207,6 +208,22 @@ class HomePage extends Component {
     };
     return (
       <ThemeProvider value={value}>
+        {/* Not a proper solution but for the moment is ok */}
+        <Helmet>
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+            crossorigin="anonymous"
+          />
+          <link
+            rel="stylesheet"
+            href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
+            type="text/css"
+            charset="utf-8"
+          />
+          <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
+        </Helmet>
         <PageContainer>
           <Header>
             <Logo />

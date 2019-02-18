@@ -32,7 +32,10 @@ const Temp = ({ companies }) => (
       {companies.map(company => (
         <a className="company" href={company.link} key={company.id}>
           <figure>
-            <img data-src={company.img} alt={company.label} />
+            <img
+              data-src={`https://www.antoniofullone.com${company.img}`}
+              alt={company.label}
+            />
             <figcaption className="animated company__label">
               {company.label}
             </figcaption>
