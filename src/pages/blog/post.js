@@ -20,11 +20,9 @@ class BlogHome extends Component {
       mailTooltip: false
     };
     this.onIntersection = this.onIntersection.bind(this);
-    this.scrollToSection = this.scrollToSection.bind(this);
     this.onResize = this.onResize.bind(this);
 
     this.renderEmailMenu = this.renderEmailMenu.bind(this);
-    this.toggleMobileLinks = this.toggleMobileLinks.bind(this);
     this.closeEmailLink = this.closeEmailLink.bind(this);
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
@@ -49,18 +47,11 @@ class BlogHome extends Component {
     clearTimeout(this.resizeTimer);
   }
 
-  setBackground(theme = 'primary-light') {
+  setBackground(theme = 'white') {
     this.setState({
       ...this.state,
       theme,
       showMobileLinks: theme !== 'white'
-    });
-  }
-
-  toggleMobileLinks() {
-    this.setState({
-      ...this.state,
-      showMobileLinks: !this.state.showMobileLinks
     });
   }
 
@@ -167,32 +158,10 @@ class BlogHome extends Component {
     e.target.setAttribute('href', `mailto:${mail}`);
   }
 
-  scrollToSection(e) {
-    const target = e.target.getAttribute('href');
-    const isLocalLink = target.startsWith('#');
-
-    if (isLocalLink) {
-      const elementToScroll = document.querySelector(target);
-      e.preventDefault();
-      // Get Header height + some space
-      const height =
-        target === '#home'
-          ? 0
-          : document.querySelector('.site-header').clientHeight + 15;
-      scrollToElement(elementToScroll, {
-        offset: height * -1,
-        ease: 'inBack',
-        duration: 600
-      });
-    }
-  }
-
   render() {
     const value = {
       ...this.state,
       animateElement: this.onIntersection,
-      scroll: this.scrollToSection,
-      toggleMobileLinks: this.toggleMobileLinks,
       toggleEmailMenu: this.renderEmailMenu,
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink
@@ -228,6 +197,10 @@ class BlogHome extends Component {
           </Header>
           <div>
             <h1>{post.frontmatter.title}</h1>
+            <div
+              className="padding-x-half"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
           </div>
         </PageContainer>
       </ThemeProvider>
@@ -250,7 +223,5 @@ export const query = graphql`
     }
   }
 `;
-
-console.log(query);
 
 export default BlogHome;
