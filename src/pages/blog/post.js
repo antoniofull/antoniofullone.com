@@ -198,7 +198,6 @@ class BlogHome extends Component {
       setEmailLink: this.setEmailLink
     };
     const { markdownRemark: post } = this.props.data;
-    console.log(this.props);
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -228,7 +227,7 @@ class BlogHome extends Component {
             </Header>
           </Header>
           <div>
-            <h1>test</h1>
+            <h1>{post.frontmatter.title}</h1>
           </div>
         </PageContainer>
       </ThemeProvider>
