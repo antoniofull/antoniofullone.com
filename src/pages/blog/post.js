@@ -1,26 +1,18 @@
-/* eslint-disable */
+'use strict';
 import smoothscroll from 'smoothscroll-polyfill';
+
 import React, { Component } from 'react';
-import scrollToElement from 'scroll-to-element';
 import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 
-import PageContainer from '../components/PageContainer';
-import Header from '../components/header';
-import Logo from '../components/logo';
-import Navigation from '../components/navigation';
-import Main from '../components/main';
-import About from '../components/about';
-import Work from '../components/work';
-import Footer from '../components/footer';
-import Observable from '../components/Observable';
+import Header from '../../components/header';
+import Logo from '../../components/logo';
+import Navigation from '../../components/navigation';
+import PageContainer from '../../components/PageContainer';
+import { ThemeProvider } from '../../components/ThemeContext';
+import { navItems } from '../../data';
 
-import { navItems } from '../data';
-import { ThemeProvider } from '../components/ThemeContext';
-
-// Import CSS Files
-import '../../style.css';
-
-class HomePage extends Component {
+class BlogHome extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -205,6 +197,8 @@ class HomePage extends Component {
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink
     };
+    const { markdownRemark: post } = this.props.data;
+    console.log(this.props);
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -225,51 +219,39 @@ class HomePage extends Component {
         </Helmet>
         <PageContainer>
           <Header>
-            <Logo />
-            <Navigation closeEmailLink={this.closeEmailLink} items={navItems} />
+            <Header>
+              <Logo />
+              <Navigation
+                closeEmailLink={this.closeEmailLink}
+                items={navItems}
+              />
+            </Header>
           </Header>
-          <main className="index" role="main">
-            <section element="section" id="intro" className="main-section">
-              <Main />
-            </section>
-            <Observable
-              element="section"
-              data-theme="white"
-              ref={this.aboutRef}
-              className="about-section"
-              id="about"
-              config={{ threshold: 0.3 }}
-              callback={this.onSectionIntersection}
-            >
-              <About />
-            </Observable>
-            <Observable
-              element="section"
-              id="work"
-              data-theme="secondary-light"
-              ref={this.workRef}
-              config={{ threshold: 0.2 }}
-              className="work-section container has-gutter-outside"
-              callback={this.onSectionIntersection}
-            >
-              <Work />
-            </Observable>
-          </main>
-          <Observable
-            element="footer"
-            id="site-footer"
-            data-theme="primary-light"
-            ref={this.footerRef}
-            config={{ threshold: 0.3 }}
-            className="site-footer"
-            callback={this.onSectionIntersection}
-          >
-            <Footer />
-          </Observable>
+          <div>
+            <h1>test</h1>
+          </div>
         </PageContainer>
       </ThemeProvider>
     );
   }
 }
 
-export default HomePage;
+export const query = graphql`
+  query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      id
+      html
+      frontmatter {
+        path
+        title
+        date(formatString: "MMMM DD, YYYY")
+        image
+        imageDesc
+      }
+    }
+  }
+`;
+
+console.log(query);
+
+export default BlogHome;
