@@ -11,7 +11,6 @@
 */
 @import './src/styles/reset.css';
 @import './src/styles/variables.css';
-/* @import './node_modules/animate.css/animate.min.css'; */
 @import './src/styles/animations.css';
 @import './src/styles/typography.css';
 @import './src/styles/grid.css';
@@ -22,22 +21,3 @@
 @import './src/styles/intro.css';
 @import './src/styles/about.css';
 @import './src/styles/work.css';
-
-@media screen and (min-width: 980px) {
-  .illustration {
-    background: none;
-  }
-  .illustration__container {
-    background: url('./src/images/bg_vespa_desktop.svg') no-repeat center;
-    background-size: contain;
-  }
-  .illustration:before,
-  .illustration:after {
-    content: none;
-  }
-}
-@media screen and (max-height: 450px) {
-  .intro {
-    padding-top: var(--padding);
-  }
-}

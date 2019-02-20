@@ -8,7 +8,7 @@ import { ThemeConsumer } from '../ThemeContext';
 const Illustration = () => (
   <ThemeConsumer>
     {({ animateElement }) => (
-      <div className="illustration grid__item--full-width">
+      <div className="illustration">
         <div className="illustration__container">
           <ItalianBanner className="italy" />
           <Observable

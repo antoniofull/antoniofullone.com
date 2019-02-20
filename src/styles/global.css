@@ -153,7 +153,24 @@ img:after {
   background-color: hsla(85, 88%, 90%, 1);
 }
 
+@media screen and (max-height: 450px) {
+  .intro {
+    padding-top: var(--padding);
+  }
+}
+
 @media screen and (min-width: 980px) {
+  .illustration {
+    background: none;
+  }
+  .illustration__container {
+    background: url('/images/bg_vespa_desktop.svg') no-repeat center;
+    background-size: contain;
+  }
+  .illustration:before,
+  .illustration:after {
+    content: none;
+  }
   .has-gutter-outside {
     padding: 0;
   }

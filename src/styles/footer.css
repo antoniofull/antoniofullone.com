@@ -23,6 +23,9 @@
 .site-footer p {
   margin-bottom: 0;
 }
+.site-footer a:visited {
+  color: var(--color-black-light);
+}
 .site-footer .social {
   grid-area: social;
 }
@@ -82,7 +85,8 @@
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.post__title a:hover {
+.post__title a:hover,
+.post__title a:visited {
   color: var(--color-white);
 }
 

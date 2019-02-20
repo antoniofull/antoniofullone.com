@@ -1,28 +1,42 @@
+import scrollToElement from 'scroll-to-element';
+
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
+
+import { ThemeProvider } from '../components/ThemeContext';
 
 import Header from '../components/Header';
 import Logo from '../components/Logo';
-import Navigation from '../components/navigation/MainNav';
+import MainNav from '../components/navigation/MainNav';
 import PageContainer from '../components/PageContainer';
-import { ThemeProvider } from '../components/ThemeContext';
 import { navItems } from '../data';
 
-class BlogHome extends Component {
+// Import css
+import '../../style.css';
+
+class BlogLayout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewport: typeof window !== `undefined` && window.innerWidth,
+      viewport: (typeof window !== `undefined` && window.innerWidth) || 0,
       mailTooltip: false
     };
+
+    // Observables Components
     this.onIntersection = this.onIntersection.bind(this);
+    this.scrollToSection = this.scrollToSection.bind(this);
+    // Calculate Viewport
     this.onResize = this.onResize.bind(this);
 
+    // Navigation Actions
     this.renderEmailMenu = this.renderEmailMenu.bind(this);
+    this.toggleMobileLinks = this.toggleMobileLinks.bind(this);
     this.closeEmailLink = this.closeEmailLink.bind(this);
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
+    // Home Page background Theming
     this.setBackground = this.setBackground.bind(this);
   }
 
@@ -36,18 +50,16 @@ class BlogHome extends Component {
     }
     this.setBackground();
     this.LazyLoadImages();
-
-    const smoothscroll = require('smoothscroll-polyfill');
-    // Smooth Scrolling polifyll for IOS and old browsers
-    smoothscroll.polyfill();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.onResize);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.onResize);
+    }
     clearTimeout(this.resizeTimer);
   }
 
-  setBackground(theme = 'white') {
+  setBackground(theme = 'primary-light') {
     this.setState({
       ...this.state,
       theme,
@@ -55,10 +67,19 @@ class BlogHome extends Component {
     });
   }
 
+  toggleMobileLinks() {
+    this.setState({
+      ...this.state,
+      showMobileLinks: !this.state.showMobileLinks
+    });
+  }
+
   onResize() {
     this.setState({
       ...this.state,
-      viewport: typeof window !== `undefined` && window.innerWidth
+      viewport:
+        (typeof window !== `undefined` && window.innerWidth) ||
+        this.state.viewport
     });
   }
 
@@ -160,78 +181,73 @@ class BlogHome extends Component {
     e.target.setAttribute('href', `mailto:${mail}`);
   }
 
+  scrollToSection(e) {
+    const target = e.target.getAttribute('href');
+    const isLocalLink = target.startsWith('#');
+
+    if (isLocalLink) {
+      const elementToScroll = document.querySelector(target);
+      e.preventDefault();
+      // Get Header height + some space
+      const height =
+        target === '#home'
+          ? 0
+          : document.querySelector('.site-header').clientHeight + 15;
+      scrollToElement(elementToScroll, {
+        offset: height * -1,
+        ease: 'inBack',
+        duration: 600
+      });
+    }
+  }
+
   render() {
     const value = {
       ...this.state,
       animateElement: this.onIntersection,
+      scroll: this.scrollToSection,
+      toggleMobileLinks: this.toggleMobileLinks,
       toggleEmailMenu: this.renderEmailMenu,
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink
     };
-    const { markdownRemark: post } = this.props.data;
-    console.log(this.props.data);
-
+    const { children } = this.props;
     return (
       <ThemeProvider value={value}>
-        {/* Not a proper solution but for the moment is ok */}
-        <Helmet>
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-            crossorigin="anonymous"
-          />
-          <link
-            rel="stylesheet"
-            href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
-            type="text/css"
-            charset="utf-8"
-          />
-          <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
-        </Helmet>
         <PageContainer>
           <Header>
-            <Header>
-              <Logo />
-              <Navigation
-                closeEmailLink={this.closeEmailLink}
-                items={navItems}
+            <Logo />
+            <MainNav items={navItems} closeEmailLink={this.closeEmailLink} />
+            <Helmet>
+              <link
+                rel="stylesheet"
+                href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+                integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+                crossorigin="anonymous"
               />
-            </Header>
+              <link
+                rel="stylesheet"
+                href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
+                type="text/css"
+                charset="utf-8"
+              />
+              <title>Antonio Fullone Personal Blog</title>
+              <meta
+                name="description"
+                content="blog about web and self development"
+              />
+              <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
+            </Helmet>
           </Header>
-          <div>
-            <h1>{post.frontmatter.title}</h1>
-            <div
-              className="padding-x-half"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </div>
+          {children}
         </PageContainer>
       </ThemeProvider>
     );
   }
 }
 
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            title
-            image
-            imageDesc
-            date
-          }
-        }
-      }
-    }
-  }
-`;
+BlogLayout.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
-export default BlogHome;
+export default BlogLayout;

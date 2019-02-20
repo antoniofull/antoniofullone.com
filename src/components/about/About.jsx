@@ -10,6 +10,9 @@ import Aside from './AsideContent';
 import { ThemeConsumer } from '../ThemeContext';
 import Observable from '../Observable';
 
+// CSS
+import '../../styles/about.css';
+
 const Article = styled.article``;
 const Button = styled.button``;
 
@@ -75,7 +78,7 @@ const About = () => (
             </aside>
           )}
           {viewport >= 1024 && (
-            <aside className="about__links has-shadows">
+            <aside className="about__links">
               <Aside
                 socialData={socialData}
                 files={files}

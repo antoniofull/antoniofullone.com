@@ -1,6 +1,3 @@
-'use strict';
-import smoothscroll from 'smoothscroll-polyfill';
-
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
@@ -12,11 +9,11 @@ import PageContainer from '../components/PageContainer';
 import { ThemeProvider } from '../components/ThemeContext';
 import { navItems } from '../data';
 
-class BlogHome extends Component {
+class Post extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewport: window.innerWidth,
+      viewport: typeof window !== `undefined` && window.innerWidth,
       mailTooltip: false
     };
     this.onIntersection = this.onIntersection.bind(this);
@@ -27,19 +24,22 @@ class BlogHome extends Component {
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
     this.setBackground = this.setBackground.bind(this);
-
-    // Smooth Scrolling polifyll for IOS and old browsers
-    smoothscroll.polyfill();
   }
 
   componentDidMount() {
     this.resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(this.resizeTimer);
-      this.resizeTimer = setTimeout(this.onResize, 0);
-    });
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', () => {
+        clearTimeout(this.resizeTimer);
+        this.resizeTimer = setTimeout(this.onResize, 0);
+      });
+    }
     this.setBackground();
     this.LazyLoadImages();
+
+    const smoothscroll = require('smoothscroll-polyfill');
+    // Smooth Scrolling polifyll for IOS and old browsers
+    smoothscroll.polyfill();
   }
 
   componentWillUnmount() {
@@ -58,7 +58,7 @@ class BlogHome extends Component {
   onResize() {
     this.setState({
       ...this.state,
-      viewport: window.innerWidth
+      viewport: typeof window !== `undefined` && window.innerWidth
     });
   }
 
@@ -136,12 +136,14 @@ class BlogHome extends Component {
         mailMenu: false
       });
     }
-    window.setTimeout(() => {
-      this.setState({
-        ...this.state,
-        mailMessage: false
-      });
-    }, 2500);
+    if (typeof window !== 'undefined') {
+      window.setTimeout(() => {
+        this.setState({
+          ...this.state,
+          mailMessage: false
+        });
+      }, 2500);
+    }
     document.body.removeChild(input);
   }
 
@@ -224,4 +226,4 @@ export const query = graphql`
   }
 `;
 
-export default BlogHome;
+export default Post;

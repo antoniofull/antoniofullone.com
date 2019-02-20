@@ -15,11 +15,15 @@ class Text extends Component {
 
   componentDidMount() {
     this.updateSize();
-    window.addEventListener('resize', this.updateSize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.updateSize);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.updateDimensions);
+    }
   }
 
   updateSize() {
@@ -44,10 +48,7 @@ class Text extends Component {
     const { fontSize } = this.state;
     const { animateElement } = this.props;
     return (
-      <div
-        className="intro container grid__item--full-width"
-        ref={this.container}
-      >
+      <div className="intro container" ref={this.container}>
         <Observable
           element="h1"
           callback={animateElement}

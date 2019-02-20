@@ -17,6 +17,9 @@ import Design from './Design';
 import { workTmp } from '../../data/index';
 import Temp from './Temp';
 
+// CSS
+import '../../styles/work.css';
+
 const Work = () => (
   <React.Fragment>
     <Temp companies={workTmp} />

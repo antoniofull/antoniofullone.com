@@ -4,6 +4,9 @@ import { ThemeConsumer } from '../ThemeContext';
 import Text from './Text';
 import Illustration from './Illustration';
 
+// CSS
+import '../../styles/intro.css';
+
 const Main = () => (
   <ThemeConsumer>
     {({ viewport }) => (

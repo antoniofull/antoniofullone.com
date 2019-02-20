@@ -12,6 +12,9 @@ import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
 import Logo from '../Logo';
 
+// CSS
+import '../../styles/footer.css';
+
 const Footer = () => (
   <div className="footer-wrapper">
     <div className="container footer-container grid grid-large-rowgap">

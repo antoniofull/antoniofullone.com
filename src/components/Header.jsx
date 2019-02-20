@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import { ThemeConsumer } from './ThemeContext';
 
 import '../styles/header.css';
+
 const Header = props => {
   return (
     <ThemeConsumer>

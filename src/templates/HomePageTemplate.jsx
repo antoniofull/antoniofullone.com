@@ -5,7 +5,6 @@ import Observable from '../components/Observable';
 import Main from '../components/Main/Intro';
 import About from '../components/about/About';
 import Work from '../components/work/Work';
-import Footer from '../components/Footer';
 
 const HomePageTemplate = () => (
   <ThemeConsumer>
