@@ -10,7 +10,7 @@ import Credits from './credits/Credits';
 import Social from '../social';
 import FooterTagline from './FooterTagline';
 import SubFooter from './SubFooter';
-import Logo from '../logo';
+import Logo from '../Logo';
 
 const Footer = () => (
   <div className="footer-wrapper">

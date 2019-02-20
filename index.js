@@ -5,8 +5,8 @@ import * as ReactDOM from 'react-dom';
 import scrollToElement from 'scroll-to-element';
 
 import PageContainer from './src/components/PageContainer';
-import Header from './src/components/header';
-import Logo from './src/components/logo';
+import Header from './src/components/Header';
+import Logo from './src/components/Logo';
 import Navigation from './src/components/navigation';
 import Main from './src/components/main';
 import About from './src/components/about';
@@ -18,8 +18,6 @@ import Observable from './src/components/Observable';
 import { navItems } from './src/data';
 
 import { ThemeProvider } from './src/components/ThemeContext';
-import { isFulfilled } from 'q';
-import { timingSafeEqual } from 'crypto';
 
 class App extends Component {
   constructor(props) {

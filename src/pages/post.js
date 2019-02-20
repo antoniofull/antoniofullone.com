@@ -3,13 +3,14 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 
-import Header from '../../components/header';
-import Logo from '../../components/logo';
-import Navigation from '../../components/navigation';
-import PageContainer from '../../components/PageContainer';
-import { ThemeProvider } from '../../components/ThemeContext';
-import { navItems } from '../../data';
+import Header from '../components/Header';
+import Logo from '../components/Logo';
+import Navigation from '../components/navigation/MainNav';
+import PageContainer from '../components/PageContainer';
+import { ThemeProvider } from '../components/ThemeContext';
+import { navItems } from '../data';
 
 class BlogHome extends Component {
   constructor(props) {
@@ -19,11 +20,9 @@ class BlogHome extends Component {
       mailTooltip: false
     };
     this.onIntersection = this.onIntersection.bind(this);
-    this.scrollToSection = this.scrollToSection.bind(this);
     this.onResize = this.onResize.bind(this);
 
     this.renderEmailMenu = this.renderEmailMenu.bind(this);
-    this.toggleMobileLinks = this.toggleMobileLinks.bind(this);
     this.closeEmailLink = this.closeEmailLink.bind(this);
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
@@ -48,18 +47,11 @@ class BlogHome extends Component {
     clearTimeout(this.resizeTimer);
   }
 
-  setBackground(theme = 'primary-light') {
+  setBackground(theme = 'white') {
     this.setState({
       ...this.state,
       theme,
       showMobileLinks: theme !== 'white'
-    });
-  }
-
-  toggleMobileLinks() {
-    this.setState({
-      ...this.state,
-      showMobileLinks: !this.state.showMobileLinks
     });
   }
 
@@ -166,36 +158,15 @@ class BlogHome extends Component {
     e.target.setAttribute('href', `mailto:${mail}`);
   }
 
-  scrollToSection(e) {
-    const target = e.target.getAttribute('href');
-    const isLocalLink = target.startsWith('#');
-
-    if (isLocalLink) {
-      const elementToScroll = document.querySelector(target);
-      e.preventDefault();
-      // Get Header height + some space
-      const height =
-        target === '#home'
-          ? 0
-          : document.querySelector('.site-header').clientHeight + 15;
-      scrollToElement(elementToScroll, {
-        offset: height * -1,
-        ease: 'inBack',
-        duration: 600
-      });
-    }
-  }
-
   render() {
     const value = {
       ...this.state,
       animateElement: this.onIntersection,
-      scroll: this.scrollToSection,
-      toggleMobileLinks: this.toggleMobileLinks,
       toggleEmailMenu: this.renderEmailMenu,
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink
     };
+    const { markdownRemark: post } = this.props.data;
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -225,12 +196,32 @@ class BlogHome extends Component {
             </Header>
           </Header>
           <div>
-            <h1>{'p.frontmatter.title'}</h1>
+            <h1>{post.frontmatter.title}</h1>
+            <div
+              className="padding-x-half"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
           </div>
         </PageContainer>
       </ThemeProvider>
     );
   }
 }
+
+export const query = graphql`
+  query BlogPostByPath($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      id
+      html
+      frontmatter {
+        path
+        title
+        date(formatString: "MMMM DD, YYYY")
+        image
+        imageDesc
+      }
+    }
+  }
+`;
 
 export default BlogHome;

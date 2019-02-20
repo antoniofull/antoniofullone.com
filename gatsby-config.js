@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Antonio Fullone Personal Website`
+    title: `Antonio Fullone Personal Website`,
+    description: 'Personal Website of Antonio Fullone, Designer &amp; Developer'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,8 +37,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/blog/`,
+        path: `${__dirname}/src/_posts/`,
         name: 'blog'
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: 'data'
       }
     }
   ]

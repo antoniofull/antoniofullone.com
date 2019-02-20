@@ -1,7 +1,7 @@
 import React from 'react';
-import LogoImg from '../../images/logo.svg';
+import LogoImg from '../images/logo.svg';
 
-import { ThemeConsumer } from '../ThemeContext';
+import { ThemeConsumer } from './ThemeContext';
 
 const Logo = () => (
   <ThemeConsumer>

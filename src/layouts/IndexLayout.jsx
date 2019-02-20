@@ -1,41 +1,43 @@
-/* eslint-disable */
 import smoothscroll from 'smoothscroll-polyfill';
-import React, { Component } from 'react';
 import scrollToElement from 'scroll-to-element';
+
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
-import PageContainer from '../components/PageContainer';
-import Header from '../components/header';
-import Logo from '../components/logo';
-import Navigation from '../components/navigation';
-import Main from '../components/main';
-import About from '../components/about';
-import Work from '../components/work';
-import Footer from '../components/footer';
-import Observable from '../components/Observable';
-
-import { navItems } from '../data';
 import { ThemeProvider } from '../components/ThemeContext';
 
-// Import CSS Files
+import Header from '../components/Header';
+import Logo from '../components/Logo';
+import MainNav from '../components/navigation/MainNav';
+import PageContainer from '../components/PageContainer';
+import { navItems } from '../data';
+
+// Import css
 import '../../style.css';
 
-class HomePage extends Component {
+class IndexLayout extends Component {
   constructor(props) {
     super(props);
     this.state = {
       viewport: window.innerWidth,
       mailTooltip: false
     };
+
+    // Observables Components
     this.onIntersection = this.onIntersection.bind(this);
     this.scrollToSection = this.scrollToSection.bind(this);
+    // Calculate Viewport
     this.onResize = this.onResize.bind(this);
 
+    // Navigation Actions
     this.renderEmailMenu = this.renderEmailMenu.bind(this);
     this.toggleMobileLinks = this.toggleMobileLinks.bind(this);
     this.closeEmailLink = this.closeEmailLink.bind(this);
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
+    // Home Page background Theming
     this.setBackground = this.setBackground.bind(this);
 
     // Smooth Scrolling polifyll for IOS and old browsers
@@ -205,71 +207,60 @@ class HomePage extends Component {
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink
     };
+    const { children } = this.props;
     return (
       <ThemeProvider value={value}>
-        {/* Not a proper solution but for the moment is ok */}
-        <Helmet>
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-            crossorigin="anonymous"
-          />
-          <link
-            rel="stylesheet"
-            href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
-            type="text/css"
-            charset="utf-8"
-          />
-          <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
-        </Helmet>
         <PageContainer>
-          <Header>
-            <Logo />
-            <Navigation closeEmailLink={this.closeEmailLink} items={navItems} />
-          </Header>
-          <main className="index" role="main">
-            <section element="section" id="intro" className="main-section">
-              <Main />
-            </section>
-            <Observable
-              element="section"
-              data-theme="white"
-              ref={this.aboutRef}
-              className="about-section"
-              id="about"
-              config={{ threshold: 0.3 }}
-              callback={this.onSectionIntersection}
-            >
-              <About />
-            </Observable>
-            <Observable
-              element="section"
-              id="work"
-              data-theme="secondary-light"
-              ref={this.workRef}
-              config={{ threshold: 0.2 }}
-              className="work-section container has-gutter-outside"
-              callback={this.onSectionIntersection}
-            >
-              <Work />
-            </Observable>
-          </main>
-          <Observable
-            element="footer"
-            id="site-footer"
-            data-theme="primary-light"
-            ref={this.footerRef}
-            config={{ threshold: 0.3 }}
-            className="site-footer"
-            callback={this.onSectionIntersection}
-          >
-            <Footer />
-          </Observable>
+          <StaticQuery
+            query={graphql`
+              query SiteTitleQuery {
+                site {
+                  siteMetadata {
+                    title
+                    description
+                  }
+                }
+              }
+            `}
+            render={data => (
+              <Header>
+                <Logo />
+                <MainNav
+                  items={navItems}
+                  closeEmailLink={this.closeEmailLink}
+                />
+                <Helmet>
+                  <link
+                    rel="stylesheet"
+                    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+                    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+                    crossorigin="anonymous"
+                  />
+                  <link
+                    rel="stylesheet"
+                    href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
+                    type="text/css"
+                    charset="utf-8"
+                  />
+                  <title>{data.site.siteMetadata.title}</title>
+                  <meta
+                    name="description"
+                    content={data.site.siteMetadata.description}
+                  />
+                  <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
+                </Helmet>
+              </Header>
+            )}
+          />
+          {children}
         </PageContainer>
       </ThemeProvider>
     );
   }
 }
 
-export default HomePage;
+IndexLayout.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
+export default IndexLayout;

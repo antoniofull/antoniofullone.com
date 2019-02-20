@@ -4,7 +4,7 @@ import NavItem from './NavItem';
 import Message from '../Message';
 import { ThemeConsumer } from '../ThemeContext';
 
-const Navigation = ({ items, closeEmailLink }) => (
+const MainNav = ({ items, closeEmailLink }) => (
   <ThemeConsumer>
     {({ mailMessage }) => (
       <nav
@@ -33,9 +33,9 @@ const Navigation = ({ items, closeEmailLink }) => (
   </ThemeConsumer>
 );
 
-Navigation.propTypes = {
+MainNav.propTypes = {
   closeEmailLink: PropTypes.func.isRequired,
   items: PropTypes.arrayOf(PropTypes.any).isRequired
 };
 
-export default Navigation;
+export default MainNav;

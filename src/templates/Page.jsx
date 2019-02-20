@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
 import PageContainer from '../components/PageContainer';
-import Header from '../components/header';
-import Logo from '../components/logo';
-import Navigation from '../components/navigation';
+import Header from '../components/Header';
+import Logo from '../components/Logo';
+import Navigation from '../components/navigation/MainNav';
 import Main from '../components/main';
 import About from '../components/about';
 import Work from '../components/work';
 import Footer from '../components/footer';
-const HomePage = ({}) => (
+const Page = ({}) => (
   <React.Fragment>
     <Helmet>
       <link
@@ -73,4 +73,4 @@ const HomePage = ({}) => (
   </React.Fragment>
 );
 
-export default HomePage;
+export default Page;
