@@ -8,7 +8,7 @@ import { ThemeProvider } from '../components/ThemeContext';
 import IndexLayout from '../layouts/IndexLayout';
 import Observable from '../components/Observable';
 import HomePageTemplate from '../templates/HomePageTemplate';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 
 import '../styles/variables.css';
 import '../styles/reset.css';

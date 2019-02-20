@@ -1,12 +1,20 @@
 import React from 'react';
 
-import { ThemeConsumer } from '../components/ThemeContext';
-import Observable from '../components/Observable';
-import Main from '../components/Main/Intro';
-import About from '../components/about/About';
-import Work from '../components/work/Work';
-import Footer from '../components/Footer';
+const BlogHomeTemplate = ({ posts }) => {
+  console.log(posts);
+  return (
+    <div className="container">
+      {posts &&
+        posts.map((post, index) => (
+          <article key={post.node.id} className="blog__post">
+            <header>
+              <h2>{post.node.frontmatter.title}</h2>
+            </header>
+            <img src={post.node.frontmatter.image} alt="" />
+          </article>
+        ))}
+    </div>
+  );
+};
 
-const BlogPageTemplate = () => <div>test</div>;
-
-export default BlogPageTemplate;
+export default BlogHomeTemplate;

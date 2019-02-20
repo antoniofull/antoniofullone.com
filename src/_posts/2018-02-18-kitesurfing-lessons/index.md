@@ -3,8 +3,9 @@ path: '/blog/kitesurfing'
 title: Kitesurfing Lessons
 date: 2018-02-18 21:30:00
 categories: writing
-image: 'kitesurfing.jpg'
+image: 'https://www.antoniofullone.com/images/posts/kitesurfing.jpg'
 imageDesc: 'Kitesurfing in Canary Islands'
+description: 'I am learning Kitesurfing and Surfing'
 ---
 
 Last week I started my **kitesurf lessons** here in **Canary Islands**. I have a very funny and nice instructor. He is Austrian and soo german in his teaching :smile:

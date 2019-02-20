@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 
-import Header from '../components/Header';
-import Logo from '../components/Logo';
-import Navigation from '../components/navigation/MainNav';
-import PageContainer from '../components/PageContainer';
 import { ThemeProvider } from '../components/ThemeContext';
-import { navItems } from '../data';
+import Observable from '../components/Observable';
+import Footer from '../components/footer/Footer';
+
+import BlogLayout from '../layouts/BlogLayout';
+import BlogHomeTemplate from '../templates/BlogHomeTemplate';
 
 class BlogHome extends Component {
   constructor(props) {
@@ -168,9 +168,6 @@ class BlogHome extends Component {
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink
     };
-    const { markdownRemark: post } = this.props.data;
-    console.log(this.props.data);
-
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -187,51 +184,54 @@ class BlogHome extends Component {
             type="text/css"
             charset="utf-8"
           />
+          <title>Antonio Fullone Personal Blog</title>
+          <meta
+            name="description"
+            content="blog about web and self development"
+          />
           <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
         </Helmet>
-        <PageContainer>
-          <Header>
-            <Header>
-              <Logo />
-              <Navigation
-                closeEmailLink={this.closeEmailLink}
-                items={navItems}
-              />
-            </Header>
-          </Header>
-          <div>
-            <h1>{post.frontmatter.title}</h1>
-            <div
-              className="padding-x-half"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </div>
-        </PageContainer>
+        <StaticQuery
+          query={graphql`
+            query allPostData {
+              allMarkdownRemark(
+                sort: { order: DESC, fields: [frontmatter___date] }
+                limit: 1000
+              ) {
+                edges {
+                  node {
+                    id
+                    html
+                    frontmatter {
+                      title
+                      image
+                      imageDesc
+                      date
+                    }
+                  }
+                }
+              }
+            }
+          `}
+          render={data => (
+            <BlogLayout>
+              <BlogHomeTemplate posts={data.allMarkdownRemark.edges} />
+              <Observable
+                element="footer"
+                id="site-footer"
+                data-theme="primary-light"
+                config={{ threshold: 0.3 }}
+                className="site-footer"
+                callback={this.onIntersection}
+              >
+                <Footer />
+              </Observable>
+            </BlogLayout>
+          )}
+        />
       </ThemeProvider>
     );
   }
 }
-
-export const query = graphql`
-  {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            title
-            image
-            imageDesc
-            date
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default BlogHome;
