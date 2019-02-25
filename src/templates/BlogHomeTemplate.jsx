@@ -1,28 +1,54 @@
 import React from 'react';
 import classnames from 'classnames';
+import { Link } from 'gatsby';
 
 import '../styles/blog.css';
 
 const BlogHomeTemplate = ({ posts }) => {
-  console.log(posts);
   return (
-    <div className="container">
+    <div className="container posts">
       {posts &&
         posts.map((post, index) => (
-          <article
-            key={post.node.id}
-            className={classnames('blog__post', {
-              'blog__post--first': index === 0
+          <Link
+            className={classnames('blogpost', {
+              'blogpost--first': index === 0
             })}
+            key={post.node.id}
+            to={post.node.frontmatter.path}
           >
-            <header>
-              <h2>{post.node.frontmatter.title}</h2>
-            </header>
-            <img src={post.node.frontmatter.image} alt="" />
-            {post.node.frontmatter.introduction && (
-              <p>{post.node.frontmatter.introduction}</p>
-            )}
-          </article>
+            <article>
+              <header>
+                <h2 className="post-title">{post.node.frontmatter.title}</h2>
+                <time
+                  className="post-date"
+                  datetime={new Date(post.node.frontmatter.date).toLocaleString(
+                    'en-US',
+                    {
+                      timeZone: 'UTC'
+                    }
+                  )}
+                >
+                  {new Date(post.node.frontmatter.date).toLocaleString(
+                    'en-US',
+                    {
+                      timeZone: 'UTC'
+                    }
+                  )}
+                </time>
+              </header>
+              {post.node.frontmatter.image && (
+                <img
+                  className="post-image"
+                  src={post.node.frontmatter.image}
+                  alt=""
+                />
+              )}
+
+              {post.node.frontmatter.introduction && (
+                <p>{post.node.frontmatter.introduction}</p>
+              )}
+            </article>
+          </Link>
         ))}
     </div>
   );

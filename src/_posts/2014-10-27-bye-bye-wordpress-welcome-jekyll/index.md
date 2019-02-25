@@ -1,9 +1,10 @@
 ---
+path: '/blog/jekyll-wordpress'
 layout: post
 title: 'Bye Bye Wordpress, welcome Jekyll!'
 date: 2014-10-27 21:48:02
 categories: dev
-image: 'jekyll.png'
+image: 'https://www.antoniofullone.com/images/posts/jekyll.png'
 imageDesc: 'By Bye Wordpress'
 introduction: 'Why I moved my blog from Wordpress to Jekyll'
 ---

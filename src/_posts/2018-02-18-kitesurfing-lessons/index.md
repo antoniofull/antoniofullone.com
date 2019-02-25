@@ -1,5 +1,5 @@
 ---
-path: '/blog/kitesurfing'
+path: '/blog/kitesurfing-canary-islands'
 title: Kitesurfing Lessons
 date: 2018-02-18 21:30:00
 categories: writing

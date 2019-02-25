@@ -23,7 +23,6 @@ class BlogHome extends Component {
     this.closeEmailLink = this.closeEmailLink.bind(this);
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
-    this.setBackground = this.setBackground.bind(this);
   }
 
   componentDidMount() {
@@ -34,7 +33,6 @@ class BlogHome extends Component {
         this.resizeTimer = setTimeout(this.onResize, 0);
       });
     }
-    this.setBackground();
     this.LazyLoadImages();
 
     const smoothscroll = require('smoothscroll-polyfill');
@@ -45,16 +43,6 @@ class BlogHome extends Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
     clearTimeout(this.resizeTimer);
-  }
-
-  setBackground(theme = 'white') {
-    if (!this.props.location.pathname.includes('/blog/')) {
-      this.setState({
-        ...this.state,
-        theme,
-        showMobileLinks: theme !== 'white'
-      });
-    }
   }
 
   onResize() {
@@ -74,9 +62,7 @@ class BlogHome extends Component {
         if (animation) {
           this.setAnimation(target);
         }
-        if (theme) {
-          this.setBackground(theme);
-        }
+
         if (src) {
           this.loadImage(entry.target);
         }
@@ -163,6 +149,7 @@ class BlogHome extends Component {
   }
 
   render() {
+    console.log(this.props.location);
     const value = {
       ...this.state,
       animateElement: this.onIntersection,
@@ -205,6 +192,7 @@ class BlogHome extends Component {
                     id
                     html
                     frontmatter {
+                      path
                       title
                       image
                       imageDesc

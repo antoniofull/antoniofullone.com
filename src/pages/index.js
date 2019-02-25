@@ -188,7 +188,7 @@ class Index extends Component {
 
   scrollToSection(e) {
     const target = e.target.getAttribute('href');
-    const isLocalLink = target.startsWith('#');
+    const isLocalLink = target.includes('#');
 
     if (isLocalLink) {
       const elementToScroll = document.querySelector(target);

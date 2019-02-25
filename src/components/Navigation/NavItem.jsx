@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import classNames from 'classnames';
+import { Link } from 'gatsby';
+
 import { ThemeConsumer } from '../ThemeContext';
 
 const NavIListItem = styled.li`
@@ -86,7 +88,7 @@ const NavItem = ({ item }) => (
         <NavLink
           theme={theme}
           link={item.link.replace('#', '')}
-          href={path === '/' ? item.link : `/${item.link}`}
+          href={path !== '/' ? `/${item.link}` : item.link}
           active={
             (item.link === '#about' && theme === 'white') ||
             (item.link === '#work' && theme === 'secondary-light')

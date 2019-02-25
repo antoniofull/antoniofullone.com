@@ -12,7 +12,7 @@ export const navItems = [
   {
     id: 3,
     text: 'Journal',
-    link: '/blog/'
+    link: 'blog'
   },
   {
     id: 4,

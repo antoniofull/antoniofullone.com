@@ -1,8 +1,10 @@
 ---
+path: '/blog/22-years'
 layout: post
 title: 22 Years
 date: 2015-09-24 06:25:00
 categories: writing
+introduction: "It's been a long time since my father passed away"
 ---
 
 Today it’s my birthday. 22 Years ago on this day I turned 16th.

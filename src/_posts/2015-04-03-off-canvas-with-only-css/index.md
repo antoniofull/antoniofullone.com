@@ -1,10 +1,12 @@
 ---
+path: '/blog/off-canvas-css'
 layout: post
 title: 'Off Canvas with only Css'
 date: 2015-04-03 19:40:00
 categories: writing
 image: 'https://www.antoniofullone.com/images/posts/off-canvas.png'
 imageDesc: 'Off Canvas with Css'
+introduction: 'Create Off Canvas using CSS and no Javascript'
 ---
 
 Yesterday evening I was bored at home (as usual) and the weather was cold (as usual) so I decided to spend some time fixing some bug on this site.
