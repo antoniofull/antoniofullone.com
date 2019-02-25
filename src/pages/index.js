@@ -66,11 +66,13 @@ class Index extends Component {
   }
 
   setBackground(theme = 'primary-light') {
-    this.setState({
-      ...this.state,
-      theme,
-      showMobileLinks: theme !== 'white'
-    });
+    if (!this.props.location.pathname.includes('/blog/')) {
+      this.setState({
+        ...this.state,
+        theme,
+        showMobileLinks: theme !== 'white'
+      });
+    }
   }
 
   toggleMobileLinks() {
@@ -213,7 +215,8 @@ class Index extends Component {
       toggleEmailMenu: this.renderEmailMenu,
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink,
-      closeEmailLink: this.closeEmailLink
+      closeEmailLink: this.closeEmailLink,
+      path: this.props.location.pathname
     };
     return (
       <ThemeProvider value={value}>

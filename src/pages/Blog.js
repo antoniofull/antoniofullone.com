@@ -48,11 +48,13 @@ class BlogHome extends Component {
   }
 
   setBackground(theme = 'white') {
-    this.setState({
-      ...this.state,
-      theme,
-      showMobileLinks: theme !== 'white'
-    });
+    if (!this.props.location.pathname.includes('/blog/')) {
+      this.setState({
+        ...this.state,
+        theme,
+        showMobileLinks: theme !== 'white'
+      });
+    }
   }
 
   onResize() {
@@ -207,6 +209,7 @@ class BlogHome extends Component {
                       image
                       imageDesc
                       date
+                      introduction
                     }
                   }
                 }

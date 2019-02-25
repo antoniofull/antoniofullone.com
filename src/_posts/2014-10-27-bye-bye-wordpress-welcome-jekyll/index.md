@@ -5,6 +5,7 @@ date: 2014-10-27 21:48:02
 categories: dev
 image: 'jekyll.png'
 imageDesc: 'By Bye Wordpress'
+introduction: 'Why I moved my blog from Wordpress to Jekyll'
 ---
 
 I use to blog a couples of times for year, maybe three. Wordpress is really too much for me, I am tired of dealing with updates, database, plugins, spam. I did a first small move the last time that I redesigned my blog, making the about and home page static, and moving only to (real) blog part to Wordpress, but it turnout that was even more hard to maintain.

@@ -1,0 +1,15 @@
+.blog__post {
+  margin-bottom: var(--margin-l);
+}
+.blog__post--first {
+  margin-top: var(--margin);
+}
+
+.blog__post header {
+  text-align: center;
+}
+
+.blog__post p {
+  padding: 0 var(--grid-outer-gutter);
+  margin-top: var(--margin-half);
+}

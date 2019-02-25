@@ -79,13 +79,14 @@ const NavItem = ({ item }) => (
       mailMenu,
       copyEmailToClipboard,
       setEmailLink,
-      viewport
+      viewport,
+      path
     }) => (
       <NavIListItem className="nav-list__item">
         <NavLink
           theme={theme}
           link={item.link.replace('#', '')}
-          href={item.link}
+          href={path === '/' ? item.link : `/${item.link}`}
           active={
             (item.link === '#about' && theme === 'white') ||
             (item.link === '#work' && theme === 'secondary-light')
