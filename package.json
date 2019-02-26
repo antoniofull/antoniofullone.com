@@ -32,6 +32,7 @@
     "build": "rm -rf dist/* && parcel build style.css && parcel build index.js && parcel build index.html --public-url ./ && cp -R src/images/ dist/images && cp index.html dist/index.html"
   },
   "dependencies": {
+    "animejs": "^3.0.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.1.4",
     "gatsby-image": "^2.0.29",
