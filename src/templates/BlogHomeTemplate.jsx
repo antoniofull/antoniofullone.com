@@ -18,10 +18,14 @@ const BlogHomeTemplate = ({ posts }) => {
           >
             <article>
               <header>
-                <h2 className="post-title">{post.node.frontmatter.title}</h2>
+                {index <= 0 ? (
+                  <h1 className="post-title">{post.node.frontmatter.title}</h1>
+                ) : (
+                  <h2 className="post-title">{post.node.frontmatter.title}</h2>
+                )}
                 <time
                   className="post-date"
-                  datetime={new Date(post.node.frontmatter.date).toLocaleString(
+                  dateTime={new Date(post.node.frontmatter.date).toLocaleString(
                     'en-US',
                     {
                       timeZone: 'UTC'
