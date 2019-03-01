@@ -149,7 +149,6 @@ class BlogHome extends Component {
   }
 
   render() {
-    console.log(this.props.location);
     const value = {
       ...this.state,
       animateElement: this.onIntersection,
