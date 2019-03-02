@@ -197,7 +197,7 @@ class Index extends Component {
       const height =
         target === '#home'
           ? 0
-          : document.querySelector('.site-header').clientHeight + 15;
+          : document.querySelector('.site-header').clientHeight;
       scrollToElement(elementToScroll, {
         offset: height * -1,
         ease: 'inBack',
