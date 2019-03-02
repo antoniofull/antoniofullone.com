@@ -41,7 +41,7 @@
   --margin-half: calc(var(--baseline) / 2);
   --margin-l: calc(var(--baseline) * 2);
   --margin-xl: calc(var(--baseline) * 3);
-  --margin-desktop: calc(var(--baseline) * 4);
+  --margin-xxl: calc(var(--baseline) * 5);
 
   --padding: var(--baseline);
   --padding-half: calc(var(--baseline) / 2);

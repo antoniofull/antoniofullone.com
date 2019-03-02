@@ -10,6 +10,8 @@ import Aside from './AsideContent';
 import { ThemeConsumer } from '../ThemeContext';
 import Observable from '../Observable';
 
+import clouds from '../../images/clouds.svg';
+
 // CSS
 import '../../styles/about.css';
 
@@ -26,6 +28,7 @@ const About = () => (
       showMobileLinks
     }) => (
       <React.Fragment>
+        <img src={clouds} />
         <Article
           className={classNames('about', 'container', 'has-gutter-outside')}
         >
@@ -46,7 +49,6 @@ const About = () => (
             className="js-animatable no-opacity"
             config={{ threshold: 0.5 }}
             callback={animateElement}
-            data-theme="white"
           >
             <img
               className="about__img"
@@ -61,7 +63,6 @@ const About = () => (
           </Observable>
           <Observable
             data-animation="fadeIn"
-            data-theme="white"
             className="js-animatable no-opacity about__content"
             config={{ treshold: 0.2 }}
             callback={animateElement}

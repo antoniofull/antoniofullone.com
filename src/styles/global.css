@@ -113,8 +113,8 @@ img:after {
   background-color: var(--color-accent);
 }
 .index > section {
-  margin-bottom: var(--margin-xl);
-  padding-bottom: var(--padding-xl);
+  /* margin-bottom: var(--margin-xl);
+  padding-bottom: var(--padding-xl); */
 }
 
 .msg {

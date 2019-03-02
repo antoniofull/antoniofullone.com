@@ -1,9 +1,23 @@
 /*=========================
   ABOUT
-==========================*/
-.about {
-  position: relative;
+  ==========================*/
+.about-section:before {
+  position: absolute;
+  width: 100%;
+  content: '';
+  background: url('../images/clouds.svg') repeat-x;
+  height: 50px;
+  top: -50px;
 }
+.about-section {
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+  padding-top: var(--margin-xl);
+  padding-bottom: var(--margin-xxl);
+  margin-top: 100vh !important;
+}
+
 .about__content {
   max-width: 700px;
   margin-left: auto;
@@ -18,7 +32,6 @@
   text-transform: uppercase;
   font-style: normal;
 }
-
 .about-section p:first-of-type {
   font-style: italic;
 }

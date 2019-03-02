@@ -8,9 +8,8 @@ const FooterTitle = () => (
       <Observable
         element="h2"
         callback={animateElement}
-        data-theme="primary-light"
         data-animation="fadeInUp"
-        className="site-footer__header tisa padding-y-l text-white"
+        className="site-footer__header tisa text-white"
       >
         Thank you for visiting my website. Here some extra links selected just
         for you.

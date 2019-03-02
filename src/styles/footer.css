@@ -7,6 +7,8 @@
   font-size: 13px;
   line-height: 1.3;
   position: relative;
+  z-index: 100;
+  background-color: inherit;
 }
 .site-footer:before {
   content: '';
@@ -50,7 +52,7 @@
   line-height: 1.3;
   grid-area: heading;
   margin-bottom: var(--margin);
-  padding-top: var(--padding-xl);
+  padding: var(--padding-xl) 0;
 }
 .blog {
   grid-area: blog;

@@ -260,7 +260,6 @@ class Index extends Component {
           <Observable
             element="footer"
             id="site-footer"
-            data-theme="primary-light"
             config={{ threshold: 0.3 }}
             className="site-footer"
             callback={this.onIntersection}

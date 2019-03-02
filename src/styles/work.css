@@ -1,6 +1,7 @@
 /*=========================
     WORK
 ==========================*/
+
 .work--temp h2 {
   text-align: left;
   font-weight: 900;
@@ -51,10 +52,39 @@
   width: 200px;
   margin: auto;
 }
-
 .work-section {
   font-style: normal;
   font-weight: 500;
+  position: relative;
+  z-index: 100;
+  padding-top: var(--margin-l);
+  padding-bottom: var(--margin-xl);
+  background: var(--color-secondary-light);
+}
+.work-section:before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  left: 0;
+  z-index: 10;
+  width: 50%;
+  height: 70px;
+  background: inherit;
+  display: block;
+  border-radius: 0 80px 0 0;
+}
+.work-section:after {
+  content: '';
+  position: absolute;
+  top: -70px;
+  left: 0;
+  z-index: 10;
+  width: 50%;
+  height: 70px;
+  background: inherit;
+  display: block;
+  border-radius: 80px 0 0 0;
+  left: 50%;
 }
 .work-intro {
   max-width: 700px;

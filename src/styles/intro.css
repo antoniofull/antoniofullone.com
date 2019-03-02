@@ -2,13 +2,26 @@
   SECTION - INTRO
 ==========================*/
 .main-section {
-  position: relative;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: var(--header-height);
+  left: 0;
   background-repeat: no-repeat;
+  height: calc(100vh - var(--header-height));
+
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.container--intro {
+  height: 100%;
+  align-items: center;
+  grid-template-rows: 1fr;
 }
 .intro {
-  padding-top: var(--padding-xl);
   min-width: 100%;
   grid-column: 1 / -1;
+  align-self: end;
 }
 .intro > * {
   margin-bottom: var(--margin);
@@ -80,14 +93,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .main-section {
-    height: 450px;
-    min-height: calc(100vh - (var(--header-height)));
-  }
-  .container--intro {
-    height: 100%;
-    align-items: center;
-  }
   .intro__header {
     font-size: 7vw;
   }
@@ -104,6 +109,7 @@
     grid-column: 1 / 9;
     margin: 0;
     padding: 0;
+    align-self: center;
   }
   .illustration {
     grid-column: 9 / 13;
@@ -111,29 +117,4 @@
   .illustration__container {
     max-height: 50%;
   }
-}
-
-@media screen and (min-width: 1280px) {
-  .intro__header {
-    /* font-size: 7.5rem; */
-  }
-}
-
-@media screen and (max-height: 768px) {
-  .main-section {
-    min-height: calc(95vh - (var(--header-height)));
-    align-items: center;
-  }
-}
-
-.viewport {
-  border: 8px dashed #ccc;
-  position: fixed;
-  width: 100%;
-  background: transparent;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }

@@ -15,7 +15,6 @@ const HomePageTemplate = () => (
         </section>
         <Observable
           element="section"
-          data-theme="white"
           className="about-section"
           id="about"
           config={{ threshold: 0.3 }}
@@ -26,9 +25,8 @@ const HomePageTemplate = () => (
         <Observable
           element="section"
           id="work"
-          data-theme="secondary-light"
           config={{ threshold: 0.2 }}
-          className="work-section container has-gutter-outside"
+          className="work-section"
           callback={animateElement}
         >
           <Work />
