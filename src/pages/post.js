@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, Link } from 'gatsby';
 
 import Header from '../components/Header';
 import Logo from '../components/Logo';
@@ -169,7 +169,7 @@ class Post extends Component {
       setEmailLink: this.setEmailLink
     };
     const { post } = this.props.data;
-    console.log(this.props);
+    const { next, prev } = this.props.pathContext;
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -219,6 +219,10 @@ class Post extends Component {
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </article>
+          <section className="next-previous">
+            {next && <Link to={next.frontmatter.path}>Next</Link>}
+            {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
+          </section>
           <section className="related-posts" />
         </PageContainer>
       </ThemeProvider>
