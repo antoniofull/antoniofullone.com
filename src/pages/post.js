@@ -247,14 +247,14 @@ class Post extends Component {
             <ul className="next-previous">
               {next && (
                 <li className="next">
-                  <Link className="next-post" to={next.frontmatter.path}>
+                  <Link className="prev-post" to={prev.frontmatter.path}>
                     {next.frontmatter.title}
                   </Link>
                 </li>
               )}
               {prev && (
                 <li className="prev">
-                  <Link className="prev-post" to={prev.frontmatter.path}>
+                  <Link className="next-post" to={next.frontmatter.path}>
                     {prev.frontmatter.title}
                   </Link>
                 </li>

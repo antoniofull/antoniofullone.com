@@ -46,14 +46,18 @@
 .prev {
   margin-left: auto;
 }
+.next {
+  margin-right: var(--margin);
+}
 .next-previous li {
   width: auto;
 }
 .next-previous li a {
   color: var(--color-accent);
+  margin-bottom: var(--margin-half);
 }
 
-.prev-post {
+.next-post {
   display: inline-block;
   position: relative;
   width: 100%;
@@ -61,12 +65,13 @@
   text-align: right;
 }
 
-.next-post {
+.prev-post {
   display: inline-block;
   position: relative;
   width: 100%;
   text-indent: var(--baseline);
 }
+
 .next-post:after,
 .next-post:before,
 .prev-post:after,
@@ -80,20 +85,20 @@
   top: -6px;
 }
 
-.next-post:after {
+.prev-post:after {
   left: 0;
   transform: rotate(135deg);
 }
-.next-post:before {
+.prev-post:before {
   left: 0;
   transform: rotate(45deg);
 }
 
-.prev-post:after {
+.next-post:after {
   right: 0;
   transform: rotate(-135deg);
 }
-.prev-post:before {
+.next-post:before {
   right: 0;
   transform: rotate(-45deg);
 }
