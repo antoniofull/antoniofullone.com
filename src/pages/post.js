@@ -232,7 +232,7 @@ class Post extends Component {
                   src={post.frontmatter.image}
                   alt={post.frontmatter.imageDesc}
                 />
-                <figcaption className="freight-sans">
+                <figcaption className="freight-sans--light">
                   {post.frontmatter.imageDesc}
                 </figcaption>
               </picture>

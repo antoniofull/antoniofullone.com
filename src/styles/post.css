@@ -108,22 +108,22 @@
   margin: 0;
   font-size: 16px;
 }
-.main-image figcaption:before {
-  /* content: ''; */
+.main-image figcaption:after {
+  content: '';
   display: block;
-  width: 20%;
-  height: 4px;
-  background: var(--color-black-light);
-  margin: 8px auto var(--margin-half) auto;
+  width: 100px;
+  height: 2px;
+  background: var(--color-accent);
+  margin: var(--margin-half) auto;
   position: relative;
 }
 .main-image figcaption {
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 100;
   display: block;
   text-align: center;
-  margin: 0 auto var(--margin-half) auto;
+  margin: var(--margin-half) auto;
   position: relative;
-  font-style: italic;
   color: var(--color-black-light);
 }
 .post .post-image {
