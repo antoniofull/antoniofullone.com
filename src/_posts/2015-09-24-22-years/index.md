@@ -3,7 +3,7 @@ path: '/blog/22-years'
 layout: post
 title: 22 Years
 date: 2015-09-24 06:25:00
-categories: writing
+category: personal
 introduction: "It's been a long time since my father passed away"
 ---
 

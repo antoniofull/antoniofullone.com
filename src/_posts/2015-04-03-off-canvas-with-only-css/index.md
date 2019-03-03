@@ -3,7 +3,7 @@ path: '/blog/off-canvas-css'
 layout: post
 title: 'Off Canvas with only Css'
 date: 2015-04-03 19:40:00
-categories: writing
+category: coding
 image: 'https://www.antoniofullone.com/images/posts/off-canvas.png'
 imageDesc: 'Off Canvas with Css'
 introduction: 'Create Off Canvas using CSS and no Javascript'

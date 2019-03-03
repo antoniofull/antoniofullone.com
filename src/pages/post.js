@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 
 import Header from '../components/Header';
 import Logo from '../components/Logo';
@@ -168,7 +168,8 @@ class Post extends Component {
       copyEmailToClipboard: this.copyEmailToClipboard,
       setEmailLink: this.setEmailLink
     };
-    const { markdownRemark: post } = this.props.data;
+    const { post } = this.props.data;
+    console.log(this.props);
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -197,13 +198,28 @@ class Post extends Component {
               />
             </Header>
           </Header>
-          <div>
-            <h1>{post.frontmatter.title}</h1>
+          <article className="post">
+            <header>
+              <h1 className="post__title">{post.frontmatter.title}</h1>
+              <time
+                dateTime={new Date(post.frontmatter.date).toLocaleString(
+                  'en-US',
+                  {
+                    timeZone: 'UTC'
+                  }
+                )}
+              >
+                {new Date(post.frontmatter.date).toLocaleString('en-US', {
+                  timeZone: 'UTC'
+                })}
+              </time>
+            </header>
             <div
-              className="padding-x-half"
+              className="post__content"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-          </div>
+          </article>
+          <section className="related-posts" />
         </PageContainer>
       </ThemeProvider>
     );
@@ -211,8 +227,8 @@ class Post extends Component {
 }
 
 export const query = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query post($path: String!, $category: String) {
+    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
       frontmatter {
@@ -221,6 +237,28 @@ export const query = graphql`
         date(formatString: "MMMM DD, YYYY")
         image
         imageDesc
+        category
+      }
+    }
+
+    related: allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: $category } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            path
+            title
+            image
+            imageDesc
+            date
+            introduction
+          }
+        }
       }
     }
   }

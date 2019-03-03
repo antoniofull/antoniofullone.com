@@ -15,6 +15,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              category
             }
           }
         }
@@ -24,11 +25,21 @@ exports.createPages = ({ actions, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const posts = result.data.allMarkdownRemark.edges;
+    posts.forEach(({ node }, index) => {
+      const prev = index === 0 ? false : posts[index - 1].node;
+      const next =
+        posts[posts.length - 1] === posts[index]
+          ? false
+          : posts[index + 1].node;
       createPage({
         path: `${node.frontmatter.path}`,
         component: postTemplate,
-        context: {}
+        context: {
+          category: node.frontmatter.category,
+          prev,
+          next
+        }
       });
     });
   });
