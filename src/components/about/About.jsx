@@ -28,7 +28,6 @@ const About = () => (
       showMobileLinks
     }) => (
       <React.Fragment>
-        <img src={clouds} />
         <Article
           className={classNames('about', 'container', 'has-gutter-outside')}
         >

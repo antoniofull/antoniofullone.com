@@ -245,38 +245,22 @@ class Post extends Component {
           </article>
           <section className="follow-links container margin-y-l">
             <ul className="next-previous">
-              {next && (
-                <li className="next">
+              {prev && (
+                <li className="prev">
                   <Link className="prev-post" to={prev.frontmatter.path}>
-                    {next.frontmatter.title}
+                    {prev.frontmatter.title}
                   </Link>
                 </li>
               )}
-              {prev && (
-                <li className="prev">
+              {next && (
+                <li className="next">
                   <Link className="next-post" to={next.frontmatter.path}>
-                    {prev.frontmatter.title}
+                    {next.frontmatter.title}
                   </Link>
                 </li>
               )}
             </ul>
           </section>
-          {/* <section className="related-posts container has-gutter-outside freight-sans">
-            <h2 className="related-posts__title">Related Posts: </h2>
-            {related.edges.map(post => (
-              <Link to={post.node.frontmatter.path}>
-                <article className="post--related" key={post.node.id}>
-                  <header>
-                    <h3>{post.node.frontmatter.title}</h3>
-                  </header>
-                  {post.node.frontmatter.image && (
-                    <img src={post.node.frontmatter.image} />
-                  )}
-                  <p className="post-excerpt">{post.node.excerpt}</p>
-                </article>
-              </Link>
-            ))}
-          </section> */}
         </PageContainer>
         <Observable
           element="footer"

@@ -167,13 +167,8 @@ class BlogHomeTemplate extends Component {
                         />
                       )}
 
-                      {post.node.frontmatter.introduction && (
-                        <p className="post-excerpt">
-                          {`${striptags(posts[0].node.html)
-                            .split(' ')
-                            .slice(0, index === 0 ? this.state.textLines : 40)
-                            .join(' ')} ...`}
-                        </p>
+                      {post.node.excerpt && (
+                        <p className="post-excerpt">{post.node.excerpt}</p>
                       )}
                       <Link
                         className={`read-more`}

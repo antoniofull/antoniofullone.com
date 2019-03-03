@@ -70,7 +70,7 @@
 @media screen and (min-width: 1024px) {
   .posts {
     display: grid;
-    grid-column-gap: var(--grid-column-gutter);
+    grid-column-gap: calc(var(--grid-column-gutter) * 1.5);
     grid-template-columns: repeat(4, minmax(var(--grid-column-width), 1fr));
     width: 100%;
     padding: 0;
@@ -126,7 +126,7 @@
     grid-column: auto / span 2;
   }
   .second-row .post-content {
-    max-width: 90%;
+    max-width: 100%;
   }
   .second-row .post-image {
     height: 240px;
