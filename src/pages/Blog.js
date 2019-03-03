@@ -1,3 +1,5 @@
+require('intersection-observer');
+
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
@@ -177,7 +179,6 @@ class BlogHome extends Component {
             name="description"
             content="blog about web and self development"
           />
-          <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
         </Helmet>
         <StaticQuery
           query={graphql`

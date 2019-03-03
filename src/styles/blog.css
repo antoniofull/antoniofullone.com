@@ -17,6 +17,7 @@
   margin-bottom: 0;
   margin-top: var(--margin-half);
 }
+
 .blogpost--first .post-image {
   display: block;
   max-width: calc(100% + calc(var(--grid-outer-gutter) * 2));
@@ -33,6 +34,7 @@
 }
 .blogpost--first .post-title {
   text-align: center;
+  font-size: var(--font-l);
 }
 .post-title {
   line-height: 1.2;

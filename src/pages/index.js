@@ -1,3 +1,4 @@
+require('intersection-observer');
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
@@ -252,7 +253,6 @@ class Index extends Component {
                   name="description"
                   content={data.site.siteMetadata.description}
                 />
-                <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
               </Helmet>
             )}
           />

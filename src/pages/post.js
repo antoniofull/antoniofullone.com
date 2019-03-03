@@ -1,6 +1,13 @@
+require('intersection-observer');
+
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql, StaticQuery, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import striptags from 'striptags';
+import Prism from 'prismjs';
+
+import 'prismjs/components/prism-jsx';
+import 'prismjs/themes/prism-okaidia.css';
 
 import Header from '../components/Header';
 import Logo from '../components/Logo';
@@ -8,6 +15,8 @@ import Navigation from '../components/navigation/MainNav';
 import PageContainer from '../components/PageContainer';
 import { ThemeProvider } from '../components/ThemeContext';
 import { navItems } from '../data';
+
+import '../styles/post.css';
 
 class Post extends Component {
   constructor(props) {
@@ -23,7 +32,6 @@ class Post extends Component {
     this.closeEmailLink = this.closeEmailLink.bind(this);
     this.copyEmailToClipboard = this.copyEmailToClipboard.bind(this);
     this.setEmailLink = this.setEmailLink.bind(this);
-    this.setBackground = this.setBackground.bind(this);
   }
 
   componentDidMount() {
@@ -34,25 +42,21 @@ class Post extends Component {
         this.resizeTimer = setTimeout(this.onResize, 0);
       });
     }
-    this.setBackground();
     this.LazyLoadImages();
 
     const smoothscroll = require('smoothscroll-polyfill');
     // Smooth Scrolling polifyll for IOS and old browsers
     smoothscroll.polyfill();
+    Prism.highlightAll();
+  }
+
+  componentDidUpdate() {
+    Prism.highlightAll();
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
     clearTimeout(this.resizeTimer);
-  }
-
-  setBackground(theme = 'white') {
-    this.setState({
-      ...this.state,
-      theme,
-      showMobileLinks: theme !== 'white'
-    });
   }
 
   onResize() {
@@ -67,13 +71,9 @@ class Post extends Component {
       if (entry.isIntersecting) {
         const target = entry.target;
         const src = target.dataset.src;
-        const theme = target.dataset.theme;
         const animation = target.dataset.animation;
         if (animation) {
           this.setAnimation(target);
-        }
-        if (theme) {
-          this.setBackground(theme);
         }
         if (src) {
           this.loadImage(entry.target);
@@ -169,7 +169,15 @@ class Post extends Component {
       setEmailLink: this.setEmailLink
     };
     const { post } = this.props.data;
-    const { next, prev } = this.props.pathContext;
+    const { next, prev } = this.props.pageContext;
+    const { related } = this.props.data;
+
+    let readingTime =
+      striptags(post.html)
+        .trim()
+        .split(/\s+/).length / 200;
+    readingTime = Math.floor(readingTime);
+
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -186,44 +194,87 @@ class Post extends Component {
             type="text/css"
             charset="utf-8"
           />
-          <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry" />
         </Helmet>
         <PageContainer>
           <Header>
-            <Header>
-              <Logo />
-              <Navigation
-                closeEmailLink={this.closeEmailLink}
-                items={navItems}
-              />
-            </Header>
+            <Logo />
+            <Navigation closeEmailLink={this.closeEmailLink} items={navItems} />
           </Header>
-          <article className="post">
+          <article className="post single container has-gutter-outside">
             <header>
               <h1 className="post__title">{post.frontmatter.title}</h1>
-              <time
-                dateTime={new Date(post.frontmatter.date).toLocaleString(
-                  'en-US',
-                  {
+              <div className="post__meta freight-sans">
+                <time
+                  className="post__date"
+                  dateTime={new Date(post.frontmatter.date).toLocaleString(
+                    'en-US',
+                    {
+                      timeZone: 'UTC'
+                    }
+                  )}
+                >
+                  {new Date(post.frontmatter.date).toLocaleString('en-US', {
                     timeZone: 'UTC'
-                  }
-                )}
-              >
-                {new Date(post.frontmatter.date).toLocaleString('en-US', {
-                  timeZone: 'UTC'
-                })}
-              </time>
+                  })}{' '}
+                </time>
+                <span className="reading-time">
+                  {' '}
+                  - Reading Time: {readingTime} minutes
+                </span>
+              </div>
             </header>
+            {post.frontmatter.image && (
+              <picture className="main-image">
+                <img
+                  className="post-image"
+                  src={post.frontmatter.image}
+                  alt={post.frontmatter.imageDesc}
+                />
+                <figcaption className="freight-sans">
+                  {post.frontmatter.imageDesc}
+                </figcaption>
+              </picture>
+            )}
+
             <div
-              className="post__content"
+              className="post__content has-gutter-outside"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </article>
-          <section className="next-previous">
-            {next && <Link to={next.frontmatter.path}>Next</Link>}
-            {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
+          <section className="follow-links container margin-y-l">
+            <ul className="next-previous">
+              {next && (
+                <li className="next">
+                  <Link className="next-post" to={next.frontmatter.path}>
+                    {next.frontmatter.title}
+                  </Link>
+                </li>
+              )}
+              {prev && (
+                <li className="prev">
+                  <Link className="prev-post" to={prev.frontmatter.path}>
+                    {prev.frontmatter.title}
+                  </Link>
+                </li>
+              )}
+            </ul>
           </section>
-          <section className="related-posts" />
+          {/* <section className="related-posts container has-gutter-outside freight-sans">
+            <h2 className="related-posts__title">Related Posts: </h2>
+            {related.edges.map(post => (
+              <Link to={post.node.frontmatter.path}>
+                <article className="post--related" key={post.node.id}>
+                  <header>
+                    <h3>{post.node.frontmatter.title}</h3>
+                  </header>
+                  {post.node.frontmatter.image && (
+                    <img src={post.node.frontmatter.image} />
+                  )}
+                  <p className="post-excerpt">{post.node.excerpt}</p>
+                </article>
+              </Link>
+            ))}
+          </section> */}
         </PageContainer>
       </ThemeProvider>
     );
@@ -231,7 +282,7 @@ class Post extends Component {
 }
 
 export const query = graphql`
-  query post($path: String!, $category: String) {
+  query post($path: String!, $category: String, $postId: String) {
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
@@ -246,12 +297,13 @@ export const query = graphql`
     }
 
     related: allMarkdownRemark(
-      filter: { frontmatter: { category: { eq: $category } } }
+      filter: { frontmatter: { category: { eq: $category, ne: $postId } } }
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
+      limit: 3
     ) {
       edges {
         node {
+          excerpt(pruneLength: 60)
           id
           html
           frontmatter {

@@ -79,20 +79,20 @@
   margin-bottom: 0;
 }
 
-.post {
+.site-footer .post {
   grid-column: auto / span 2;
 }
-.post__title a {
+.site-footer .post__title a {
   color: var(--color-black-light);
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.post__title a:hover,
-.post__title a:visited {
+.site-footer .post__title a:hover,
+.site-footer .post__title a:visited {
   color: var(--color-white);
 }
 
-.post__title {
+.site-footer .post__title {
   display: block;
   display: -webkit-box;
   font-size: 14px;

@@ -9,9 +9,7 @@ description: 'I am learning Kitesurfing and Surfing'
 introduction: 'Learning kitesurf and surf in the Canary Islands. I started my weekly lessons to learn how to ride the ocean and is pretty cool'
 ---
 
-Last week I started my **kitesurf lessons** here in **Canary Islands**. I have a very funny and nice instructor. He is Austrian and soo german in his teaching :smile:
-
-Anyway it is very fun, for now I had few lessons and always on the land, learning how to control the kite and how to standup and sit down with it. I am feeling very excited about starting this new sport.
+Last week I started my **kitesurf lessons** here in **Canary Islands**. I have a very funny and nice instructor. He is Austrian and soo german in his teaching. Anyway it is very fun, for now I had few lessons and always on the land, learning how to control the kite and how to standup and sit down with it. I am feeling very excited about starting this new sport.
 
 I was struggling on which type of water sport I could do. I would have loved to do diving, but unfortunately because of my ear problems is something that it can be very risky for my health. Diving has always been my dream so when I found out that I could not do it, honestly it broke my heart.
 

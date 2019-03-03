@@ -125,7 +125,7 @@ class BlogHomeTemplate extends Component {
                     <div className="post-content">
                       <header className="post-header">
                         {index <= 0 ? (
-                          <h1
+                          <h2
                             className={classnames(
                               'post-title',
                               {
@@ -137,7 +137,7 @@ class BlogHomeTemplate extends Component {
                             )}
                           >
                             {post.node.frontmatter.title}
-                          </h1>
+                          </h2>
                         ) : (
                           <h2 className="post-title">
                             {post.node.frontmatter.title}
@@ -197,7 +197,7 @@ class BlogHomeTemplate extends Component {
                     <div className="post-content">
                       <header className="post-header">
                         {index <= 0 ? (
-                          <h1
+                          <h2
                             className={classnames(
                               'post-title',
                               {
@@ -209,7 +209,7 @@ class BlogHomeTemplate extends Component {
                             )}
                           >
                             {post.node.frontmatter.title}
-                          </h1>
+                          </h2>
                         ) : (
                           <h2 className="post-title">
                             {post.node.frontmatter.title}
@@ -253,9 +253,9 @@ class BlogHomeTemplate extends Component {
               <MediaQuery query="(max-device-width: 1023px)">
                 <header className="post-header">
                   {index <= 0 ? (
-                    <h1 className="post-title">
+                    <h2 className="post-title">
                       {post.node.frontmatter.title}
-                    </h1>
+                    </h2>
                   ) : (
                     <h2 className="post-title">
                       {post.node.frontmatter.title}

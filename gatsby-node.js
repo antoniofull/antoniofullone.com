@@ -16,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               path
               category
+              title
             }
           }
         }
@@ -37,6 +38,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: postTemplate,
         context: {
           category: node.frontmatter.category,
+          postId: node.id,
           prev,
           next
         }
