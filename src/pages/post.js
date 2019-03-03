@@ -12,6 +12,8 @@ import 'prismjs/themes/prism-okaidia.css';
 import Header from '../components/Header';
 import Logo from '../components/Logo';
 import Navigation from '../components/navigation/MainNav';
+import Observable from '../components/Observable';
+import Footer from '../components/footer/Footer';
 import PageContainer from '../components/PageContainer';
 import { ThemeProvider } from '../components/ThemeContext';
 import { navItems } from '../data';
@@ -276,6 +278,15 @@ class Post extends Component {
             ))}
           </section> */}
         </PageContainer>
+        <Observable
+          element="footer"
+          id="site-footer"
+          config={{ threshold: 0.3 }}
+          className="site-footer"
+          callback={this.onIntersection}
+        >
+          <Footer />
+        </Observable>
       </ThemeProvider>
     );
   }

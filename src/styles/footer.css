@@ -254,7 +254,7 @@
   .blog.grid {
     grid-template-columns: repeat(9, minmax(var(--grid-column-width), 1fr));
   }
-  .post {
+  .site-footer .post {
     grid-column: auto / span 3;
   }
 }
