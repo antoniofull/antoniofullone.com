@@ -1,9 +1,6 @@
-require('intersection-observer');
-
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
-import striptags from 'striptags';
 import Prism from 'prismjs';
 
 import 'prismjs/components/prism-jsx';
@@ -14,6 +11,7 @@ import Logo from '../components/Logo';
 import Navigation from '../components/navigation/MainNav';
 import Observable from '../components/Observable';
 import Footer from '../components/footer/Footer';
+import PostLayout from '../layouts/Postlayout';
 import PageContainer from '../components/PageContainer';
 import { ThemeProvider } from '../components/ThemeContext';
 import { navItems } from '../data';
@@ -37,6 +35,26 @@ class Post extends Component {
   }
 
   componentDidMount() {
+    // Loading the polify for Intersection Observer
+    // Window will be undefined if loaded before componendDidMount
+    try {
+      require('intersection-observer');
+      this.WebFont = require('webfontloader');
+    } catch (e) {
+      console.error(e);
+    }
+
+    const WebFontConfig = {
+      typekit: { id: 'avo5hes' },
+      custom: {
+        families: ['Bodoni 24'],
+        urls: ['https://indestructibletype.com/fonts/Bodoni/Bodoni.css']
+      },
+      active: this.allFontsLoaded
+    };
+
+    this.WebFont.load(WebFontConfig);
+
     this.resizeTimer;
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', () => {
@@ -174,12 +192,6 @@ class Post extends Component {
     const { next, prev } = this.props.pageContext;
     const { related } = this.props.data;
 
-    let readingTime =
-      striptags(post.html)
-        .trim()
-        .split(/\s+/).length / 200;
-    readingTime = Math.floor(readingTime);
-
     return (
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
@@ -202,65 +214,7 @@ class Post extends Component {
             <Logo />
             <Navigation closeEmailLink={this.closeEmailLink} items={navItems} />
           </Header>
-          <article className="post single container has-gutter-outside">
-            <header>
-              <h1 className="post__title">{post.frontmatter.title}</h1>
-              <div className="post__meta freight-sans">
-                <time
-                  className="post__date"
-                  dateTime={new Date(post.frontmatter.date).toLocaleString(
-                    'en-US',
-                    {
-                      timeZone: 'UTC'
-                    }
-                  )}
-                >
-                  {new Date(post.frontmatter.date).toLocaleString('en-US', {
-                    timeZone: 'UTC'
-                  })}{' '}
-                </time>
-                <span className="reading-time">
-                  {' '}
-                  - Reading Time: {readingTime} minutes
-                </span>
-              </div>
-            </header>
-            {post.frontmatter.image && (
-              <picture className="main-image">
-                <img
-                  className="post-image"
-                  src={post.frontmatter.image}
-                  alt={post.frontmatter.imageDesc}
-                />
-                <figcaption className="freight-sans--light">
-                  {post.frontmatter.imageDesc}
-                </figcaption>
-              </picture>
-            )}
-
-            <div
-              className="post__content has-gutter-outside"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </article>
-          <section className="follow-links container margin-y-l">
-            <ul className="next-previous">
-              {prev && (
-                <li className="prev">
-                  <Link className="prev-post" to={prev.frontmatter.path}>
-                    {prev.frontmatter.title}
-                  </Link>
-                </li>
-              )}
-              {next && (
-                <li className="next">
-                  <Link className="next-post" to={next.frontmatter.path}>
-                    {next.frontmatter.title}
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </section>
+          <PostLayout post={post} prev={prev} next={next} />
         </PageContainer>
         <Observable
           element="footer"

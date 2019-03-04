@@ -1,5 +1,3 @@
-require('intersection-observer');
-import WebFont from 'webfontloader';
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
@@ -47,6 +45,15 @@ class Index extends Component {
   }
 
   componentDidMount() {
+    // Loading the polify for Intersection Observer
+    // Window will be undefined if loaded before componendDidMount
+    try {
+      require('intersection-observer');
+      this.WebFont = require('webfontloader');
+    } catch (e) {
+      console.error(e);
+    }
+
     this.resizeTimer;
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', () => {
@@ -70,7 +77,7 @@ class Index extends Component {
       active: this.allFontsLoaded
     };
 
-    WebFont.load(WebFontConfig);
+    this.WebFont.load(WebFontConfig);
   }
   componentWillUnmount() {
     if (typeof window !== 'undefined') {

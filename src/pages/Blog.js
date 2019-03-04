@@ -1,5 +1,3 @@
-require('intersection-observer');
-
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
@@ -28,6 +26,25 @@ class BlogHome extends Component {
   }
 
   componentDidMount() {
+    // Loading the polify for Intersection Observer
+    // Window will be undefined if loaded before componendDidMount
+    try {
+      require('intersection-observer');
+      this.WebFont = require('webfontloader');
+    } catch (e) {
+      console.error(e);
+    }
+
+    const WebFontConfig = {
+      typekit: { id: 'avo5hes' },
+      custom: {
+        families: ['Bodoni 24'],
+        urls: ['https://indestructibletype.com/fonts/Bodoni/Bodoni.css']
+      },
+      active: this.allFontsLoaded
+    };
+    this.WebFont.load(WebFontConfig);
+
     this.resizeTimer;
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', () => {

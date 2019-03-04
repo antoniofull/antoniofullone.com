@@ -1,6 +1,10 @@
 /* eslint-disable */
 const path = require('path');
 
+exports.onCreatePage = ({ page, actions }) => {
+  console.log('the page is: ', page.path);
+};
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve(`src/pages/post.js`);
@@ -28,11 +32,9 @@ exports.createPages = ({ actions, graphql }) => {
     }
     const posts = result.data.allMarkdownRemark.edges;
     posts.forEach(({ node }, index) => {
-      const prev = index === 0 ? false : posts[index - 1].node;
-      const next =
-        posts[posts.length - 1] === posts[index]
-          ? false
-          : posts[index + 1].node;
+      const prev = posts[index - 1] ? posts[index - 1].node : false;
+      const next = posts[index + 1] ? posts[index + 1].node : false;
+
       createPage({
         path: `${node.frontmatter.path}`,
         component: postTemplate,
