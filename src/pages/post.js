@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Prism from 'prismjs';
+import ReactGA from 'react-ga';
 
 import 'prismjs/components/prism-jsx';
 import 'prismjs/themes/prism-okaidia.css';
@@ -18,9 +19,15 @@ import { navItems } from '../data';
 
 import '../styles/post.css';
 
+if (typeof window !== 'undefined') {
+  // Loading the polify for Intersection Observer
+  require('intersection-observer');
+}
+
 class Post extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       viewport: typeof window !== `undefined` && window.innerWidth,
       mailTooltip: false
@@ -38,11 +45,12 @@ class Post extends Component {
     // Loading the polify for Intersection Observer
     // Window will be undefined if loaded before componendDidMount
     try {
-      require('intersection-observer');
       this.WebFont = require('webfontloader');
     } catch (e) {
       console.error(e);
     }
+    ReactGA.initialize('UA-67184030-4');
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     const WebFontConfig = {
       typekit: { id: 'avo5hes' },
@@ -202,11 +210,10 @@ class Post extends Component {
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
             crossorigin="anonymous"
           />
-          <link
-            rel="stylesheet"
-            href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
-            type="text/css"
-            charset="utf-8"
+
+          <script
+            crossorigin="anonymous"
+            src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry"
           />
         </Helmet>
         <PageContainer>
@@ -235,6 +242,7 @@ export const query = graphql`
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
+      excerpt(pruneLength: 120)
       frontmatter {
         path
         title

@@ -1,4 +1,5 @@
 import striptags from 'striptags';
+import { Helmet } from 'react-helmet';
 import React from 'react';
 import { Link } from 'gatsby';
 import { RaceOperator } from 'rxjs/internal/observable/race';
@@ -16,6 +17,14 @@ const Postlayout = ({ post, prev, next }) => (
   <>
     {post && (
       <React.Fragment>
+        <Helmet>
+          <title>{post.frontmatter.title}</title>
+          <link
+            rel="canonical"
+            href={`http://www.antoniofullone.com/${post.frontmatter.path}`}
+          />
+          <meta name="description" content={post.excerpt} />
+        </Helmet>
         <article className="post single container has-gutter-outside">
           <header>
             <h1 className="post__title">{post.frontmatter.title}</h1>

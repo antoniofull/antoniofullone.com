@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import scrollToElement from 'scroll-to-element';
+import ReactGA from 'react-ga';
 
 import { ThemeProvider } from '../components/ThemeContext';
 
@@ -18,9 +19,15 @@ import '../styles/grid.css';
 import '../styles/helpers.css';
 import '../styles/global.css';
 
+if (typeof window !== 'undefined') {
+  // Loading the polify for Intersection Observer
+  require('intersection-observer');
+}
+
 class Index extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       viewport: (typeof window !== `undefined` && window.innerWidth) || 0,
       mailTooltip: false,
@@ -45,14 +52,15 @@ class Index extends Component {
   }
 
   componentDidMount() {
-    // Loading the polify for Intersection Observer
     // Window will be undefined if loaded before componendDidMount
     try {
-      require('intersection-observer');
       this.WebFont = require('webfontloader');
     } catch (e) {
       console.error(e);
     }
+
+    ReactGA.initialize('UA-67184030-4');
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     this.resizeTimer;
     if (typeof window !== 'undefined') {

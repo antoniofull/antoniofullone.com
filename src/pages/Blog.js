@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import ReactGA from 'react-ga';
 
 import { ThemeProvider } from '../components/ThemeContext';
 import Observable from '../components/Observable';
@@ -9,9 +10,15 @@ import Footer from '../components/footer/Footer';
 import BlogLayout from '../layouts/BlogLayout';
 import BlogHomeTemplate from '../templates/BlogHomeTemplate';
 
+if (typeof window !== 'undefined') {
+  // Loading the polify for Intersection Observer
+  require('intersection-observer');
+}
+
 class BlogHome extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       viewport: typeof window !== `undefined` && window.innerWidth,
       mailTooltip: false
@@ -29,11 +36,12 @@ class BlogHome extends Component {
     // Loading the polify for Intersection Observer
     // Window will be undefined if loaded before componendDidMount
     try {
-      require('intersection-observer');
       this.WebFont = require('webfontloader');
     } catch (e) {
       console.error(e);
     }
+    ReactGA.initialize('UA-67184030-4');
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     const WebFontConfig = {
       typekit: { id: 'avo5hes' },
@@ -179,22 +187,20 @@ class BlogHome extends Component {
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
         <Helmet>
+          <title>Antonio Fullone Personal Blog</title>
+          <meta
+            name="description"
+            content="Antonio Fullone Personal blog. Web and self development"
+          />
           <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
             crossorigin="anonymous"
           />
-          <link
-            rel="stylesheet"
-            href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
-            type="text/css"
-            charset="utf-8"
-          />
-          <title>Antonio Fullone Personal Blog</title>
-          <meta
-            name="description"
-            content="blog about web and self development"
+          <script
+            crossorigin="anonymous"
+            src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry"
           />
         </Helmet>
         <StaticQuery
