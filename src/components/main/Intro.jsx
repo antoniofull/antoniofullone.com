@@ -3,16 +3,16 @@ import React from 'react';
 import { ThemeConsumer } from '../ThemeContext';
 import Text from './Text';
 import Illustration from './Illustration';
+import Skeleton from '../Skeleton';
 
 // CSS
 import '../../styles/intro.css';
-
 const Main = () => (
   <ThemeConsumer>
-    {({ viewport }) => (
+    {({ viewport, isLoading }) => (
       <React.Fragment>
         <div className="container container--intro grid">
-          <Text viewport={viewport} />
+          {isLoading ? <Skeleton /> : <Text viewport={viewport} />}
           <Illustration />
         </div>
       </React.Fragment>

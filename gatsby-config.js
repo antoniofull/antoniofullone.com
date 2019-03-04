@@ -11,14 +11,7 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        typekit: {
-          id: `avo5hes`
-        }
-      }
-    },
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -50,3 +43,14 @@ module.exports = {
     }
   ]
 };
+
+/**
+ * {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        typekit: {
+          id: `avo5hes`
+        }
+      }
+    },
+ */

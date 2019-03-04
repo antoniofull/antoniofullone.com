@@ -18,13 +18,16 @@
   align-items: center;
   grid-template-rows: 1fr;
 }
+
+.skeleton {
+  grid-column: 2 / 6;
+  align-self: end;
+}
 .intro {
   min-width: 100%;
   grid-column: 1 / -1;
-  align-self: end;
 }
 .intro > * {
-  margin-bottom: var(--margin);
   display: block;
 }
 .intro__header {
@@ -69,26 +72,29 @@
 .illustration {
   position: relative;
   grid-column: 1 / -1;
+  min-height: 40vh;
 }
 .illustration__container {
-  background: url('../images/bg_vespa_desktop.svg') no-repeat center;
+  /* background: url('../images/bg_vespa_desktop.svg') no-repeat center; */
   background-size: contain;
-  min-height: 17rem;
+  background-position: center;
+  position: relative;
+  height: 100%;
 }
 .vespa {
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translateX(-50%);
-  width: 50%;
-  max-width: 230px;
+  position: relative;
+  z-index: 1000;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  max-width: 300px;
 }
 .italy {
   position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   max-width: 390px;
 }
 
@@ -105,16 +111,40 @@
     font-size: var(--base-font);
   }
 
-  .intro {
-    grid-column: 1 / 9;
+  .intro,
+  .skeleton {
+    grid-column: 1 / 8;
     margin: 0;
     padding: 0;
     align-self: center;
+    min-height: 40vh;
   }
   .illustration {
-    grid-column: 9 / 13;
+    grid-column: 8 / 13;
+    min-height: 30vh;
   }
   .illustration__container {
     max-height: 50%;
+    min-height: 21rem;
+    background-position: right;
+  }
+  .vespa {
+    width: 65%;
+  }
+  .italy {
+    width: 100%;
+    top: 35%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .vespa {
+    width: 100%;
+    max-width: 60%;
+  }
+  .italy {
+    width: 100%;
+    max-width: 100%;
+    top: 40%;
   }
 }

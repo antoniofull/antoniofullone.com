@@ -43,11 +43,10 @@
   display: flex;
   flex-wrap: wrap;
 }
-.prev {
-  margin-left: auto;
-}
+
 .next {
   margin-right: var(--margin);
+  margin-left: auto;
 }
 .next-previous li {
   width: auto;

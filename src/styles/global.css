@@ -112,11 +112,6 @@ img:after {
   border-radius: 50%;
   background-color: var(--color-accent);
 }
-.index > section {
-  /* margin-bottom: var(--margin-xl);
-  padding-bottom: var(--padding-xl); */
-}
-
 .msg {
   font-size: var(--font-s);
   padding: 8px 16px;
@@ -160,17 +155,6 @@ img:after {
 }
 
 @media screen and (min-width: 980px) {
-  .illustration {
-    background: none;
-  }
-  .illustration__container {
-    background: url('/images/bg_vespa_desktop.svg') no-repeat center;
-    background-size: contain;
-  }
-  .illustration:before,
-  .illustration:after {
-    content: none;
-  }
   .has-gutter-outside {
     padding: 0;
   }

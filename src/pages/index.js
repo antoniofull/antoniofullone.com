@@ -1,4 +1,5 @@
 require('intersection-observer');
+import WebFont from 'webfontloader';
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
@@ -24,7 +25,8 @@ class Index extends Component {
     super(props);
     this.state = {
       viewport: (typeof window !== `undefined` && window.innerWidth) || 0,
-      mailTooltip: false
+      mailTooltip: false,
+      isLoading: true
     };
 
     // Observables Components
@@ -41,6 +43,7 @@ class Index extends Component {
     this.setEmailLink = this.setEmailLink.bind(this);
     // Home Page background Theming
     this.setBackground = this.setBackground.bind(this);
+    this.allFontsLoaded = this.allFontsLoaded.bind(this);
   }
 
   componentDidMount() {
@@ -57,13 +60,30 @@ class Index extends Component {
     const smoothscroll = require('smoothscroll-polyfill');
     // Smooth Scrolling polifyll for IOS and old browsers
     smoothscroll.polyfill();
-  }
 
+    const WebFontConfig = {
+      typekit: { id: 'avo5hes' },
+      custom: {
+        families: ['Bodoni 24'],
+        urls: ['https://indestructibletype.com/fonts/Bodoni/Bodoni.css']
+      },
+      active: this.allFontsLoaded
+    };
+
+    WebFont.load(WebFontConfig);
+  }
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
       window.removeEventListener('resize', this.onResize);
     }
     clearTimeout(this.resizeTimer);
+  }
+
+  allFontsLoaded() {
+    this.setState({
+      ...this.state,
+      isLoading: false
+    });
   }
 
   setBackground(theme = 'primary-light') {
@@ -242,12 +262,7 @@ class Index extends Component {
                   integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
                   crossorigin="anonymous"
                 />
-                <link
-                  rel="stylesheet"
-                  href="https://indestructibletype.com/fonts/Bodoni/Bodoni.css"
-                  type="text/css"
-                  charset="utf-8"
-                />
+
                 <title>{data.site.siteMetadata.title}</title>
                 <meta
                   name="description"
