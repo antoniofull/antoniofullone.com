@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import Observable from '../Observable';
 import { ThemeConsumer } from '../ThemeContext';
@@ -46,13 +47,15 @@ class Text extends Component {
 
   render() {
     const { fontSize } = this.state;
-    const { animateElement } = this.props;
+    const { animateElement, isLoading } = this.props;
     return (
       <div className="intro container" ref={this.container}>
         <Observable
           element="h1"
           callback={animateElement}
-          className="intro__header text-center bodoni-24"
+          className={classnames('intro__header', 'text-center', 'bodoni-24', {
+            'is-loaded': !isLoading
+          })}
           ref={this.textElement}
           data-theme="primary-light"
           style={fontSize ? { fontSize } : null}
@@ -60,7 +63,14 @@ class Text extends Component {
           Antonio Fullone
         </Observable>
         <div className="tagline">
-          <h2 className="intro__tagline text-center bodoni-24">
+          <h2
+            className={classnames(
+              'intro__tagline',
+              'text-center',
+              'bodoni-24',
+              { 'is-loaded': !isLoading }
+            )}
+          >
             Designer &amp; Developer
           </h2>
           <span className="i-am-cool text-center bodoni-24">Wannabe Cook</span>

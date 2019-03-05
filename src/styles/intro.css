@@ -30,6 +30,16 @@
 .intro > * {
   display: block;
 }
+@keyframes animateIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .intro__header {
   font-size: var(--font-dy-l);
   line-height: var(--font-s);
@@ -37,6 +47,10 @@
   position: relative;
   margin-bottom: 0;
 }
+.intro__header.is-loaded {
+  animation: animateIntro 0.2s ease-in-out forwards;
+}
+
 .intro__header:after {
   display: block;
   content: ' ';
