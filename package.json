@@ -28,9 +28,7 @@
     "react-docgen": "^3.0.0"
   },
   "scripts": {
-    "dev": "cp -R src/images/ dist/images && cp index.html dist/index.html && parcel index.html",
-    "build": "rm -rf dist/* && parcel build style.css && parcel build index.js && parcel build index.html --public-url ./ && cp -R src/images/ dist/images && cp index.html dist/index.html",
-    "develop": "gatsby develop"
+    "start": "gatsby develop"
   },
   "dependencies": {
     "animejs": "^3.0.1",

@@ -7,6 +7,7 @@ import Skeleton from '../Skeleton';
 
 // CSS
 import '../../styles/intro.css';
+
 const Main = () => (
   <ThemeConsumer>
     {({ viewport, isLoading }) => (

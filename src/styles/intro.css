@@ -72,10 +72,8 @@
 .illustration {
   position: relative;
   grid-column: 1 / -1;
-  min-height: 40vh;
 }
 .illustration__container {
-  /* background: url('../images/bg_vespa_desktop.svg') no-repeat center; */
   background-size: contain;
   background-position: center;
   position: relative;
@@ -86,18 +84,30 @@
   z-index: 1000;
   display: block;
   margin: 0 auto;
-  width: 60%;
-  max-width: 300px;
+  width: 70%;
+  height: 100%;
+  max-width: 60%;
+}
+.vespa > svg {
+  height: 100%;
 }
 .italy {
   position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 56%;
+  transform: translateX(-50%);
   width: 90%;
-  max-width: 390px;
+  height: 100%;
+}
+.italy * {
+  opacity: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .vespa {
+    max-width: 60%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .intro__header {
     font-size: 7vw;
@@ -129,22 +139,23 @@
     background-position: right;
   }
   .vespa {
-    width: 65%;
+    width: 100%;
+    max-width: 80%;
+    left: 10%;
   }
   .italy {
     width: 100%;
-    top: 35%;
+    transform: translate(0, 0);
+    left: 15%;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .vespa {
-    width: 100%;
-    max-width: 60%;
+    max-width: 70%;
   }
   .italy {
     width: 100%;
     max-width: 100%;
-    top: 40%;
   }
 }

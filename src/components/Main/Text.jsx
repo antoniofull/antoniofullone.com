@@ -55,7 +55,6 @@ class Text extends Component {
           className="intro__header text-center bodoni-24"
           ref={this.textElement}
           data-theme="primary-light"
-          data-area="primary-light"
           style={fontSize ? { fontSize } : null}
         >
           Antonio Fullone

@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import scrollToElement from 'scroll-to-element';
 import ReactGA from 'react-ga';
-
 import { ThemeProvider } from '../components/ThemeContext';
 
 import IndexLayout from '../layouts/IndexLayout';
@@ -49,6 +48,10 @@ class Index extends Component {
     // Home Page background Theming
     this.setBackground = this.setBackground.bind(this);
     this.allFontsLoaded = this.allFontsLoaded.bind(this);
+
+    // get a reference to DOM elements
+
+    this.vespaRef = React.createRef();
   }
 
   componentDidMount() {
