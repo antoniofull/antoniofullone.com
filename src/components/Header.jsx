@@ -9,13 +9,14 @@ import '../styles/header.css';
 const Header = props => {
   return (
     <ThemeConsumer>
-      {({ theme }) => (
+      {({ theme, isLoading }) => (
         <header
           className={classNames(
             theme,
             'site-header',
             { 'has-shadows': theme === 'white' },
             { 'bg-white': theme === 'white' },
+            { 'is-loaded': !isLoading },
             'has-gutter-outside'
           )}
           role="banner"

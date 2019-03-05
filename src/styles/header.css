@@ -1,7 +1,6 @@
 /*=========================
   HEADER
 ==========================*/
-
 .site-header {
   height: var(--header-height);
   width: 100%;
@@ -11,8 +10,13 @@
   position: sticky;
   position: -webkit-sticky;
   z-index: 1000;
-  top: 0;
+  transform: translateY(-30%);
+  opacity: 0;
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.site-header.is-loaded {
+  transform: translateY(0);
+  opacity: 1;
 }
 .site-header > .container {
   height: 100%;
