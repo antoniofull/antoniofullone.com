@@ -1,16 +1,17 @@
 /* eslint-disable */
 const path = require('path');
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreatePage = ({ page, actions }) => {
-  console.log('the page is: ', page.path);
+  // console.log('the page is: ', page.path);
 };
-
-const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    const feedPath = createFilePath({ node, getNode });
+    const value = `/blog/${feedPath}`;
+
     createNodeField({
       name: 'slug',
       node,

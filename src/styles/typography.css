@@ -45,29 +45,29 @@ h1 {
   font-size: var(--font-l);
   margin-bottom: var(--margin);
   line-height: 1;
-  font-family: freight-sans-prop, sans-serif;
+  font-family: freight-sans-pro, sans-serif;
 }
 h2 {
   font-size: var(--font-m);
   margin-bottom: var(--margin);
   line-height: 1;
-  font-family: freight-sans-prop, sans-serif;
+  font-family: freight-sans-pro, sans-serif;
 }
 h3 {
   font-size: var(--base-font);
   margin-bottom: var(--margin-half);
-  font-family: freight-sans-prop, sans-serif;
+  font-family: freight-sans-pro, sans-serif;
 }
 h4 {
   font-size: var(--font-s);
   margin-bottom: var(--margin-half);
-  font-family: freight-sans-prop, sans-serif;
+  font-family: freight-sans-pro, sans-serif;
 }
 h5,
 h6 {
   font-size: var(--font-xs);
   margin-bottom: var(--margin-half);
-  font-family: freight-sans-prop, sans-serif;
+  font-family: freight-sans-pro, sans-serif;
 }
 
 blockquote {

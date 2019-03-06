@@ -62,7 +62,7 @@ const Postlayout = ({ post, prev, next }) => (
           )}
 
           <div
-            className="post__content has-gutter-outside"
+            className="post__content"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>

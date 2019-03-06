@@ -36,9 +36,6 @@ pre,
 ol,
 ul,
 li,
-dl,
-dt,
-dd,
 div,
 section,
 article,
@@ -92,8 +89,7 @@ svg {
 }
 
 ol,
-ul,
-dl {
+ul {
   list-style: none;
 }
 
