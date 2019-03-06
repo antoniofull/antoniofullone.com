@@ -27,7 +27,7 @@ Born in the beautiful and sunny [Calabria](https://en.wikipedia.org/wiki/Calabri
 
 He has traveled to several countries between Europe and North America and in the last two years, he has been working remotely as a consultant, traveling to his favorite places while working with different companies to improve their UI’s and Websites.
 
-His long time dream was to become a chef and own a restaurant. His hero and inspiration is [Massimo Bottura](https://osteriafrancescana.it). Today he is more than happy to work in the tech industry. Cooking remains one of his favorite hobbies and activities. He writes [code](http://github.com/antoniofull/), he likes to experiment with [CSS](https://codepen.io/antoniofull/) and [design]() things and [icons](https://thenounproject.com/antonio.fullone/).
+His long time dream was to become a chef and own a restaurant. His hero and inspiration is [Massimo Bottura](https://osteriafrancescana.it). Today he is more than happy to work in the tech industry. Cooking remains one of his favorite hobbies and activities. He writes [code](https://github.com/antoniofull/), he likes to experiment with [CSS](https://codepen.io/antoniofull/) and [design]() things and [icons](https://thenounproject.com/antonio.fullone/).
 
 He writes his thoughts on a [journal](https://www.antoniofullone.com/blog) and he sends some [(re)tweets](https://twitter.com/_antoniofullone) from time to time. He rarely uses [Facebook](https://www.facebook.com/antonio.fullone) and does not have a personal Instagram account.
 
@@ -108,7 +108,7 @@ export const workTmp = [
   {
     id: 7,
     label: 'Comune di Paola',
-    link: 'http://www.comune.paola.cs.it/',
+    link: 'https://www.comune.paola.cs.it/',
     img: '/images/logos/paola.png'
   },
   {
@@ -419,7 +419,7 @@ export const socialData = [
     label: 'Linkedin',
     icon: 'linkedin-in',
     style: 'fab',
-    link: 'http://linkedin.com/in/antoniofullone/'
+    link: 'https://linkedin.com/in/antoniofullone/'
   },
   {
     id: 2,
@@ -433,14 +433,14 @@ export const socialData = [
     label: 'Github',
     icon: 'github',
     style: 'fab',
-    link: 'http://github.com/antoniofull/'
+    link: 'https://github.com/antoniofull/'
   },
   {
     id: 4,
     label: 'Twitter',
     icon: 'twitter',
     style: 'fab',
-    link: 'http://twitter.com/_fulloneantonio'
+    link: 'https://twitter.com/_fulloneantonio'
   },
   {
     id: 5,

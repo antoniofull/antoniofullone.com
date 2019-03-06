@@ -21,7 +21,7 @@ const Postlayout = ({ post, prev, next }) => (
           <title>{post.frontmatter.title}</title>
           <link
             rel="canonical"
-            href={`http://www.antoniofullone.com/${post.frontmatter.path}`}
+            href={`https://www.antoniofullone.com/${post.frontmatter.path}`}
           />
           <meta name="description" content={post.excerpt} />
         </Helmet>

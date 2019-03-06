@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Antonio Fullone Personal Website`,
-    description: 'Personal Website of Antonio Fullone, Designer &amp; Developer'
+    title: 'Antonio Fullone Personal Website',
+    description:
+      'Personal Website of Antonio Fullone, Designer &amp; Developer',
+    siteUrl: 'https://www.antoniofullone.com'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -9,7 +11,7 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -24,6 +26,9 @@ module.exports = {
         // Plugins configs
         plugins: []
       }
+    },
+    {
+      resolve: `gatsby-plugin-feed`
     },
     {
       resolve: `gatsby-source-filesystem`,
