@@ -242,7 +242,7 @@ export const query = graphql`
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
-      excerpt(pruneLength: 120)
+      excerpt(pruneLength: 20)
       frontmatter {
         path
         title
@@ -260,7 +260,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 60)
+          excerpt(pruneLength: 20)
           id
           html
           frontmatter {

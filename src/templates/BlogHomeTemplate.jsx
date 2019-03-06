@@ -102,12 +102,17 @@ class BlogHomeTemplate extends Component {
                           )}
                         </time>
                       </header>
-                      {post.node.frontmatter.introduction && (
+                      {post.node.excerpt && (
                         <p className="post-excerpt">
-                          {`${striptags(posts[0].node.html)
-                            .split(' ')
-                            .slice(0, index === 0 ? this.state.textLines : 40)
-                            .join(' ')} ...`}
+                          {index === 0
+                            ? `${striptags(posts[0].node.html)
+                                .split(' ')
+                                .slice(
+                                  0,
+                                  index === 0 ? this.state.textLines : 40
+                                )
+                                .join(' ')} ...`
+                            : post.node.excerpt}
                         </p>
                       )}
                       <Link
@@ -227,12 +232,7 @@ class BlogHomeTemplate extends Component {
                         </time>
                       </header>
                       {post.node.frontmatter.introduction && (
-                        <p className="post-excerpt">
-                          {`${striptags(posts[0].node.html)
-                            .split(' ')
-                            .slice(0, index === 0 ? this.state.textLines : 40)
-                            .join(' ')} ...`}
-                        </p>
+                        <p className="post-excerpt">{post.node.excerpt}</p>
                       )}
                       <Link
                         className={`read-more`}
@@ -280,12 +280,14 @@ class BlogHomeTemplate extends Component {
                   />
                 )}
 
-                {post.node.frontmatter.introduction && (
+                {post.node.excerpt && (
                   <p className="post-excerpt">
-                    {`${striptags(posts[0].node.html)
-                      .split(' ')
-                      .slice(0, this.state.textLines)
-                      .join(' ')} ...`}
+                    {index == 0
+                      ? `${striptags(posts[0].node.html)
+                          .split(' ')
+                          .slice(0, this.state.textLines)
+                          .join(' ')} ...`
+                      : post.node.excerpt}
                   </p>
                 )}
                 <Link

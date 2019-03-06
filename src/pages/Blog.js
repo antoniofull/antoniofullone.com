@@ -214,7 +214,7 @@ class BlogHome extends Component {
                   node {
                     id
                     html
-                    excerpt(pruneLength: 140)
+                    excerpt(pruneLength: 100)
                     frontmatter {
                       path
                       title
