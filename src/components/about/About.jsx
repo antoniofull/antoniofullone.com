@@ -5,12 +5,10 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 
 import { aboutText, socialData, files, websites } from '../../data';
-import img from '../../images/me.png';
 import Aside from './AsideContent';
+import img from '../../images/me.png';
 import { ThemeConsumer } from '../ThemeContext';
 import Observable from '../Observable';
-
-import clouds from '../../images/clouds.svg';
 
 // CSS
 import '../../styles/about.css';
