@@ -8,9 +8,6 @@
 .blogpost--first {
   margin-top: var(--margin-l);
 }
-.blogpost .post-image {
-  margin-top: var(--margin-half);
-}
 .post-excerpt {
   width: 90%;
   margin-bottom: 0;
@@ -55,6 +52,7 @@
   font-size: 12px;
   font-style: normal;
   color: var(--color-black-light);
+  font-family: 'freight-sans-pro', sans-serif;
 }
 .read-more,
 .read-more:visited {

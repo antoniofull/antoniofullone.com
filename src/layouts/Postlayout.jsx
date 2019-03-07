@@ -60,30 +60,23 @@ const Postlayout = ({ post, prev, next }) => (
               </figcaption>
             </picture>
           )}
-
           <div
             className="post__content"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-        </article>
-        <section className="follow-links container margin-y-l">
-          <ul className="next-previous">
+          <ul className="follow-links container margin-y-l next-previous">
             {prev && (
               <li className="prev">
-                <Link className="prev-post" to={prev.frontmatter.path}>
-                  {prev.frontmatter.title}
-                </Link>
+                <Link className="prev-post" to={prev.frontmatter.path} />
               </li>
             )}
             {next && (
               <li className="next">
-                <Link className="next-post" to={next.frontmatter.path}>
-                  {next.frontmatter.title}
-                </Link>
+                <Link className="next-post" to={next.frontmatter.path} />
               </li>
             )}
           </ul>
-        </section>{' '}
+        </article>
       </React.Fragment>
     )}
   </>

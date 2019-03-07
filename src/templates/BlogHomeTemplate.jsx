@@ -87,7 +87,7 @@ class BlogHomeTemplate extends Component {
                           </h2>
                         )}
                         <time
-                          className="post-date"
+                          className="post-date freight-sans"
                           dateTime={new Date(
                             post.node.frontmatter.date
                           ).toLocaleString('en-US', {
