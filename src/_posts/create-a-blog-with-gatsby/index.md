@@ -7,6 +7,7 @@ category: coding
 image: 'https://www.antoniofullone.com/images/posts/off-canvas.png'
 imageDesc: 'Gatsby blog with React'
 introduction: 'Building a blog with Gatsby and React'
+status: 'draft'
 ---
 
 A while ago I decided to move from Wordpress to Jekyll. This year, for the new redesign, I decided to rebuild my website with React and Gatsby. The blog still uses Markdown and Gatsby will render it as normal html, same as Jekyll. Unlike Jekyll, I find Gatsby easier to use, and one of the big advantage, apart for the obvious React thing ..., is that is everyting set up for you.
