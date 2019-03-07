@@ -454,14 +454,14 @@ export const socialData = [
     label: 'Rss',
     icon: 'rss',
     style: 'fas',
-    link: ''
+    link: 'https://www.antoniofullone.com/rss.xml'
   },
   {
     id: 7,
     label: 'Pinterest',
     icon: 'pinterest',
     style: 'fab',
-    link: 'https://www.pinterest.es/antoniofull/'
+    link: 'https://www.pinterest.com/antoniofull/'
   },
   {
     id: 8,
