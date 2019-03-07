@@ -45,14 +45,13 @@ export const files = [
   {
     id: 1,
     label: 'Antonios resume',
-    link:
-      'https://www.dropbox.com/s/5pj04p723ov2hum/Antonio-Fullone-resume.pdf?dl=0'
-  },
-  {
-    id: 2,
-    label: 'Website StyleGuides',
-    link: 'https://www.antoniofullone.com/styleguides.html'
+    link: 'https://www.dropbox.com/s/zxak5wd7qtuc93x/antonio-fullone.pdf?dl=0'
   }
+  // {
+  //   id: 2,
+  //   label: 'Website StyleGuides',
+  //   link: 'https://www.antoniofullone.com/styleguides.html'
+  // }
 ];
 
 export const websites = [
