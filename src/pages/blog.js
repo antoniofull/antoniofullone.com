@@ -207,6 +207,7 @@ class BlogHome extends Component {
           query={graphql`
             query allPostData {
               allMarkdownRemark(
+                filter: { frontmatter: { status: { ne: "draft" } } }
                 sort: { order: DESC, fields: [frontmatter___date] }
                 limit: 1000
               ) {
@@ -216,6 +217,7 @@ class BlogHome extends Component {
                     html
                     excerpt(pruneLength: 140)
                     frontmatter {
+                      status
                       path
                       title
                       image

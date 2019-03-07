@@ -7,6 +7,7 @@ image: 'https://www.antoniofullone.com/images/posts/kitesurfing.jpg'
 imageDesc: 'Kitesurfing in Canary Islands'
 description: 'I am learning Kitesurfing and Surfing'
 introduction: 'Learning kitesurf and surf in the Canary Islands. I started my weekly lessons to learn how to ride the ocean and is pretty cool'
+status: 'published'
 ---
 
 Last week I started my **kitesurf lessons** here in **Canary Islands**. I have a very funny and nice instructor. He is Austrian and soo german in his teaching. Anyway it is very fun, for now I had few lessons and always on the land, learning how to control the kite and how to standup and sit down with it. I am feeling very excited about starting this new sport.

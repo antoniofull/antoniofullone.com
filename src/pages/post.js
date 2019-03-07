@@ -239,11 +239,14 @@ class Post extends Component {
 
 export const query = graphql`
   query post($path: String!, $category: String, $postId: String) {
-    post: markdownRemark(frontmatter: { path: { eq: $path } }) {
+    post: markdownRemark(
+      frontmatter: { path: { eq: $path }, status: { ne: "draft" } }
+    ) {
       id
       html
       excerpt(pruneLength: 20)
       frontmatter {
+        status
         path
         title
         date(formatString: "MMMM DD, YYYY")
@@ -265,6 +268,7 @@ export const query = graphql`
           html
           frontmatter {
             path
+            status
             title
             image
             imageDesc

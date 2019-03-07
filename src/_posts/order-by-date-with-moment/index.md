@@ -9,6 +9,7 @@ date: 2018-01-07 17:25:00
 category: coding
 imageDesc: 'quick tip on how to sort an array by date, using momentjs'
 image: 'https://antoniofullone.com/images/posts/array.png'
+status: 'published'
 ---
 
 Sorting and ordering an array is quite easy, just use `array.sort` and pass the function which returns the difference. For instance:

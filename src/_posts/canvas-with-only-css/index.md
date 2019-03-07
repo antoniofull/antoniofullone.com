@@ -7,6 +7,7 @@ category: coding
 image: 'https://www.antoniofullone.com/images/posts/off-canvas.png'
 imageDesc: 'Off Canvas with Css'
 introduction: 'Create Off Canvas using CSS and no Javascript'
+status: 'published'
 ---
 
 Yesterday evening I was bored at home (as usual) and the weather was cold (as usual) so I decided to spend some time fixing some bug on this site.
