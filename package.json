@@ -28,7 +28,8 @@
     "react-docgen": "^3.0.0"
   },
   "scripts": {
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "build": "gatsby build"
   },
   "dependencies": {
     "animejs": "^3.0.1",

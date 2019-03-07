@@ -13,8 +13,25 @@ class Illustration extends Component {
   componentDidMount() {
     const vespa = document.querySelector('.vespa');
     const banner = document.querySelector('.italy');
+
     if (vespa) {
       this.animate('.vespa svg *');
+      // TODO Remove this later, only for test animation
+      const ruotaAnteriore = document.querySelector(
+        '.vespa svg .ruota-anteriore ellipse'
+      );
+      const ruotaPosteriore = document.querySelector(
+        '.vespa svg .ruota-posteriore ellipse'
+      );
+      vespa.addEventListener('mouseover', () => {
+        ruotaAnteriore.classList.add('run');
+        ruotaPosteriore.classList.add('run');
+      });
+
+      vespa.addEventListener('mouseout', () => {
+        ruotaAnteriore.classList.remove('run');
+        ruotaPosteriore.classList.remove('run');
+      });
     }
   }
   animate(el) {
@@ -48,8 +65,6 @@ class Illustration extends Component {
   }
 
   render() {
-    console.log('rednder');
-
     return (
       <ThemeConsumer>
         {({ animateElement, isLoading }) => (

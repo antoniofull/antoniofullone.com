@@ -51,7 +51,7 @@
                                 <ellipse id="Oval" fill="#D1CFCF" transform="translate(25.164205, 17.955760) rotate(44.000000) translate(-25.164205, -17.955760) " cx="25.1642051" cy="17.9557598" rx="1.78621881" ry="1.786011"></ellipse>
                             </g>
                         </g>
-                        <g id="ruota-posteriore" transform="translate(57.533268, 263.441612) rotate(-9.000000) translate(-57.533268, -263.441612) translate(17.533268, 224.941612)" fill-rule="nonzero">
+                        <g id="ruota-posteriore" class="ruota-posteriore" transform="translate(57.533268, 263.441612) rotate(-9.000000) translate(-57.533268, -263.441612) translate(17.533268, 224.941612)" fill-rule="nonzero">
                             <ellipse id="Oval" fill="#0D0B17" cx="39.6338078" cy="38.3837417" rx="39.6338078" ry="38.3837417"></ellipse>
                             <ellipse id="Oval" fill="#272727" cx="39.9340639" cy="38.6836147" rx="25.5217702" ry="25.4892035"></ellipse>
                             <ellipse id="Oval-Copy" stroke="#5C6277" stroke-width="6" cx="39.9340639" cy="38.6836147" rx="18.3156233" ry="18.2922519"></ellipse>

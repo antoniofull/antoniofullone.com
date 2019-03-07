@@ -81,3 +81,18 @@
   animation-iteration-count: infinite;
 }
 */
+@keyframes run {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.run {
+  animation: run 0.5s linear infinite forwards;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  display: inline-block;
+}
