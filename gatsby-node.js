@@ -23,10 +23,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve(`src/pages/post.js`);
-
+  status: {
+    ne: 'draft';
+  }
   return graphql(`
     {
       allMarkdownRemark(
+        filter: { frontmatter: { status: { ne: "draft" } } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
