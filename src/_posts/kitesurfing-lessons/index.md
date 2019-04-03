@@ -3,7 +3,7 @@ path: '/blog/kitesurfing-canary-islands'
 title: Kitesurfing Lessons
 date: 2018-02-18 21:30:00
 category: personal
-image: 'https://www.antoniofullone.com/images/posts/kitesurfing.jpg'
+image: '/images/posts/kitesurfing.jpg'
 imageDesc: 'Kitesurfing in Canary Islands'
 description: 'I am learning Kitesurfing and Surfing'
 introduction: 'Learning kitesurf and surf in the Canary Islands. I started my weekly lessons to learn how to ride the ocean and is pretty cool'

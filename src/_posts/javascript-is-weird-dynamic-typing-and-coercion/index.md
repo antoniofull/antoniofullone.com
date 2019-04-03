@@ -4,7 +4,7 @@ layout: post
 title: 'Javascript is weird: Dynamic typing and coercion'
 date: 2019-04-02 19:40:00
 category: coding
-image: 'https://www.antoniofullone.com/images/posts/javascript_underwater.jpg'
+image: '/images/posts/js-strongtyped.png'
 imageDesc: 'Source Programming Humor on Reddit'
 introduction: 'Understanding dynamic typing and coercion in Javascript. (Yeah Javascript is weird ... )'
 status: 'published'
@@ -143,4 +143,4 @@ I will try to write other posts taked from these notes, so hopefully with this p
 Final note:
 [Typescript](https://github.com/Microsoft/TypeScript) and [Flow](https://flow.org/) are the 2 most well known solutions for using static types in JS, but keep in mind that while typescript is a superset of the language, flow is just a static checker.
 
-Image credits: [Programming Humor](https://www.reddit.com/r/ProgrammerHumor/comments/8w0fve/i_will_try_this/www.reddit.com')
+Image credits: [Programming Humor](https://www.reddit.com/r/ProgrammerHumor/comments/6vsv4g/javascript_meme/')

@@ -104,15 +104,7 @@ class BlogHomeTemplate extends Component {
                       </header>
                       {post.node.excerpt && (
                         <p className="post-excerpt">
-                          {index === 0
-                            ? `${striptags(posts[0].node.html)
-                                .split(' ')
-                                .slice(
-                                  0,
-                                  index === 0 ? this.state.textLines : 40
-                                )
-                                .join(' ')} ...`
-                            : post.node.excerpt}
+                          {post.node.frontmatter.introduction}
                         </p>
                       )}
                       <Link
@@ -232,7 +224,9 @@ class BlogHomeTemplate extends Component {
                         </time>
                       </header>
                       {post.node.frontmatter.introduction && (
-                        <p className="post-excerpt">{post.node.excerpt}</p>
+                        <p className="post-excerpt">
+                          {post.node.frontmatter.introduction}
+                        </p>
                       )}
                       <Link
                         className={`read-more`}

@@ -3,6 +3,9 @@
   margin-bottom: var(--margin-half);
   text-align: center;
   line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
 }
 
 .post__meta {
@@ -10,6 +13,7 @@
   color: var(--color-black-light);
   display: block;
   text-align: center;
+  margin-bottom: var(--margin);
 }
 
 .post__content {

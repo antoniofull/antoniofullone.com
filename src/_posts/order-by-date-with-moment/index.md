@@ -8,7 +8,7 @@ title: Sort an array of objects by date using moment
 date: 2018-01-07 17:25:00
 category: coding
 imageDesc: 'quick tip on how to sort an array by date, using momentjs'
-image: 'https://www.antoniofullone.com/images/posts/array.png'
+image: '/images/posts/array.png'
 status: 'published'
 ---
 
