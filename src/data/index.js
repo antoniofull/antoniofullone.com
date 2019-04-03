@@ -302,22 +302,22 @@ export const work = {
 export const blogData = [
   {
     id: 1,
-    title: 'Sort an array of objects by date using moment',
-    img: '',
+    title: 'Javascript dynamic typing and coercion',
+    img: '/images/posts/js-strongtyped.png',
     link:
-      'https://www.antoniofullone.com/writing/2018/01/07/order-by-date-with-moment/'
+      'https://www.antoniofullone.com/blog/javascript-dynamic-typing-coercion'
   },
   {
     id: 2,
     title: 'Kitesurfing in the Canary Islands.',
-    img: 'https://www.antoniofullone.com/images/posts/kitesurfing.jpg',
+    img: '/images/posts/kitesurfing.jpg',
     link:
       'https://www.antoniofullone.com/writing/2018/02/18/kitesurfing-lessons/'
   },
   {
     id: 3,
     title: 'Circular Menu inspired by Path.',
-    img: 'https://www.antoniofullone.com/images/posts/circular.png',
+    img: '/images/posts/circular.png',
     link:
       'https://www.antoniofullone.com/writing/2018/02/18/kitesurfing-lessons/'
   }
