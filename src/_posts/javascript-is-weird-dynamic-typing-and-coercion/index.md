@@ -138,7 +138,7 @@ Number(myNewVar); // 0
 ```
 
 So yes, some parts of javascript are weird, others are [good](http://shop.oreilly.com/product/9780596517748.do).
-I will try to write other posts taked from these notes, so hopefully with this post I can also announce that I am **_back to blogging_**.
+I will try to write other posts taken from these notes, so hopefully with this post I can also announce that I am **_back to blogging_**.
 
 Final note:
 [Typescript](https://github.com/Microsoft/TypeScript) and [Flow](https://flow.org/) are the 2 most well known solutions for using static types in JS, but keep in mind that while typescript is a superset of the language, flow is just a static checker.
