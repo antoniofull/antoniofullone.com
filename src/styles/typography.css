@@ -76,6 +76,10 @@ blockquote {
   padding-left: var(--margin-half);
 }
 
+em {
+  font-style: italic;
+}
+
 /* Font Families */
 .freight-sans {
   font-family: freight-sans-pro, sans-serif;

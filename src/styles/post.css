@@ -75,11 +75,20 @@
   text-transform: uppercase;
   font-style: normal;
 }
-
-.post__content code {
+.post__content p > code {
+  background: #f2f3ed;
   font-size: 16px;
 }
-
+.post__content > code {
+  font-size: 14px;
+  background: var(--color-primary-light);
+  padding: 0 5px;
+}
+.post__content pre {
+  font-size: 16px;
+  margin: var(--margin) 0;
+  max-height: 550px;
+}
 .follow-links {
   position: relative;
   padding: var(--padding-half) var(--padding-half) var(--padding)

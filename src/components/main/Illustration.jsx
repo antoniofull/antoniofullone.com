@@ -53,7 +53,7 @@ class Illustration extends Component {
           duration: 500,
           delay: 0,
           complete: function(anim) {
-            console.log(anim);
+            // console.log(anim);
           },
           direction: 'alternate',
           loop: false

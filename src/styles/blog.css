@@ -18,6 +18,7 @@
   display: block;
   max-width: calc(100% + calc(var(--grid-outer-gutter) * 2));
   margin-left: calc(var(--grid-outer-gutter) * -1);
+  min-width: 400px;
 }
 .blogpost .post-header {
   position: relative;

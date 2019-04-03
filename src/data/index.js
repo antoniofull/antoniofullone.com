@@ -31,7 +31,7 @@ His long time dream was to become a chef and own a restaurant. His hero and insp
 
 He writes his thoughts on a [journal](https://www.antoniofullone.com/blog) and he sends some [(re)tweets](https://twitter.com/_antoniofullone) from time to time. He rarely uses [Facebook](https://www.facebook.com/antonio.fullone) and does not have a personal Instagram account.
 
-You can check his professional Bio (and photo) on [LinkedIn](www.linkedin.com/in/antoniofullone) or download his [Resume](https://www.dropbox.com/s/5pj04p723ov2hum/Antonio-Fullone-resume.pdf?dl=0). He loves traveling, reading books, watching series on Netflix and taking amateur photos. He practices meditation and he’s interested in __philosophy__ and __Stoicism__. His favorite cities are __New York__ and __Malaga.__
+You can check his professional Bio (and photo) on [LinkedIn](www.linkedin.com/in/antoniofullone) or download his [Resume](https://www.dropbox.com/s/zxak5wd7qtuc93x/antonio-fullone.pdf?dl=0). He loves traveling, reading books, watching series on Netflix and taking amateur photos. He practices meditation and he’s interested in __philosophy__ and __Stoicism__. His favorite cities are __New York__ and __Malaga.__
 
 His favorite quote is from Marcus Aurelius, author of [Meditations](https://en.wikipedia.org/wiki/Meditations), his favorite book.
 
@@ -72,7 +72,7 @@ export const workTmp = [
     id: 1,
     label: 'WPML',
     link: 'https://wpml.org/',
-    img: './images/logos/wpml.svg'
+    img: '/images/logos/wpml.svg'
   },
   {
     id: 2,

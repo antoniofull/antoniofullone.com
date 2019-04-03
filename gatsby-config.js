@@ -7,10 +7,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-favicon`,
     {
@@ -34,7 +33,10 @@ module.exports = {
         // It's important to specify the maxWidth (in pixels) of
         // the content container as this plugin uses this as the
         // base for generating different widths of each image.
-        maxWidth: 700
+        maxWidth: 700,
+        linkImagesToOriginal: true,
+        sizeByPixelDensity: true,
+        showCaptions: true
       }
     },
     {
@@ -53,6 +55,7 @@ module.exports = {
         path: `${__dirname}/src/data/`,
         name: 'data'
       }
-    }
+    },
+    `gatsby-plugin-offline`
   ]
 };
