@@ -125,9 +125,13 @@ Also `NaN` returns false. NaN stands for "Not A Number" but its type is number, 
 typeof NaN; // Number!!
 ```
 
-Same as `typeof null` will return object, same as `typeof []` for arrays.
+When you do `typeof null` or `typeof []` it will return object.
 
-And finally let's look at another WTF
+### Explicit Vs Implicit Coercion
+
+Coercion can be explicit or implicit. It is explicit when we are defining it's type, like `Number('20')` and it is implicit when we let the JS engine do the conversion like `let counter = 20`.
+
+Finally the last "WTF" :)
 
 ```javascript
 let myVar;
@@ -141,6 +145,6 @@ So yes, some parts of javascript are weird, others are [good](http://shop.oreill
 I will try to write other posts taken from these notes, so hopefully with this post I can also announce that I am **_back to blogging_**.
 
 Final note:
-[Typescript](https://github.com/Microsoft/TypeScript) and [Flow](https://flow.org/) are the 2 most well known solutions for using static types in JS, but keep in mind that while typescript is a superset of the language, flow is just a static checker.
+[Typescript](https://github.com/Microsoft/TypeScript) and [Flow](https://flow.org/) are the 2 most well known solutions for using static types in JS, Typescript is a superset of javascript(Js with super powers), flow is a static checker.
 
 Image credits: [Programming Humor](https://www.reddit.com/r/ProgrammerHumor/comments/6vsv4g/javascript_meme/')
