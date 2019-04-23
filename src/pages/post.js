@@ -42,8 +42,6 @@ class Post extends Component {
   }
 
   componentDidMount() {
-    // Loading the polify for Intersection Observer
-    // Window will be undefined if loaded before componendDidMount
     try {
       this.WebFont = require('webfontloader');
     } catch (e) {
