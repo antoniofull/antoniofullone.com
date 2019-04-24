@@ -10,7 +10,7 @@ introduction: 'Building a Singly Linked List with Javascript, and reverse it'
 status: 'published'
 ---
 
-When working with data in Javascript we usually rely arrays and object as primary way to store data. There are in fact a lot of different way to structure our data and each one of them has some pros and cons and a practical usage. Linked List are a type of data structure that isn't talked too much and, especially when it comes to interview, seems to be a topic quite scaring.
+When working with data in Javascript we usually rely on arrays and objects as primary way to store data. There are in fact a lot of different way to structure our data and each one of them has some pros and cons and a practical usage. Linked List are a type of data structure that isn't talked too much and, especially when it comes to interview, seems to be a topic quite scaring.
 
 I am not entering into the discussion of the algorithm/data structure interview for a FrontEnd (there is enough fire out there about it), but Linked List can be pretty useful compared to array, and they have a lot of advantages.
 
