@@ -342,33 +342,37 @@ Self explanatory I would say.
 
 ### Traverse the List
 
-Traversing the list is easy, we just go to the next node 'till we hit null. But this method will come handy for some next methods. We can add a callback to the method, so that we can then reuse the value or node to do something.
+Traversing the list is easy, we just go to the next node 'till we hit null. This method might come handy for some next other methods. We can add a callback to the method, so that we can then reuse the value or node to do something. I'll call this method `run`, I just like it more than `traverse`.
 
 ```javascript
 
-	/**
-    *
-    * @param {Function} cb - a callback function that returns the node
-    */
+	 /**
+   * Traverse the entire Linked List
+   * @callback cb - do something with the list
+   * @Example
+      function log(node) {
+        if(node) {
+          console.log('The value is: ', node.val);
+          if(!node.next) {
+            console.log('we reached the end, ', node.val)
+          }
+        }
+      }
+   *
+   * */
+  run(cb) {
+    // Reference to the head
+    let current = this.head;
 
-    traverse(cb) {
-	    // if list is empty
-	    if (this.isEmpty()) return null;
+    // Loop until we reach the end
+    while (current) {
+      // Do something with the value
+      cb(current);
 
-	    // reference to the head
-	    let node = this.head;
-
-	    // start looping
-	    while (node.next) {
-	      // use callback
-	      // if is passed as argument
-	      if (typeof cb === 'function') {
-	        cb(node);
-	      }
-	      // move on to the list
-	      node = node.next;
-	    }
-	  }
+      // move on
+      current = current.next;
+    }
+  }
 ```
 
 We can search in a Linked List either based on the index or the value. For the value is pretty easy to do.
@@ -383,7 +387,9 @@ Just loop through all the list until you find the value you are looking for.
   find(val) {
     let current = this.head;
     // traverse the entire list
-
+    // We could use also the run method and pass the
+    // callback to it
+    // But let's do it normally
     while (current) {
       if (current.val === val) {
         // we found the node
@@ -441,11 +447,10 @@ It's time now to update a value. This is now really easy, we just created a `fin
 
 	// Set the value on a certain index
 	// I use set as name rather than update
-     set(index, val) {
-      // Get the node passing the index
-      let node = this.get(index);
-      // If node is found then set the value to be new val
-      // Because get method might return null if index is < 0 || > length
+      update(index, val) {
+      // we take advantage of our findAt method
+      let node = this.findAt(index);
+      // If node is found
       if (node) {
         node.val = val;
         return node;
