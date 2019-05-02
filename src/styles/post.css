@@ -1,3 +1,12 @@
+.post {
+  margin-top: var(--margin-l);
+  font-size: 16px;
+}
+
+.post h2 {
+  margin-bottom: var(--margin-half);
+}
+
 .post__title {
   margin-top: var(--margin);
   margin-bottom: var(--margin-half);
@@ -5,7 +14,7 @@
   line-height: 1;
   margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .post__meta {
@@ -22,12 +31,12 @@
 }
 .post__content ul {
   list-style-type: disc;
-  padding-left: var(--padding-l);
+  padding-left: var(--padding);
   margin-bottom: var(--baseline);
 }
 .post__content ol {
   list-style-type: decimal;
-  padding-left: var(--padding-l);
+  padding-left: var(--padding);
   margin-bottom: var(--baseline);
 }
 .post__content ol li,
@@ -75,7 +84,7 @@
   float: left;
   line-height: 0.68;
   font-weight: 100;
-  margin: 0.1em 0.1em 0 0;
+  margin: 0.05em 0.1em 0.3em 0;
   text-transform: uppercase;
   font-style: normal;
 }
@@ -196,6 +205,8 @@
 .post .post-image {
   display: block;
   width: 100%;
+  max-height: 550px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 600px) {
@@ -210,6 +221,9 @@
 @media screen and (min-width: 1024px) {
   .post.single {
     position: relative;
+    /* max-width: 700px; */
+    font-size: 18px;
+    line-height: 1.5;
   }
   .image--full-width {
     display: block;

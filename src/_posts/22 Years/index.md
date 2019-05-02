@@ -2,20 +2,13 @@
 path: '/blog/22-years'
 layout: post
 title: 22 Years
-date: 2015-09-24 06:25:00
+date: 2015-09-24
 category: personal
 introduction: "It's been a long time since my father passed away"
 status: 'published'
 ---
 
-Today it’s my birthday. 22 Years ago on this day I turned 16th.
-
-22 Years ago on this day my father died.
-
-Every year on this day I wake up living the same scene:
-I see my mum crying, my sisters in shock, my little sister taken away by my aunt.
-
-It could have happened a day later or before, but no, it happened just on my birthday.
+Today it’s my birthday. 22 Years ago on this day I turned 16th. 22 Years ago on this day my father died. Every year on this day I wake up living the same scene, I see my mum crying, my sisters in shock, my little sister taken away by my aunt.It could have happened a day later or before, but no, it happened just on my birthday.
 
 A lot of people told me that was a “sign of the destiny” but I don’t believe in that, I don’t believe in those religious things, I just know that he’s gone, just on the most important day of my life.
 

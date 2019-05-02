@@ -2,10 +2,8 @@
 path: '/blog/data-structures-with-javascript-singly-linked-list'
 layout: post
 title: 'Singly Linked List with Javascript'
-date: 2019-04-23 19:40:00
+date: 2019-04-23
 category: coding
-image: '/images/posts/singly-linked-list.png'
-imageDesc: 'Reverse a singly linked list'
 introduction: 'Building a Singly Linked List with Javascript, and reverse it'
 status: 'published'
 ---
@@ -14,7 +12,7 @@ When working with data in Javascript we usually rely on arrays and objects as pr
 
 I am not entering into the discussion of the algorithm/data structure interview for a FrontEnd (there is enough fire out there about it), but Linked List can be pretty useful compared to array, and they have a lot of advantages.
 
-All the code is available on my [github profile](https://github.com/antoniofull/javascript-data-structures/blob/master/src/SinglyLinkedList.js).
+All the code is available on [github](https://github.com/antoniofull/javascript-data-structures/blob/master/src/SinglyLinkedList.js).
 
 ## What are linked list?
 

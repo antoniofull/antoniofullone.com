@@ -2,7 +2,7 @@
 path: '/blog/jekyll-wordpress'
 layout: post
 title: 'Bye Bye Wordpress, welcome Jekyll!'
-date: 2014-10-27 21:48:02
+date: 2014-10-27
 category: coding
 image: '/images/posts/jekyll.png'
 imageDesc: 'By Bye Wordpress'

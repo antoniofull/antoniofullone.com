@@ -28,23 +28,16 @@ const Postlayout = ({ post, prev, next }) => (
         <article className="post single container has-gutter-outside">
           <header>
             <h1 className="post__title">{post.frontmatter.title}</h1>
-            <div className="post__meta freight-sans">
+            <div className="post__meta">
               <time
                 className="post__date"
-                dateTime={new Date(post.frontmatter.date).toLocaleString(
-                  'en-US',
-                  {
-                    timeZone: 'UTC'
-                  }
-                )}
+                dateTime={new Date(post.frontmatter.date).toDateString()}
               >
-                {new Date(post.frontmatter.date).toLocaleString('en-US', {
-                  timeZone: 'UTC'
-                })}{' '}
+                {new Date(post.frontmatter.date).toDateString()}
               </time>
               <span className="reading-time">
                 {' '}
-                - Reading Time: {calculateReadingTime(post.html)} minutes
+                Reading Time: {calculateReadingTime(post.html)} minutes
               </span>
             </div>
           </header>

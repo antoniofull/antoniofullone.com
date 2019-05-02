@@ -122,13 +122,19 @@ dfn {
 svg {
   pointer-events: none;
 }
-/*
 
+:root {
+  line-sizing: normal;
+  text-spacing: trim-start allow-end trim-adjacent ideograph-alpha
+    ideograph-numeric;
+}
+
+/*
 Prevent Zoom on Focus only for IOS devices
  -webkit-overflow-scrolling is supported only in IOS Safari
  https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-overflow-scrolling
-
  */
+
 @supports (-webkit-overflow-scrolling: touch) {
   select,
   textarea,

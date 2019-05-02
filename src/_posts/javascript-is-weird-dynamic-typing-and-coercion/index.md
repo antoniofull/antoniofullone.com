@@ -2,7 +2,7 @@
 path: '/blog/javascript-dynamic-typing-coercion'
 layout: post
 title: 'Javascript is weird: Dynamic typing and coercion'
-date: 2019-04-02 19:40:00
+date: 2019-04-02
 category: coding
 image: '/images/posts/js-strongtyped.png'
 imageDesc: 'Source Programming Humor on Reddit'

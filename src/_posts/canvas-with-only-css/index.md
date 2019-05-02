@@ -2,7 +2,7 @@
 path: '/blog/off-canvas-css'
 layout: post
 title: 'Off Canvas with only Css'
-date: 2015-04-03 19:40:00
+date: 2015-04-03
 category: coding
 image: '/images/posts/off-canvas.png'
 imageDesc: 'Off Canvas with Css'

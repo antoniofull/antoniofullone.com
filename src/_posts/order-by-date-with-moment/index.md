@@ -5,14 +5,12 @@ headtitle: 'Order an array of objects by date, using momentjs'
 description: 'How to order an array of objecs by date. Using momentjs library'
 metatag: 'javascript, array, momentjs'
 title: Sort an array of objects by date using moment
-date: 2018-01-07 17:25:00
+date: 2018-01-07
 category: coding
-imageDesc: 'quick tip on how to sort an array by date, using momentjs'
-image: '/images/posts/array.png'
 status: 'published'
 ---
 
-Sorting and ordering an array is quite easy, just use `array.sort` and pass the function which returns the difference. For instance:
+Sorting and ordering an array is quite easy, just use `array.sort` and pass the function which will sort it. Something like this:
 
 ```javascript
 const arr = [0, 10, 2, 3];
@@ -34,4 +32,4 @@ const newarr = arr.sort((a, b) => {
 });
 ```
 
-This will sort the array by date with **moment**. Easy peasy :smile:
+This will sort the array by date with **moment**.

@@ -2,7 +2,7 @@
 path: '/blog/build-a-blog-with-gatsby'
 layout: post
 title: 'Build a blog with React and Gatsby'
-date: 2019-03-07 19:40:00
+date: 2019-03-07
 category: coding
 image: 'https://www.antoniofullone.com/images/posts/off-canvas.png'
 imageDesc: 'Gatsby blog with React'
