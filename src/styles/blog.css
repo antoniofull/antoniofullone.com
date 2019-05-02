@@ -73,3 +73,26 @@
 .reading-time {
   display: block;
 }
+
+@media screen and (min-width: 1024px) {
+  .post-title:before {
+    left: -23px;
+  }
+  .posts {
+    padding: 0;
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .blogpost--first .post-image {
+    max-width: 62%;
+    margin-left: -12%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-height: 800px) {
+  .blogpost--first .post-image {
+    max-height: 450px;
+  }
+}
