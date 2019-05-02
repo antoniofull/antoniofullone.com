@@ -2,7 +2,6 @@ import striptags from 'striptags';
 import { Helmet } from 'react-helmet';
 import React from 'react';
 import { Link } from 'gatsby';
-import { RaceOperator } from 'rxjs/internal/observable/race';
 
 function calculateReadingTime(html) {
   if (!html) return 'less than a minute';
