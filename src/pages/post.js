@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Prism from 'prismjs';
 import ReactGA from 'react-ga';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/themes/prism-okaidia.css';
 
 import Header from '../components/Header';
 import Logo from '../components/Logo';
