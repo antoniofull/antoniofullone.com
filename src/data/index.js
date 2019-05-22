@@ -29,7 +29,7 @@ He has traveled to several countries between Europe and North America and in the
 
 His long time dream was to become a chef and own a restaurant. His hero and inspiration is [Massimo Bottura](https://osteriafrancescana.it). Today he is more than happy to work in the tech industry. Cooking remains one of his favorite hobbies and activities. He writes [code](https://github.com/antoniofull/), he likes to experiment with [CSS](https://codepen.io/antoniofull/) and [design]() things and [icons](https://thenounproject.com/antonio.fullone/).
 
-He writes his thoughts on a [journal](https://www.antoniofullone.com/blog) and he sends some [(re)tweets](https://twitter.com/_antoniofullone) from time to time. He rarely uses [Facebook](https://www.facebook.com/antonio.fullone) and does not have a personal Instagram account.
+He writes his thoughts on a [journal](https://www.antoniofullone.com/blog).
 
 You can check his professional Bio (and photo) on [LinkedIn](www.linkedin.com/in/antoniofullone) or download his [Resume](https://www.dropbox.com/s/zxak5wd7qtuc93x/antonio-fullone.pdf?dl=0). He loves traveling, reading books, watching series on Netflix and taking amateur photos. He practices meditation and he’s interested in __philosophy__ and __Stoicism__. His favorite cities are __New York__ and __Malaga.__
 
