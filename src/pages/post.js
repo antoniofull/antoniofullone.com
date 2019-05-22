@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Prism from 'prismjs';
-import ReactGA from 'react-ga';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/themes/prism-okaidia.css';
 
@@ -18,9 +17,6 @@ import { navItems } from '../data';
 
 import '../styles/post.css';
 import '../styles/fonts-awesome.css';
-
-ReactGA.initialize('UA-67184030-4');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 if (typeof window !== 'undefined') {
   // Loading the polify for Intersection Observer

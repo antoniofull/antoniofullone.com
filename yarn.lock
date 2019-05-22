@@ -5118,6 +5118,12 @@ gatsby-plugin-feed@^2.0.14:
     pify "^3.0.0"
     rss "^1.2.2"
 
+gatsby-plugin-google-analytics@^2.0.20:
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.20.tgz#ee8f10228a072247686a33d180d978abc574327c"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-netlify@^2.0.17:
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.17.tgz#05954942041f55d1e37af2c064bbcdb61d143821"

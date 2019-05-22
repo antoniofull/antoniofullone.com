@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import ReactGA from 'react-ga';
 
 import { ThemeProvider } from '../components/ThemeContext';
 import Observable from '../components/Observable';
@@ -11,9 +10,6 @@ import BlogLayout from '../layouts/BlogLayout';
 import BlogHomeTemplate from '../templates/BlogHomeTemplate';
 
 import '../styles/fonts-awesome.css';
-
-ReactGA.initialize('UA-67184030-4');
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 if (typeof window !== 'undefined') {
   // Loading the polify for Intersection Observer
