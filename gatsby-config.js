@@ -12,6 +12,7 @@ module.exports = {
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-favicon`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
