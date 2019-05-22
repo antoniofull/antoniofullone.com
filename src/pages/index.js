@@ -17,6 +17,7 @@ import '../styles/typography.css';
 import '../styles/grid.css';
 import '../styles/helpers.css';
 import '../styles/global.css';
+import '../styles/fonts-awesome.css';
 
 if (typeof window !== 'undefined') {
   // Loading the polify for Intersection Observer
@@ -274,18 +275,12 @@ class Index extends Component {
             `}
             render={data => (
               <Helmet>
-                <link
-                  rel="stylesheet"
-                  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-                  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-                  crossorigin="anonymous"
-                />
-
                 <title>{data.site.siteMetadata.title}</title>
                 <meta
                   name="description"
                   content={data.site.siteMetadata.description}
                 />
+                <html lang="en" />
               </Helmet>
             )}
           />

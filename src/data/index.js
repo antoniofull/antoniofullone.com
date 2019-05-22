@@ -369,36 +369,30 @@ export const credits = [
   },
   {
     id: 3,
-    title: 'Freight Sans',
+    title: 'Typekit',
     author: 'Typekit',
-    link: 'https://fonts.adobe.com/fonts/freight-sans'
+    link: 'https://fonts.adobe.com/'
   },
   {
     id: 4,
-    title: 'Tisa Pro',
-    author: 'Typekit',
-    link: 'https://fonts.adobe.com/fonts/ff-tisa'
-  },
-  {
-    id: 5,
     title: 'Font Awesome Icons',
     author: '',
     link: 'https://fontawesome.com'
   },
   {
-    id: 6,
+    id: 5,
     title: 'Visual Studio Code',
     author: 'Microsoft',
     link: 'https://code.visualstudio.com'
   },
   {
-    id: 7,
+    id: 6,
     title: 'VIM',
     author: '',
     link: 'https://www.vim.org'
   },
   {
-    id: 8,
+    id: 7,
     title: 'MacBook Pro',
     author: 'Apple',
     link: 'https://www.apple.com'

@@ -10,6 +10,8 @@ import Footer from '../components/footer/Footer';
 import BlogLayout from '../layouts/BlogLayout';
 import BlogHomeTemplate from '../templates/BlogHomeTemplate';
 
+import '../styles/fonts-awesome.css';
+
 if (typeof window !== 'undefined') {
   // Loading the polify for Intersection Observer
   require('intersection-observer');
@@ -192,16 +194,12 @@ class BlogHome extends Component {
             name="description"
             content="Antonio Fullone Personal blog. Web and self development"
           />
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-            crossorigin="anonymous"
-          />
+
           <script
             crossorigin="anonymous"
             src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry"
           />
+          <html lang="en" />
         </Helmet>
         <StaticQuery
           query={graphql`

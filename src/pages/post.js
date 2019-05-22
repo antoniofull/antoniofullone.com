@@ -4,9 +4,6 @@ import { graphql, Link } from 'gatsby';
 import Prism from 'prismjs';
 import ReactGA from 'react-ga';
 
-import 'prismjs/components/prism-jsx';
-import 'prismjs/themes/prism-okaidia.css';
-
 import Header from '../components/Header';
 import Logo from '../components/Logo';
 import Navigation from '../components/navigation/MainNav';
@@ -18,6 +15,7 @@ import { ThemeProvider } from '../components/ThemeContext';
 import { navItems } from '../data';
 
 import '../styles/post.css';
+import '../styles/fonts-awesome.css';
 
 if (typeof window !== 'undefined') {
   // Loading the polify for Intersection Observer
@@ -202,17 +200,11 @@ class Post extends Component {
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
         <Helmet>
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-            crossorigin="anonymous"
-          />
-
           <script
             crossorigin="anonymous"
             src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry"
           />
+          <html lang="en" />
         </Helmet>
         <PageContainer>
           <Header>
