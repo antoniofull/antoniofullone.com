@@ -224,6 +224,7 @@ class BlogHome extends Component {
                       imageDesc
                       date
                       introduction
+                      category
                     }
                   }
                 }

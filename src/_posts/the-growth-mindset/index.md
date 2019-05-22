@@ -19,7 +19,7 @@ According with [Carol Dweck](https://en.wikipedia.org/wiki/Carol_Dweck), author 
 1. **The Fixed mindset** - (No need to learn, people are born with talent, blaming everyone but yourself)
 2. **The Growth Mindset** - accept failure, keep learning, even when you are the number 1 in your field, take ownership about mistakes and failures.
 
-It reminfs me a little bit of the system 1 and system 2 from [Kahneman masterpiece, thinking fast and slow,](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555). I have to be honest, a lot of these books about brain and behaviours have recently taken a path similar to Kahneman's book, therefore they like to divide in 2 systems basically eveything :D
+It reminds me a little bit of the system 1 and system 2 from [Kahneman masterpiece, thinking fast and slow,](https://www.amazon.com/Thinking-Fast-Slow-Daniel-Kahneman/dp/0374533555). I have to be honest, a lot of these books about brain and behaviours have recently taken a path similar to Kahneman's book, therefore they like to divide in 2 systems basically eveything :D
 
 The fixed mindset believes that talent is a gift when you are born, that you don't need to learn anymore or you can't grow or learn more. It also believes that failure means you will never make it anymore. In a few words people with fixed mindset are not willing to "take the extra mile", for succededing. This gets reinforced in our subconscious by events and the environment on which we are living.
 
@@ -57,7 +57,7 @@ On the other side, Elon Musk is pretty much a growth mindset and we can see it. 
 
 ## Applying this mindset at work
 
-The front end world is really a good example of a type of work where the fixed mindset is not only just wrong, but it will bring automatical failures.
+The front end world is really a good example of a type of work where the fixed mindset is not only just wrong, but it will bring failures.
 
 The so called [Javascript fatigue](https://medium.com/@ericclemmons/javascript-fatigue-48d4011b6fc4) is a example, and if you really want to keep up with front end, you will never have to stop learning. As an example, while writing this I learned aboud a new framework, [Svelte](https://github.com/sveltejs/svelte), which seems to be the next react thing ;)
 

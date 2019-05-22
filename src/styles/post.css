@@ -75,16 +75,16 @@
 .post__content blockquote {
   font-style: italic;
   color: var(--color-black-light);
-  margin: var(--margin-l) auto;
+  margin: var(--margin) auto;
   max-width: 90%;
 }
 
 .post__content > p:first-of-type:first-letter {
-  font-size: var(--font-xxl);
+  font-size: var(--font-xl);
   float: left;
   line-height: 0.68;
   font-weight: 100;
-  margin: 0.05em 0.1em 0.3em 0;
+  margin: 0.1em 0.1em 0.1em 0;
   text-transform: uppercase;
   font-style: normal;
 }

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import MediaQuery from 'react-responsive';
-import classnames from 'classnames';
 import { Link } from 'gatsby';
-import striptags from 'striptags';
 
 import '../styles/blog.css';
 
@@ -53,6 +50,9 @@ class BlogHomeTemplate extends Component {
                   key={post.node.id}
                   to={post.node.frontmatter.path}
                 >
+                  <p className="post-category freight-sans--bold">
+                    {post.node.frontmatter.category}
+                  </p>
                   <h2 className="post-title">{post.node.frontmatter.title}</h2>
                   <time
                     className="post-date"
@@ -62,6 +62,10 @@ class BlogHomeTemplate extends Component {
                   >
                     {new Date(post.node.frontmatter.date).toDateString()}
                   </time>
+                  <p className="post-desc">
+                    {post.node.frontmatter.introduction}
+                  </p>
+                  <p className="read-post">→</p>
                 </Link>
               </header>
             </article>
