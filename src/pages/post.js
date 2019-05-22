@@ -200,10 +200,6 @@ class Post extends Component {
       <ThemeProvider value={value}>
         {/* Not a proper solution but for the moment is ok */}
         <Helmet>
-          <script
-            crossorigin="anonymous"
-            src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry"
-          />
           <html lang="en" />
         </Helmet>
         <PageContainer>

@@ -195,10 +195,6 @@ class BlogHome extends Component {
             content="Antonio Fullone Personal blog. Web and self development"
           />
 
-          <script
-            crossorigin="anonymous"
-            src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CIntersectionObserver%2CIntersectionObserverEntry"
-          />
           <html lang="en" />
         </Helmet>
         <StaticQuery
