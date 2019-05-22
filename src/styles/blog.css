@@ -9,6 +9,9 @@
   position: relative;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .blogpost:last-of-type {
@@ -72,6 +75,9 @@
   .posts {
     padding: 0;
     max-width: 700px;
+  }
+  .blogpost {
+    box-shadow: none;
   }
 }
 
