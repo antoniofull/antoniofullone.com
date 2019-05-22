@@ -363,9 +363,9 @@ export const credits = [
   },
   {
     id: 2,
-    title: 'Jekyll',
-    author: 'Jekyll Team',
-    link: 'https://jekyllrb.com/'
+    title: 'Gatsby',
+    author: 'Gatsby Team',
+    link: 'https://www.gatsbyjs.org/'
   },
   {
     id: 3,
@@ -415,11 +415,12 @@ Always down south.
 export const socialData = [
   {
     id: 1,
-    label: 'Linkedin',
-    icon: 'linkedin-in',
+    label: 'Github',
+    icon: 'github',
     style: 'fab',
-    link: 'https://linkedin.com/in/antoniofullone/'
+    link: 'https://github.com/antoniofull/'
   },
+
   {
     id: 2,
     label: 'CodePen',
@@ -429,51 +430,30 @@ export const socialData = [
   },
   {
     id: 3,
-    label: 'Github',
-    icon: 'github',
+    label: 'Linkedin',
+    icon: 'linkedin-in',
     style: 'fab',
-    link: 'https://github.com/antoniofull/'
+    link: 'https://linkedin.com/in/antoniofullone/'
   },
   {
     id: 4,
-    label: 'Twitter',
-    icon: 'twitter',
-    style: 'fab',
-    link: 'https://twitter.com/_fulloneantonio'
-  },
-  {
-    id: 5,
     label: 'Email',
     icon: 'at',
     style: 'fas',
     link: 'mailto'
   },
   {
-    id: 6,
+    id: 5,
     label: 'Rss',
     icon: 'rss',
     style: 'fas',
     link: 'https://www.antoniofullone.com/rss.xml'
   },
   {
-    id: 7,
-    label: 'Pinterest',
-    icon: 'pinterest',
-    style: 'fab',
-    link: 'https://www.pinterest.com/antoniofull/'
-  },
-  {
-    id: 8,
+    id: 6,
     label: 'Dribbble',
     icon: 'dribbble',
     style: 'fab',
     link: 'https://dribbble.com/AntonioFullone'
-  },
-  {
-    id: 9,
-    label: 'Facebook',
-    icon: 'facebook',
-    style: 'fab',
-    link: 'https://facebook.com/Antonio.Fullone'
   }
 ];
