@@ -12,6 +12,9 @@ import BlogHomeTemplate from '../templates/BlogHomeTemplate';
 
 import '../styles/fonts-awesome.css';
 
+ReactGA.initialize('UA-67184030-4');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 if (typeof window !== 'undefined') {
   // Loading the polify for Intersection Observer
   require('intersection-observer');
@@ -42,8 +45,6 @@ class BlogHome extends Component {
     } catch (e) {
       console.error(e);
     }
-    ReactGA.initialize('UA-67184030-4');
-    ReactGA.pageview(window.location.pathname + window.location.search);
 
     const WebFontConfig = {
       typekit: { id: 'avo5hes' },

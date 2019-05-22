@@ -19,6 +19,9 @@ import '../styles/helpers.css';
 import '../styles/global.css';
 import '../styles/fonts-awesome.css';
 
+ReactGA.initialize('UA-67184030-4');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 if (typeof window !== 'undefined') {
   // Loading the polify for Intersection Observer
   require('intersection-observer');
@@ -62,9 +65,6 @@ class Index extends Component {
     } catch (e) {
       console.error(e);
     }
-
-    ReactGA.initialize('UA-67184030-4');
-    ReactGA.pageview(window.location.pathname + window.location.search);
 
     this.resizeTimer;
     if (typeof window !== 'undefined') {
