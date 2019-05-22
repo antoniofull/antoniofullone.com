@@ -46,6 +46,7 @@ class BlogHomeTemplate extends Component {
             <article className="blogpost" key={post.node.id}>
               <header classnames="post-header">
                 <Link
+                  aria-label="Read Blog Post"
                   className={`read-more`}
                   key={post.node.id}
                   to={post.node.frontmatter.path}

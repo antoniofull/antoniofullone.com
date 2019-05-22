@@ -59,12 +59,20 @@ const Postlayout = ({ post, prev, next }) => (
           <ul className="follow-links container margin-y-l next-previous">
             {prev && (
               <li className="prev">
-                <Link className="prev-post" to={prev.frontmatter.path} />
+                <Link
+                  aria-label="Previous post"
+                  className="prev-post"
+                  to={prev.frontmatter.path}
+                />
               </li>
             )}
             {next && (
               <li className="next">
-                <Link className="next-post" to={next.frontmatter.path} />
+                <Link
+                  className="next-post"
+                  aria-label="Next Post"
+                  to={next.frontmatter.path}
+                />
               </li>
             )}
           </ul>

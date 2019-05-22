@@ -8,7 +8,12 @@ const Logo = () => (
   <ThemeConsumer>
     {({ scroll }) => (
       <div className="logo">
-        <Link to={'/'} onClick={scroll} className="logo__link">
+        <Link
+          aria-label="Go to Home Page"
+          to={'/'}
+          onClick={scroll}
+          className="logo__link"
+        >
           <LogoImg className="logo__img" />
         </Link>
       </div>
