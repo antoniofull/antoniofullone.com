@@ -104,7 +104,7 @@ em {
   font-family: 'Bodoni 24';
   letter-spacing: 1px;
 }
-/* Enable Alegreya Opentype features */
+/* Enable Opentype features */
 .fractional {
   font-variant: diagonal-fractions;
   -moz-font-feature-settings: 'frac';
