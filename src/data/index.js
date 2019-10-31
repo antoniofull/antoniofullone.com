@@ -302,10 +302,9 @@ export const work = {
 export const blogData = [
   {
     id: 1,
-    title: 'Javascript dynamic typing and coercion',
-    img: '/images/posts/js-strongtyped.png',
-    link:
-      'https://www.antoniofullone.com/blog/javascript-dynamic-typing-coercion'
+    title: 'Smooth Horizontal scroll with CSS Snap Scroll',
+    img: '/images/posts/horizontal-scrolling-css.png',
+    link: 'http://localhost:8000/blog/horizontal-smooth-scrolling-css'
   },
   {
     id: 2,
