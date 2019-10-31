@@ -304,7 +304,7 @@ export const blogData = [
     id: 1,
     title: 'Smooth Horizontal scroll with CSS Snap Scroll',
     img: '/images/posts/horizontal-scrolling-css.png',
-    link: 'http://localhost:8000/blog/horizontal-smooth-scrolling-css'
+    link: 'https://www.antoniofullone.com/blog/horizontal-smooth-scrolling-css'
   },
   {
     id: 2,
