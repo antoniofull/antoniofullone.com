@@ -27,7 +27,8 @@
 
 .post__content {
   margin: var(--margin) auto;
-  max-width: 700px;
+  max-width: 620px;
+  line-height: 1.7;
 }
 .post__content ul {
   list-style-type: disc;
@@ -71,6 +72,9 @@
   float: right;
   max-width: 60%;
 }
+.post__content p {
+  margin-bottom: 1rem;
+}
 
 .post__content blockquote {
   font-style: italic;
@@ -80,7 +84,7 @@
 }
 
 .post__content > p:first-of-type:first-letter {
-  font-size: var(--font-xl);
+  font-size: var(--font-l);
   float: left;
   line-height: 0.68;
   font-weight: 100;
