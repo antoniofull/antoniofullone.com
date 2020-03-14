@@ -87,6 +87,7 @@ class Index extends Component {
 
     this.WebFont.load(WebFontConfig);
   }
+
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
       window.removeEventListener('resize', this.onResize);
