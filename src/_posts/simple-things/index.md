@@ -17,7 +17,7 @@ I took this time alone to reflect on several things and I really want, once this
 
 I am terrified for what is happening in Italy, I have my family there and I cannot go back to stay close to them.
 My mother is one of the subject at high risk since she has diabetes and heart problems, my brother in law had a liver transplant and his son, my Godson, had meningitis plus he suffer from a mild form of psoriasis.
-I have trouble sleeping at night and I keep having nightmares. I know I am not the only one in this situation, but I realise how much I love my family and how, sometimes, I have been selfish thinking about myself. Like taking a luggage and go travel, while maybe they needed me there. I know this sounds like a real Italian thing but yes, I do love my family more than anything else in this world. I can’t wait to be there and stay with them.
+I have trouble sleeping at night and I keep having nightmares. I know I am not the only one in this situation, but I realise how much I love my family and how, sometimes, I have been selfish thinking about myself. Like making a plane ticket the day before and go travel somewhere around the world, while maybe my family needed me there. I know this sounds like a real Italian thing but yes, I do love my family more than anything else in this world. I can’t wait to be there and stay with them.
 
 ### Walking
 
@@ -26,7 +26,7 @@ When I use to do my walk, I never noticed the environment around me, trees, lake
 
 ### Pizza
 
-I want to go to te restaurant and have a pizza, like a big one and I want it super spicy. I want to have a pizza with my family and another with my colleagues. Yes I want a huge spcicy pizza, the one that you can find only down in the south of Italy.
+I want to go to te restaurant and have a pizza, like a big one and I want it super spicy. I want to have a pizza with my family and another with my colleagues. Yes I want a huge spciy pizza, the one that you can find only down in the south of Italy.
 
 ### Friends
 
