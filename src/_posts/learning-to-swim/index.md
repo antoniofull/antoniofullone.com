@@ -18,7 +18,7 @@ He told me lay on his back and grab him, and so I did. We reached the land and b
 
 When my father passed away, I was devastated. I felt like the first moments when my "donut" started deflating, but the difference is that he would not be there, no matter where I looked. I spent a lot of time denying his death to myself, I even refused for years to go to visit his grave.
 
-That feeling of being lost at sea has followed me for many years and made me make many mistakes, but the biggest mistake I did was trying to be "like him". It took me way too many years that this cannot be possible.
+That feeling of being lost at sea has followed me for many years and made me make many mistakes, but the biggest mistake I did was trying to be "like him". It took me way too many years to understand that this cannot be possible.
 
 Talking to a dear friend recently I got this very simple answer:
 
