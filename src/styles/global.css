@@ -171,5 +171,5 @@ img:after {
   display: none !important;
 }
 .no-opacity {
-  opacity: 0 !important;
+  opacity: 0;
 }

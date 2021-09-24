@@ -22,15 +22,6 @@ const HomePageTemplate = () => (
         >
           <About />
         </Observable>
-        <Observable
-          element="section"
-          id="work"
-          config={{ threshold: 0.2 }}
-          className="work-section"
-          callback={animateElement}
-        >
-          <Work />
-        </Observable>
       </main>
     )}
   </ThemeConsumer>

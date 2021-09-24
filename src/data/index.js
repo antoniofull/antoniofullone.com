@@ -5,11 +5,6 @@ export const navItems = [
     link: '#about'
   },
   {
-    id: 2,
-    text: 'Work',
-    link: '#work'
-  },
-  {
     id: 3,
     text: 'Journal',
     link: 'blog'
