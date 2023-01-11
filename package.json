@@ -51,7 +51,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^3.0.6",
     "gatsby-source-filesystem": "^2.0.38",
-    "gatsby-transformer-remark": "^2.2.5",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.13",
     "intersection-observer": "^0.5.1",
     "prismjs": "^1.15.0",
